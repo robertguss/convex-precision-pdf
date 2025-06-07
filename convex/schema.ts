@@ -9,4 +9,10 @@ export default defineSchema({
   numbers: defineTable({
     value: v.number(),
   }),
+  users: defineTable({
+    name: v.string(),
+    email: v.string(),
+    // this the Clerk ID, stored in the subject JWT field
+    externalId: v.string(),
+  }).index("byExternalId", ["externalId"]),
 });
