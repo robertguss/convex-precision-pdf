@@ -38,6 +38,18 @@ export interface Chunk {
     height: number;
   };
   metadata?: Record<string, unknown>;
+  // Additional fields for DocumentViewer compatibility
+  text?: string;
+  chunk_type?: string;
+  grounding?: Array<{
+    page: number;
+    box: {
+      l: number;
+      t: number;
+      r: number;
+      b: number;
+    };
+  }>;
 }
 
 export interface DocData {
@@ -47,4 +59,4 @@ export interface DocData {
   num_pages: number;
 }
 
-export type ExportFormat = '' | 'markdown' | 'json' | 'csv';
+export type ExportFormat = '' | 'markdown' | 'json' | 'csv' | 'xlsx';

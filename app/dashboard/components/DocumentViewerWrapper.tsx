@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api';
 import { Id } from '@/convex/_generated/dataModel';
-import { Preloaded, usePreloadedQuery } from 'convex/nextjs';
 import { Allotment } from 'allotment';
 import 'allotment/dist/style.css';
 
@@ -22,22 +21,21 @@ import { downloadFile, exportChunks } from './utils/exportUtils';
 const API_BASE_URL = process.env.NEXT_PUBLIC_FAST_API_URL || 'http://localhost:8000';
 
 interface DocumentViewerWrapperProps {
-  preloadedDocument: Preloaded<typeof api.documents.getDocument>;
+  document: NonNullable<typeof api.documents.getDocument._returnType>;
   isDemo?: boolean;
 }
 
 export function DocumentViewerWrapper({
-  preloadedDocument,
+  document: initialDocument,
   isDemo = false,
 }: DocumentViewerWrapperProps) {
-  const initialDocument = usePreloadedQuery(preloadedDocument);
   const documentId = initialDocument._id;
   
   // Poll for updates while processing
   const document = useQuery(
     api.documents.getDocument,
     { documentId: documentId as Id<"documents"> }
-  );
+  ) ?? initialDocument;
   const router = useRouter();
   const [exportFormat, setExportFormat] = useState<ExportFormat>('');
   const [isExtractingContent, setIsExtractingContent] = useState(false);
@@ -62,9 +60,22 @@ export function DocumentViewerWrapper({
   // Initialize docData from document
   useEffect(() => {
     if (document) {
+      // Transform chunks to match the expected format for DocumentViewer
+      const transformedChunks = (document.chunks || []).map(chunk => ({
+        chunk_id: chunk.chunk_id,
+        content: chunk.content,
+        page: chunk.page,
+        bbox: chunk.bbox,
+        metadata: chunk.metadata,
+        // Add properties expected by DocumentViewer
+        text: chunk.content,
+        chunk_type: (chunk.metadata as any)?.chunk_type || 'text',
+        grounding: (chunk.metadata as any)?.grounding || []
+      }));
+
       const initialData: DocData = {
         markdown: document.markdown || '',
-        chunks: document.chunks || [],
+        chunks: transformedChunks,
         errors: document.errorMessage ? [{ message: document.errorMessage }] : [],
         num_pages: document.pageCount || 0,
       };

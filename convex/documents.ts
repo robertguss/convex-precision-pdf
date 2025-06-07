@@ -1,6 +1,6 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
-import { getCurrentUserOrThrow } from "./users";
+import { getCurrentUserOrThrow, getCurrentUser } from "./users";
 
 /**
  * Creates an example document from pre-processed data.
@@ -76,7 +76,12 @@ export const createExampleDocument = mutation({
 export const listDocuments = query({
   args: {},
   handler: async (ctx) => {
-    const user = await getCurrentUserOrThrow(ctx);
+    const user = await getCurrentUser(ctx);
+    
+    // Return empty array if user is not authenticated
+    if (!user) {
+      return [];
+    }
     
     const documents = await ctx.db
       .query("documents")
@@ -96,17 +101,22 @@ export const getDocument = query({
     documentId: v.id("documents"),
   },
   handler: async (ctx, args) => {
-    const user = await getCurrentUserOrThrow(ctx);
+    const user = await getCurrentUser(ctx);
+    
+    // Return null if user is not authenticated
+    if (!user) {
+      return null;
+    }
     
     const document = await ctx.db.get(args.documentId);
     
     if (!document) {
-      throw new Error("Document not found");
+      return null;
     }
     
     // Ensure the user owns the document
     if (document.userId !== user._id) {
-      throw new Error("Unauthorized");
+      return null;
     }
     
     return document;
