@@ -62,7 +62,7 @@ export function UploadPage() {
       await queryClient.invalidateQueries({ queryKey: ["credits"] });
 
       // Redirect to document view
-      router.push(`/home/documents/${result.documentId}`);
+      router.push(`/dashboard/documents/${result.documentId}`);
     } catch (err) {
       console.error("Error during file upload:", err);
       setError(
@@ -109,7 +109,7 @@ export function UploadPage() {
       const result = await response.json();
 
       // Redirect to document view
-      router.push(`/home/documents/${result.documentId}`);
+      router.push(`/dashboard/documents/${result.documentId}`);
     } catch (err) {
       console.error(err);
       setError(

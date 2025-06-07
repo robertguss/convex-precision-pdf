@@ -15,4 +15,47 @@ export default defineSchema({
     // this the Clerk ID, stored in the subject JWT field
     externalId: v.string(),
   }).index("byExternalId", ["externalId"]),
+  
+  documents: defineTable({
+    userId: v.id("users"),
+    title: v.string(),
+    fileId: v.id("_storage"),
+    status: v.union(
+      v.literal("uploading"),
+      v.literal("processing"),
+      v.literal("completed"),
+      v.literal("failed")
+    ),
+    errorMessage: v.optional(v.string()),
+    
+    // Landing AI API response data
+    landingAiResponse: v.optional(v.any()),
+    
+    // Extracted data from Landing AI response
+    markdown: v.optional(v.string()),
+    chunks: v.optional(v.array(v.object({
+      chunk_id: v.string(),
+      content: v.string(),
+      page: v.number(),
+      bbox: v.optional(v.object({
+        x: v.number(),
+        y: v.number(),
+        width: v.number(),
+        height: v.number(),
+      })),
+      metadata: v.any(),
+    }))),
+    marginalia: v.optional(v.array(v.any())),
+    
+    // Metadata
+    pageCount: v.optional(v.number()),
+    fileSize: v.number(),
+    mimeType: v.string(),
+    
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("byUserId", ["userId"])
+    .index("byStatus", ["status"])
+    .index("byCreatedAt", ["createdAt"]),
 });

@@ -1,0 +1,197 @@
+{
+  "markdown": "logo: UC DAVIS HEALTH SYSTEM\n\nUC DAVIS DERMATOPATHOLOGY SERVICE\nMAXWELL A. FUNG, MD, DIRECTOR\nTHOMAS H. KONIA, MD\nDepartment of Dermatology\n3301 C Street, Suite 1450\nSacramento, California 95816\n\nPhone: (916) 734-6373   Toll Free: (866) 323-9061   Fax: (916) 703-5159\n\nlogo: UC DAVIS SCHOOL OF MEDICINE <!-- form, from page 0 (l=0.079,t=0.037,r=0.954,b=0.140), with ID fc569e83-33aa-4e62-a1ac-815b24e5276f -->\n\nPATIENT NAME:  \nDOB:  \nAge/Sex:  \nPhysician:  \nPhysician Phone:  \nCopy To:  \nCC Phone Number:  \n\nPATH NUMBER: DS14-02529  \nService: 3/31/2014  \nReceived: 3/31/2014  \nReported: 4/1/2014  \nPhysician Fax:  \nCC Fax Number: <!-- form, from page 0 (l=0.084,t=0.145,r=0.949,b=0.346), with ID eed366e4-782b-4dac-aac5-11855309ab99 -->\n\nClinical Data:        A,B) Pink pruritic/vesicular papules, DDx: dermatitis herpetiformis, BP, drug reaction, other.\n\nDIAGNOSIS:\nA      SKIN, LEFT AXILLA, MEDIAL (PUNCH BIOPSY)\n         DERMATITIS HERPETIFORMIS\n\nB      SKIN, LEFT AXILLA, LATERAL, PERILESIONAL (PUNCH BIOPSY)\n         DIRECT IMMUNOFLUORESCENCE: GRANULAR DEPOSITION OF IGA ALONG THE\n         BASEMENT MEMBRANE ZONE, CONSISTENT WITH DERMATITIS HERPETIFORMIS <!-- text, from page 0 (l=0.084,t=0.348,r=0.950,b=0.523), with ID 3abdf3c9-b510-458b-ae6d-aa93fefb9964 -->\n\nA\n\nfigure: Two side-by-side histological images of skin tissue sections stained with hematoxylin and eosin (H&E). The left image (A) shows epidermal thickening and inflammatory infiltrate in the dermis. The right image (B: H&E) also shows epidermal thickening with elongated rete ridges and a similar inflammatory pattern. Both images highlight histopathological features of skin disease, with the right image explicitly labeled as H&E stained. <!-- figure, from page 0 (l=0.084,t=0.541,r=0.948,b=0.701), with ID da19d098-9bbe-48f6-b904-a0745a19f594 -->\n\nSpecimen:      A   SKIN, LEFT AXILLA, MEDIAL\n               B   SKIN, LEFT AXILLA, LATERAL, PERILESIONAL <!-- text, from page 0 (l=0.085,t=0.704,r=0.799,b=0.749), with ID 07715326-6cd3-4845-9351-fa836d078b73 -->\n\nGross\nA   Received in formalin, cylindrical skin segment, 0.2 x 0.3 cm, entirely submitted in 1 block in a nylon bag.mu\nB   Received for immunofluorescence studies, cylindrical skin segment, 0.3 x 0.4 cm, entirely submitted in 1 block.jf <!-- text, from page 0 (l=0.082,t=0.759,r=0.927,b=0.860), with ID 975ff7d2-14d8-419c-bf6b-ed3f34a45934 -->\n\nPage 1 of 2 <!-- marginalia, from page 0 (l=0.863,t=0.910,r=0.954,b=0.930), with ID 236eba22-eb27-46de-8190-82532a54529b -->\n\nDS14-02529 <!-- marginalia, from page 0 (l=0.815,t=0.036,r=0.946,b=0.063), with ID c2ed4da7-b851-4a09-bb85-50bdfd90adb8 -->\n\nMicroscopic Description  \nA  Sections show a subepidermal split with mostly neutrophils and also fibrin and eosinophils within the blister cavity and upper dermis.\nB  Cryostat sections stained with fluorescein-conjugated antibodies to IgG, IgM, IgA, C3, fibrinogen, and albumin were performed. There is granular IgA along the basement membrane zone, accentuated within dermal papillae, variable concomitant fibrinogen within dermal papillae, and no other significant epidermal, junctional, or perivascular reactivity. The immunohistochemical tests were developed and their performance characteristics determined by the UC Davis Dermatopathology Service. This laboratory is certified under the Clinical Laboratory Improvement Amendments of 1988 (CLIA-88) as qualified to perform high complexity clinical laboratory testing. <!-- text, from page 0 (l=0.083,t=0.080,r=0.952,b=0.273), with ID f1740249-436a-470a-9281-127bd6beca11 -->\n\nICD9:   A. 694.0  B. 694.0\n\nCPT:    A. 88305  B. 88346 x 6 <!-- form, from page 0 (l=0.085,t=0.302,r=0.341,b=0.363), with ID f71df5f5-bf5e-46e7-92f2-62ffba5515b0 -->\n\nElectronically Signed By:\nMaxwell A. Fung, MD\nDermatopathologist <!-- text, from page 0 (l=0.633,t=0.304,r=0.832,b=0.365), with ID f6279f22-9594-45b3-9dcc-f7271ce23373 -->\n\nPage 2 of 2 <!-- marginalia, from page 0 (l=0.857,t=0.911,r=0.948,b=0.931), with ID 4de3ac75-aefc-48a4-87bf-7623cf944ce1 -->",
+  "chunks": [
+    {
+      "text": "logo: UC DAVIS HEALTH SYSTEM\n\nUC DAVIS DERMATOPATHOLOGY SERVICE\nMAXWELL A. FUNG, MD, DIRECTOR\nTHOMAS H. KONIA, MD\nDepartment of Dermatology\n3301 C Street, Suite 1450\nSacramento, California 95816\n\nPhone: (916) 734-6373   Toll Free: (866) 323-9061   Fax: (916) 703-5159\n\nlogo: UC DAVIS SCHOOL OF MEDICINE",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0790746808052063,
+            "t": 0.03734002262353897,
+            "r": 0.9536742568016052,
+            "b": 0.13951238989830017
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "fc569e83-33aa-4e62-a1ac-815b24e5276f"
+    },
+    {
+      "text": "PATIENT NAME:  \nDOB:  \nAge/Sex:  \nPhysician:  \nPhysician Phone:  \nCopy To:  \nCC Phone Number:  \n\nPATH NUMBER: DS14-02529  \nService: 3/31/2014  \nReceived: 3/31/2014  \nReported: 4/1/2014  \nPhysician Fax:  \nCC Fax Number:",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08414256572723389,
+            "t": 0.14475804567337036,
+            "r": 0.9485535621643066,
+            "b": 0.34610190987586975
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "eed366e4-782b-4dac-aac5-11855309ab99"
+    },
+    {
+      "text": "Clinical Data:        A,B) Pink pruritic/vesicular papules, DDx: dermatitis herpetiformis, BP, drug reaction, other.\n\nDIAGNOSIS:\nA      SKIN, LEFT AXILLA, MEDIAL (PUNCH BIOPSY)\n         DERMATITIS HERPETIFORMIS\n\nB      SKIN, LEFT AXILLA, LATERAL, PERILESIONAL (PUNCH BIOPSY)\n         DIRECT IMMUNOFLUORESCENCE: GRANULAR DEPOSITION OF IGA ALONG THE\n         BASEMENT MEMBRANE ZONE, CONSISTENT WITH DERMATITIS HERPETIFORMIS",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08380141854286194,
+            "t": 0.348171204328537,
+            "r": 0.9496365785598755,
+            "b": 0.5233561992645264
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "3abdf3c9-b510-458b-ae6d-aa93fefb9964"
+    },
+    {
+      "text": "A\n\nfigure: Two side-by-side histological images of skin tissue sections stained with hematoxylin and eosin (H&E). The left image (A) shows epidermal thickening and inflammatory infiltrate in the dermis. The right image (B: H&E) also shows epidermal thickening with elongated rete ridges and a similar inflammatory pattern. Both images highlight histopathological features of skin disease, with the right image explicitly labeled as H&E stained.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08357584476470947,
+            "t": 0.541107177734375,
+            "r": 0.9479771852493286,
+            "b": 0.7013283967971802
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "da19d098-9bbe-48f6-b904-a0745a19f594"
+    },
+    {
+      "text": "Specimen:      A   SKIN, LEFT AXILLA, MEDIAL\n               B   SKIN, LEFT AXILLA, LATERAL, PERILESIONAL",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0849149227142334,
+            "t": 0.7043639421463013,
+            "r": 0.7989131212234497,
+            "b": 0.7485520839691162
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "07715326-6cd3-4845-9351-fa836d078b73"
+    },
+    {
+      "text": "Gross\nA   Received in formalin, cylindrical skin segment, 0.2 x 0.3 cm, entirely submitted in 1 block in a nylon bag.mu\nB   Received for immunofluorescence studies, cylindrical skin segment, 0.3 x 0.4 cm, entirely submitted in 1 block.jf",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0821177065372467,
+            "t": 0.7586581707000732,
+            "r": 0.9274355173110962,
+            "b": 0.859809398651123
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "975ff7d2-14d8-419c-bf6b-ed3f34a45934"
+    },
+    {
+      "text": "Page 1 of 2",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8626092076301575,
+            "t": 0.9098843932151794,
+            "r": 0.9541831612586975,
+            "b": 0.9299308657646179
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "236eba22-eb27-46de-8190-82532a54529b"
+    },
+    {
+      "text": "DS14-02529",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8153955340385437,
+            "t": 0.036209557205438614,
+            "r": 0.9460868239402771,
+            "b": 0.06295488774776459
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "c2ed4da7-b851-4a09-bb85-50bdfd90adb8"
+    },
+    {
+      "text": "Microscopic Description  \nA  Sections show a subepidermal split with mostly neutrophils and also fibrin and eosinophils within the blister cavity and upper dermis.\nB  Cryostat sections stained with fluorescein-conjugated antibodies to IgG, IgM, IgA, C3, fibrinogen, and albumin were performed. There is granular IgA along the basement membrane zone, accentuated within dermal papillae, variable concomitant fibrinogen within dermal papillae, and no other significant epidermal, junctional, or perivascular reactivity. The immunohistochemical tests were developed and their performance characteristics determined by the UC Davis Dermatopathology Service. This laboratory is certified under the Clinical Laboratory Improvement Amendments of 1988 (CLIA-88) as qualified to perform high complexity clinical laboratory testing.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08335086703300476,
+            "t": 0.07970768958330154,
+            "r": 0.9520063400268555,
+            "b": 0.2727746069431305
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "f1740249-436a-470a-9281-127bd6beca11"
+    },
+    {
+      "text": "ICD9:   A. 694.0  B. 694.0\n\nCPT:    A. 88305  B. 88346 x 6",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0850847065448761,
+            "t": 0.30198633670806885,
+            "r": 0.34111884236335754,
+            "b": 0.3631201386451721
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "f71df5f5-bf5e-46e7-92f2-62ffba5515b0"
+    },
+    {
+      "text": "Electronically Signed By:\nMaxwell A. Fung, MD\nDermatopathologist",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6331608891487122,
+            "t": 0.3039908707141876,
+            "r": 0.8319573998451233,
+            "b": 0.36545780301094055
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "f6279f22-9594-45b3-9dcc-f7271ce23373"
+    },
+    {
+      "text": "Page 2 of 2",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8566450476646423,
+            "t": 0.9113026261329651,
+            "r": 0.9480335116386414,
+            "b": 0.9305179715156555
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "4de3ac75-aefc-48a4-87bf-7623cf944ce1"
+    }
+  ]
+}

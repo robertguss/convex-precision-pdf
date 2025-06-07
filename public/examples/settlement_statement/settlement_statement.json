@@ -1,0 +1,869 @@
+{
+  "markdown": "logo: U.S. Department of Housing and Urban Development <!-- figure, from page 0 (l=0.048,t=0.029,r=0.145,b=0.093), with ID f7c10a1a-1788-4cb7-bc8c-255e4e96dfa8 -->\n\nOMB Approval No. 2502-0265 <!-- marginalia, from page 0 (l=0.775,t=0.033,r=0.962,b=0.046), with ID 61abc3a6-1b6a-4201-8b72-c98098ce38d2 -->\n\nA.  Settlement Statement (HUD-1) <!-- text, from page 0 (l=0.169,t=0.055,r=0.585,b=0.077), with ID 16bdb8ee-cd2a-4350-b093-49e9bb4bd2e4 -->\n\nB.  Type of Loan\n\n1. [ ] FHA\n2. [ ] RHS\n3. [x] Conv. Unins.\n4. [ ] VA\n5. [ ] Conv. Ins.\n\n6.  File Number: SAMPLE.PDF\n\n7.  Loan Number:\n\n8.  Mortgage Insurance Case Number: <!-- form, from page 0 (l=0.031,t=0.092,r=0.970,b=0.132), with ID 73af0557-06ab-45e6-bb2e-3674062b9844 -->\n\nC.  Note:  This form is furnished to give you a statement of actual settlement costs.  Amounts paid to and by the settlement agent are shown.  Items marked \"(p.o.c.)\" were paid outside the closing; they are shown here for informational purposes and are not included in the totals. <!-- text, from page 0 (l=0.033,t=0.132,r=0.969,b=0.159), with ID 6f259fdf-41c9-468b-9895-e90d85f39db5 -->\n\nD.  Name and Address of Borrower:\nJohn F. Doe and\nJane E. Doe\n\nE.  Name and Address of Seller:\nJoe S. Title\n\nF.  Name and Address of Lender:\nBank of Roanoke\n\nG.  Property Location:\n1425 XYZ Lane\nRoanoke, VA 24015\n\nH.  Settlement Agent:\nCovenant Real Estate Services, LLC\n1626 Apperson Drive, Ste. C\nSalem, VA  24153\nPh.  (540)404-3213\nPlace of Settlement:\n1626 Apperson Drive, Ste. C\nSalem, VA  24153\n\nI.  Settlement Date:\nAugust 31, 8201 <!-- form, from page 0 (l=0.033,t=0.159,r=0.968,b=0.312), with ID a2e30ac7-cd7b-4740-a3e5-af1570da0ecd -->\n\n<table><tbody><tr><td>J. Summary of Borrower's transaction</td></tr><tr><td>100. Gross Amount Due from Borrower:</td></tr><tr><td>101. Contract sales price</td><td>150,000.00</td></tr><tr><td>102. Personal property</td><td></td></tr><tr><td>103. Settlement Charges to Borrower (Line 1400)</td><td>7,427.47</td></tr><tr><td>104.</td><td></td></tr><tr><td>105.</td><td></td></tr><tr><td>Adjustments for items paid by Seller in advance</td></tr><tr><td>106. City/Town Taxes</td><td>to</td><td></td></tr><tr><td>107. County Taxes</td><td>to</td><td></td></tr><tr><td>108. Assessments</td><td>to</td><td></td></tr><tr><td>109.</td><td></td></tr><tr><td>110.</td><td></td></tr><tr><td>111.</td><td></td></tr><tr><td>112.</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.032,t=0.315,r=0.499,b=0.468), with ID 0cdcffcd-54f6-4db7-b029-30b4cac71f05 -->\n\n<table><tbody><tr><td>120. Gross Amount Due from Borrower</td><td>157,427.47</td></tr><tr><td>200. Amounts Paid by or in Behalf of Borrower</td><td></td></tr><tr><td>201. Deposit or earnest money</td><td>1,000.00</td></tr><tr><td>202. Principal amount of new loan(s)</td><td>100,000.00</td></tr><tr><td>203. Existing loan(s) taken subject to</td><td></td></tr><tr><td>204.</td><td></td></tr><tr><td>205.</td><td></td></tr><tr><td>206.</td><td></td></tr><tr><td>207.</td><td></td></tr><tr><td>208.</td><td></td></tr><tr><td>209.</td><td></td></tr><tr><td>Adjustments for items unpaid by Seller</td><td></td></tr><tr><td>210. City/Town Taxes      07/01/01   to   09/01/01</td><td>235.87</td></tr><tr><td>211. County Taxes                    to</td><td></td></tr><tr><td>212. Assessments                    to</td><td></td></tr><tr><td>213.</td><td></td></tr><tr><td>214.</td><td></td></tr><tr><td>215.</td><td></td></tr><tr><td>216.</td><td></td></tr><tr><td>217.</td><td></td></tr><tr><td>218.</td><td></td></tr><tr><td>219.</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.032,t=0.470,r=0.497,b=0.698), with ID 8cbfe286-72d2-4423-8acc-8c93c26c8158 -->\n\n<table>\n  <tr>\n    <td>220.</td>\n    <td>Total Paid by/for Borrower</td>\n    <td></td>\n    <td>101,235.87</td>\n  </tr>\n  <tr>\n    <td colspan=\"4\"><b>300. Cash at Settlement from/to Borrower</b></td>\n  </tr>\n  <tr>\n    <td>301.</td>\n    <td>Gross amount due from Borrower (line 120)</td>\n    <td></td>\n    <td>157,427.47</td>\n  </tr>\n  <tr>\n    <td>302.</td>\n    <td>Less amount paid by/for Borrower (line 220)</td>\n    <td></td>\n    <td>( 101,235.87)</td>\n  </tr>\n  <tr>\n    <td>303.</td>\n    <td>Cash <span style=\"border:1px solid #000;padding:0 4px;\">X</span> From <span style=\"border:1px solid #000;padding:0 4px;\">&nbsp;&nbsp;</span> To Borrower</td>\n    <td></td>\n    <td>56,191.60</td>\n  </tr>\n</table> <!-- form, from page 0 (l=0.032,t=0.701,r=0.498,b=0.767), with ID 0fa11fb0-746a-4836-b6b2-df88960659b4 -->\n\n<table><tbody><tr><td>K. Summary of Seller's transaction</td></tr><tr><td>400. Gross Amount Due to Seller:</td></tr><tr><td>401. Contract sales price</td><td>150,000.00</td></tr><tr><td>402. Personal property</td><td></td></tr><tr><td>403.</td><td></td></tr><tr><td>404.</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.506,t=0.316,r=0.967,b=0.384), with ID dfe03861-0ffb-4af2-9ee1-a4b70bc3b0e7 -->\n\n<table><tbody><tr><td colspan=\"3\">Adjustments for items paid by Seller in advance</td></tr><tr><td>406. City/Town Taxes</td><td>to</td><td></td></tr><tr><td>407. County Taxes</td><td>to</td><td></td></tr><tr><td>408. Assessments</td><td>to</td><td></td></tr><tr><td>409.</td><td></td><td></td></tr><tr><td>410.</td><td></td><td></td></tr><tr><td>411.</td><td></td><td></td></tr><tr><td>412.</td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.506,t=0.386,r=0.967,b=0.470), with ID acd74c35-0930-4d61-8ba5-1dacaaa98b44 -->\n\n<table><tbody><tr><td>420. Gross Amount Due to Seller</td><td>150,000.00</td></tr><tr><td>500. Reductions in Amount Due Seller:</td><td></td></tr><tr><td>501. Excess deposit (see instructions)</td><td></td></tr><tr><td>502. Settlement charges to Seller (Line 1400)</td><td>9,325.00</td></tr><tr><td>503. Existing loan(s) taken subject to</td><td></td></tr><tr><td>504. Payoff First Mortgage to ABC Bank</td><td>89,500.22</td></tr><tr><td>505. Payoff Second Mortgage</td><td></td></tr><tr><td>506.</td><td></td></tr><tr><td>507. (Deposit disb. as proceeds)</td><td></td></tr><tr><td>508.</td><td></td></tr><tr><td>509.</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.507,t=0.471,r=0.967,b=0.585), with ID c111bfc9-69da-44d0-9d43-81b1b56aa0b3 -->\n\n<table><tbody><tr><td colspan=\"3\">Adjustments for items unpaid by Seller</td></tr><tr><td>510. City/Town Taxes</td><td>07/01/01 to 09/01/01</td><td>235.87</td></tr><tr><td>511. County Taxes</td><td>to</td><td></td></tr><tr><td>512. Assessments</td><td>to</td><td></td></tr><tr><td>513.</td><td></td><td></td></tr><tr><td>514.</td><td></td><td></td></tr><tr><td>515.</td><td></td><td></td></tr><tr><td>516.</td><td></td><td></td></tr><tr><td>517.</td><td></td><td></td></tr><tr><td>518.</td><td></td><td></td></tr><tr><td>519.</td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.507,t=0.588,r=0.967,b=0.698), with ID 9510c996-0119-4532-838a-6c9ca62de512 -->\n\n<table>\n  <tr>\n    <td>520. <b>Total Reduction Amount Due Seller</b></td>\n    <td align=\"right\">99,061.09</td>\n  </tr>\n  <tr>\n    <td colspan=\"2\"><b>600. Cash at settlement to/from Seller</b></td>\n  </tr>\n  <tr>\n    <td>601. Gross amount due to Seller (line 420)</td>\n    <td align=\"right\">150,000.00</td>\n  </tr>\n  <tr>\n    <td>602. Less reductions due Seller (line 520)</td>\n    <td align=\"right\">( 99,061.09)</td>\n  </tr>\n  <tr>\n    <td>603. <b>Cash</b> <span style=\"border:1px solid #000;padding:0 6px;\">X</span> To <span style=\"border:1px solid #000;padding:0 6px;\">&nbsp;&nbsp;&nbsp;&nbsp;</span> <b>From Seller</b></td>\n    <td align=\"right\">50,938.91</td>\n  </tr>\n</table> <!-- form, from page 0 (l=0.507,t=0.701,r=0.968,b=0.767), with ID 89c74767-d5fe-4631-9558-c3eb9edfb89b -->\n\n*Paid outside of closing by borrower(B), seller(S), lender(L), or third-party(T)\nThe undersigned hereby acknowledge receipt of a completed copy of this statement & any attachments referred to herein\n        Borrower ________________________________        Seller _______________________________________\n                        John F. Doe                                             Joe S. Title <!-- form, from page 0 (l=0.039,t=0.770,r=0.869,b=0.816), with ID df820629-1380-4dfd-9f9e-15e20bac44e7 -->\n\n_____________________________\nJane E. Doe\n\nTO THE BEST OF MY KNOWLEDGE, THE HUD-1 SETTLEMENT STATEMENT WHICH I HAVE PREPARED IS A TRUE AND ACCURATE ACCOUNT OF THE FUNDS WHICH WERE RECEIVED AND HAVE BEEN OR WILL BE DISBURSED BY THE UNDERSIGNED AS PART OF THE SETTLEMENT OF THIS TRANSACTION. <!-- text, from page 0 (l=0.039,t=0.827,r=0.935,b=0.869), with ID 2f423a24-3789-442f-a571-87daf669af6b -->\n\nCovenant Real Estate Services, LLC, Settlement Agent\n\nWARNING:  IT IS A CRIME TO KNOWINGLY MAKE FALSE STATEMENTS TO THE UNITED STATES ON THIS OR ANY SIMILAR FORM.  PENALTIES UPON CONVICTION CAN INCLUDE A FINE AND IMPRISONMENT.  FOR DETAILS SEE:  TITLE 18 U.S. CODE SECTION 1001 & SECTION 1010. <!-- text, from page 0 (l=0.040,t=0.878,r=0.930,b=0.912), with ID aa47ead9-c3b8-42b9-a69a-1b3b8bd7259b -->\n\nThe Public Reporting Burden for this collection of information is estimated at 35 minutes per response for collecting, reviewing, and reporting the data. This agency may not collect this information, and you are not required to complete this form, unless it displays a currently valid OMB control number. No confidentiality is assured; this disclosure is mandatory. This is designed to provide the parties to a RESPA covered transaction with information during the settlement process. <!-- text, from page 0 (l=0.041,t=0.933,r=0.961,b=0.955), with ID 36faac8c-5ca0-405b-8cf9-a0b255bcb1bc -->\n\nPage 1 of 3 <!-- marginalia, from page 0 (l=0.472,t=0.953,r=0.541,b=0.964), with ID 33897187-2ca3-450a-8507-401fc68da0a9 -->\n\nHUD-1  \n(SAMPLE.PDF.PFD/SAMPLE.PDF/3) <!-- marginalia, from page 0 (l=0.756,t=0.952,r=0.970,b=0.975), with ID a5b0b96b-f227-4d1e-aa5f-6e9e606aa454 -->\n\n<table><tbody><tr><td colspan=\"3\">L. Settlement Charges</td></tr><tr><td>700. Total Real Estate Broker Fees</td><td>$ 9,000.00</td><td></td><td>Paid From Borrower's Funds at Settlement</td><td>Paid From Seller's Funds at Settlement</td></tr><tr><td colspan=\"3\">Division of commission (line 700) as follows:</td><td></td><td></td></tr><tr><td>701. $ 9,000.00</td><td>to</td><td>ReMax</td><td></td><td></td></tr><tr><td>702. $</td><td>to</td><td></td><td></td><td></td></tr><tr><td>703. Commission paid at settlement</td><td></td><td></td><td></td><td>9,000.00</td></tr><tr><td>704.</td><td></td><td></td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.027,t=0.032,r=0.971,b=0.113), with ID 88d9ccfc-a8af-443c-8235-0757da32317d -->\n\n<table><tbody><tr><td>800. Items Payable in Connection with Loan</td><td></td><td></td><td></td></tr><tr><td>801. Our origination charge</td><td>$</td><td>1,000.00</td><td>(from GFE #1)</td><td></td><td></td></tr><tr><td>802. Your credit or charge (points) for the specific interest rate chosen</td><td>$</td><td></td><td>(from GFE #2)</td><td></td><td></td></tr><tr><td>803. Your adjusted origination charges</td><td></td><td></td><td>(from GFE #A)</td><td>1,000.00</td><td></td></tr><tr><td>804. Appraisal fee</td><td>to</td><td>Appraisers United</td><td>(from GFE #3)</td><td>400.00</td><td></td></tr><tr><td>805. Credit Report</td><td>to</td><td>Credit Solutions</td><td>(from GFE #3)</td><td>45.00</td><td></td></tr><tr><td>806. Tax service</td><td>to</td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>807. Flood certification</td><td>to</td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>808.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>809.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>810.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>811.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.028,t=0.113,r=0.970,b=0.248), with ID f6c8194e-91bb-472c-9fa8-30b05402796c -->\n\n<table><tbody><tr><td>900. Items Required by Lender to Be Paid in Advance</td><td></td><td></td></tr><tr><td>901. Daily interest charges from 08/31/15 to 09/01/15</td><td>0 @ $/day (from GFE #10)</td><td></td></tr><tr><td>902. Mortgage insurance premium for months to</td><td>(from GFE #3)</td><td></td></tr><tr><td>903. Homeowner's insurance for 1.0 years to Elephant Insurance</td><td>(from GFE #11)</td><td>1,750.00</td></tr><tr><td>904.</td><td>(from GFE #11)</td><td></td></tr><tr><td>905.</td><td>(from GFE #11)</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.028,t=0.248,r=0.970,b=0.318), with ID c270ec1a-3a5a-4d52-a288-853f409d563a -->\n\n<table><tbody><tr><td>1000. Reserves Deposited with Lender</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1001. Initial deposit for your escrow account</td><td>(from GFE #9)</td><td>1,322.14</td><td></td></tr><tr><td>1002. Homeowner's insurance</td><td>3.000</td><td>months</td><td>@</td><td>$</td><td>145.83</td><td>per</td><td>month</td><td>$</td><td>437.49</td><td></td><td></td></tr><tr><td>1003. Mortgage insurance</td><td></td><td>months</td><td>@</td><td>$</td><td></td><td>per</td><td>month</td><td>$</td><td></td><td></td><td></td></tr><tr><td>1004. Property taxes</td><td></td><td></td><td></td><td>$</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1005. Property Taxes</td><td>5.000</td><td>months</td><td>@</td><td>$</td><td>176.93</td><td>per</td><td>month</td><td>$</td><td>884.65</td><td></td><td></td></tr><tr><td>1006.</td><td></td><td>months</td><td>@</td><td>$</td><td></td><td>per</td><td>month</td><td>$</td><td></td><td></td><td></td></tr><tr><td>1007.</td><td></td><td>months</td><td>@</td><td>$</td><td></td><td>per</td><td>month</td><td>$</td><td></td><td></td><td></td></tr><tr><td>1008.</td><td></td><td></td><td></td><td>$</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1009. Aggregate Adjustment</td><td></td><td></td><td></td><td>$</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.029,t=0.318,r=0.970,b=0.429), with ID c7df51bd-e81e-415c-b334-0dbeb988ec4a -->\n\n<table><tbody><tr><td>1100. Title Charges</td><td></td><td></td></tr><tr><td>1101. Title services and lender's title insurance</td><td>(from GFE #4)</td><td>893.00</td></tr><tr><td>1102. Settlement or closing fee</td><td>$</td><td></td></tr><tr><td>1103. Owner's title insurance to Fidelity National Title Insurance Company</td><td>(from GFE #5)</td><td>585.00</td></tr><tr><td>1104. Lender's title insurance to Fidelity National Title Insurance Company</td><td>$    208.00</td><td></td></tr><tr><td>1105. Lender's title policy limit</td><td>$    100,000.00</td><td></td></tr><tr><td>1106. Owner's title policy limit</td><td>$    150,000.00</td><td></td></tr><tr><td>1107. Agent's portion of the total title insurance premium    to Covenant Real Estate Services, LLC</td><td>$    594.75</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.029,t=0.428,r=0.969,b=0.523), with ID 13262dbd-815e-4316-9bfb-195173d6aced -->\n\n<table><tbody><tr><td>1108. Underwriter's portion of the total title insurance premium to Fidelity National Title Insurance Company</td><td>$</td><td>198.25</td><td></td></tr><tr><td>1109. Deed Preparation</td><td>to Sam Jones Esq</td><td>$</td><td></td><td></td><td>100.00</td></tr><tr><td>1110.</td><td></td><td>$</td><td></td><td></td><td></td></tr><tr><td>1111.</td><td></td><td>$</td><td></td><td></td><td></td></tr><tr><td>1112.</td><td></td><td>$</td><td></td><td></td><td></td></tr><tr><td>1113.</td><td></td><td>$</td><td></td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.029,t=0.524,r=0.969,b=0.593), with ID c75bb24e-2673-4000-b461-28756be2e634 -->\n\n<table><tbody><tr><td>1200. Government Recording and Transfer Charges</td><td></td><td></td><td></td></tr><tr><td>1201. Government recording charges</td><td>to Clerk of the Circuit Court</td><td>(from GFE #7)</td><td>99.00</td></tr><tr><td>1202. Deed $</td><td>43.00</td><td>Mortgage $</td><td>56.00</td><td>Releases $</td><td>Other $</td><td></td></tr><tr><td>1203. Transfer taxes</td><td>to Clerk of the Circuit Court</td><td>(from GFE #8)</td><td>833.33</td></tr><tr><td>1204. City/County tax/stamps</td><td>Grantee Tax $</td><td>125.00</td><td>Grantee Tax $</td><td>83.33</td><td></td></tr><tr><td>1205. State tax/stamps</td><td>Grantee Tax $</td><td>375.00</td><td>Grantee Tax $</td><td>250.00</td><td></td></tr><tr><td>1206. Grantor Deed Recording Tax</td><td>to Clerk of the Circuit Court</td><td></td><td>150.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.029,t=0.593,r=0.969,b=0.675), with ID 064fe925-70fe-4b67-a434-8b4977b49335 -->\n\n<table><tbody><tr><td>1300. Additional Settlement Charges</td><td></td><td></td></tr><tr><td>1301. Required services that you can shop for</td><td>(from GFE #6)</td><td>500.00</td></tr><tr><td>1302. Survey</td><td>to Top Surveyors</td><td>$ 500.00</td><td></td></tr><tr><td>1303. Pest Inspection</td><td>to Pest Control Inc</td><td>$ </td><td></td><td>75.00</td></tr><tr><td>1304.</td><td></td><td>$ </td><td></td><td></td></tr><tr><td>1305.</td><td></td><td>$ </td><td></td><td></td></tr><tr><td>1400. Total Settlement Charges (enter on lines 103, Section J and 502, Section K)</td><td></td><td>7,427.47</td><td>9,325.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.029,t=0.677,r=0.969,b=0.762), with ID 5f19176e-543c-4b30-9223-0bb7a16e267e -->\n\n* Paid outside of closing by borrower(B), seller(S), lender(L), or third-party(T)\nBy signing page 1 of this statement, the signatories acknowledge receipt of a completed copy of page 2 & 3 of this three page statement. <!-- text, from page 0 (l=0.039,t=0.763,r=0.650,b=0.783), with ID 7411910c-eb4b-49cc-81c6-ec76ade7876b -->\n\nCertified to be a true copy. <!-- text, from page 0 (l=0.041,t=0.804,r=0.198,b=0.817), with ID 844ad286-8abb-4c37-a598-aa64ae5a32ba -->\n\nCovenant Real Estate Services, LLC, Settlement Agent <!-- text, from page 0 (l=0.498,t=0.794,r=0.817,b=0.805), with ID 7b77bf99-b011-4251-a4ef-58368a99d950 -->\n\nPage 2 of 3 <!-- marginalia, from page 0 (l=0.469,t=0.951,r=0.538,b=0.962), with ID 7cafb68e-3692-4b85-9ef4-bc034eda5d90 -->\n\n(SAMPLE.PDF.PFD/SAMPLE.PDF/3) <!-- marginalia, from page 0 (l=0.753,t=0.959,r=0.967,b=0.975), with ID f69fde31-29e4-4b70-8b7d-18ebec908a3e -->\n\n<table><tbody><tr><td>Comparison of Good Faith Estimate (GFE) and HUD-1 Charges</td><td>Good Faith Estimate</td><td>HUD-1</td></tr><tr><td>Charges That Cannot Increase</td><td>HUD-1 Line Number</td><td></td><td></td></tr><tr><td>Our origination charge</td><td># 801</td><td>1,000.00</td><td>1,000.00</td></tr><tr><td>Your adjusted origination charges</td><td># 803</td><td>1,000.00</td><td>1,000.00</td></tr><tr><td>Transfer taxes</td><td>#1203</td><td>833.33</td><td>833.33</td></tr></tbody></table> <!-- table, from page 0 (l=0.027,t=0.029,r=0.972,b=0.098), with ID dc4ea596-404b-4451-8c7b-5ac951ed146f -->\n\n<table><tbody><tr><td>Charges That in Total Cannot Increase More than 10%</td><td>Good Faith Estimate</td><td>HUD-1</td></tr><tr><td>Government recording charges</td><td>#1201</td><td>99.00</td><td>99.00</td></tr><tr><td>Appraisal fee</td><td># 804</td><td>350.00</td><td>400.00</td></tr><tr><td>Credit report</td><td># 805</td><td>55.00</td><td>45.00</td></tr><tr><td>Title services and lender's title insurance</td><td>#1101</td><td>785.00</td><td>893.00</td></tr><tr><td>Owner's title insurance to Fidelity National Title Insurance Comp</td><td># 1103</td><td>600.00</td><td>585.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.027,t=0.102,r=0.972,b=0.178), with ID 04ccc71a-8a80-42da-929f-72c699f8b61b -->\n\n<table><tbody><tr><td>Total</td><td>1,889.00</td><td>2,022.00</td></tr><tr><td>Increase between GFE and HUD-1 Charges</td><td>$</td><td>133.00 or</td><td>7.04%</td></tr></tbody></table> <!-- table, from page 0 (l=0.027,t=0.180,r=0.972,b=0.212), with ID 86310cd3-f800-4801-a873-eb65464a0aa8 -->\n\n<table><tbody><tr><td>Charges That Can Change</td><td>Good Faith Estimate</td><td>HUD-1</td></tr><tr><td>Initial deposit for your escrow account</td><td>#1001</td><td>1,322.14</td><td>1,322.14</td></tr><tr><td>Homeowner's insurance</td><td># 903</td><td>1,750.00</td><td>1,750.00</td></tr><tr><td>Survey</td><td>#1302</td><td>550.00</td><td>500.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.027,t=0.216,r=0.972,b=0.269), with ID 4cf35f61-7cdf-4cca-b2e4-24501651dadc -->\n\nLoan Terms\n\nYour initial loan amount is: $ 100,000.00\n\nYour loan term is: 30.00 years\n\nYour initial interest rate is: 4.5000 %\n\nYour initial monthly amount owed for principal, interest and any mortgage insurance is: $ 506.69 includes  \n[x] Principal  \n[x] Interest  \n[ ] Mortgage Insurance\n\nCan your interest rate rise?  \n[x] No  [ ] Yes, it can rise to a maximum of ________%. The first change will be on ________ and can change again every ___ months after ________. Every change date, your interest rate can increase or decrease by ________%. Over the life of the loan, your interest rate is guaranteed to never be lower than ________% or higher than ________%.\n\nEven if you make payments on time, can your loan balance rise?  \n[x] No  [ ] Yes, it can rise to a maximum of $_________.\n\nEven if you make payments on time, can your monthly amount owed for principal, interest, and mortgage insurance rise?  \n[x] No  [ ] Yes, the first increase can be on ________ and the monthly amount owed can rise to $__________.  \nThe maximum it can ever rise to is $__________.\n\nDoes your loan have a prepayment penalty?  \n[x] No  [ ] Yes, your maximum prepayment penalty is $__________.\n\nDoes your loan have a balloon payment?  \n[x] No  [ ] Yes, you have a balloon payment of $__________ due in ___ years on ________.\n\nTotal monthly amount owed including escrow account payments  \n[ ] You do not have a monthly escrow payment for items, such as property taxes and homeowner’s insurance. You must pay these items directly yourself.  \n[x] You have an additional monthly escrow payment of $322.76 that results in a total initial monthly amount owed of $829.45. This includes principal, interest, any mortgage insurance and any items checked below:  \n[x] Property taxes  \n[x] Homeowner’s insurance  \n[x] Flood insurance  \n[ ] Other (see page 4) <!-- form, from page 0 (l=0.027,t=0.273,r=0.972,b=0.711), with ID 1540b6f2-8f7a-488a-9c1f-67fe898c4bc7 -->\n\nNote: If you have any questions about the Settlement Charges and Loan Terms listed on this form, please contact your lender. <!-- text, from page 0 (l=0.028,t=0.712,r=0.760,b=0.727), with ID e610dc8d-7da8-4361-b264-2c1ae16ab26b -->\n\nPage 3 of 3 <!-- marginalia, from page 0 (l=0.468,t=0.958,r=0.539,b=0.971), with ID 86f957c3-2734-448d-a00c-e5b22de23d1c -->\n\nHUD-1 <!-- marginalia, from page 0 (l=0.894,t=0.958,r=0.941,b=0.971), with ID ab8bf4ff-58b9-4316-b0f2-70bdaa406206 -->\n\nHUD-1 Attachment <!-- text, from page 0 (l=0.378,t=0.047,r=0.656,b=0.073), with ID c6fa48ce-50ac-405c-9bee-2898da577d1f -->\n\n**Borrower(s):** John F. Doe and Jane E. Doe <!-- text, from page 0 (l=0.089,t=0.077,r=0.425,b=0.095), with ID 69747e12-13a2-4e47-b5c8-f1ad9cf68917 -->\n\n**Seller(s):** Joe S. Title <!-- text, from page 0 (l=0.553,t=0.078,r=0.725,b=0.095), with ID 95923680-989c-4fec-bc9f-887f70c33aec -->\n\nLender: Bank of Roanoke\nSettlement Agent: Covenant Real Estate Services, LLC\n(540)404-3213\n\nPlace of Settlement: 1626 Apperson Drive, Ste. C\nSalem, VA  24153\n\nSettlement Date: August 31, 8201\nProperty Location: 1425 XYZ Lane\nRoanoke, VA 24015 <!-- form, from page 0 (l=0.046,t=0.112,r=0.478,b=0.215), with ID 30df104f-18a7-45d8-8beb-eb42e4502e63 -->\n\n<table><tbody><tr><td colspan=\"3\">Seller Loan Payoff Details</td></tr><tr><td>Payoff First Mortgage</td><td colspan=\"2\">to ABC Bank</td></tr><tr><td>Loan Payoff</td><td colspan=\"2\">As of</td></tr><tr><td>Total Additional Interest</td><td>days @</td><td>Per Diem</td></tr><tr><td>Total Loan Payoff</td><td colspan=\"2\">89,500.22</td></tr></tbody></table> <!-- table, from page 0 (l=0.052,t=0.224,r=0.938,b=0.337), with ID 53f743a0-598e-4009-98ba-eb846ac7fa86 -->\n\n<table><tbody><tr><td colspan=\"3\">Adjusted Origination Charge Details</td></tr><tr><td colspan=\"2\">Origination Charge</td><td></td></tr><tr><td>Origination Fee</td><td></td><td>1,000.00</td></tr><tr><td>to</td><td>Bank of Roanoke</td><td></td></tr><tr><td></td><td>Total $</td><td>1,000.00</td></tr><tr><td colspan=\"3\">Origination Credit/Charge (points) for the specific interest rate chosen</td></tr><tr><td></td><td>Total $</td><td></td></tr><tr><td></td><td>Adjusted Origination Charges $</td><td>1,000.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.054,t=0.368,r=0.946,b=0.539), with ID db6833b4-5ffd-4deb-b375-e859c271ec2e -->\n\n<table><tbody><tr><td colspan=\"3\">Reserves Deposited with Lender</td></tr><tr><td>Homeowner's Insurance</td><td></td><td>437.49</td></tr><tr><td></td><td>3.000 at 145.83 per month</td><td></td></tr><tr><td></td><td></td><td>884.65</td></tr><tr><td></td><td>5.000 at 176.93 per month</td><td></td></tr><tr><td></td><td>Total $</td><td>1,322.14</td></tr></tbody></table> <!-- table, from page 0 (l=0.054,t=0.562,r=0.946,b=0.676), with ID 80a18fec-9813-488e-b204-4fe5bbae0448 -->\n\n<table><tbody><tr><td>Title Services and Lender's Title Insurance Details</td><td>BORROWER</td><td>SELLER</td></tr><tr><td>Settlement Fee<br>to Covenant Real Estate Services, LLC</td><td>500.00</td><td></td></tr><tr><td>Title Search Fee<br>to Title Exams Inc</td><td>125.00</td><td></td></tr><tr><td>CPL Fee<br>to Fidelity National Title Insurance Company</td><td>20.00</td><td></td></tr><tr><td>Update and Recording Fee<br>to Covenant Real Estate Services, LLC</td><td>40.00</td><td></td></tr><tr><td>Lender's title insurance<br>to Fidelity National Title Insurance Company</td><td>208.00</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.054,t=0.690,r=0.949,b=0.882), with ID 778b4096-d538-46a7-be30-5d9dc2722e8d -->\n\nWARNING:  It is a crime to knowingly make false statements to the United States on this or any similar form.  Penalties upon conviction can include a fine and imprisonment.  For details see:  Title 18 U.S. Code Section 1001 and Section 1010. <!-- text, from page 0 (l=0.054,t=0.900,r=0.929,b=0.923), with ID 8be0d0ad-4bd2-4aa9-8ef2-70142c808269 -->\n\n(SAMPLE.PDF.PFD/SAMPLE.PDF/3) <!-- marginalia, from page 0 (l=0.727,t=0.937,r=0.944,b=0.952), with ID acaf502f-6bc7-41f8-88bb-328abcb49783 -->\n\n<table><tbody><tr><td colspan=\"3\">HUD-1 Attachment - Continued</td></tr><tr><td></td><td>Total</td><td>$ 893.00 $ 0.00</td></tr><tr><td>Owner's Title Insurance</td><td>BORROWER</td><td>SELLER</td></tr><tr><td>Owner's Policy Premium<br>to Fidelity National Title Insurance Company</td><td>585.00</td><td></td></tr><tr><td></td><td>Total</td><td>$ 585.00 $ 0.00</td></tr><tr><td>Lender's Title Insurance<br>*fees also shown above in Title Services and Lender's Title Insurance Details</td><td>BORROWER</td><td>SELLER</td></tr><tr><td>Lender's Policy Premium<br>to Fidelity National Title Insurance Company</td><td>208.00</td><td></td></tr><tr><td></td><td>Total</td><td>$ 208.00 $ 0.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.050,t=0.043,r=0.953,b=0.322), with ID 9f2a9fb8-4d2c-48f0-a354-b75399f5241d -->\n\nWARNING:  It is a crime to knowingly make false statements to the United States on this or any similar form.  Penalties upon conviction can include a fine and imprisonment.  For details see:  Title 18 U.S. Code Section 1001 and Section 1010. <!-- text, from page 0 (l=0.052,t=0.899,r=0.932,b=0.925), with ID e3bdb895-6f3b-45dd-b5bd-24f0495d457b -->\n\n(SAMPLE.PDF.PFD/SAMPLE.PDF/3) <!-- marginalia, from page 0 (l=0.726,t=0.937,r=0.944,b=0.953), with ID 1d235cb2-d3db-4de0-b5ea-b5fc6f567092 -->",
+  "chunks": [
+    {
+      "text": "logo: U.S. Department of Housing and Urban Development",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.047780562192201614,
+            "t": 0.029029540717601776,
+            "r": 0.14492560923099518,
+            "b": 0.0926147922873497
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "f7c10a1a-1788-4cb7-bc8c-255e4e96dfa8"
+    },
+    {
+      "text": "OMB Approval No. 2502-0265",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7746734619140625,
+            "t": 0.03276163339614868,
+            "r": 0.9624286890029907,
+            "b": 0.04551742225885391
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "61abc3a6-1b6a-4201-8b72-c98098ce38d2"
+    },
+    {
+      "text": "A.  Settlement Statement (HUD-1)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.1691315919160843,
+            "t": 0.05455724522471428,
+            "r": 0.58537358045578,
+            "b": 0.07739636301994324
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "16bdb8ee-cd2a-4350-b093-49e9bb4bd2e4"
+    },
+    {
+      "text": "B.  Type of Loan\n\n1. [ ] FHA\n2. [ ] RHS\n3. [x] Conv. Unins.\n4. [ ] VA\n5. [ ] Conv. Ins.\n\n6.  File Number: SAMPLE.PDF\n\n7.  Loan Number:\n\n8.  Mortgage Insurance Case Number:",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.030783385038375854,
+            "t": 0.09171704947948456,
+            "r": 0.9700783491134644,
+            "b": 0.13222816586494446
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "73af0557-06ab-45e6-bb2e-3674062b9844"
+    },
+    {
+      "text": "C.  Note:  This form is furnished to give you a statement of actual settlement costs.  Amounts paid to and by the settlement agent are shown.  Items marked \"(p.o.c.)\" were paid outside the closing; they are shown here for informational purposes and are not included in the totals.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.03265818953514099,
+            "t": 0.13245435059070587,
+            "r": 0.9689122438430786,
+            "b": 0.15937168896198273
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "6f259fdf-41c9-468b-9895-e90d85f39db5"
+    },
+    {
+      "text": "D.  Name and Address of Borrower:\nJohn F. Doe and\nJane E. Doe\n\nE.  Name and Address of Seller:\nJoe S. Title\n\nF.  Name and Address of Lender:\nBank of Roanoke\n\nG.  Property Location:\n1425 XYZ Lane\nRoanoke, VA 24015\n\nH.  Settlement Agent:\nCovenant Real Estate Services, LLC\n1626 Apperson Drive, Ste. C\nSalem, VA  24153\nPh.  (540)404-3213\nPlace of Settlement:\n1626 Apperson Drive, Ste. C\nSalem, VA  24153\n\nI.  Settlement Date:\nAugust 31, 8201",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.03276705741882324,
+            "t": 0.1590757966041565,
+            "r": 0.9684265851974487,
+            "b": 0.3123944401741028
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "a2e30ac7-cd7b-4740-a3e5-af1570da0ecd"
+    },
+    {
+      "text": "<table><tbody><tr><td>J. Summary of Borrower's transaction</td></tr><tr><td>100. Gross Amount Due from Borrower:</td></tr><tr><td>101. Contract sales price</td><td>150,000.00</td></tr><tr><td>102. Personal property</td><td></td></tr><tr><td>103. Settlement Charges to Borrower (Line 1400)</td><td>7,427.47</td></tr><tr><td>104.</td><td></td></tr><tr><td>105.</td><td></td></tr><tr><td>Adjustments for items paid by Seller in advance</td></tr><tr><td>106. City/Town Taxes</td><td>to</td><td></td></tr><tr><td>107. County Taxes</td><td>to</td><td></td></tr><tr><td>108. Assessments</td><td>to</td><td></td></tr><tr><td>109.</td><td></td></tr><tr><td>110.</td><td></td></tr><tr><td>111.</td><td></td></tr><tr><td>112.</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.03177265822887421,
+            "t": 0.3149734139442444,
+            "r": 0.4987947344779968,
+            "b": 0.4675680994987488
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "0cdcffcd-54f6-4db7-b029-30b4cac71f05"
+    },
+    {
+      "text": "<table><tbody><tr><td>120. Gross Amount Due from Borrower</td><td>157,427.47</td></tr><tr><td>200. Amounts Paid by or in Behalf of Borrower</td><td></td></tr><tr><td>201. Deposit or earnest money</td><td>1,000.00</td></tr><tr><td>202. Principal amount of new loan(s)</td><td>100,000.00</td></tr><tr><td>203. Existing loan(s) taken subject to</td><td></td></tr><tr><td>204.</td><td></td></tr><tr><td>205.</td><td></td></tr><tr><td>206.</td><td></td></tr><tr><td>207.</td><td></td></tr><tr><td>208.</td><td></td></tr><tr><td>209.</td><td></td></tr><tr><td>Adjustments for items unpaid by Seller</td><td></td></tr><tr><td>210. City/Town Taxes      07/01/01   to   09/01/01</td><td>235.87</td></tr><tr><td>211. County Taxes                    to</td><td></td></tr><tr><td>212. Assessments                    to</td><td></td></tr><tr><td>213.</td><td></td></tr><tr><td>214.</td><td></td></tr><tr><td>215.</td><td></td></tr><tr><td>216.</td><td></td></tr><tr><td>217.</td><td></td></tr><tr><td>218.</td><td></td></tr><tr><td>219.</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.032416462898254395,
+            "t": 0.4702712297439575,
+            "r": 0.4971977472305298,
+            "b": 0.6984649896621704
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "8cbfe286-72d2-4423-8acc-8c93c26c8158"
+    },
+    {
+      "text": "<table>\n  <tr>\n    <td>220.</td>\n    <td>Total Paid by/for Borrower</td>\n    <td></td>\n    <td>101,235.87</td>\n  </tr>\n  <tr>\n    <td colspan=\"4\"><b>300. Cash at Settlement from/to Borrower</b></td>\n  </tr>\n  <tr>\n    <td>301.</td>\n    <td>Gross amount due from Borrower (line 120)</td>\n    <td></td>\n    <td>157,427.47</td>\n  </tr>\n  <tr>\n    <td>302.</td>\n    <td>Less amount paid by/for Borrower (line 220)</td>\n    <td></td>\n    <td>( 101,235.87)</td>\n  </tr>\n  <tr>\n    <td>303.</td>\n    <td>Cash <span style=\"border:1px solid #000;padding:0 4px;\">X</span> From <span style=\"border:1px solid #000;padding:0 4px;\">&nbsp;&nbsp;</span> To Borrower</td>\n    <td></td>\n    <td>56,191.60</td>\n  </tr>\n</table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.03151595592498779,
+            "t": 0.7011666297912598,
+            "r": 0.4984988570213318,
+            "b": 0.7672079801559448
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "0fa11fb0-746a-4836-b6b2-df88960659b4"
+    },
+    {
+      "text": "<table><tbody><tr><td>K. Summary of Seller's transaction</td></tr><tr><td>400. Gross Amount Due to Seller:</td></tr><tr><td>401. Contract sales price</td><td>150,000.00</td></tr><tr><td>402. Personal property</td><td></td></tr><tr><td>403.</td><td></td></tr><tr><td>404.</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5060137510299683,
+            "t": 0.31602469086647034,
+            "r": 0.967265248298645,
+            "b": 0.3842903673648834
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "dfe03861-0ffb-4af2-9ee1-a4b70bc3b0e7"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">Adjustments for items paid by Seller in advance</td></tr><tr><td>406. City/Town Taxes</td><td>to</td><td></td></tr><tr><td>407. County Taxes</td><td>to</td><td></td></tr><tr><td>408. Assessments</td><td>to</td><td></td></tr><tr><td>409.</td><td></td><td></td></tr><tr><td>410.</td><td></td><td></td></tr><tr><td>411.</td><td></td><td></td></tr><tr><td>412.</td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5063043832778931,
+            "t": 0.3863089084625244,
+            "r": 0.9666117429733276,
+            "b": 0.46976035833358765
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "acd74c35-0930-4d61-8ba5-1dacaaa98b44"
+    },
+    {
+      "text": "<table><tbody><tr><td>420. Gross Amount Due to Seller</td><td>150,000.00</td></tr><tr><td>500. Reductions in Amount Due Seller:</td><td></td></tr><tr><td>501. Excess deposit (see instructions)</td><td></td></tr><tr><td>502. Settlement charges to Seller (Line 1400)</td><td>9,325.00</td></tr><tr><td>503. Existing loan(s) taken subject to</td><td></td></tr><tr><td>504. Payoff First Mortgage to ABC Bank</td><td>89,500.22</td></tr><tr><td>505. Payoff Second Mortgage</td><td></td></tr><tr><td>506.</td><td></td></tr><tr><td>507. (Deposit disb. as proceeds)</td><td></td></tr><tr><td>508.</td><td></td></tr><tr><td>509.</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5070685744285583,
+            "t": 0.4713229537010193,
+            "r": 0.9673635363578796,
+            "b": 0.5848715901374817
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "c111bfc9-69da-44d0-9d43-81b1b56aa0b3"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">Adjustments for items unpaid by Seller</td></tr><tr><td>510. City/Town Taxes</td><td>07/01/01 to 09/01/01</td><td>235.87</td></tr><tr><td>511. County Taxes</td><td>to</td><td></td></tr><tr><td>512. Assessments</td><td>to</td><td></td></tr><tr><td>513.</td><td></td><td></td></tr><tr><td>514.</td><td></td><td></td></tr><tr><td>515.</td><td></td><td></td></tr><tr><td>516.</td><td></td><td></td></tr><tr><td>517.</td><td></td><td></td></tr><tr><td>518.</td><td></td><td></td></tr><tr><td>519.</td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5069889426231384,
+            "t": 0.5878021717071533,
+            "r": 0.9670194983482361,
+            "b": 0.6981523036956787
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "9510c996-0119-4532-838a-6c9ca62de512"
+    },
+    {
+      "text": "<table>\n  <tr>\n    <td>520. <b>Total Reduction Amount Due Seller</b></td>\n    <td align=\"right\">99,061.09</td>\n  </tr>\n  <tr>\n    <td colspan=\"2\"><b>600. Cash at settlement to/from Seller</b></td>\n  </tr>\n  <tr>\n    <td>601. Gross amount due to Seller (line 420)</td>\n    <td align=\"right\">150,000.00</td>\n  </tr>\n  <tr>\n    <td>602. Less reductions due Seller (line 520)</td>\n    <td align=\"right\">( 99,061.09)</td>\n  </tr>\n  <tr>\n    <td>603. <b>Cash</b> <span style=\"border:1px solid #000;padding:0 6px;\">X</span> To <span style=\"border:1px solid #000;padding:0 6px;\">&nbsp;&nbsp;&nbsp;&nbsp;</span> <b>From Seller</b></td>\n    <td align=\"right\">50,938.91</td>\n  </tr>\n</table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.507475733757019,
+            "t": 0.7006771564483643,
+            "r": 0.9679750204086304,
+            "b": 0.7666261196136475
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "89c74767-d5fe-4631-9558-c3eb9edfb89b"
+    },
+    {
+      "text": "*Paid outside of closing by borrower(B), seller(S), lender(L), or third-party(T)\nThe undersigned hereby acknowledge receipt of a completed copy of this statement & any attachments referred to herein\n        Borrower ________________________________        Seller _______________________________________\n                        John F. Doe                                             Joe S. Title",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.03917530179023743,
+            "t": 0.7699406147003174,
+            "r": 0.8690911531448364,
+            "b": 0.8158775568008423
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "df820629-1380-4dfd-9f9e-15e20bac44e7"
+    },
+    {
+      "text": "_____________________________\nJane E. Doe\n\nTO THE BEST OF MY KNOWLEDGE, THE HUD-1 SETTLEMENT STATEMENT WHICH I HAVE PREPARED IS A TRUE AND ACCURATE ACCOUNT OF THE FUNDS WHICH WERE RECEIVED AND HAVE BEEN OR WILL BE DISBURSED BY THE UNDERSIGNED AS PART OF THE SETTLEMENT OF THIS TRANSACTION.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0386696457862854,
+            "t": 0.8267958760261536,
+            "r": 0.9351288676261902,
+            "b": 0.8689737915992737
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "2f423a24-3789-442f-a571-87daf669af6b"
+    },
+    {
+      "text": "Covenant Real Estate Services, LLC, Settlement Agent\n\nWARNING:  IT IS A CRIME TO KNOWINGLY MAKE FALSE STATEMENTS TO THE UNITED STATES ON THIS OR ANY SIMILAR FORM.  PENALTIES UPON CONVICTION CAN INCLUDE A FINE AND IMPRISONMENT.  FOR DETAILS SEE:  TITLE 18 U.S. CODE SECTION 1001 & SECTION 1010.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.04039612412452698,
+            "t": 0.8776223063468933,
+            "r": 0.929561972618103,
+            "b": 0.9121180176734924
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "aa47ead9-c3b8-42b9-a69a-1b3b8bd7259b"
+    },
+    {
+      "text": "The Public Reporting Burden for this collection of information is estimated at 35 minutes per response for collecting, reviewing, and reporting the data. This agency may not collect this information, and you are not required to complete this form, unless it displays a currently valid OMB control number. No confidentiality is assured; this disclosure is mandatory. This is designed to provide the parties to a RESPA covered transaction with information during the settlement process.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.04087057709693909,
+            "t": 0.933465301990509,
+            "r": 0.9612909555435181,
+            "b": 0.9547250866889954
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "36faac8c-5ca0-405b-8cf9-a0b255bcb1bc"
+    },
+    {
+      "text": "Page 1 of 3",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4722211956977844,
+            "t": 0.9534878134727478,
+            "r": 0.5408254265785217,
+            "b": 0.9637134671211243
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "33897187-2ca3-450a-8507-401fc68da0a9"
+    },
+    {
+      "text": "HUD-1  \n(SAMPLE.PDF.PFD/SAMPLE.PDF/3)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7556029558181763,
+            "t": 0.9519662261009216,
+            "r": 0.9702529907226562,
+            "b": 0.9754413962364197
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "a5b0b96b-f227-4d1e-aa5f-6e9e606aa454"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">L. Settlement Charges</td></tr><tr><td>700. Total Real Estate Broker Fees</td><td>$ 9,000.00</td><td></td><td>Paid From Borrower's Funds at Settlement</td><td>Paid From Seller's Funds at Settlement</td></tr><tr><td colspan=\"3\">Division of commission (line 700) as follows:</td><td></td><td></td></tr><tr><td>701. $ 9,000.00</td><td>to</td><td>ReMax</td><td></td><td></td></tr><tr><td>702. $</td><td>to</td><td></td><td></td><td></td></tr><tr><td>703. Commission paid at settlement</td><td></td><td></td><td></td><td>9,000.00</td></tr><tr><td>704.</td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.02703717350959778,
+            "t": 0.03157324343919754,
+            "r": 0.9705232381820679,
+            "b": 0.11294833570718765
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "88d9ccfc-a8af-443c-8235-0757da32317d"
+    },
+    {
+      "text": "<table><tbody><tr><td>800. Items Payable in Connection with Loan</td><td></td><td></td><td></td></tr><tr><td>801. Our origination charge</td><td>$</td><td>1,000.00</td><td>(from GFE #1)</td><td></td><td></td></tr><tr><td>802. Your credit or charge (points) for the specific interest rate chosen</td><td>$</td><td></td><td>(from GFE #2)</td><td></td><td></td></tr><tr><td>803. Your adjusted origination charges</td><td></td><td></td><td>(from GFE #A)</td><td>1,000.00</td><td></td></tr><tr><td>804. Appraisal fee</td><td>to</td><td>Appraisers United</td><td>(from GFE #3)</td><td>400.00</td><td></td></tr><tr><td>805. Credit Report</td><td>to</td><td>Credit Solutions</td><td>(from GFE #3)</td><td>45.00</td><td></td></tr><tr><td>806. Tax service</td><td>to</td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>807. Flood certification</td><td>to</td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>808.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>809.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>810.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr><tr><td>811.</td><td></td><td></td><td>(from GFE #3)</td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.02822175621986389,
+            "t": 0.11305797845125198,
+            "r": 0.9699784517288208,
+            "b": 0.24798578023910522
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "f6c8194e-91bb-472c-9fa8-30b05402796c"
+    },
+    {
+      "text": "<table><tbody><tr><td>900. Items Required by Lender to Be Paid in Advance</td><td></td><td></td></tr><tr><td>901. Daily interest charges from 08/31/15 to 09/01/15</td><td>0 @ $/day (from GFE #10)</td><td></td></tr><tr><td>902. Mortgage insurance premium for months to</td><td>(from GFE #3)</td><td></td></tr><tr><td>903. Homeowner's insurance for 1.0 years to Elephant Insurance</td><td>(from GFE #11)</td><td>1,750.00</td></tr><tr><td>904.</td><td>(from GFE #11)</td><td></td></tr><tr><td>905.</td><td>(from GFE #11)</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.028280436992645264,
+            "t": 0.2476721704006195,
+            "r": 0.9700703024864197,
+            "b": 0.3175595700740814
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "c270ec1a-3a5a-4d52-a288-853f409d563a"
+    },
+    {
+      "text": "<table><tbody><tr><td>1000. Reserves Deposited with Lender</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1001. Initial deposit for your escrow account</td><td>(from GFE #9)</td><td>1,322.14</td><td></td></tr><tr><td>1002. Homeowner's insurance</td><td>3.000</td><td>months</td><td>@</td><td>$</td><td>145.83</td><td>per</td><td>month</td><td>$</td><td>437.49</td><td></td><td></td></tr><tr><td>1003. Mortgage insurance</td><td></td><td>months</td><td>@</td><td>$</td><td></td><td>per</td><td>month</td><td>$</td><td></td><td></td><td></td></tr><tr><td>1004. Property taxes</td><td></td><td></td><td></td><td>$</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1005. Property Taxes</td><td>5.000</td><td>months</td><td>@</td><td>$</td><td>176.93</td><td>per</td><td>month</td><td>$</td><td>884.65</td><td></td><td></td></tr><tr><td>1006.</td><td></td><td>months</td><td>@</td><td>$</td><td></td><td>per</td><td>month</td><td>$</td><td></td><td></td><td></td></tr><tr><td>1007.</td><td></td><td>months</td><td>@</td><td>$</td><td></td><td>per</td><td>month</td><td>$</td><td></td><td></td><td></td></tr><tr><td>1008.</td><td></td><td></td><td></td><td>$</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1009. Aggregate Adjustment</td><td></td><td></td><td></td><td>$</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.028871804475784302,
+            "t": 0.3182622790336609,
+            "r": 0.9697638750076294,
+            "b": 0.4294242858886719
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "c7df51bd-e81e-415c-b334-0dbeb988ec4a"
+    },
+    {
+      "text": "<table><tbody><tr><td>1100. Title Charges</td><td></td><td></td></tr><tr><td>1101. Title services and lender's title insurance</td><td>(from GFE #4)</td><td>893.00</td></tr><tr><td>1102. Settlement or closing fee</td><td>$</td><td></td></tr><tr><td>1103. Owner's title insurance to Fidelity National Title Insurance Company</td><td>(from GFE #5)</td><td>585.00</td></tr><tr><td>1104. Lender's title insurance to Fidelity National Title Insurance Company</td><td>$    208.00</td><td></td></tr><tr><td>1105. Lender's title policy limit</td><td>$    100,000.00</td><td></td></tr><tr><td>1106. Owner's title policy limit</td><td>$    150,000.00</td><td></td></tr><tr><td>1107. Agent's portion of the total title insurance premium    to Covenant Real Estate Services, LLC</td><td>$    594.75</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.02893969416618347,
+            "t": 0.42849990725517273,
+            "r": 0.9692261219024658,
+            "b": 0.5232530236244202
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "13262dbd-815e-4316-9bfb-195173d6aced"
+    },
+    {
+      "text": "<table><tbody><tr><td>1108. Underwriter's portion of the total title insurance premium to Fidelity National Title Insurance Company</td><td>$</td><td>198.25</td><td></td></tr><tr><td>1109. Deed Preparation</td><td>to Sam Jones Esq</td><td>$</td><td></td><td></td><td>100.00</td></tr><tr><td>1110.</td><td></td><td>$</td><td></td><td></td><td></td></tr><tr><td>1111.</td><td></td><td>$</td><td></td><td></td><td></td></tr><tr><td>1112.</td><td></td><td>$</td><td></td><td></td><td></td></tr><tr><td>1113.</td><td></td><td>$</td><td></td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.028722494840621948,
+            "t": 0.523505687713623,
+            "r": 0.9688733816146851,
+            "b": 0.5926486253738403
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "c75bb24e-2673-4000-b461-28756be2e634"
+    },
+    {
+      "text": "<table><tbody><tr><td>1200. Government Recording and Transfer Charges</td><td></td><td></td><td></td></tr><tr><td>1201. Government recording charges</td><td>to Clerk of the Circuit Court</td><td>(from GFE #7)</td><td>99.00</td></tr><tr><td>1202. Deed $</td><td>43.00</td><td>Mortgage $</td><td>56.00</td><td>Releases $</td><td>Other $</td><td></td></tr><tr><td>1203. Transfer taxes</td><td>to Clerk of the Circuit Court</td><td>(from GFE #8)</td><td>833.33</td></tr><tr><td>1204. City/County tax/stamps</td><td>Grantee Tax $</td><td>125.00</td><td>Grantee Tax $</td><td>83.33</td><td></td></tr><tr><td>1205. State tax/stamps</td><td>Grantee Tax $</td><td>375.00</td><td>Grantee Tax $</td><td>250.00</td><td></td></tr><tr><td>1206. Grantor Deed Recording Tax</td><td>to Clerk of the Circuit Court</td><td></td><td>150.00</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.029323846101760864,
+            "t": 0.5926305651664734,
+            "r": 0.9692486524581909,
+            "b": 0.6753764748573303
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "064fe925-70fe-4b67-a434-8b4977b49335"
+    },
+    {
+      "text": "<table><tbody><tr><td>1300. Additional Settlement Charges</td><td></td><td></td></tr><tr><td>1301. Required services that you can shop for</td><td>(from GFE #6)</td><td>500.00</td></tr><tr><td>1302. Survey</td><td>to Top Surveyors</td><td>$ 500.00</td><td></td></tr><tr><td>1303. Pest Inspection</td><td>to Pest Control Inc</td><td>$ </td><td></td><td>75.00</td></tr><tr><td>1304.</td><td></td><td>$ </td><td></td><td></td></tr><tr><td>1305.</td><td></td><td>$ </td><td></td><td></td></tr><tr><td>1400. Total Settlement Charges (enter on lines 103, Section J and 502, Section K)</td><td></td><td>7,427.47</td><td>9,325.00</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.02876397967338562,
+            "t": 0.6772869825363159,
+            "r": 0.9694573879241943,
+            "b": 0.7616740465164185
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "5f19176e-543c-4b30-9223-0bb7a16e267e"
+    },
+    {
+      "text": "* Paid outside of closing by borrower(B), seller(S), lender(L), or third-party(T)\nBy signing page 1 of this statement, the signatories acknowledge receipt of a completed copy of page 2 & 3 of this three page statement.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.03899058699607849,
+            "t": 0.7625518441200256,
+            "r": 0.6495034694671631,
+            "b": 0.7830125689506531
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "7411910c-eb4b-49cc-81c6-ec76ade7876b"
+    },
+    {
+      "text": "Certified to be a true copy.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.041089512407779694,
+            "t": 0.8042845726013184,
+            "r": 0.19757062196731567,
+            "b": 0.8167344331741333
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "844ad286-8abb-4c37-a598-aa64ae5a32ba"
+    },
+    {
+      "text": "Covenant Real Estate Services, LLC, Settlement Agent",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4979074001312256,
+            "t": 0.7937642335891724,
+            "r": 0.8166970014572144,
+            "b": 0.8053315877914429
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "7b77bf99-b011-4251-a4ef-58368a99d950"
+    },
+    {
+      "text": "Page 2 of 3",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4691084027290344,
+            "t": 0.9514983296394348,
+            "r": 0.5383026003837585,
+            "b": 0.9621849656105042
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "7cafb68e-3692-4b85-9ef4-bc034eda5d90"
+    },
+    {
+      "text": "(SAMPLE.PDF.PFD/SAMPLE.PDF/3)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.753470778465271,
+            "t": 0.9586787223815918,
+            "r": 0.967404842376709,
+            "b": 0.9745174646377563
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "f69fde31-29e4-4b70-8b7d-18ebec908a3e"
+    },
+    {
+      "text": "<table><tbody><tr><td>Comparison of Good Faith Estimate (GFE) and HUD-1 Charges</td><td>Good Faith Estimate</td><td>HUD-1</td></tr><tr><td>Charges That Cannot Increase</td><td>HUD-1 Line Number</td><td></td><td></td></tr><tr><td>Our origination charge</td><td># 801</td><td>1,000.00</td><td>1,000.00</td></tr><tr><td>Your adjusted origination charges</td><td># 803</td><td>1,000.00</td><td>1,000.00</td></tr><tr><td>Transfer taxes</td><td>#1203</td><td>833.33</td><td>833.33</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.026534229516983032,
+            "t": 0.029224783182144165,
+            "r": 0.9720636606216431,
+            "b": 0.09835803508758545
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "dc4ea596-404b-4451-8c7b-5ac951ed146f"
+    },
+    {
+      "text": "<table><tbody><tr><td>Charges That in Total Cannot Increase More than 10%</td><td>Good Faith Estimate</td><td>HUD-1</td></tr><tr><td>Government recording charges</td><td>#1201</td><td>99.00</td><td>99.00</td></tr><tr><td>Appraisal fee</td><td># 804</td><td>350.00</td><td>400.00</td></tr><tr><td>Credit report</td><td># 805</td><td>55.00</td><td>45.00</td></tr><tr><td>Title services and lender's title insurance</td><td>#1101</td><td>785.00</td><td>893.00</td></tr><tr><td>Owner's title insurance to Fidelity National Title Insurance Comp</td><td># 1103</td><td>600.00</td><td>585.00</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.027327120304107666,
+            "t": 0.10249188542366028,
+            "r": 0.9724434614181519,
+            "b": 0.17801141738891602
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "04ccc71a-8a80-42da-929f-72c699f8b61b"
+    },
+    {
+      "text": "<table><tbody><tr><td>Total</td><td>1,889.00</td><td>2,022.00</td></tr><tr><td>Increase between GFE and HUD-1 Charges</td><td>$</td><td>133.00 or</td><td>7.04%</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.026598840951919556,
+            "t": 0.17997191846370697,
+            "r": 0.9723937511444092,
+            "b": 0.21164004504680634
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "86310cd3-f800-4801-a873-eb65464a0aa8"
+    },
+    {
+      "text": "<table><tbody><tr><td>Charges That Can Change</td><td>Good Faith Estimate</td><td>HUD-1</td></tr><tr><td>Initial deposit for your escrow account</td><td>#1001</td><td>1,322.14</td><td>1,322.14</td></tr><tr><td>Homeowner's insurance</td><td># 903</td><td>1,750.00</td><td>1,750.00</td></tr><tr><td>Survey</td><td>#1302</td><td>550.00</td><td>500.00</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.02721753716468811,
+            "t": 0.21576698124408722,
+            "r": 0.971770167350769,
+            "b": 0.2689524292945862
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "4cf35f61-7cdf-4cca-b2e4-24501651dadc"
+    },
+    {
+      "text": "Loan Terms\n\nYour initial loan amount is: $ 100,000.00\n\nYour loan term is: 30.00 years\n\nYour initial interest rate is: 4.5000 %\n\nYour initial monthly amount owed for principal, interest and any mortgage insurance is: $ 506.69 includes  \n[x] Principal  \n[x] Interest  \n[ ] Mortgage Insurance\n\nCan your interest rate rise?  \n[x] No  [ ] Yes, it can rise to a maximum of ________%. The first change will be on ________ and can change again every ___ months after ________. Every change date, your interest rate can increase or decrease by ________%. Over the life of the loan, your interest rate is guaranteed to never be lower than ________% or higher than ________%.\n\nEven if you make payments on time, can your loan balance rise?  \n[x] No  [ ] Yes, it can rise to a maximum of $_________.\n\nEven if you make payments on time, can your monthly amount owed for principal, interest, and mortgage insurance rise?  \n[x] No  [ ] Yes, the first increase can be on ________ and the monthly amount owed can rise to $__________.  \nThe maximum it can ever rise to is $__________.\n\nDoes your loan have a prepayment penalty?  \n[x] No  [ ] Yes, your maximum prepayment penalty is $__________.\n\nDoes your loan have a balloon payment?  \n[x] No  [ ] Yes, you have a balloon payment of $__________ due in ___ years on ________.\n\nTotal monthly amount owed including escrow account payments  \n[ ] You do not have a monthly escrow payment for items, such as property taxes and homeowner’s insurance. You must pay these items directly yourself.  \n[x] You have an additional monthly escrow payment of $322.76 that results in a total initial monthly amount owed of $829.45. This includes principal, interest, any mortgage insurance and any items checked below:  \n[x] Property taxes  \n[x] Homeowner’s insurance  \n[x] Flood insurance  \n[ ] Other (see page 4)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.026899605989456177,
+            "t": 0.2726327180862427,
+            "r": 0.972317099571228,
+            "b": 0.7105353474617004
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "1540b6f2-8f7a-488a-9c1f-67fe898c4bc7"
+    },
+    {
+      "text": "Note: If you have any questions about the Settlement Charges and Loan Terms listed on this form, please contact your lender.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.028272390365600586,
+            "t": 0.7116773724555969,
+            "r": 0.7599753141403198,
+            "b": 0.7272067666053772
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "e610dc8d-7da8-4361-b264-2c1ae16ab26b"
+    },
+    {
+      "text": "Page 3 of 3",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.46818411350250244,
+            "t": 0.9582381248474121,
+            "r": 0.5394898653030396,
+            "b": 0.9714699983596802
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "86f957c3-2734-448d-a00c-e5b22de23d1c"
+    },
+    {
+      "text": "HUD-1",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8936140537261963,
+            "t": 0.9577813744544983,
+            "r": 0.9412606954574585,
+            "b": 0.9709692597389221
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "ab8bf4ff-58b9-4316-b0f2-70bdaa406206"
+    },
+    {
+      "text": "HUD-1 Attachment",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.3783414959907532,
+            "t": 0.04701835289597511,
+            "r": 0.6560452580451965,
+            "b": 0.07325242459774017
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "c6fa48ce-50ac-405c-9bee-2898da577d1f"
+    },
+    {
+      "text": "**Borrower(s):** John F. Doe and Jane E. Doe",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08892235159873962,
+            "t": 0.07651196420192719,
+            "r": 0.4249895513057709,
+            "b": 0.09452606737613678
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "69747e12-13a2-4e47-b5c8-f1ad9cf68917"
+    },
+    {
+      "text": "**Seller(s):** Joe S. Title",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5530666708946228,
+            "t": 0.07785988599061966,
+            "r": 0.7247090935707092,
+            "b": 0.09464419633150101
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "95923680-989c-4fec-bc9f-887f70c33aec"
+    },
+    {
+      "text": "Lender: Bank of Roanoke\nSettlement Agent: Covenant Real Estate Services, LLC\n(540)404-3213\n\nPlace of Settlement: 1626 Apperson Drive, Ste. C\nSalem, VA  24153\n\nSettlement Date: August 31, 8201\nProperty Location: 1425 XYZ Lane\nRoanoke, VA 24015",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.04621309041976929,
+            "t": 0.11180669069290161,
+            "r": 0.47811388969421387,
+            "b": 0.21504318714141846
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "30df104f-18a7-45d8-8beb-eb42e4502e63"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">Seller Loan Payoff Details</td></tr><tr><td>Payoff First Mortgage</td><td colspan=\"2\">to ABC Bank</td></tr><tr><td>Loan Payoff</td><td colspan=\"2\">As of</td></tr><tr><td>Total Additional Interest</td><td>days @</td><td>Per Diem</td></tr><tr><td>Total Loan Payoff</td><td colspan=\"2\">89,500.22</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05239909887313843,
+            "t": 0.223774716258049,
+            "r": 0.938212513923645,
+            "b": 0.336932897567749
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "53f743a0-598e-4009-98ba-eb846ac7fa86"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">Adjusted Origination Charge Details</td></tr><tr><td colspan=\"2\">Origination Charge</td><td></td></tr><tr><td>Origination Fee</td><td></td><td>1,000.00</td></tr><tr><td>to</td><td>Bank of Roanoke</td><td></td></tr><tr><td></td><td>Total $</td><td>1,000.00</td></tr><tr><td colspan=\"3\">Origination Credit/Charge (points) for the specific interest rate chosen</td></tr><tr><td></td><td>Total $</td><td></td></tr><tr><td></td><td>Adjusted Origination Charges $</td><td>1,000.00</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05410724878311157,
+            "t": 0.3679125905036926,
+            "r": 0.945975124835968,
+            "b": 0.5393604040145874
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "db6833b4-5ffd-4deb-b375-e859c271ec2e"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">Reserves Deposited with Lender</td></tr><tr><td>Homeowner's Insurance</td><td></td><td>437.49</td></tr><tr><td></td><td>3.000 at 145.83 per month</td><td></td></tr><tr><td></td><td></td><td>884.65</td></tr><tr><td></td><td>5.000 at 176.93 per month</td><td></td></tr><tr><td></td><td>Total $</td><td>1,322.14</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05429232120513916,
+            "t": 0.5618433952331543,
+            "r": 0.9464091062545776,
+            "b": 0.6760640144348145
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "80a18fec-9813-488e-b204-4fe5bbae0448"
+    },
+    {
+      "text": "<table><tbody><tr><td>Title Services and Lender's Title Insurance Details</td><td>BORROWER</td><td>SELLER</td></tr><tr><td>Settlement Fee<br>to Covenant Real Estate Services, LLC</td><td>500.00</td><td></td></tr><tr><td>Title Search Fee<br>to Title Exams Inc</td><td>125.00</td><td></td></tr><tr><td>CPL Fee<br>to Fidelity National Title Insurance Company</td><td>20.00</td><td></td></tr><tr><td>Update and Recording Fee<br>to Covenant Real Estate Services, LLC</td><td>40.00</td><td></td></tr><tr><td>Lender's title insurance<br>to Fidelity National Title Insurance Company</td><td>208.00</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05356547236442566,
+            "t": 0.6899921894073486,
+            "r": 0.9490643739700317,
+            "b": 0.8815387487411499
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "778b4096-d538-46a7-be30-5d9dc2722e8d"
+    },
+    {
+      "text": "WARNING:  It is a crime to knowingly make false statements to the United States on this or any similar form.  Penalties upon conviction can include a fine and imprisonment.  For details see:  Title 18 U.S. Code Section 1001 and Section 1010.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05399838089942932,
+            "t": 0.9000241756439209,
+            "r": 0.9287322759628296,
+            "b": 0.9234253168106079
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "8be0d0ad-4bd2-4aa9-8ef2-70142c808269"
+    },
+    {
+      "text": "(SAMPLE.PDF.PFD/SAMPLE.PDF/3)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7269547581672668,
+            "t": 0.936998188495636,
+            "r": 0.9437931180000305,
+            "b": 0.9520719647407532
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "acaf502f-6bc7-41f8-88bb-328abcb49783"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">HUD-1 Attachment - Continued</td></tr><tr><td></td><td>Total</td><td>$ 893.00 $ 0.00</td></tr><tr><td>Owner's Title Insurance</td><td>BORROWER</td><td>SELLER</td></tr><tr><td>Owner's Policy Premium<br>to Fidelity National Title Insurance Company</td><td>585.00</td><td></td></tr><tr><td></td><td>Total</td><td>$ 585.00 $ 0.00</td></tr><tr><td>Lender's Title Insurance<br>*fees also shown above in Title Services and Lender's Title Insurance Details</td><td>BORROWER</td><td>SELLER</td></tr><tr><td>Lender's Policy Premium<br>to Fidelity National Title Insurance Company</td><td>208.00</td><td></td></tr><tr><td></td><td>Total</td><td>$ 208.00 $ 0.00</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05004918575286865,
+            "t": 0.0426311194896698,
+            "r": 0.9531562328338623,
+            "b": 0.3216252624988556
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "9f2a9fb8-4d2c-48f0-a354-b75399f5241d"
+    },
+    {
+      "text": "WARNING:  It is a crime to knowingly make false statements to the United States on this or any similar form.  Penalties upon conviction can include a fine and imprisonment.  For details see:  Title 18 U.S. Code Section 1001 and Section 1010.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.05223068594932556,
+            "t": 0.8992812037467957,
+            "r": 0.9320214986801147,
+            "b": 0.9245100617408752
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "e3bdb895-6f3b-45dd-b5bd-24f0495d457b"
+    },
+    {
+      "text": "(SAMPLE.PDF.PFD/SAMPLE.PDF/3)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7263170480728149,
+            "t": 0.9365553855895996,
+            "r": 0.9443917274475098,
+            "b": 0.952561616897583
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "1d235cb2-d3db-4de0-b5ea-b5fc6f567092"
+    }
+  ]
+}

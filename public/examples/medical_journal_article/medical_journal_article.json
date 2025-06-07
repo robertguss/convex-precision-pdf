@@ -1,0 +1,1845 @@
+{
+  "markdown": "logo: circular icon with red bookmark and blue/yellow background\nCheck for updates <!-- marginalia, from page 0 (l=0.868,t=0.001,r=1.000,b=0.022), with ID df9b2037-3fbf-4323-8062-e3573cd06793 -->\n\nReceived: 18 December 2020 <!-- marginalia, from page 0 (l=0.071,t=0.036,r=0.237,b=0.051), with ID 2accc4fd-fad5-405e-b740-7040d19c1210 -->\n\nRevised: 28 January 2021 <!-- marginalia, from page 0 (l=0.248,t=0.036,r=0.400,b=0.052), with ID 8a08d6b2-0139-4ccf-907c-c9c804532b9f -->\n\nAccepted: 8 February 2021 <!-- marginalia, from page 0 (l=0.408,t=0.036,r=0.562,b=0.052), with ID d21fc722-50bd-4994-9221-92368bb24226 -->\n\nDOI: 10.1002/cnr2.1357 <!-- marginalia, from page 0 (l=0.071,t=0.053,r=0.211,b=0.068), with ID 7810c5e7-1419-4051-9306-c59944f06463 -->\n\nORIGINAL ARTICLE\n___ <!-- text, from page 0 (l=0.069,t=0.082,r=0.266,b=0.106), with ID afc0eae1-8499-4afc-bcf2-e7b087592ce5 -->\n\nlogo: Cancer Reports Open Access\n\nlogo: WILEY <!-- figure, from page 0 (l=0.617,t=0.073,r=0.927,b=0.103), with ID ea5e9628-312b-4265-a17e-089bff43e1ab -->\n\nA 4K score/MRI-based nomogram for predicting prostate cancer, clinically significant prostate cancer, and unfavorable prostate cancer <!-- text, from page 0 (l=0.066,t=0.134,r=0.893,b=0.225), with ID 84feb0d8-6ca7-481a-9d41-f84cfc069527 -->\n\nVinayak G. Wagaskar¹ ![figure: ORCID icon] | Stanislaw Sobotka¹ | Parita Ratnani¹ | James Young¹ | Anna Lantz¹ ![figure: ORCID icon] | Sneha Parekh¹ | Ugo Giovanni Falagario¹ ![figure: ORCID icon] | Li Li² | Sara Lewis³ | Kenneth Haines III² | Sanoj Punnen⁴ | Peter Wiklund¹ | Ash Tewari¹ <!-- form, from page 0 (l=0.067,t=0.247,r=0.919,b=0.325), with ID 5a95c978-33df-4a53-b4a9-ad54a70dcac7 -->\n\n¹Department of Urology, Icahn School of  \nMedicine at Mount Sinai Hospital, New York,  \nNew York <!-- text, from page 0 (l=0.070,t=0.344,r=0.311,b=0.385), with ID bfcfb004-2e1e-4655-b34a-0d43f0ea1145 -->\n\n²Department of Pathology, Icahn School of Medicine at Mount Sinai Hospital, New York, New York <!-- text, from page 0 (l=0.071,t=0.387,r=0.310,b=0.428), with ID 34d99b04-6e82-4916-bb5c-dc2d603182a3 -->\n\n³Department of Radiology, Icahn School of Medicine at Mount Sinai Hospital, New York, New York <!-- text, from page 0 (l=0.072,t=0.429,r=0.309,b=0.469), with ID 2a5cbbab-7a4a-4a6f-9434-0aa2b63e5780 -->\n\n⁴Department of Urology, University of Miami,\nMiller School of Medicine, Miami, Florida <!-- text, from page 0 (l=0.072,t=0.471,r=0.312,b=0.502), with ID 8fad7c6f-1704-4c51-abf1-db02180b2fbc -->\n\nCorrespondence  \nVinayak G. Wagaskar, Department of Urology,  \nIcahn School of Medicine at Mount Sinai  \nHospital, 1425 Madison Avenue, New York,  \nNY 10029, USA. <!-- text, from page 0 (l=0.071,t=0.511,r=0.315,b=0.575), with ID 87878be3-a2cb-4bf8-ad0c-7a9ddb6d106b -->\n\nEmail: vinayakwagaskar99@gmail.com, vinayak.wagaskar@mountsinai.org <!-- text, from page 0 (l=0.070,t=0.576,r=0.277,b=0.602), with ID 80581170-6829-4144-928f-72802b4f5696 -->\n\nAbstract  \n**Background:** The detection of prostate cancer requires histological confirmation in biopsy core. Currently, number of unnecessary prostate biopsies are being performed in the United States. This is due to the absence of appropriate biopsy decision-making protocol.  \n**Aim:** To develop and validate a 4K score/multiparametric magnetic resonance imaging (mpMRI)-based nomogram to predict prostate cancer (PCa), clinically significant prostate cancer (csPCa), and unfavorable prostate cancer (uPCa). <!-- text, from page 0 (l=0.345,t=0.352,r=0.916,b=0.485), with ID 6a6d2410-a296-47d4-881b-b6f310faf2a1 -->\n\n**Methods and Results:** Retrospective, single-center study evaluating a cohort of 574 men with 4K score test >7% or suspicious digital rectal examination (DRE) or Prostate Imaging Reporting and Data System (PI-RADS) scores 3, 4, or 5 on mpMRI that underwent systematic and/or mpMRI/ultrasound fusion–targeted prostate biopsy between 2016 and 2020. External cohort included 622 men. csPCa and uPCa were defined as Gleason score ≥3 + 4 and ≥4 + 3 on biopsy, respectively. Multivariable logistic regression analysis was performed to build nomogram for predicting PCa, csPCa, and uPCa. Validation was performed by plotting the area under the curve (AUC) and comparing nomogram-predicted probabilities with actual rates of PCa, csPCa, and uPCa probabilities in the external cohort. 4K score, a PI-RADS ≥4, prostate volume and prior negative biopsy were significant predictors of PCa, csPCa, and uPCa. AUCs were 0.84, 0.88, and 0.86 for the prediction of PCa, csPCa, and uPCa, respectively. The predicted and actual rates of PCa, csPCa, and uPCa showed agreement across all percentage probability ranges in the validation cohort. Using the prediction model at threshold of 30, 30% of overall biopsies, 41% of benign biopsies, and 19% of diagnosed indolent PCa could be avoided, while missing 9% of csPCa. <!-- text, from page 0 (l=0.347,t=0.488,r=0.916,b=0.773), with ID 4bc5155f-2280-4968-a7d7-597bfc175493 -->\n\n**Conclusion:** This novel nomogram would reduce unnecessary prostate biopsies and decrease detection of clinically insignificant PCa. <!-- text, from page 0 (l=0.346,t=0.776,r=0.915,b=0.812), with ID 1e667f27-dd06-40bf-9965-43c935eafdbf -->\n\nKEYWORDS\n4K score test, biopsy, multiparametric MRI, prostate cancer <!-- text, from page 0 (l=0.347,t=0.826,r=0.698,b=0.858), with ID ffdb09b2-7cfe-41e5-8efc-2b8274c819b2 -->\n\nThis is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.\n© 2021 The Authors. *Cancer Reports* published by Wiley Periodicals LLC. <!-- text, from page 0 (l=0.071,t=0.905,r=0.916,b=0.949), with ID 3ec99c57-2e10-4416-95c7-fdf787361aef -->\n\n*Cancer Reports*. 2021;4:e1357.  \nhttps://doi.org/10.1002/cnr2.1357 <!-- marginalia, from page 0 (l=0.071,t=0.959,r=0.262,b=0.988), with ID 4ff4b61e-0334-47f3-b888-acb43d7bf472 -->\n\nwileyonlinelibrary.com/journal/cnr2 <!-- marginalia, from page 0 (l=0.663,t=0.958,r=0.854,b=0.973), with ID 4a88b700-cd39-4c3d-a8d6-93589ec24eb8 -->\n\n1 of 9 <!-- marginalia, from page 0 (l=0.886,t=0.958,r=0.926,b=0.973), with ID 71b0b7df-cbf2-4540-b6e5-26c72895aa60 -->\n\n2 of 9 <!-- marginalia, from page 0 (l=0.074,t=0.027,r=0.114,b=0.041), with ID 8def453e-d452-489b-97fd-d760f533a78b -->\n\nWILEY\n\nCancer Reports\n\nlogo: stylized globe with interconnected nodes <!-- marginalia, from page 0 (l=0.138,t=0.026,r=0.443,b=0.051), with ID 3b35c8dc-2085-4e70-b24a-363e43db565a -->\n\nWAGASKAR ET AL. <!-- marginalia, from page 0 (l=0.829,t=0.027,r=0.926,b=0.041), with ID 0f9e4836-aa86-4dbd-884e-470c1becb21b -->\n\n1   |   BACKGROUND\n\nProstate cancer is the most common cancer in men in the United States, accounting for an estimated 19% of all newly diagnosed cancers in 2018.¹ Prostate-specific antigen (PSA) is the only molecular marker routinely used for detection of prostate cancer (PCa), and screening with PSA has been shown to reduce prostate cancer mortality.² However, numerous studies have demonstrated the diagnostic limitations of PSA resulting in overdiagnosis of indolent cancers, frequent unnecessary prostate biopsies, the results of which are benign, and overtreatment with significant morbidity.³ Alternative strategies for the detection of significant PCa are needed to avoid potentially morbid, invasive procedures in men who are unlikely to be diagnosed with prostate cancer. <!-- text, from page 0 (l=0.073,t=0.063,r=0.489,b=0.277), with ID 0cc6a52f-a0b1-4098-bfea-1987e44081a7 -->\n\n4K score test (OPKO Diagnostics, Woburn, MA) is a serum biomarker–based test on a four-kallikrein panel including kallikrein-related peptidase 2 (hK2), intact PSA, free PSA, and total PSA, as well as incorporating clinical information such as biopsy history and DRE findings. The 4K score test has repeatedly been shown to predict prostate cancer (PCa) biopsy outcome in men with elevated PSAs while also significantly reducing the number of unnecessary biopsies.⁴⁻⁶ Furthermore, multiparametric magnetic resonance imaging (mpMRI) in combination with targeted biopsies has emerged as an effective tool to detect clinically significant disease.⁷⁻⁹ Studies combining biomarkers and MRI-targeted biopsies for prostate cancer detection have also been proven to decrease the number of biopsies and avoid over-detection of indolent cancer to an even greater extent.¹⁰ <!-- text, from page 0 (l=0.075,t=0.280,r=0.490,b=0.494), with ID 1eca7455-825c-4b12-864b-bd51c1742301 -->\n\nAlthough the mpMRI and the 4K score test are both used in American clinical practice for the evaluation of prostate cancer, there are no reports on the impact of using these tests in combination. We hypothesize that both of these tests will provide independent and complementary value, and when combined, will improve the detection of clinically significant disease compared to either test alone.¹¹ The aim of this study was to develop a nomogram using 4K score test and mpMRI to detect clinically significant prostate cancer (csPCa) in men with an elevated PSA and/or abnormal DRE. <!-- text, from page 0 (l=0.075,t=0.497,r=0.489,b=0.644), with ID fc153c75-8a0b-4478-8090-7d45311255e7 -->\n\n2  |  MATERIAL AND METHODS <!-- text, from page 0 (l=0.074,t=0.675,r=0.375,b=0.695), with ID dcd3a655-84d0-4761-882c-171dff1ad7b3 -->\n\n2.1   |   Study population\n\nWe retrospectively reviewed our institution's prostate biopsy data-\nbase to extract relevant patient records. A total of 1100 patients\nunderwent 4K score test between January 2016 and April 2020. Of\nthese, 584 (53%) underwent systematic or combined systematic and\nMRI/transrectal ultrasound (TRUS) fusion biopsy by a single expert\nsurgeon (A.K.T. ) with 20 years of experience. Indications of biopsy\nwere 4K score test of >7%, suspicious DRE, PI-RADS scores of 3, 4 or\n5 on mpMRI, or combination of any of the above. Men who have con-\ntraindication for prebiopsy mpMRI (n = 10) were excluded. In total,\n574 men were used to build the model (development cohort). For vali-\ndation, we used a cohort of 622 men that underwent systematic or\ncombined systematic and MRI/TRUS fusion biopsy for similar <!-- text, from page 0 (l=0.073,t=0.710,r=0.489,b=0.943), with ID e74414d7-3db4-4275-8e16-cf700012f7b2 -->\n\nindications (4K score test >7%, suspicious DRE, PI-RADS scores of 3, 4, or 5 on mpMRI) at the University of Miami. <!-- text, from page 0 (l=0.515,t=0.065,r=0.926,b=0.095), with ID 270047bd-b021-425c-9c08-2bbc1d7e7476 -->\n\nAll men underwent standardized 3-Tesla mpMRI prior to prostate biopsy. All mpMRI examinations were compliant with the American College of Radiology recommendations for technical specifications. All mpMRI results were evaluated according to PI-RADS Version 2 (PI-RADS V2) by clinical radiologists with experience in prostate imaging. <!-- text, from page 0 (l=0.516,t=0.098,r=0.927,b=0.178), with ID 44a89b51-4d89-4d4e-b97d-38aaa80e443c -->\n\nAll biopsies were performed using a spring-loaded biopsy gun and 18-gauge needles. For targeted biopsies, Artemis MRI/TRUS fusion device (Innomedicus, Cham, Switzerland) was used and extra 2-4 cores taken from each lesion in addition to standard 12 cores biopsy. An experienced genitourinary pathologist (K.H. III) reviewed all biopsy samples. <!-- text, from page 0 (l=0.516,t=0.180,r=0.927,b=0.261), with ID 3619021c-3138-4738-8787-0ce9e2ee2cb0 -->\n\n## 2.2 | Outcomes definition and statistical analysis\n\nThe outcome for predicting PCa was defined as a Gleason score of ≥3 + 3 on biopsy, and men with this outcome were considered cases. Men with negative biopsy were considered controls. The outcome for predicting csPCa was defined as a Gleason score of ≥3 + 4 on biopsy; men with this outcome were considered cases, and the remaining men with negative biopsy and men with Gleason score 3 + 3 on biopsy were considered controls. The outcome for predicting uPCa was defined as a Gleason score of ≥4 + 3 on biopsy; men with this outcome were considered cases, while the remaining men with negative biopsy, Gleason score 3 + 3, 3 + 4, were considered controls. <!-- text, from page 0 (l=0.514,t=0.295,r=0.928,b=0.493), with ID eb81eeff-2149-429a-8e78-bb3f0300236a -->\n\nDescriptive statistics for the two groups were calculated. Continuous variables were reported as median and interquartile range (IQR) and compared using a Mann–Whitney U test. Categorical variables were reported as rates and were tested with a chi-square test, as appropriate. The prediction model included the following variables: age, family history of prostate cancer, history of negative prior biopsy, 4K score test, DRE findings, mpMRI prostate volume, and highest PI-RADS score. We are aware that 4K score test incorporates clinical parameters like age, family history, DRE, and prior biopsy history. Therefore, we calculated matrix of correlation coefficients between 4K score test and these predictors. We also ran variance inflation factor analysis (the inflation in the variances of the parameter estimates due to collinearities among predictors) to evaluate the potential presence of substantial multicollinearity between these predictors in our model. <!-- text, from page 0 (l=0.514,t=0.497,r=0.927,b=0.727), with ID a39eef40-533f-403c-a93c-0b4c14ddba4a -->\n\nAnalysis of correlation coefficients between predictors as well as\nvariance inflation index of predictors did not indicate presence of\nstrong collinearity between 4K and other predictors in our model.\nThere were no strong correlations (>0.8) between 4K score test and\nother predictors. PI-RADS scores of 1 and 2 were grouped for the\npurpose of analysis. Multivariable binary logistic regression analysis\nwas performed for presence of PCa, csPCa, and uPCa in the develop-\nment cohort. The nomogram predicting PCa, csPCa, and uPCa was\nbuilt based on coefficients of the logit function. <!-- text, from page 0 (l=0.515,t=0.730,r=0.927,b=0.876), with ID 4dd7deb0-9356-4fbe-b415-0f30364d70d6 -->\n\nNomogram validation was performed in the external cohort in two\nstages. First, receiver-operating characteristics (ROCs) were plotted for\npresence of PCa, csPCa, and uPCa using the same variables that were\nused to build the nomogram. Second, calibration graphs were plotted <!-- text, from page 0 (l=0.516,t=0.880,r=0.926,b=0.942), with ID 2490c1fa-adfb-45f4-b59e-8102debf78a7 -->\n\n25731848, 2021. 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cam4.3753 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.968,t=0.018,r=0.984,b=0.982), with ID 6ad92312-83f8-48a7-83b5-5e88004fcbcb -->\n\nWAGASKAR ET AL. <!-- marginalia, from page 0 (l=0.072,t=0.028,r=0.171,b=0.041), with ID 8ddb1619-7685-458f-8275-bed3bf448d3c -->\n\nCancer Reports\nOpen Access <!-- marginalia, from page 0 (l=0.557,t=0.026,r=0.752,b=0.051), with ID 3b1b8f0f-9e77-4621-b72b-ada094c4272f -->\n\n-WILEY- <!-- marginalia, from page 0 (l=0.759,t=0.026,r=0.859,b=0.051), with ID 45cfb3ff-5cab-4170-a6b0-195613b6baf9 -->\n\n3 of 9 <!-- marginalia, from page 0 (l=0.888,t=0.026,r=0.925,b=0.042), with ID 99fa49f4-e098-4ab9-a3a4-b31b58151b8a -->\n\nby grouping sorted nomogram-predicted probabilities from the development cohort into deciles and then comparing the mean prediction of each group with the observed proportion of men from the validation cohort with PCa or csPCa or uPCa. Using nomogram-derived probability cut-offs, we calculated the number of biopsies that could be avoided without missing PCa, csPCa, or uPCa in the validation cohort. Decision curve analysis (DCA) was performed to evaluate the performance of the prediction models in the validation cohort. Statistical analyses were performed using STATA 12 (StataCorp LP, College Station, TX, USA) and SAS 9.4 (SAS Institute, Cary, NC, USA). All tests were two-tailed with a significance level of P < .05. <!-- text, from page 0 (l=0.070,t=0.063,r=0.489,b=0.247), with ID f8c067ce-899a-40e5-ae90-7fbe1bee587a -->\n\n3  |  RESULTS\n\nOf the total 574 men in the development cohort, 232 (40%) were diagnosed with PCa, while the remaining 342 men (60%) were not having PCa. Median age was 66 years [interquartile range (IQR) <!-- text, from page 0 (l=0.070,t=0.276,r=0.489,b=0.364), with ID aa244717-270d-4ee3-a115-8443bef92088 -->\n\n60, 70] and 64 years (IQR 59, 69) for PCa and benign biopsies, respec-\ntively; median PSA was 6.1 ng/mL (IQR 4.5, 7.9), 5.3 ng/mL (IQR 3.4,\n7.7); and median 4K score test was 28 (IQR 13, 55), 9 (IQR 3, 18) for\nmen with PCa and men with benign biopsy, respectively. Of the\n232 men with PCa, 89 (38%), 65 (28%), 27 (12%), 30 (13%), and 21\n(9%) had Gleason scores of 3 + 3, 3 + 4, 4 + 3, 4 + 4, and 4 + 5/5 + 4/\n5 + 5, respectively. Of the 622 men in the validation cohort, 328\n(53%) did not have prostate cancer on biopsy. Of the remaining\n294 who had cancer in the validation cohort, 121 (41%), 77 (26%),\n29 (10%), and 38 (13%) had Gleason scores of 3 + 3, 3 + 4,\n4 + 3, 4 + 4, and 4 + 5/5 + 4/5 + 5, respectively (Table 1). <!-- text, from page 0 (l=0.509,t=0.063,r=0.927,b=0.246), with ID 05509779-d621-4c57-991a-1d1797d7f45e -->\n\n3.1   |   Univariable and multivariable analysis predicting PCa, csPCa, and uPCa\n\nIn univariate analysis, 4K score test, family history of prostate cancer, prior negative biopsy, DRE findings, and PI-RADS 3, 4, 5, and MRI <!-- text, from page 0 (l=0.510,t=0.276,r=0.926,b=0.364), with ID 668829c5-5a41-41e7-b601-674b5eaa6084 -->\n\n<table><tbody><tr><td colspan=\"6\">TABLE 1 Comparison of factors between cases and controls in development and validation cohort</td></tr><tr><td colspan=\"3\">Mount Sinai (Development) Cohort</td><td colspan=\"3\">University of Miami (Validation) Cohort</td></tr><tr><td>Factors</td><td>Benign biopsies n = 342 (60%)</td><td>Prostate cancer n = 232 (40%)</td><td>P value</td><td>Benign biopsies N = 328 (53%)</td><td>Prostate cancer N = 294 (47%)</td><td>P value</td></tr><tr><td>Age years (Median, IQR)</td><td>64 (59, 69)</td><td>66 (60, 70)</td><td>.0339</td><td>61 (59, 69)</td><td>60 (58,70)</td><td>.7746</td></tr><tr><td>PSA ng/mL (Median, IQR)</td><td>5.3 (3.4, 7.7)</td><td>6.1 (4.5, 7.9)</td><td>.001</td><td>5.6 (3.9, 8.6)</td><td>6.0 (4.5, 8.4)</td><td>.0655</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA) (Median, IQR)</td><td>9 (3,18)</td><td>28 (13, 55)</td><td><.0001</td><td>11 (4, 21)</td><td>28 (13, 56)</td><td><.0001</td></tr><tr><td>Prior negative biopsy</td><td></td><td></td><td><.0001</td><td></td><td></td><td><.0001</td></tr><tr><td>No</td><td>191 (56%)</td><td>196 (85%)</td><td></td><td>191 (58%)</td><td>221 (75%)</td><td></td></tr><tr><td>Yes</td><td>151 (44%)</td><td>36 (15%)</td><td></td><td>137 (42%)</td><td>73 (25%)</td><td></td></tr><tr><td>DRE</td><td></td><td></td><td><.0001</td><td></td><td></td><td>.0358</td></tr><tr><td>Normal</td><td>250 (73%)</td><td>127 (55%)</td><td></td><td>250 (76%)</td><td>202 (69%)</td><td></td></tr><tr><td>Suspicious</td><td>92 (27%)</td><td>105 (45%)</td><td></td><td>78 (24%)</td><td>92 (31%)</td><td></td></tr><tr><td>MRI lesion highest PI-RADS score</td><td></td><td></td><td><.0001</td><td></td><td></td><td><.0001</td></tr><tr><td>0-2</td><td>194 (57%)</td><td>50 (21%)</td><td></td><td>144 (44%)</td><td>38 (13%)</td><td></td></tr><tr><td>3</td><td>68 (20%)</td><td>29 (13%)</td><td></td><td>102 (31%)</td><td>51 (17%)</td><td></td></tr><tr><td>4</td><td>70 (20%)</td><td>94 (41%)</td><td></td><td>72 (22%)</td><td>136 (46%)</td><td></td></tr><tr><td>5</td><td>10 (3%)</td><td>59 (25%)</td><td></td><td>10 (3%)</td><td>69 (24%)</td><td></td></tr><tr><td>Prostate volume cc (Median, IQR)</td><td>60 (43, 82)</td><td>41 (30, 56)</td><td><.0001</td><td>60 (42, 83)</td><td>41 (31,57)</td><td><.0001</td></tr><tr><td>Biopsy</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Systematic</td><td>201 (59%)</td><td>71 (31%)</td><td></td><td>144 (44%)</td><td>38 (13%)</td><td></td></tr><tr><td>Systematic and targeted</td><td>141 (41%)</td><td>161 (69%)</td><td></td><td>184 (56%)</td><td>256 (87%)</td><td></td></tr><tr><td>Biopsy GS</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>0</td><td>342 (100%)</td><td>0</td><td></td><td>328 (100%)</td><td>0</td><td></td></tr><tr><td>3 + 3</td><td>0</td><td>89 (38%)</td><td></td><td>0</td><td>121 (41%)</td><td></td></tr><tr><td>3 + 4</td><td>0</td><td>65 (28%)</td><td></td><td>0</td><td>77 (26%)</td><td></td></tr><tr><td>4 + 3</td><td>0</td><td>27 (12%)</td><td></td><td>0</td><td>29 (10%)</td><td></td></tr><tr><td>4 + 4/3 + 5/5 + 3</td><td>0</td><td>30 (13%)</td><td></td><td>0</td><td>29 (10%)</td><td></td></tr><tr><td>4 + 5/5 + 4/5 + 5</td><td>0</td><td>21 (9%)</td><td></td><td>0</td><td>38 (13%)</td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.070,t=0.374,r=0.924,b=0.909), with ID 602d6e1c-534f-496a-89d7-19b2916f7dfa -->\n\nAbbreviations: DRE, digital rectal examination; GS, Gleason score; IQR, interquartile range; MRI, magnetic resonance imaging; PI-RADS, prostate imaging reporting and data system version 2; PNB, prior negative biopsy; PSA, prostate-specific antigen. <!-- text, from page 0 (l=0.072,t=0.915,r=0.911,b=0.944), with ID 43e89a83-ecd8-4927-8b35-511faed8db53 -->\n\n25731848, 2021, 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cne.25137 by Wiley Online Library on [illegible] See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.968,t=0.019,r=0.985,b=0.982), with ID 3aff9a50-78cc-4f48-bc59-68fc502691f7 -->\n\n4 of 9 <!-- marginalia, from page 0 (l=0.074,t=0.026,r=0.115,b=0.043), with ID 9e9a1825-ac7f-417e-96b4-7ece6dbad78f -->\n\nlogo: WILEY\n\nCancer Reports\nOpen Access\n\nlogo: abstract blue-green circular emblem with dots and arcs <!-- marginalia, from page 0 (l=0.138,t=0.025,r=0.446,b=0.053), with ID a6648226-cacb-481f-a5e7-e12431e691b4 -->\n\nWAGASKAR ET AL. <!-- marginalia, from page 0 (l=0.828,t=0.027,r=0.926,b=0.041), with ID 3c9900d4-042e-44ff-8a5f-5740eddbeadf -->\n\nprostate volume emerged as significant predictors of PCa, csPCa, and uPCa. In multivariate analysis, 4K score test, PI-RADS scores of 4 and 5, prostate volume, and history of prior negative biopsy were signifi-\ncantly associated with PCa, csPCa, and uPCa (all P < .05), while family history of PCa was significant in predicting PCa and uPCa; PI-RADS score 3 was found significant predictor for PCa (Table 2). <!-- text, from page 0 (l=0.073,t=0.064,r=0.491,b=0.163), with ID 9257fca8-d317-4e2b-8e3a-4dc972faa20e -->\n\n3.2   |   Nomogram to estimate risk of PCa, csPCa, and uPCa\n\nFigure 1A-C illustrate the nomogram developed for prediction of PCa, csPCa, and unfavorable PCa, respectively, in the development cohort. <!-- text, from page 0 (l=0.073,t=0.193,r=0.491,b=0.280), with ID 292e240c-ad08-4e7a-9d0b-5f17b3b54bba -->\n\nMRI PI-RADS score, 4K score test, prostate volume, and history of\nprior negative biopsy were significantly contributing to the total score\nthat eventually determined nomogram probability of PCa, csPCa, and\nunfavorable PCa. <!-- text, from page 0 (l=0.513,t=0.063,r=0.929,b=0.130), with ID a214d434-050f-43ad-ac6a-992510688c98 -->\n\n3.3 | Nomogram validation\n\nArea under receiver operating curves (AUCs) for predicting PCa, csPCa, and unfavorable PCa in the validation cohort were 0.84, 0.88, and 0.86, respectively (Figure 2). 4K score test and mpMRI PI‐RADS score showed significant contribution for building AUCs. <!-- text, from page 0 (l=0.513,t=0.159,r=0.930,b=0.281), with ID 3bfc62d3-efa5-427f-b097-60e52813687b -->\n\n<table><thead><tr><th colspan=\"6\">TABLE 2 The results of multivariable analysis</th></tr><tr><th>Variable</th><th>Odds Ratio</th><th>SE</th><th>P value</th><th colspan=\"2\">95% Conf. interval for OR</th></tr></thead><tbody><tr><td colspan=\"6\">Predicting presence of PCa</td></tr><tr><td>Age</td><td>1.018</td><td>0.015</td><td>.210</td><td>0.998</td><td>1.049</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA)</td><td>1.033</td><td>0.006</td><td>.000</td><td>1.020</td><td>1.047</td></tr><tr><td>DRE</td><td>0.971</td><td>0.226</td><td>.900</td><td>0.614</td><td>1.535</td></tr><tr><td>Prior negative biopsy</td><td>0.492</td><td>0.125</td><td>.006</td><td>0.298</td><td>0.813</td></tr><tr><td>Prostate volume</td><td>0.978</td><td>0.004</td><td>.000</td><td>0.970</td><td>0.987</td></tr><tr><td>MRI PI-RADS score</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>2.114</td><td>0.641</td><td>.014</td><td>1.166</td><td>3.831</td></tr><tr><td>4</td><td>4.402</td><td>1.106</td><td>.000</td><td>2.690</td><td>7.203</td></tr><tr><td>5</td><td>9.235</td><td>4.028</td><td>.000</td><td>3.927</td><td>21.716</td></tr><tr><td colspan=\"6\">Predicting presence of csPCa</td></tr><tr><td>Age</td><td>1.021</td><td>0.019</td><td>.267</td><td>0.983</td><td>1.060</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA)</td><td>1.033</td><td>0.006</td><td>.000</td><td>1.020</td><td>1.047</td></tr><tr><td>DRE</td><td>1.397</td><td>0.381</td><td>.220</td><td>0.818</td><td>2.386</td></tr><tr><td>Prior negative biopsy</td><td>0.288</td><td>0.111</td><td>.001</td><td>0.135</td><td>0.616</td></tr><tr><td>Prostate volume</td><td>0.977</td><td>0.054</td><td>.000</td><td>0.967</td><td>0.988</td></tr><tr><td>MRI PI-RADS score</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>2.650</td><td>1.187</td><td>.030</td><td>1.102</td><td>6.378</td></tr><tr><td>4</td><td>8.366</td><td>2.894</td><td>.000</td><td>4.246</td><td>16.483</td></tr><tr><td>5</td><td>18.702</td><td>8.512</td><td>.000</td><td>7.664</td><td>45.639</td></tr><tr><td colspan=\"6\">Predicting presence of uPCa</td></tr><tr><td>Age</td><td>1.072</td><td>0.024</td><td>.002</td><td>1.026</td><td>1.119</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA)</td><td>1.024</td><td>0.007</td><td>.000</td><td>1.011</td><td>1.038</td></tr><tr><td>DRE</td><td>1.472</td><td>0.463</td><td>.219</td><td>0.794</td><td>2.727</td></tr><tr><td>Prior negative biopsy</td><td>0.189</td><td>0.109</td><td>.004</td><td>0.060</td><td>0.587</td></tr><tr><td>Prostate volume</td><td>0.994</td><td>0.004</td><td>.211</td><td>0.985</td><td>1.003</td></tr><tr><td>MRI PI-RADS score</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>1.767</td><td>1.196</td><td>.401</td><td>0.468</td><td>6.666</td></tr><tr><td>4</td><td>7.338</td><td>3.531</td><td>.000</td><td>2.856</td><td>18.846</td></tr><tr><td>5</td><td>13.670</td><td>7.462</td><td>.000</td><td>4.689</td><td>39.849</td></tr></tbody></table> <!-- table, from page 0 (l=0.071,t=0.327,r=0.930,b=0.905), with ID 513f248c-f964-4a9d-832c-cd3f89326b58 -->\n\nAbbreviations: csPCa, clinically significant prostate cancer; DRE, digital rectal examination finding; PCa, prostate cancer; PI-RADS, Prostate Imaging Reporting and Data System; uPCa, unfavorable prostate cancer. <!-- marginalia, from page 0 (l=0.075,t=0.910,r=0.883,b=0.939), with ID 76d0e7e3-282b-499b-b6db-47a4432dd0d0 -->\n\n2513482-2021.4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/anzf.13974 by Wiley Online Library on [09/05/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.967,t=0.019,r=0.985,b=0.981), with ID d35110a0-18a9-4b43-a340-ced530551c6e -->\n\nWAGASKAR ET AL. <!-- marginalia, from page 0 (l=0.072,t=0.028,r=0.171,b=0.040), with ID 986dee71-d967-4c71-a353-0cd5393885b3 -->\n\nCancer Reports\nOpen Access <!-- marginalia, from page 0 (l=0.557,t=0.026,r=0.694,b=0.051), with ID 7d70d919-2afa-4470-8b44-d7d1acd2478f -->\n\nlogo: stylized \"CP\" in teal and dark blue with pixelated effect, no visible company name or tagline <!-- figure, from page 0 (l=0.725,t=0.027,r=0.752,b=0.052), with ID bc599851-b431-495d-9032-d2aaa976aae8 -->\n\nWILEY <!-- marginalia, from page 0 (l=0.760,t=0.028,r=0.858,b=0.051), with ID 3dc6c65a-9aac-4a7b-8f88-108de4581fb1 -->\n\n5 of 9 <!-- marginalia, from page 0 (l=0.888,t=0.027,r=0.925,b=0.042), with ID 777e4a82-1d85-4e92-8543-fe5734521597 -->\n\nstatistical chart: \"Nomogram predicting any PCa\". The chart consists of a nomogram with several horizontal scales for different clinical variables, each contributing to a total score predicting the probability of any prostate cancer (PCa).\n\n- Title: \"Nomogram predicting any PCa\"\n- Variables (top to bottom, each with its own horizontal scale and tick marks):\n  1. MRI PI-RADS score (scale: 1 to 5)\n  2. Prostate volume (cc) (scale: 360 to 50, decreasing left to right)\n  3. Prior Negative Biopsy (Yes/No)\n  4. DRE findings (scale: 1 to 4)\n  5. 4K score (scale: 4 to 59)\n  6. Age (yrs) (scale: 40 to 85)\n- Each variable has a corresponding \"Score\" scale (bottom axis, 0 to 11).\n- At the bottom, a \"Total score\" scale (0 to 21) maps to \"Probability of any PCa\" (0 to 1, marked as .01, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1).\n- The chart is color-coded with lines and tick marks for each variable.\n- The nomogram is used to sum the individual scores from each variable to estimate the probability of any prostate cancer.\n\nSummary: This is a nomogram chart that allows clinicians to estimate the probability of any prostate cancer in a patient by assigning points for each clinical variable, summing them, and mapping the total to a probability. <!-- figure, from page 0 (l=0.081,t=0.066,r=0.497,b=0.296), with ID 09c3ff3f-3263-4c38-93b9-529bb518c323 -->\n\nstatistical plot: \"Nomogram predicting csPCa\". The figure consists of a nomogram with multiple horizontal scales for different clinical variables, each mapped to a \"Score\" axis, and a lower scale mapping \"Total score\" to \"Probability of csPCa\".\n\nTop section (Nomogram variables, each with its own horizontal line and tick marks):\n- MRI PI-RADS score: scale from 1 to 5, mapped to scores 0 to 11.\n- Prostate volume (cc): scale from 350 to 10, mapped to scores 0 to 10.\n- Prior Negative Biopsy: Yes/No, mapped to scores 0 or 2.\n- DRE findings: scale from 0 to 1, mapped to scores 0 to 2.\n- 4K score: scale from 5 to 80, mapped to scores 0 to 6.\n- Age (yr): scale from 40 to 85, mapped to scores 0 to 3.\n\nBottom section:\n- \"Probability of csPCa\" scale, mapping \"Total score\" (0 to 22) to probability values (from .01 to .99).\n\nThe nomogram allows users to sum the individual scores for each variable, then use the total score to estimate the probability of csPCa (clinically significant prostate cancer) using the lower probability scale. No legend or color coding is present. The overall process is to use clinical variables to estimate csPCa risk. <!-- figure, from page 0 (l=0.507,t=0.066,r=0.919,b=0.296), with ID 306c517f-87e2-4d22-96c2-c266414e5813 -->\n\nflowchart: \"Nomogram for predicting uPCa\"\n- Top title: \"Nomogram for predicting uPCa\"\n- Horizontal axes/lines for each variable:\n  1. \"MRI PI-RADS score\" (scale: 3 to 5)\n  2. \"Prostate volume (cc)\" (scale: 350, 250, 125, 10)\n  3. \"Prior Negative Biopsy\" (Yes / No)\n  4. \"DRE findings\" (Normal / Suspicious)\n  5. \"4K score\" (0 to 100)\n  6. \"Age (yrs)\" (40 to 90)\n- Each variable has a corresponding \"Score\" axis (0 to 11)\n- Bottom axis: \"Total score\" (0 to 35)\n- Bottom-most axis: \"Probability of uPCa\" (0 to 1, with tick marks at .01, .05, .1, .25, .5, .75, .9, .95, .99)\n- The chart is a nomogram: for each patient, you locate their value on each variable axis, draw a vertical line up to the \"Score\" axis, sum the scores, and then map the total score to the \"Probability of uPCa\" axis.\n\nSummary: This nomogram chart allows clinicians to estimate the probability of uPCa (unfavorable prostate cancer) by scoring six clinical variables and summing them to predict risk. <!-- figure, from page 0 (l=0.284,t=0.300,r=0.704,b=0.532), with ID 10b593b3-491b-46aa-b8de-5fe0246a7328 -->\n\nFIGURE 1  Nomogram prediction model for predicting prostate cancer, clinically significant prostate cancer and unfavourable prostate cancer at the time of biopsy. Steps for assessing cancer probability from the nomogram are as follows: 1. Locate the patient's variable Age on corresponding axis. 2. Draw a line straight download to the score axis to determine how many points towards the probability of cancer the patient is scored for his Age. 3. Repeat the process for each additional variable [ 4K score test, prior negative biopsy, DRE, MRI Prostate volume and MRI PI-RADS score]. 4. Total the points for each of the predictors. 5. Locate the final sum on the total score axis. 6. Draw a line straight up to find the patient's probability of having PCa, csPCa and uPCa. Total scores correspond to a probability value for PCa, csPCa and uPCa. Abbreviations: PCa- prostate cancer, csPCa- clinically significant prostate cancer, uPCa-unfavourable PCa DRE- digital rectal examination finding, PI-RADS- Prostate Imaging Reporting and Data System <!-- text, from page 0 (l=0.069,t=0.545,r=0.925,b=0.661), with ID 90acb21e-b15e-4f4e-b86d-1e68704548a6 -->\n\nWe evaluated the nomogram's calibration by comparing predicted and actual probabilities of PCa, csPCa, and unfavorable PCa in the validation cohort. There was agreement between the predicted and actual rate of probabilities (0%-100%) for PCa, csPCa, and unfavorable PCa as seen by points on the diagonal line in Figure 3A-C, respectively. <!-- text, from page 0 (l=0.071,t=0.695,r=0.488,b=0.793), with ID 0646a922-ff5e-4d8c-882d-082d549f856e -->\n\nDCA showed superior clinical risk prediction for 5%-95% of\nnomogram-derived probabilities for predicting PCa, csPCa, and uPCa\nthan relying on 4K score test alone or PI-RADS score alone.\n(Figure 4A-C). <!-- text, from page 0 (l=0.072,t=0.795,r=0.487,b=0.860), with ID 362f06bd-cf77-4ea9-aaed-97d613c0d046 -->\n\nUsing our model in the validation cohort, 10% of biopsies could\nbe avoided without missing uPCa and with missing 1% csPCa,\navoiding 17% of benign biopsies and avoiding 4% of clinically indolent\nPCa (Figure 5). Additionally, 15%, 20%, 25%, and 30% of biopsies <!-- text, from page 0 (l=0.073,t=0.862,r=0.487,b=0.928), with ID a8373e25-b111-4ab8-8694-558734236d8e -->\n\ncould be avoided while missing 2%, 4%, 6%, and 9% of csPCa, respec-\ntively, avoiding 24%, 31%, 39%, and 41% of benign biopsies, respec-\ntively, and avoiding 10%, 14%, 14%, and 19% of clinically indolent\nPCa, respectively. <!-- text, from page 0 (l=0.510,t=0.696,r=0.926,b=0.761), with ID f08978cd-0ef2-440f-b575-c9638d43f285 -->\n\n4   |   DISCUSSION\n\nMultiparametric MRI and the 4K score test are both used in American\nclinical practice for the evaluation of prostate cancer. To our knowl-\nedge, this is the first study investigating the use of both the 4K score\ntest and mpMRI in combination to detect PCa, csPCa, and uPCa. Our\nmodel confers three key benefits. (a) It reduces number of biopsies\nwithout compromising detection of csPCa and uPCa rates, (b) the <!-- text, from page 0 (l=0.511,t=0.792,r=0.926,b=0.927), with ID 3aa67f1c-e89e-4f12-95ad-d70c48e3540b -->\n\n2513482-2021.4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/anzf.13978 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.967,t=0.019,r=0.985,b=0.981), with ID 098f51cb-31ca-453c-a255-210f654fb583 -->\n\n6 of 9\n\nlogo: Wiley | Cancer Reports\n\nWAGASKAR ET AL.\n\n<table>\n  <tr>\n    <td>\n      <b>Variable</b>\n    </td>\n    <td>\n      <b>AUC</b>\n    </td>\n  </tr>\n  <tr>\n    <td>Model</td>\n    <td>0.84</td>\n  </tr>\n  <tr>\n    <td>Age</td>\n    <td>0.51</td>\n  </tr>\n  <tr>\n    <td>4K score</td>\n    <td>0.73</td>\n  </tr>\n  <tr>\n    <td>DRE</td>\n    <td>0.54</td>\n  </tr>\n  <tr>\n    <td>Prior Negative Biopsy</td>\n    <td>0.42</td>\n  </tr>\n  <tr>\n    <td>MRI Prostate volume</td>\n    <td>0.30</td>\n  </tr>\n  <tr>\n    <td>MRI PI-RADS score</td>\n    <td>0.76</td>\n  </tr>\n</table>\n\n<table>\n  <tr>\n    <td>\n      <b>Variable</b>\n    </td>\n    <td>\n      <b>AUC</b>\n    </td>\n  </tr>\n  <tr>\n    <td>Model</td>\n    <td>0.88</td>\n  </tr>\n  <tr>\n    <td>Age</td>\n    <td>0.51</td>\n  </tr>\n  <tr>\n    <td>4K score</td>\n    <td>0.80</td>\n  </tr>\n  <tr>\n    <td>DRE</td>\n    <td>0.56</td>\n  </tr>\n  <tr>\n    <td>Prior Negative Biopsy</td>\n    <td>0.42</td>\n  </tr>\n  <tr>\n    <td>MRI Prostate volume</td>\n    <td>0.28</td>\n  </tr>\n  <tr>\n    <td>MRI PI-RADS score</td>\n    <td>0.80</td>\n  </tr>\n</table>\n\n<table>\n  <tr>\n    <td>\n      <b>Variable</b>\n    </td>\n    <td>\n      <b>AUC</b>\n    </td>\n  </tr>\n  <tr>\n    <td>Model</td>\n    <td>0.86</td>\n  </tr>\n  <tr>\n    <td>Age</td>\n    <td>0.55</td>\n  </tr>\n  <tr>\n    <td>4K score</td>\n    <td>0.81</td>\n  </tr>\n  <tr>\n    <td>DRE</td>\n    <td>0.59</td>\n  </tr>\n  <tr>\n    <td>Prior Negative Biopsy</td>\n    <td>0.45</td>\n  </tr>\n  <tr>\n    <td>MRI Prostate volume</td>\n    <td>0.33</td>\n  </tr>\n  <tr>\n    <td>MRI PI-RADS score</td>\n    <td>0.79</td>\n  </tr>\n</table>\n\nfigure_or_chart: Three ROC (Receiver Operating Characteristic) curves for different models predicting PCa, csPCa, and uPCa. Each plot has axes labeled \"Sensitivity\" (y-axis) and \"1 - Specificity\" (x-axis), with curves for Predicted probability, Age, 4K score, DRE, Prior Negative Biopsy, Volume, PI-RADS score, and a Reference Line. The legend on the right identifies each curve by color. The ROC curves for the model (Predicted probability) are consistently higher than individual variables, indicating better performance. The AUC (Area Under Curve) values for each variable and the model are summarized in the tables below each plot, showing the model outperforms individual predictors.\n\nFIGURE 2  Area under curve characteristics for predicting PCa, csPCa, and uPCa <!-- figure, from page 0 (l=0.068,t=0.023,r=0.930,b=0.434), with ID ec2f1baf-866b-4d54-94fd-0552de81a253 -->\n\nmodel shows efficacy of 4K score test and mpMRI PI-RADS score, for predicting PCa, csPCa, and uPCa, and (c) the model showed accuracy in predicting any PCa, csPCa, and uPCa in entirely different cohort across all ranges of probabilities. <!-- text, from page 0 (l=0.073,t=0.480,r=0.491,b=0.544), with ID 325ef067-026e-4be6-9ecf-e54237598ea3 -->\n\nCombining both the 4Kscore and mpMRI in this newly developed\nmodel has the ability to guide prostate cancer diagnostics with more\naccuracy and further decrease number of unnecessary biopsies as well\nas the detection of non-csPCa. By reducing the number of unneeded\nbiopsies, patients can avoid the risk of biopsy-related complications\nincluding pain, bleeding, and infections, and in 1%-2% of biopsied\nmen, life-threatening urosepsis.¹² Moreover, overdetetion of non-\ncsPCa is known to cause overtreatment of indolent disease and\ndecreased QoL from patients living with an untreated cancer.¹³˒¹⁴ The\nadvantages of this novel nomogram in men pre-PCa diagnosis are\nclear, but it may also have clinical value in the increasingly large group\nof men with low-risk prostate cancer who are in active surveillance\n(AS) programs. <!-- text, from page 0 (l=0.074,t=0.547,r=0.490,b=0.760), with ID 80d8242a-3a35-4752-a11a-7805661df09d -->\n\nStudies have shown that the 4K score can improve the diagnostic discrimination of csPCa, reducing the number of required prostate biopsies. It has been suggested it could play an important clinical role in the decision-making process prior to proceeding with initial prostate biopsy in men with an elevated PSA level or abnormal digital rectal examination (DRE) or after a prior negative biopsy and persistently abnormal PSA levels.¹⁵ The recent prospective US validation study showed that 4K score test can predict csPCa with AUC 0.82 and with excellent calibration.¹¹ In the French arm of the ERSPC (European Randomized Study of Prostate Cancer Screening), <!-- text, from page 0 (l=0.075,t=0.763,r=0.489,b=0.927), with ID 4c174172-dd28-40ad-95a5-ea58cb0a911e -->\n\nAUC for detecting csPCa increased from 0.77 for a basic model (age, total PSA, and DRE) to 0.87 after adding four-kallikrein panel.^16 Our study confirms significant role of 4K score test in predicting csPCa. Additionally, multiple studies have shown that mpMRI helps in identifying a higher proportion of csPCa when compared to transrectal ultrasound-guided prostate biopsies alone. In the large multicenter, paired-cohort study, PROMIS, (comparing the diagnostic accuracy of mpMRI and TRUS-biopsy against template prostate mapping biopsy), results show that mpMRI and targeted biopsies detected up to 18% more cases of csPCa compared with TRUS-biopsy for all, while avoiding diagnosis of nonsignificant PCa by 5%.^8 However, other studies have shown a wide range of sensitivity for detecting csPCa (44%-87%) as well as negative predictive values ranging from 63%-98%.^7 <!-- text, from page 0 (l=0.514,t=0.480,r=0.928,b=0.709), with ID 947d3319-95e5-426d-a65f-ee8b688d1b22 -->\n\nProbabilistic estimates and predictions are being used with\nincreasing frequency in prostate cancer research to guide the\ndecision-making process. Huge data sets and increasingly sophisti-\ncated statistical software allow for individualized probability pre-\ndictions. However, these predictions can be only helpful if they\naccurately reflect the correct underlying probabilities.¹⁷ Calibra-\ntion of the prediction model is a critical component of its accuracy\nand thereby its clinical utility and more effective individualized\ncare. The feature of this prediction tool is that it has been cali-\nbrated in an entirely different cohort and showed accuracy\nbetween predicted and actual rates of PCa, csPCa, and uPCa\nacross all ranges probability percentages. Approximately, 70% of\npatients that undergo prostate biopsy has negative results.¹⁸ <!-- text, from page 0 (l=0.515,t=0.713,r=0.927,b=0.926), with ID f36d7886-fe76-4057-96cd-41d6d82423af -->\n\n25-Sep-2021 4 Downloaded from https://onlinelibrary.wiley.com/doi/epdf/10.1002/ajh.26321 by Wiley Online Library on [10/23/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1096-8652) for Use of Wiley Online Library, nor rules of use. OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.969,t=0.020,r=0.984,b=0.981), with ID 9abcb09b-41e9-4b22-bb02-d5be2e9cdd32 -->\n\nWAGASKAR ET AL. <!-- marginalia, from page 0 (l=0.072,t=0.027,r=0.171,b=0.041), with ID 4c9c82b6-bd44-4ea3-a3f5-f52c84c69d0e -->\n\nCancer Reports\nOpen Access <!-- marginalia, from page 0 (l=0.557,t=0.025,r=0.752,b=0.051), with ID f5e2d8c4-9984-4e62-8842-aa966cc3f038 -->\n\n-WILEY <!-- marginalia, from page 0 (l=0.760,t=0.026,r=0.858,b=0.050), with ID 8543e9c4-d5db-4739-b845-8031ab6f2f6e -->\n\n7 of 9 <!-- marginalia, from page 0 (l=0.887,t=0.026,r=0.925,b=0.042), with ID 927934f7-d740-44d1-90b3-3522f95d8fd7 -->\n\nscatter plot: The plot displays the \"Actual rate of any PCa\" (y-axis) versus the \"Predictive rate of any PCa\" (x-axis), both axes ranging from 0.0 to 1.0. There are blue scatter points distributed along the plot, with a blue diagonal reference line (y = x) running from the bottom left (0,0) to the top right (1,1). Thin green vertical bars are shown along the x-axis, representing the distribution of predictive rates. The plot is labeled \"(A)\" in the upper left corner. The overall trend shows that the actual rate generally increases with the predictive rate, with points clustering near the diagonal. There is no legend. <!-- figure, from page 0 (l=0.084,t=0.060,r=0.495,b=0.359), with ID 0d1d80d4-9041-4f18-b628-cc19db9798b7 -->\n\nscatter plot: The plot shows the relationship between the \"Predictive rate of csPCa\" (x-axis, ranging from 0.0 to 1.0) and the \"Actual rate of csPCa\" (y-axis, ranging from 0.0 to 1.0). Blue dots represent data points, and a blue diagonal line (y = x) is drawn from the bottom left to the top right, indicating perfect calibration. Green vertical bars are present along the x-axis, mostly clustered at lower predictive rates. The plot is labeled \"(B)\" in the upper left corner. The overall trend shows that as the predictive rate increases, the actual rate also increases, with some deviation from the diagonal. There is no legend or title beyond the axis labels. <!-- figure, from page 0 (l=0.494,t=0.062,r=0.910,b=0.361), with ID 201c00de-9e07-487f-ad0f-2e47ffbb81e2 -->\n\nscatter plot: The plot compares the \"Predictive rate of uPCa\" (x-axis) with the \"Actual rate of uPCa\" (y-axis). The axes both range from 0.0 to 1.0. There are several blue data points scattered, mostly clustered at lower predictive and actual rates, with a few points at higher values. A diagonal reference line (y = x) is drawn from the bottom-left to the top-right, indicating perfect prediction. Thin green vertical lines are present at the base of the plot, likely representing the distribution or frequency of predictive rates. The plot is labeled \"(C)\" in the upper left corner. No legend or further annotation is present. The chart visualizes the calibration of predictive versus actual rates for uPCa. <!-- figure, from page 0 (l=0.290,t=0.366,r=0.706,b=0.654), with ID 5ff2fc9a-b90e-4d31-bd98-16681a260e2d -->\n\nFIGURE 3  A, Predictive probabilities of cancer for each case in the testing cohort are sorted by probability of PCa calculated from the training model, respectively. Each point (average of 60 subsequent cases) illustrates the comparison between predictive probability (calculated from the training model) and actual cancer rate for this group of cases. Points on the diagonal line (0, 0 and 1, 1), show the agreement between the predicted and actual rate of PCa and the validated training model. The histogram of the calculated probabilities for the validation cohort is shown along the horizontal axis. B, Predictive probabilities of cancer for each case in the testing cohort are sorted by probability of csPCa calculated from the training model, respectively. Each point (average of 60 subsequent cases) illustrates the comparison between predictive probability (calculated from the training model) and actual cancer rate for this group of cases. Points on the diagonal line (0, 0 and 1, 1) show the agreement between the predicted and actual rate of csPCa and the validated training model. The histogram of the calculated probabilities for the validation cohort is shown along the horizontal axis. C, Predictive probabilities of cancer for each case in the testing cohort are sorted by probability of uPCa calculated from the training model, respectively. Each point (average of 60 subsequent cases) illustrates the comparison between predictive probability (calculated from the training model) and actual cancer rate for this group of cases. Points on the diagonal line (0, 0 and 1, 1) show the agreement between the predicted and actual rate of uPCa and the validated training model. The histogram of the calculated probabilities for the validation cohort is shown along the horizontal axis <!-- text, from page 0 (l=0.070,t=0.664,r=0.921,b=0.850), with ID e0583778-d50c-494e-b38b-79293340ce79 -->\n\nHistory of negative prostate biopsy in the past lowers the chances\nof finding PCa in the forthcoming prostate biopsy.¹⁸ Finding the\ncancer at earlier stage is equally important for oncological efficacy\nas well as addressing quality-of-life issues after the surgery.¹⁹ We <!-- text, from page 0 (l=0.072,t=0.878,r=0.486,b=0.944), with ID 8f5c9797-78bb-4e60-9256-dce918d68a3d -->\n\nfound significance of prior negative biopsy for predicting PCa,\ncsPCa, and uPCa. <!-- text, from page 0 (l=0.511,t=0.880,r=0.923,b=0.909), with ID 5e909717-1c85-4145-add5-55f36e859bf3 -->\n\nOur study has some limitations. First, all biopsies were performed\nby a single experienced, high-volume expert, which could affect <!-- text, from page 0 (l=0.511,t=0.912,r=0.923,b=0.943), with ID da7f0e31-a7d6-4f6c-9b92-d0a49f993f75 -->\n\n25734838, 2021, 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cam4.3753 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.968,t=0.019,r=0.985,b=0.981), with ID 27923196-b751-4177-a4ee-2433545932a3 -->\n\nfigure: Three line charts showing decision curve analysis for predicting prostate cancer (PCa) using different models and scores.\n\n(A) Decision curve analysis for predicting any PCa\n- Y-axis: Net Benefit (ranging from -0.1 to 0.5)\n- X-axis: Threshold Probability (ranging from 0 to 1)\n- Four lines:\n  - Blue: Net Benefit: Biopsy using prediction model\n  - Orange: Net Benefit: Biopsy using PI-RADS score\n  - Gray: Net Benefit: Biopsy using 4K score\n  - Brown: Net Benefit: Biopsy All\n  - Red: Net Benefit: Biopsy None\n- The blue line (prediction model) shows the highest net benefit across most threshold probabilities.\n\n(B) Decision curve analysis for predicting csPCa\n- Y-axis: Net Benefit (ranging from -0.1 to 0.3)\n- X-axis: Threshold Probability (ranging from 0 to 1)\n- Four lines:\n  - Blue: Net Benefit: Biopsy using prediction model\n  - Orange: Net Benefit: Biopsy using PI-RADS score\n  - Gray: Net Benefit: Biopsy using 4K score\n  - Brown: Net Benefit: Biopsy All\n  - Red: Net Benefit: Biopsy None\n- The blue line (prediction model) again shows the highest net benefit across most threshold probabilities.\n\n(C) Decision curve analysis for predicting uPCa\n- Y-axis: Net Benefit (ranging from -0.05 to 0.15)\n- X-axis: Threshold Probability (ranging from 0 to 1)\n- Four lines:\n  - Blue: Net Benefit: Biopsy using prediction model\n  - Orange: Net Benefit: Biopsy using PI-RADS score\n  - Gray: Net Benefit: Biopsy using 4K score\n  - Brown: Net Benefit: Biopsy All\n  - Red: Net Benefit: Biopsy None\n- The blue line (prediction model) shows the highest net benefit across most threshold probabilities.\n\nLegends are present below each chart, matching line colors to the net benefit calculation method.\n\nSummary: The figure presents decision curve analyses for predicting any prostate cancer (PCa), clinically significant PCa (csPCa), and unfavorable PCa (uPCa) using a prediction model, 4K score, or PI-RADS score alone. The prediction model consistently provides the highest net benefit across a range of threshold probabilities. <!-- figure, from page 0 (l=0.071,t=0.024,r=0.932,b=0.607), with ID 11183f78-1135-4d49-9675-9b2c69312aec -->\n\nbar chart: The chart displays the percent of biopsies saved (y-axis) versus the percent of biopsies (x-axis) for different biopsy-saving thresholds (30%, 25%, 20%, 15%, 10%, 5%, and 0%). Each horizontal bar is divided into colored segments representing the following categories: Biopsies saved (blue), Benign biopsy (orange), Gleason 3+4 on biopsy (gray), Gleason 4+3 on biopsy (yellow), Gleason 6 on biopsy (purple), and ≥Gleason 8 on biopsy (green). The number of cases in each segment is labeled within the bar. The legend at the bottom matches each color to its category. The chart shows that as the percent of biopsies saved increases, the number of benign biopsies decreases, while the number of higher Gleason scores on biopsy remains relatively stable. This figure summarizes the trade-off between reducing unnecessary biopsies and detecting clinically significant prostate cancer. <!-- figure, from page 0 (l=0.074,t=0.646,r=0.485,b=0.872), with ID 3f79a43a-b0af-476b-89c1-c452de475412 -->\n\n**FIGURE 5**  Graph showing the number of biopsies that can be saved in the validation cohort using the prediction tool predicting clinically significant prostate cancer (csPCa) <!-- text, from page 0 (l=0.072,t=0.882,r=0.467,b=0.929), with ID 417a2db6-ca0f-4ca1-a034-56c41d3f9f14 -->\n\nreproducibility. Second, as mentioned in methodology, not all men who had 4K score test done were included in the analysis. Stringent biopsy criteria could also affect generalizability. <!-- text, from page 0 (l=0.514,t=0.644,r=0.930,b=0.696), with ID cff57449-fd1d-46e6-bd7e-4334428a90e4 -->\n\n5   |   CONCLUSIONS\n\nWe have developed a 4K score/MRI-based tool to assist clinicians in biopsy decision-making and counselling of men at risk for PCa. Using our novel prediction model could significantly reduce the large number of biopsies that detect benign or clinically insignificant PCa, while missing only a small proportion of csPCa and uPCa. Our results demonstrate the importance of combining 4K score test, prior negative biopsy, prostate volume, and mpMRI PI-RADS score ≥4 for predicting PCa, csPCa, and uPCa. This novel model could reduce unnecessary biopsies and decrease detection of clinically insignificant prostate cancer more effectively than mpMRI or 4K score alone. Thus, this model <!-- text, from page 0 (l=0.513,t=0.725,r=0.930,b=0.928), with ID fa4a39c4-5541-4d6e-ab0f-e2aec74a0070 -->\n\n25731848, 2021. 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cam4.3753 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.967,t=0.018,r=0.985,b=0.983), with ID abb69a8d-2e66-4627-987b-a0a8b13395fc -->\n\nWAGASKAR ET AL. <!-- marginalia, from page 0 (l=0.071,t=0.027,r=0.173,b=0.041), with ID d6ac50fb-54b2-49f8-88b3-9615e211b55b -->\n\nCancer Reports  \nOpen Access <!-- marginalia, from page 0 (l=0.556,t=0.025,r=0.753,b=0.052), with ID 4b98f7f7-83f3-41e2-9caa-6bd9c23bab75 -->\n\nWILEY <!-- marginalia, from page 0 (l=0.758,t=0.027,r=0.859,b=0.051), with ID b4908788-d364-4c6a-9a7e-6f9963416072 -->\n\n9 of 9 <!-- marginalia, from page 0 (l=0.887,t=0.027,r=0.925,b=0.041), with ID 7cadf23a-8b0b-4ef8-88ad-ff14a5f6100e -->\n\ncould have a significant impact on patient morbidity and social eco-\nnomic costs within prostate cancer diagnostics. <!-- text, from page 0 (l=0.071,t=0.064,r=0.486,b=0.097), with ID 6fdd3d60-0e28-440c-b45b-0e6fad83ed77 -->\n\nACKNOWLEDGMENT  \nWe thank Ms Sima Rabinowitz for editorial revision. <!-- text, from page 0 (l=0.070,t=0.112,r=0.382,b=0.146), with ID 0a714cde-24db-4343-9ff6-375bb5d02a71 -->\n\nCONFLICT OF INTEREST  \nThe authors declare no conflicts of interest. <!-- text, from page 0 (l=0.071,t=0.162,r=0.332,b=0.196), with ID de2c3f5c-23e8-475c-a95c-12fb8c4f27b1 -->\n\nAUTHOR CONTRIBUTIONS  \nConceptualization, Data curation, Formal analysis, Methodology, Project administration, Visualization, Writing-original draft, Writing-review and editing, V.W.; Data curation, Software, Writing-review and editing, S.S.; Data curation, Formal analysis, Methodology, P.R.; Investigation, Resources, Writing-review and editing, J.Y.; Investigation, Writing-review and editing, A.L.; Data curation, Investigation, Writing-review and editing, S.P.; Investigation, Writing-review and editing, U.F. and S.L.; Data curation, Investigation, L.L.; Data curation, Writing-review and editing, K.H.; Validation, Writing-review and editing, S.P.; Conceptualization, Writing-original draft, Writing-review and editing, P.W.; Conceptualization, Project administration, Resources, Supervision, Writing-original draft, Writing-review & editing, A.T. <!-- text, from page 0 (l=0.070,t=0.212,r=0.489,b=0.430), with ID 63071690-9460-4219-940a-569e4163111f -->\n\n**DATA AVAILABILITY STATEMENT**  \nThe data that support the findings of this study are available from the corresponding author upon reasonable request. <!-- text, from page 0 (l=0.070,t=0.444,r=0.488,b=0.496), with ID a598d55e-51ba-4d6e-b917-e3c986957788 -->\n\nETHICAL STATEMENT  \nThe study was conducted at the Icahn School of Medicine at Mount Sinai Health System (ISMMS) after approval from the Institutional Review Board (GCO 19-1711). Informed patient consent waived for this study. <!-- text, from page 0 (l=0.070,t=0.511,r=0.488,b=0.596), with ID 930adfc1-0e0d-4793-b02b-d55178ef5976 -->\n\nORCID  \n_Vinayak G. Wagaskar_ ![figure: ORCID logo](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0000-0001-8027-6661  \n_Anna Lantz_ ![figure: ORCID logo](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0000-0002-5335-8028  \n_Ugo Giovanni Falagario_ ![figure: ORCID logo](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0000-0002-1152-3005 <!-- text, from page 0 (l=0.070,t=0.627,r=0.472,b=0.696), with ID 7699ff99-47b3-4f3b-94bc-d78246c01287 -->\n\n1. Siegel RL, Miller KD, Jemal A. Cancer statistics, 2018. CA *Cancer J Clin.* 2018;68(1):7-30.\n2. Schroder FH, Hugosson J, Roobol MJ, et al; ERSPC Investigators. Screening and prostate cancer mortality: results of the European Randomised Study of Screening for Prostate Cancer (ERSPC) at 13 years of follow-up. *Lancet.* 2014;384(9959):2027-2035.\n3. Loeb S, Carter HB, Berndt SI, Ricker W, Schaeffer EM. Complications after prostate biopsy: data from SEER-Medicare. *J Urol.* 2011;186(5):1830-1834.\n4. Vickers AJ, Cronin AM, Roobol MJ, et al. A four-kallikrein panel predicts prostate cancer in men with recent screening: data from the European Randomized Study of Screening for Prostate Cancer, Rotterdam. *Clin Cancer Res.* 2010;16(12):3232-3239.\n5. Vickers AJ, Cronin AM, Aus G, et al. A panel of kallikrein markers can reduce unnecessary biopsy for prostate cancer: data from the <!-- text, from page 0 (l=0.071,t=0.709,r=0.489,b=0.933), with ID b1c00980-1e98-44fa-96f2-c91a10503351 -->\n\n- 6. Nordstrom T, Vickers A, Assel M, Lilja H, Gronberg H, Eklund M. Comparison between the four-kallikrein panel and prostate health index for predicting prostate cancer. Eur Urol. 2015;68(1):139-146.\n- 7. Futterer JJ, Briganti A, De Visschere P, et al. Can clinically significant prostate cancer be detected with multiparametric magnetic resonance imaging? A systematic review of the literature. Eur Urol. 2015;68(6):1045-1053.\n- 8. Ahmed HU, El-Shater Bosaily A, Brown LC, et al; PROMIS Study group. Diagnostic accuracy of multi-parametric MRI and TRUS biopsy in prostate cancer (PROMIS): a paired validating confirmatory study. Lancet. 2017;389(10071):815-822.\n- 9. Rouvière O, Puech P, Renard-Penna R, et al. Use of prostate systematic and targeted biopsy on the basis of multiparametric MRI in biopsy-naive patients (MRI-FIRST): a prospective, multicentre, paired diagnostic study. Lancet Oncol. 2019;20(1):100-109.\n- 10. Gronberg H, Eklund M, Picker W, et al. Prostate cancer diagnostics using a combination of the Stockholm3 blood test and multiparametric magnetic resonance imaging. Eur Urol. 2018;74(6):722-728.\n- 11. Punnen S, Nahar B, Soodana-Prakash N, et al. Optimizing patient's selection for prostate biopsy: a single institution experience with multi-parametric MRI and the 4Kscore test for the detection of aggressive prostate cancer. PLoS One. 2018;13(8):e0201384.\n- 12. Aly M, Dyrdak R, Nordstrom T, et al. Rapid increase in multidrug-resistant enteric bacilli blood stream infection after prostate biopsy: A 10-year population-based cohort study. Prostate. 2015;75(9):947-956.\n- 13. Johansson E, Steineck G, Holmberg L, et al; SPCG-4 Investigators. Long-term quality-of-life outcomes after radical prostatectomy or watchful waiting: the Scandinavian Prostate Cancer Group-4 randomised trial. Lancet Oncol. 2011;12(9):891-899.\n- 14. Chen RC, Basak R, Meyer AM, et al. Association between choice of radical prostatectomy, external beam radiotherapy, brachytherapy, or active surveillance and patient-reported quality of life among men with localized prostate cancer. JAMA. 2017;317(11):1141-1150.\n- 15. Punnen S, Pavan N, Parekh DJ. Finding the wolf in sheep's clothing: the 4Kscore is a novel blood test that can accurately identify the risk of aggressive prostate cancer. Rev Urol. 2015;17(1):3-13.\n- 16. Benchikh A, Savage C, Cronin A, et al. A panel of kallikrein markers can predict outcome of prostate biopsy following clinical work-up: an independent validation study from the European Randomized Study of Prostate Cancer screening, France. BMC Cancer. 2010;10:635-635.\n- 17. Lindheim O, Petersen IT, Møntch LK, Youngstrom EA. The importance of calibration in clinical psychology. Assessment. 2020;27(4):840-854.\n- 18. Rivas J, Alvarez-Maestro M, Czarniecki M, Czarniecki S, Socarras M, Loeb S. Negative biopsies with rising prostate-specific antigen. What to do? EMJ Urol. 2017;5:76-82.\n- 19. Wagskarr VG, Mittal A, Sobotka S, et al. Hood technique for robotic radical prostatectomy—Preserving periurethral anatomical structures in the space of Retzius and sparing the pouch of douglas, enabling early return of continence without uncompromising surgical margin rates. Eur Urol. 2020(S0302-2838(20)):30771–30775. https://doi.org/10.1016/j.eururo.2020.09.044. <!-- text, from page 0 (l=0.509,t=0.063,r=0.931,b=0.794), with ID 38561c8e-7183-475c-817f-8cd4f3d12467 -->\n\nHow to cite this article: Wagaskar VG, Sobotka S, Ratnani P, et al. A 4K score/MRI-based nomogram for predicting prostate cancer, clinically significant prostate cancer, and unfavorable prostate cancer. Cancer Reports. 2021;4:e1357. https://doi.org/10.1002/cnr2.1357 <!-- text, from page 0 (l=0.513,t=0.820,r=0.923,b=0.926), with ID 8fd65625-d291-4971-8a53-23d434fdb5b0 -->\n\n2573848. 2021. 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cat.51378 Wiley Online Library on [illegible] 05/06/2023. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use. OA articles are governed by the applicable Creative Commons License <!-- marginalia, from page 0 (l=0.967,t=0.017,r=0.986,b=0.986), with ID d3ce206e-7bc7-4d85-9472-3ab2519e9ed8 -->",
+  "chunks": [
+    {
+      "text": "logo: circular icon with red bookmark and blue/yellow background\nCheck for updates",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8680140376091003,
+            "t": 0.0005473596975207329,
+            "r": 1.0000032186508179,
+            "b": 0.02159619703888893
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "df9b2037-3fbf-4323-8062-e3573cd06793"
+    },
+    {
+      "text": "Received: 18 December 2020",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07127352058887482,
+            "t": 0.03625546768307686,
+            "r": 0.23650385439395905,
+            "b": 0.05119539424777031
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "2accc4fd-fad5-405e-b740-7040d19c1210"
+    },
+    {
+      "text": "Revised: 28 January 2021",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.24842095375061035,
+            "t": 0.036254506558179855,
+            "r": 0.40045231580734253,
+            "b": 0.051648493856191635
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "8a08d6b2-0139-4ccf-907c-c9c804532b9f"
+    },
+    {
+      "text": "Accepted: 8 February 2021",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4084585905075073,
+            "t": 0.035955071449279785,
+            "r": 0.5615453720092773,
+            "b": 0.05185011774301529
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "d21fc722-50bd-4994-9221-92368bb24226"
+    },
+    {
+      "text": "DOI: 10.1002/cnr2.1357",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07088135182857513,
+            "t": 0.0534752793610096,
+            "r": 0.2111528366804123,
+            "b": 0.06849445402622223
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "7810c5e7-1419-4051-9306-c59944f06463"
+    },
+    {
+      "text": "ORIGINAL ARTICLE\n___",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06867307424545288,
+            "t": 0.08159156143665314,
+            "r": 0.26594868302345276,
+            "b": 0.10609592497348785
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "afc0eae1-8499-4afc-bcf2-e7b087592ce5"
+    },
+    {
+      "text": "logo: Cancer Reports Open Access\n\nlogo: WILEY",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6168267130851746,
+            "t": 0.07290396839380264,
+            "r": 0.92695552110672,
+            "b": 0.10288969427347183
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "ea5e9628-312b-4265-a17e-089bff43e1ab"
+    },
+    {
+      "text": "A 4K score/MRI-based nomogram for predicting prostate cancer, clinically significant prostate cancer, and unfavorable prostate cancer",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06569939851760864,
+            "t": 0.13401637971401215,
+            "r": 0.8934525847434998,
+            "b": 0.22521533071994781
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "84feb0d8-6ca7-481a-9d41-f84cfc069527"
+    },
+    {
+      "text": "Vinayak G. Wagaskar¹ ![figure: ORCID icon] | Stanislaw Sobotka¹ | Parita Ratnani¹ | James Young¹ | Anna Lantz¹ ![figure: ORCID icon] | Sneha Parekh¹ | Ugo Giovanni Falagario¹ ![figure: ORCID icon] | Li Li² | Sara Lewis³ | Kenneth Haines III² | Sanoj Punnen⁴ | Peter Wiklund¹ | Ash Tewari¹",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0666397213935852,
+            "t": 0.24736332893371582,
+            "r": 0.9188779592514038,
+            "b": 0.32473474740982056
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "5a95c978-33df-4a53-b4a9-ad54a70dcac7"
+    },
+    {
+      "text": "¹Department of Urology, Icahn School of  \nMedicine at Mount Sinai Hospital, New York,  \nNew York",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07046877592802048,
+            "t": 0.3442196846008301,
+            "r": 0.31116366386413574,
+            "b": 0.3852071166038513
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "bfcfb004-2e1e-4655-b34a-0d43f0ea1145"
+    },
+    {
+      "text": "²Department of Pathology, Icahn School of Medicine at Mount Sinai Hospital, New York, New York",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0706452876329422,
+            "t": 0.3866659700870514,
+            "r": 0.3095324635505676,
+            "b": 0.42781004309654236
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "34d99b04-6e82-4916-bb5c-dc2d603182a3"
+    },
+    {
+      "text": "³Department of Radiology, Icahn School of Medicine at Mount Sinai Hospital, New York, New York",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0715041533112526,
+            "t": 0.42941123247146606,
+            "r": 0.3093241751194,
+            "b": 0.46908432245254517
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "2a5cbbab-7a4a-4a6f-9434-0aa2b63e5780"
+    },
+    {
+      "text": "⁴Department of Urology, University of Miami,\nMiller School of Medicine, Miami, Florida",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07161133736371994,
+            "t": 0.47053593397140503,
+            "r": 0.3117537200450897,
+            "b": 0.5015047192573547
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "8fad7c6f-1704-4c51-abf1-db02180b2fbc"
+    },
+    {
+      "text": "Correspondence  \nVinayak G. Wagaskar, Department of Urology,  \nIcahn School of Medicine at Mount Sinai  \nHospital, 1425 Madison Avenue, New York,  \nNY 10029, USA.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07086231559515,
+            "t": 0.5111513137817383,
+            "r": 0.3146288990974426,
+            "b": 0.5754375457763672
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "87878be3-a2cb-4bf8-ad0c-7a9ddb6d106b"
+    },
+    {
+      "text": "Email: vinayakwagaskar99@gmail.com, vinayak.wagaskar@mountsinai.org",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07046642154455185,
+            "t": 0.5757681727409363,
+            "r": 0.2765994071960449,
+            "b": 0.602289617061615
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "80581170-6829-4144-928f-72802b4f5696"
+    },
+    {
+      "text": "Abstract  \n**Background:** The detection of prostate cancer requires histological confirmation in biopsy core. Currently, number of unnecessary prostate biopsies are being performed in the United States. This is due to the absence of appropriate biopsy decision-making protocol.  \n**Aim:** To develop and validate a 4K score/multiparametric magnetic resonance imaging (mpMRI)-based nomogram to predict prostate cancer (PCa), clinically significant prostate cancer (csPCa), and unfavorable prostate cancer (uPCa).",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.34501153230667114,
+            "t": 0.3524419367313385,
+            "r": 0.9160367846488953,
+            "b": 0.48458191752433777
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "6a6d2410-a296-47d4-881b-b6f310faf2a1"
+    },
+    {
+      "text": "**Methods and Results:** Retrospective, single-center study evaluating a cohort of 574 men with 4K score test >7% or suspicious digital rectal examination (DRE) or Prostate Imaging Reporting and Data System (PI-RADS) scores 3, 4, or 5 on mpMRI that underwent systematic and/or mpMRI/ultrasound fusion–targeted prostate biopsy between 2016 and 2020. External cohort included 622 men. csPCa and uPCa were defined as Gleason score ≥3 + 4 and ≥4 + 3 on biopsy, respectively. Multivariable logistic regression analysis was performed to build nomogram for predicting PCa, csPCa, and uPCa. Validation was performed by plotting the area under the curve (AUC) and comparing nomogram-predicted probabilities with actual rates of PCa, csPCa, and uPCa probabilities in the external cohort. 4K score, a PI-RADS ≥4, prostate volume and prior negative biopsy were significant predictors of PCa, csPCa, and uPCa. AUCs were 0.84, 0.88, and 0.86 for the prediction of PCa, csPCa, and uPCa, respectively. The predicted and actual rates of PCa, csPCa, and uPCa showed agreement across all percentage probability ranges in the validation cohort. Using the prediction model at threshold of 30, 30% of overall biopsies, 41% of benign biopsies, and 19% of diagnosed indolent PCa could be avoided, while missing 9% of csPCa.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.3467046022415161,
+            "t": 0.4883062541484833,
+            "r": 0.9163886308670044,
+            "b": 0.7730364799499512
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "4bc5155f-2280-4968-a7d7-597bfc175493"
+    },
+    {
+      "text": "**Conclusion:** This novel nomogram would reduce unnecessary prostate biopsies and decrease detection of clinically insignificant PCa.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.3462049961090088,
+            "t": 0.7755534052848816,
+            "r": 0.91538405418396,
+            "b": 0.8119511008262634
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "1e667f27-dd06-40bf-9965-43c935eafdbf"
+    },
+    {
+      "text": "KEYWORDS\n4K score test, biopsy, multiparametric MRI, prostate cancer",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.34745466709136963,
+            "t": 0.8263718485832214,
+            "r": 0.6982184648513794,
+            "b": 0.8576591610908508
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "ffdb09b2-7cfe-41e5-8efc-2b8274c819b2"
+    },
+    {
+      "text": "This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.\n© 2021 The Authors. *Cancer Reports* published by Wiley Periodicals LLC.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07084876298904419,
+            "t": 0.9049278497695923,
+            "r": 0.9155551791191101,
+            "b": 0.949230432510376
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "3ec99c57-2e10-4416-95c7-fdf787361aef"
+    },
+    {
+      "text": "*Cancer Reports*. 2021;4:e1357.  \nhttps://doi.org/10.1002/cnr2.1357",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0711418092250824,
+            "t": 0.9589665532112122,
+            "r": 0.2618268132209778,
+            "b": 0.9876568913459778
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "4ff4b61e-0334-47f3-b888-acb43d7bf472"
+    },
+    {
+      "text": "wileyonlinelibrary.com/journal/cnr2",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6630613803863525,
+            "t": 0.9581790566444397,
+            "r": 0.8537399768829346,
+            "b": 0.9731511473655701
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "4a88b700-cd39-4c3d-a8d6-93589ec24eb8"
+    },
+    {
+      "text": "1 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.885651171207428,
+            "t": 0.9579733610153198,
+            "r": 0.9255407452583313,
+            "b": 0.9727087020874023
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "71b0b7df-cbf2-4540-b6e5-26c72895aa60"
+    },
+    {
+      "text": "2 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07392039149999619,
+            "t": 0.026704266667366028,
+            "r": 0.11395295709371567,
+            "b": 0.041431233286857605
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "8def453e-d452-489b-97fd-d760f533a78b"
+    },
+    {
+      "text": "WILEY\n\nCancer Reports\n\nlogo: stylized globe with interconnected nodes",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.13790656626224518,
+            "t": 0.026053164154291153,
+            "r": 0.44323259592056274,
+            "b": 0.05127135291695595
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "3b35c8dc-2085-4e70-b24a-363e43db565a"
+    },
+    {
+      "text": "WAGASKAR ET AL.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.82856285572052,
+            "t": 0.027436405420303345,
+            "r": 0.9258264303207397,
+            "b": 0.04070074111223221
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "0f9e4836-aa86-4dbd-884e-470c1becb21b"
+    },
+    {
+      "text": "1   |   BACKGROUND\n\nProstate cancer is the most common cancer in men in the United States, accounting for an estimated 19% of all newly diagnosed cancers in 2018.¹ Prostate-specific antigen (PSA) is the only molecular marker routinely used for detection of prostate cancer (PCa), and screening with PSA has been shown to reduce prostate cancer mortality.² However, numerous studies have demonstrated the diagnostic limitations of PSA resulting in overdiagnosis of indolent cancers, frequent unnecessary prostate biopsies, the results of which are benign, and overtreatment with significant morbidity.³ Alternative strategies for the detection of significant PCa are needed to avoid potentially morbid, invasive procedures in men who are unlikely to be diagnosed with prostate cancer.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07346343994140625,
+            "t": 0.06254110485315323,
+            "r": 0.4894554615020752,
+            "b": 0.2771659791469574
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "0cc6a52f-a0b1-4098-bfea-1987e44081a7"
+    },
+    {
+      "text": "4K score test (OPKO Diagnostics, Woburn, MA) is a serum biomarker–based test on a four-kallikrein panel including kallikrein-related peptidase 2 (hK2), intact PSA, free PSA, and total PSA, as well as incorporating clinical information such as biopsy history and DRE findings. The 4K score test has repeatedly been shown to predict prostate cancer (PCa) biopsy outcome in men with elevated PSAs while also significantly reducing the number of unnecessary biopsies.⁴⁻⁶ Furthermore, multiparametric magnetic resonance imaging (mpMRI) in combination with targeted biopsies has emerged as an effective tool to detect clinically significant disease.⁷⁻⁹ Studies combining biomarkers and MRI-targeted biopsies for prostate cancer detection have also been proven to decrease the number of biopsies and avoid over-detection of indolent cancer to an even greater extent.¹⁰",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07504449784755707,
+            "t": 0.28035834431648254,
+            "r": 0.48977190256118774,
+            "b": 0.4936734735965729
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "1eca7455-825c-4b12-864b-bd51c1742301"
+    },
+    {
+      "text": "Although the mpMRI and the 4K score test are both used in American clinical practice for the evaluation of prostate cancer, there are no reports on the impact of using these tests in combination. We hypothesize that both of these tests will provide independent and complementary value, and when combined, will improve the detection of clinically significant disease compared to either test alone.¹¹ The aim of this study was to develop a nomogram using 4K score test and mpMRI to detect clinically significant prostate cancer (csPCa) in men with an elevated PSA and/or abnormal DRE.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0751338005065918,
+            "t": 0.49652206897735596,
+            "r": 0.4885264039039612,
+            "b": 0.6436237096786499
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "fc153c75-8a0b-4478-8090-7d45311255e7"
+    },
+    {
+      "text": "2  |  MATERIAL AND METHODS",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07388396561145782,
+            "t": 0.6754125952720642,
+            "r": 0.3754613995552063,
+            "b": 0.6954948306083679
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "dcd3a655-84d0-4761-882c-171dff1ad7b3"
+    },
+    {
+      "text": "2.1   |   Study population\n\nWe retrospectively reviewed our institution's prostate biopsy data-\nbase to extract relevant patient records. A total of 1100 patients\nunderwent 4K score test between January 2016 and April 2020. Of\nthese, 584 (53%) underwent systematic or combined systematic and\nMRI/transrectal ultrasound (TRUS) fusion biopsy by a single expert\nsurgeon (A.K.T. ) with 20 years of experience. Indications of biopsy\nwere 4K score test of >7%, suspicious DRE, PI-RADS scores of 3, 4 or\n5 on mpMRI, or combination of any of the above. Men who have con-\ntraindication for prebiopsy mpMRI (n = 10) were excluded. In total,\n574 men were used to build the model (development cohort). For vali-\ndation, we used a cohort of 622 men that underwent systematic or\ncombined systematic and MRI/TRUS fusion biopsy for similar",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07339204847812653,
+            "t": 0.7098885178565979,
+            "r": 0.4893462657928467,
+            "b": 0.94306880235672
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "e74414d7-3db4-4275-8e16-cf700012f7b2"
+    },
+    {
+      "text": "indications (4K score test >7%, suspicious DRE, PI-RADS scores of 3, 4, or 5 on mpMRI) at the University of Miami.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.515379011631012,
+            "t": 0.06529897451400757,
+            "r": 0.925575315952301,
+            "b": 0.09510596096515656
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "270047bd-b021-425c-9c08-2bbc1d7e7476"
+    },
+    {
+      "text": "All men underwent standardized 3-Tesla mpMRI prior to prostate biopsy. All mpMRI examinations were compliant with the American College of Radiology recommendations for technical specifications. All mpMRI results were evaluated according to PI-RADS Version 2 (PI-RADS V2) by clinical radiologists with experience in prostate imaging.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5156605839729309,
+            "t": 0.09802819788455963,
+            "r": 0.9266576170921326,
+            "b": 0.17832167446613312
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "44a89b51-4d89-4d4e-b97d-38aaa80e443c"
+    },
+    {
+      "text": "All biopsies were performed using a spring-loaded biopsy gun and 18-gauge needles. For targeted biopsies, Artemis MRI/TRUS fusion device (Innomedicus, Cham, Switzerland) was used and extra 2-4 cores taken from each lesion in addition to standard 12 cores biopsy. An experienced genitourinary pathologist (K.H. III) reviewed all biopsy samples.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.515704870223999,
+            "t": 0.18041032552719116,
+            "r": 0.9271690845489502,
+            "b": 0.2613784372806549
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "3619021c-3138-4738-8787-0ce9e2ee2cb0"
+    },
+    {
+      "text": "## 2.2 | Outcomes definition and statistical analysis\n\nThe outcome for predicting PCa was defined as a Gleason score of ≥3 + 3 on biopsy, and men with this outcome were considered cases. Men with negative biopsy were considered controls. The outcome for predicting csPCa was defined as a Gleason score of ≥3 + 4 on biopsy; men with this outcome were considered cases, and the remaining men with negative biopsy and men with Gleason score 3 + 3 on biopsy were considered controls. The outcome for predicting uPCa was defined as a Gleason score of ≥4 + 3 on biopsy; men with this outcome were considered cases, while the remaining men with negative biopsy, Gleason score 3 + 3, 3 + 4, were considered controls.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5137585401535034,
+            "t": 0.29496318101882935,
+            "r": 0.9276615381240845,
+            "b": 0.49349379539489746
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "eb81eeff-2149-429a-8e78-bb3f0300236a"
+    },
+    {
+      "text": "Descriptive statistics for the two groups were calculated. Continuous variables were reported as median and interquartile range (IQR) and compared using a Mann–Whitney U test. Categorical variables were reported as rates and were tested with a chi-square test, as appropriate. The prediction model included the following variables: age, family history of prostate cancer, history of negative prior biopsy, 4K score test, DRE findings, mpMRI prostate volume, and highest PI-RADS score. We are aware that 4K score test incorporates clinical parameters like age, family history, DRE, and prior biopsy history. Therefore, we calculated matrix of correlation coefficients between 4K score test and these predictors. We also ran variance inflation factor analysis (the inflation in the variances of the parameter estimates due to collinearities among predictors) to evaluate the potential presence of substantial multicollinearity between these predictors in our model.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5143364667892456,
+            "t": 0.49731960892677307,
+            "r": 0.9269647598266602,
+            "b": 0.7265944480895996
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "a39eef40-533f-403c-a93c-0b4c14ddba4a"
+    },
+    {
+      "text": "Analysis of correlation coefficients between predictors as well as\nvariance inflation index of predictors did not indicate presence of\nstrong collinearity between 4K and other predictors in our model.\nThere were no strong correlations (>0.8) between 4K score test and\nother predictors. PI-RADS scores of 1 and 2 were grouped for the\npurpose of analysis. Multivariable binary logistic regression analysis\nwas performed for presence of PCa, csPCa, and uPCa in the develop-\nment cohort. The nomogram predicting PCa, csPCa, and uPCa was\nbuilt based on coefficients of the logit function.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5154979228973389,
+            "t": 0.7298056483268738,
+            "r": 0.9267981052398682,
+            "b": 0.8757874369621277
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "4dd7deb0-9356-4fbe-b415-0f30364d70d6"
+    },
+    {
+      "text": "Nomogram validation was performed in the external cohort in two\nstages. First, receiver-operating characteristics (ROCs) were plotted for\npresence of PCa, csPCa, and uPCa using the same variables that were\nused to build the nomogram. Second, calibration graphs were plotted",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5161070227622986,
+            "t": 0.8798263669013977,
+            "r": 0.926389753818512,
+            "b": 0.941777765750885
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "2490c1fa-adfb-45f4-b59e-8102debf78a7"
+    },
+    {
+      "text": "25731848, 2021. 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cam4.3753 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9677463173866272,
+            "t": 0.018399745225906372,
+            "r": 0.9841369986534119,
+            "b": 0.9817854166030884
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "6ad92312-83f8-48a7-83b5-5e88004fcbcb"
+    },
+    {
+      "text": "WAGASKAR ET AL.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07211972773075104,
+            "t": 0.027556831017136574,
+            "r": 0.17126202583312988,
+            "b": 0.04053565487265587
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "8ddb1619-7685-458f-8275-bed3bf448d3c"
+    },
+    {
+      "text": "Cancer Reports\nOpen Access",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5568482279777527,
+            "t": 0.025503160431981087,
+            "r": 0.7518444657325745,
+            "b": 0.05141090601682663
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "3b1b8f0f-9e77-4621-b72b-ada094c4272f"
+    },
+    {
+      "text": "-WILEY-",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7586996555328369,
+            "t": 0.026251889765262604,
+            "r": 0.8592426776885986,
+            "b": 0.051016464829444885
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "45cfb3ff-5cab-4170-a6b0-195613b6baf9"
+    },
+    {
+      "text": "3 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8880113363265991,
+            "t": 0.026001766324043274,
+            "r": 0.9250586032867432,
+            "b": 0.042148806154727936
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "99fa49f4-e098-4ab9-a3a4-b31b58151b8a"
+    },
+    {
+      "text": "by grouping sorted nomogram-predicted probabilities from the development cohort into deciles and then comparing the mean prediction of each group with the observed proportion of men from the validation cohort with PCa or csPCa or uPCa. Using nomogram-derived probability cut-offs, we calculated the number of biopsies that could be avoided without missing PCa, csPCa, or uPCa in the validation cohort. Decision curve analysis (DCA) was performed to evaluate the performance of the prediction models in the validation cohort. Statistical analyses were performed using STATA 12 (StataCorp LP, College Station, TX, USA) and SAS 9.4 (SAS Institute, Cary, NC, USA). All tests were two-tailed with a significance level of P < .05.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07021190226078033,
+            "t": 0.06275106966495514,
+            "r": 0.4888227581977844,
+            "b": 0.246922567486763
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "f8c067ce-899a-40e5-ae90-7fbe1bee587a"
+    },
+    {
+      "text": "3  |  RESULTS\n\nOf the total 574 men in the development cohort, 232 (40%) were diagnosed with PCa, while the remaining 342 men (60%) were not having PCa. Median age was 66 years [interquartile range (IQR)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06998315453529358,
+            "t": 0.2758553922176361,
+            "r": 0.4886098802089691,
+            "b": 0.3637964427471161
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "aa244717-270d-4ee3-a115-8443bef92088"
+    },
+    {
+      "text": "60, 70] and 64 years (IQR 59, 69) for PCa and benign biopsies, respec-\ntively; median PSA was 6.1 ng/mL (IQR 4.5, 7.9), 5.3 ng/mL (IQR 3.4,\n7.7); and median 4K score test was 28 (IQR 13, 55), 9 (IQR 3, 18) for\nmen with PCa and men with benign biopsy, respectively. Of the\n232 men with PCa, 89 (38%), 65 (28%), 27 (12%), 30 (13%), and 21\n(9%) had Gleason scores of 3 + 3, 3 + 4, 4 + 3, 4 + 4, and 4 + 5/5 + 4/\n5 + 5, respectively. Of the 622 men in the validation cohort, 328\n(53%) did not have prostate cancer on biopsy. Of the remaining\n294 who had cancer in the validation cohort, 121 (41%), 77 (26%),\n29 (10%), and 38 (13%) had Gleason scores of 3 + 3, 3 + 4,\n4 + 3, 4 + 4, and 4 + 5/5 + 4/5 + 5, respectively (Table 1).",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5091714262962341,
+            "t": 0.06339853256940842,
+            "r": 0.9272832274436951,
+            "b": 0.24618849158287048
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "05509779-d621-4c57-991a-1d1797d7f45e"
+    },
+    {
+      "text": "3.1   |   Univariable and multivariable analysis predicting PCa, csPCa, and uPCa\n\nIn univariate analysis, 4K score test, family history of prostate cancer, prior negative biopsy, DRE findings, and PI-RADS 3, 4, 5, and MRI",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5097652673721313,
+            "t": 0.27622365951538086,
+            "r": 0.9255325794219971,
+            "b": 0.3643410801887512
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "668829c5-5a41-41e7-b601-674b5eaa6084"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"6\">TABLE 1 Comparison of factors between cases and controls in development and validation cohort</td></tr><tr><td colspan=\"3\">Mount Sinai (Development) Cohort</td><td colspan=\"3\">University of Miami (Validation) Cohort</td></tr><tr><td>Factors</td><td>Benign biopsies n = 342 (60%)</td><td>Prostate cancer n = 232 (40%)</td><td>P value</td><td>Benign biopsies N = 328 (53%)</td><td>Prostate cancer N = 294 (47%)</td><td>P value</td></tr><tr><td>Age years (Median, IQR)</td><td>64 (59, 69)</td><td>66 (60, 70)</td><td>.0339</td><td>61 (59, 69)</td><td>60 (58,70)</td><td>.7746</td></tr><tr><td>PSA ng/mL (Median, IQR)</td><td>5.3 (3.4, 7.7)</td><td>6.1 (4.5, 7.9)</td><td>.001</td><td>5.6 (3.9, 8.6)</td><td>6.0 (4.5, 8.4)</td><td>.0655</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA) (Median, IQR)</td><td>9 (3,18)</td><td>28 (13, 55)</td><td><.0001</td><td>11 (4, 21)</td><td>28 (13, 56)</td><td><.0001</td></tr><tr><td>Prior negative biopsy</td><td></td><td></td><td><.0001</td><td></td><td></td><td><.0001</td></tr><tr><td>No</td><td>191 (56%)</td><td>196 (85%)</td><td></td><td>191 (58%)</td><td>221 (75%)</td><td></td></tr><tr><td>Yes</td><td>151 (44%)</td><td>36 (15%)</td><td></td><td>137 (42%)</td><td>73 (25%)</td><td></td></tr><tr><td>DRE</td><td></td><td></td><td><.0001</td><td></td><td></td><td>.0358</td></tr><tr><td>Normal</td><td>250 (73%)</td><td>127 (55%)</td><td></td><td>250 (76%)</td><td>202 (69%)</td><td></td></tr><tr><td>Suspicious</td><td>92 (27%)</td><td>105 (45%)</td><td></td><td>78 (24%)</td><td>92 (31%)</td><td></td></tr><tr><td>MRI lesion highest PI-RADS score</td><td></td><td></td><td><.0001</td><td></td><td></td><td><.0001</td></tr><tr><td>0-2</td><td>194 (57%)</td><td>50 (21%)</td><td></td><td>144 (44%)</td><td>38 (13%)</td><td></td></tr><tr><td>3</td><td>68 (20%)</td><td>29 (13%)</td><td></td><td>102 (31%)</td><td>51 (17%)</td><td></td></tr><tr><td>4</td><td>70 (20%)</td><td>94 (41%)</td><td></td><td>72 (22%)</td><td>136 (46%)</td><td></td></tr><tr><td>5</td><td>10 (3%)</td><td>59 (25%)</td><td></td><td>10 (3%)</td><td>69 (24%)</td><td></td></tr><tr><td>Prostate volume cc (Median, IQR)</td><td>60 (43, 82)</td><td>41 (30, 56)</td><td><.0001</td><td>60 (42, 83)</td><td>41 (31,57)</td><td><.0001</td></tr><tr><td>Biopsy</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Systematic</td><td>201 (59%)</td><td>71 (31%)</td><td></td><td>144 (44%)</td><td>38 (13%)</td><td></td></tr><tr><td>Systematic and targeted</td><td>141 (41%)</td><td>161 (69%)</td><td></td><td>184 (56%)</td><td>256 (87%)</td><td></td></tr><tr><td>Biopsy GS</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>0</td><td>342 (100%)</td><td>0</td><td></td><td>328 (100%)</td><td>0</td><td></td></tr><tr><td>3 + 3</td><td>0</td><td>89 (38%)</td><td></td><td>0</td><td>121 (41%)</td><td></td></tr><tr><td>3 + 4</td><td>0</td><td>65 (28%)</td><td></td><td>0</td><td>77 (26%)</td><td></td></tr><tr><td>4 + 3</td><td>0</td><td>27 (12%)</td><td></td><td>0</td><td>29 (10%)</td><td></td></tr><tr><td>4 + 4/3 + 5/5 + 3</td><td>0</td><td>30 (13%)</td><td></td><td>0</td><td>29 (10%)</td><td></td></tr><tr><td>4 + 5/5 + 4/5 + 5</td><td>0</td><td>21 (9%)</td><td></td><td>0</td><td>38 (13%)</td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07006537914276123,
+            "t": 0.37356653809547424,
+            "r": 0.9243506193161011,
+            "b": 0.9089932441711426
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "602d6e1c-534f-496a-89d7-19b2916f7dfa"
+    },
+    {
+      "text": "Abbreviations: DRE, digital rectal examination; GS, Gleason score; IQR, interquartile range; MRI, magnetic resonance imaging; PI-RADS, prostate imaging reporting and data system version 2; PNB, prior negative biopsy; PSA, prostate-specific antigen.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07192370295524597,
+            "t": 0.9149004220962524,
+            "r": 0.9106347560882568,
+            "b": 0.9439090490341187
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "43e89a83-ecd8-4927-8b35-511faed8db53"
+    },
+    {
+      "text": "25731848, 2021, 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cne.25137 by Wiley Online Library on [illegible] See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9678203463554382,
+            "t": 0.01859387755393982,
+            "r": 0.984660804271698,
+            "b": 0.9824440479278564
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "3aff9a50-78cc-4f48-bc59-68fc502691f7"
+    },
+    {
+      "text": "4 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07364261895418167,
+            "t": 0.026424532756209373,
+            "r": 0.11462298780679703,
+            "b": 0.042507246136665344
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "9e9a1825-ac7f-417e-96b4-7ece6dbad78f"
+    },
+    {
+      "text": "logo: WILEY\n\nCancer Reports\nOpen Access\n\nlogo: abstract blue-green circular emblem with dots and arcs",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.1381959617137909,
+            "t": 0.02453579753637314,
+            "r": 0.4456368386745453,
+            "b": 0.05311300605535507
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "a6648226-cacb-481f-a5e7-e12431e691b4"
+    },
+    {
+      "text": "WAGASKAR ET AL.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8281863331794739,
+            "t": 0.026734566316008568,
+            "r": 0.9259980320930481,
+            "b": 0.041133396327495575
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "3c9900d4-042e-44ff-8a5f-5740eddbeadf"
+    },
+    {
+      "text": "prostate volume emerged as significant predictors of PCa, csPCa, and uPCa. In multivariate analysis, 4K score test, PI-RADS scores of 4 and 5, prostate volume, and history of prior negative biopsy were signifi-\ncantly associated with PCa, csPCa, and uPCa (all P < .05), while family history of PCa was significant in predicting PCa and uPCa; PI-RADS score 3 was found significant predictor for PCa (Table 2).",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07334648072719574,
+            "t": 0.0637267678976059,
+            "r": 0.4909791946411133,
+            "b": 0.16288089752197266
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "9257fca8-d317-4e2b-8e3a-4dc972faa20e"
+    },
+    {
+      "text": "3.2   |   Nomogram to estimate risk of PCa, csPCa, and uPCa\n\nFigure 1A-C illustrate the nomogram developed for prediction of PCa, csPCa, and unfavorable PCa, respectively, in the development cohort.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07281437516212463,
+            "t": 0.19309203326702118,
+            "r": 0.49144914746284485,
+            "b": 0.2797335386276245
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "292e240c-ad08-4e7a-9d0b-5f17b3b54bba"
+    },
+    {
+      "text": "MRI PI-RADS score, 4K score test, prostate volume, and history of\nprior negative biopsy were significantly contributing to the total score\nthat eventually determined nomogram probability of PCa, csPCa, and\nunfavorable PCa.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5131445527076721,
+            "t": 0.06283138692378998,
+            "r": 0.9292845129966736,
+            "b": 0.13041964173316956
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "a214d434-050f-43ad-ac6a-992510688c98"
+    },
+    {
+      "text": "3.3 | Nomogram validation\n\nArea under receiver operating curves (AUCs) for predicting PCa, csPCa, and unfavorable PCa in the validation cohort were 0.84, 0.88, and 0.86, respectively (Figure 2). 4K score test and mpMRI PI‐RADS score showed significant contribution for building AUCs.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5127984285354614,
+            "t": 0.15948493778705597,
+            "r": 0.9300222396850586,
+            "b": 0.2805003523826599
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "3bfc62d3-efa5-427f-b097-60e52813687b"
+    },
+    {
+      "text": "<table><thead><tr><th colspan=\"6\">TABLE 2 The results of multivariable analysis</th></tr><tr><th>Variable</th><th>Odds Ratio</th><th>SE</th><th>P value</th><th colspan=\"2\">95% Conf. interval for OR</th></tr></thead><tbody><tr><td colspan=\"6\">Predicting presence of PCa</td></tr><tr><td>Age</td><td>1.018</td><td>0.015</td><td>.210</td><td>0.998</td><td>1.049</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA)</td><td>1.033</td><td>0.006</td><td>.000</td><td>1.020</td><td>1.047</td></tr><tr><td>DRE</td><td>0.971</td><td>0.226</td><td>.900</td><td>0.614</td><td>1.535</td></tr><tr><td>Prior negative biopsy</td><td>0.492</td><td>0.125</td><td>.006</td><td>0.298</td><td>0.813</td></tr><tr><td>Prostate volume</td><td>0.978</td><td>0.004</td><td>.000</td><td>0.970</td><td>0.987</td></tr><tr><td>MRI PI-RADS score</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>2.114</td><td>0.641</td><td>.014</td><td>1.166</td><td>3.831</td></tr><tr><td>4</td><td>4.402</td><td>1.106</td><td>.000</td><td>2.690</td><td>7.203</td></tr><tr><td>5</td><td>9.235</td><td>4.028</td><td>.000</td><td>3.927</td><td>21.716</td></tr><tr><td colspan=\"6\">Predicting presence of csPCa</td></tr><tr><td>Age</td><td>1.021</td><td>0.019</td><td>.267</td><td>0.983</td><td>1.060</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA)</td><td>1.033</td><td>0.006</td><td>.000</td><td>1.020</td><td>1.047</td></tr><tr><td>DRE</td><td>1.397</td><td>0.381</td><td>.220</td><td>0.818</td><td>2.386</td></tr><tr><td>Prior negative biopsy</td><td>0.288</td><td>0.111</td><td>.001</td><td>0.135</td><td>0.616</td></tr><tr><td>Prostate volume</td><td>0.977</td><td>0.054</td><td>.000</td><td>0.967</td><td>0.988</td></tr><tr><td>MRI PI-RADS score</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>2.650</td><td>1.187</td><td>.030</td><td>1.102</td><td>6.378</td></tr><tr><td>4</td><td>8.366</td><td>2.894</td><td>.000</td><td>4.246</td><td>16.483</td></tr><tr><td>5</td><td>18.702</td><td>8.512</td><td>.000</td><td>7.664</td><td>45.639</td></tr><tr><td colspan=\"6\">Predicting presence of uPCa</td></tr><tr><td>Age</td><td>1.072</td><td>0.024</td><td>.002</td><td>1.026</td><td>1.119</td></tr><tr><td>4K score test (OPKO Diagnostics, Woburn, MA)</td><td>1.024</td><td>0.007</td><td>.000</td><td>1.011</td><td>1.038</td></tr><tr><td>DRE</td><td>1.472</td><td>0.463</td><td>.219</td><td>0.794</td><td>2.727</td></tr><tr><td>Prior negative biopsy</td><td>0.189</td><td>0.109</td><td>.004</td><td>0.060</td><td>0.587</td></tr><tr><td>Prostate volume</td><td>0.994</td><td>0.004</td><td>.211</td><td>0.985</td><td>1.003</td></tr><tr><td>MRI PI-RADS score</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>1.767</td><td>1.196</td><td>.401</td><td>0.468</td><td>6.666</td></tr><tr><td>4</td><td>7.338</td><td>3.531</td><td>.000</td><td>2.856</td><td>18.846</td></tr><tr><td>5</td><td>13.670</td><td>7.462</td><td>.000</td><td>4.689</td><td>39.849</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07136490941047668,
+            "t": 0.327392578125,
+            "r": 0.929814338684082,
+            "b": 0.9052466154098511
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "513f248c-f964-4a9d-832c-cd3f89326b58"
+    },
+    {
+      "text": "Abbreviations: csPCa, clinically significant prostate cancer; DRE, digital rectal examination finding; PCa, prostate cancer; PI-RADS, Prostate Imaging Reporting and Data System; uPCa, unfavorable prostate cancer.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07489794492721558,
+            "t": 0.9100275635719299,
+            "r": 0.8833887577056885,
+            "b": 0.9391463398933411
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "76d0e7e3-282b-499b-b6db-47a4432dd0d0"
+    },
+    {
+      "text": "2513482-2021.4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/anzf.13974 by Wiley Online Library on [09/05/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9669766426086426,
+            "t": 0.018844932317733765,
+            "r": 0.9854511022567749,
+            "b": 0.9805848598480225
+          },
+          "page": 3
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "d35110a0-18a9-4b43-a340-ced530551c6e"
+    },
+    {
+      "text": "WAGASKAR ET AL.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07194231450557709,
+            "t": 0.027714021503925323,
+            "r": 0.17145340144634247,
+            "b": 0.040475837886333466
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "986dee71-d967-4c71-a353-0cd5393885b3"
+    },
+    {
+      "text": "Cancer Reports\nOpen Access",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5571814775466919,
+            "t": 0.025572599843144417,
+            "r": 0.6940492391586304,
+            "b": 0.0511917844414711
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "7d70d919-2afa-4470-8b44-d7d1acd2478f"
+    },
+    {
+      "text": "logo: stylized \"CP\" in teal and dark blue with pixelated effect, no visible company name or tagline",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7253111600875854,
+            "t": 0.027495192363858223,
+            "r": 0.7522521018981934,
+            "b": 0.05154487490653992
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "bc599851-b431-495d-9032-d2aaa976aae8"
+    },
+    {
+      "text": "WILEY",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7601498365402222,
+            "t": 0.028078854084014893,
+            "r": 0.8580659627914429,
+            "b": 0.05085770785808563
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "3dc6c65a-9aac-4a7b-8f88-108de4581fb1"
+    },
+    {
+      "text": "5 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8880655765533447,
+            "t": 0.02683611959218979,
+            "r": 0.9250657558441162,
+            "b": 0.04235149919986725
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "777e4a82-1d85-4e92-8543-fe5734521597"
+    },
+    {
+      "text": "statistical chart: \"Nomogram predicting any PCa\". The chart consists of a nomogram with several horizontal scales for different clinical variables, each contributing to a total score predicting the probability of any prostate cancer (PCa).\n\n- Title: \"Nomogram predicting any PCa\"\n- Variables (top to bottom, each with its own horizontal scale and tick marks):\n  1. MRI PI-RADS score (scale: 1 to 5)\n  2. Prostate volume (cc) (scale: 360 to 50, decreasing left to right)\n  3. Prior Negative Biopsy (Yes/No)\n  4. DRE findings (scale: 1 to 4)\n  5. 4K score (scale: 4 to 59)\n  6. Age (yrs) (scale: 40 to 85)\n- Each variable has a corresponding \"Score\" scale (bottom axis, 0 to 11).\n- At the bottom, a \"Total score\" scale (0 to 21) maps to \"Probability of any PCa\" (0 to 1, marked as .01, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1).\n- The chart is color-coded with lines and tick marks for each variable.\n- The nomogram is used to sum the individual scores from each variable to estimate the probability of any prostate cancer.\n\nSummary: This is a nomogram chart that allows clinicians to estimate the probability of any prostate cancer in a patient by assigning points for each clinical variable, summing them, and mapping the total to a probability.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08059442043304443,
+            "t": 0.06604394316673279,
+            "r": 0.4968124032020569,
+            "b": 0.29576313495635986
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "09c3ff3f-3263-4c38-93b9-529bb518c323"
+    },
+    {
+      "text": "statistical plot: \"Nomogram predicting csPCa\". The figure consists of a nomogram with multiple horizontal scales for different clinical variables, each mapped to a \"Score\" axis, and a lower scale mapping \"Total score\" to \"Probability of csPCa\".\n\nTop section (Nomogram variables, each with its own horizontal line and tick marks):\n- MRI PI-RADS score: scale from 1 to 5, mapped to scores 0 to 11.\n- Prostate volume (cc): scale from 350 to 10, mapped to scores 0 to 10.\n- Prior Negative Biopsy: Yes/No, mapped to scores 0 or 2.\n- DRE findings: scale from 0 to 1, mapped to scores 0 to 2.\n- 4K score: scale from 5 to 80, mapped to scores 0 to 6.\n- Age (yr): scale from 40 to 85, mapped to scores 0 to 3.\n\nBottom section:\n- \"Probability of csPCa\" scale, mapping \"Total score\" (0 to 22) to probability values (from .01 to .99).\n\nThe nomogram allows users to sum the individual scores for each variable, then use the total score to estimate the probability of csPCa (clinically significant prostate cancer) using the lower probability scale. No legend or color coding is present. The overall process is to use clinical variables to estimate csPCa risk.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5065658092498779,
+            "t": 0.06550448387861252,
+            "r": 0.9187178611755371,
+            "b": 0.295767217874527
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "306c517f-87e2-4d22-96c2-c266414e5813"
+    },
+    {
+      "text": "flowchart: \"Nomogram for predicting uPCa\"\n- Top title: \"Nomogram for predicting uPCa\"\n- Horizontal axes/lines for each variable:\n  1. \"MRI PI-RADS score\" (scale: 3 to 5)\n  2. \"Prostate volume (cc)\" (scale: 350, 250, 125, 10)\n  3. \"Prior Negative Biopsy\" (Yes / No)\n  4. \"DRE findings\" (Normal / Suspicious)\n  5. \"4K score\" (0 to 100)\n  6. \"Age (yrs)\" (40 to 90)\n- Each variable has a corresponding \"Score\" axis (0 to 11)\n- Bottom axis: \"Total score\" (0 to 35)\n- Bottom-most axis: \"Probability of uPCa\" (0 to 1, with tick marks at .01, .05, .1, .25, .5, .75, .9, .95, .99)\n- The chart is a nomogram: for each patient, you locate their value on each variable axis, draw a vertical line up to the \"Score\" axis, sum the scores, and then map the total score to the \"Probability of uPCa\" axis.\n\nSummary: This nomogram chart allows clinicians to estimate the probability of uPCa (unfavorable prostate cancer) by scoring six clinical variables and summing them to predict risk.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.28365254402160645,
+            "t": 0.3002086579799652,
+            "r": 0.7036427855491638,
+            "b": 0.5316029787063599
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "10b593b3-491b-46aa-b8de-5fe0246a7328"
+    },
+    {
+      "text": "FIGURE 1  Nomogram prediction model for predicting prostate cancer, clinically significant prostate cancer and unfavourable prostate cancer at the time of biopsy. Steps for assessing cancer probability from the nomogram are as follows: 1. Locate the patient's variable Age on corresponding axis. 2. Draw a line straight download to the score axis to determine how many points towards the probability of cancer the patient is scored for his Age. 3. Repeat the process for each additional variable [ 4K score test, prior negative biopsy, DRE, MRI Prostate volume and MRI PI-RADS score]. 4. Total the points for each of the predictors. 5. Locate the final sum on the total score axis. 6. Draw a line straight up to find the patient's probability of having PCa, csPCa and uPCa. Total scores correspond to a probability value for PCa, csPCa and uPCa. Abbreviations: PCa- prostate cancer, csPCa- clinically significant prostate cancer, uPCa-unfavourable PCa DRE- digital rectal examination finding, PI-RADS- Prostate Imaging Reporting and Data System",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06875428557395935,
+            "t": 0.545141875743866,
+            "r": 0.9249017238616943,
+            "b": 0.6605685353279114
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "90acb21e-b15e-4f4e-b86d-1e68704548a6"
+    },
+    {
+      "text": "We evaluated the nomogram's calibration by comparing predicted and actual probabilities of PCa, csPCa, and unfavorable PCa in the validation cohort. There was agreement between the predicted and actual rate of probabilities (0%-100%) for PCa, csPCa, and unfavorable PCa as seen by points on the diagonal line in Figure 3A-C, respectively.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07073137164115906,
+            "t": 0.69490647315979,
+            "r": 0.487799733877182,
+            "b": 0.7929824590682983
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "0646a922-ff5e-4d8c-882d-082d549f856e"
+    },
+    {
+      "text": "DCA showed superior clinical risk prediction for 5%-95% of\nnomogram-derived probabilities for predicting PCa, csPCa, and uPCa\nthan relying on 4K score test alone or PI-RADS score alone.\n(Figure 4A-C).",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07175008952617645,
+            "t": 0.7950696349143982,
+            "r": 0.4867931008338928,
+            "b": 0.8600597977638245
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "362f06bd-cf77-4ea9-aaed-97d613c0d046"
+    },
+    {
+      "text": "Using our model in the validation cohort, 10% of biopsies could\nbe avoided without missing uPCa and with missing 1% csPCa,\navoiding 17% of benign biopsies and avoiding 4% of clinically indolent\nPCa (Figure 5). Additionally, 15%, 20%, 25%, and 30% of biopsies",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07280628383159637,
+            "t": 0.8621839880943298,
+            "r": 0.4871017336845398,
+            "b": 0.9275625348091125
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "a8373e25-b111-4ab8-8694-558734236d8e"
+    },
+    {
+      "text": "could be avoided while missing 2%, 4%, 6%, and 9% of csPCa, respec-\ntively, avoiding 24%, 31%, 39%, and 41% of benign biopsies, respec-\ntively, and avoiding 10%, 14%, 14%, and 19% of clinically indolent\nPCa, respectively.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5099788904190063,
+            "t": 0.6957696676254272,
+            "r": 0.9261091947555542,
+            "b": 0.7611428499221802
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "f08978cd-0ef2-440f-b575-c9638d43f285"
+    },
+    {
+      "text": "4   |   DISCUSSION\n\nMultiparametric MRI and the 4K score test are both used in American\nclinical practice for the evaluation of prostate cancer. To our knowl-\nedge, this is the first study investigating the use of both the 4K score\ntest and mpMRI in combination to detect PCa, csPCa, and uPCa. Our\nmodel confers three key benefits. (a) It reduces number of biopsies\nwithout compromising detection of csPCa and uPCa rates, (b) the",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5105023384094238,
+            "t": 0.7916772961616516,
+            "r": 0.9255894422531128,
+            "b": 0.9271132349967957
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "3aa67f1c-e89e-4f12-95ad-d70c48e3540b"
+    },
+    {
+      "text": "2513482-2021.4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/anzf.13978 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9674844741821289,
+            "t": 0.019249260425567627,
+            "r": 0.984559178352356,
+            "b": 0.9809128642082214
+          },
+          "page": 4
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "098f51cb-31ca-453c-a255-210f654fb583"
+    },
+    {
+      "text": "6 of 9\n\nlogo: Wiley | Cancer Reports\n\nWAGASKAR ET AL.\n\n<table>\n  <tr>\n    <td>\n      <b>Variable</b>\n    </td>\n    <td>\n      <b>AUC</b>\n    </td>\n  </tr>\n  <tr>\n    <td>Model</td>\n    <td>0.84</td>\n  </tr>\n  <tr>\n    <td>Age</td>\n    <td>0.51</td>\n  </tr>\n  <tr>\n    <td>4K score</td>\n    <td>0.73</td>\n  </tr>\n  <tr>\n    <td>DRE</td>\n    <td>0.54</td>\n  </tr>\n  <tr>\n    <td>Prior Negative Biopsy</td>\n    <td>0.42</td>\n  </tr>\n  <tr>\n    <td>MRI Prostate volume</td>\n    <td>0.30</td>\n  </tr>\n  <tr>\n    <td>MRI PI-RADS score</td>\n    <td>0.76</td>\n  </tr>\n</table>\n\n<table>\n  <tr>\n    <td>\n      <b>Variable</b>\n    </td>\n    <td>\n      <b>AUC</b>\n    </td>\n  </tr>\n  <tr>\n    <td>Model</td>\n    <td>0.88</td>\n  </tr>\n  <tr>\n    <td>Age</td>\n    <td>0.51</td>\n  </tr>\n  <tr>\n    <td>4K score</td>\n    <td>0.80</td>\n  </tr>\n  <tr>\n    <td>DRE</td>\n    <td>0.56</td>\n  </tr>\n  <tr>\n    <td>Prior Negative Biopsy</td>\n    <td>0.42</td>\n  </tr>\n  <tr>\n    <td>MRI Prostate volume</td>\n    <td>0.28</td>\n  </tr>\n  <tr>\n    <td>MRI PI-RADS score</td>\n    <td>0.80</td>\n  </tr>\n</table>\n\n<table>\n  <tr>\n    <td>\n      <b>Variable</b>\n    </td>\n    <td>\n      <b>AUC</b>\n    </td>\n  </tr>\n  <tr>\n    <td>Model</td>\n    <td>0.86</td>\n  </tr>\n  <tr>\n    <td>Age</td>\n    <td>0.55</td>\n  </tr>\n  <tr>\n    <td>4K score</td>\n    <td>0.81</td>\n  </tr>\n  <tr>\n    <td>DRE</td>\n    <td>0.59</td>\n  </tr>\n  <tr>\n    <td>Prior Negative Biopsy</td>\n    <td>0.45</td>\n  </tr>\n  <tr>\n    <td>MRI Prostate volume</td>\n    <td>0.33</td>\n  </tr>\n  <tr>\n    <td>MRI PI-RADS score</td>\n    <td>0.79</td>\n  </tr>\n</table>\n\nfigure_or_chart: Three ROC (Receiver Operating Characteristic) curves for different models predicting PCa, csPCa, and uPCa. Each plot has axes labeled \"Sensitivity\" (y-axis) and \"1 - Specificity\" (x-axis), with curves for Predicted probability, Age, 4K score, DRE, Prior Negative Biopsy, Volume, PI-RADS score, and a Reference Line. The legend on the right identifies each curve by color. The ROC curves for the model (Predicted probability) are consistently higher than individual variables, indicating better performance. The AUC (Area Under Curve) values for each variable and the model are summarized in the tables below each plot, showing the model outperforms individual predictors.\n\nFIGURE 2  Area under curve characteristics for predicting PCa, csPCa, and uPCa",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06811413168907166,
+            "t": 0.022993117570877075,
+            "r": 0.9302757978439331,
+            "b": 0.43423447012901306
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "ec2f1baf-866b-4d54-94fd-0552de81a253"
+    },
+    {
+      "text": "model shows efficacy of 4K score test and mpMRI PI-RADS score, for predicting PCa, csPCa, and uPCa, and (c) the model showed accuracy in predicting any PCa, csPCa, and uPCa in entirely different cohort across all ranges of probabilities.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07309338450431824,
+            "t": 0.47977113723754883,
+            "r": 0.49089911580085754,
+            "b": 0.5439480543136597
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "325ef067-026e-4be6-9ecf-e54237598ea3"
+    },
+    {
+      "text": "Combining both the 4Kscore and mpMRI in this newly developed\nmodel has the ability to guide prostate cancer diagnostics with more\naccuracy and further decrease number of unnecessary biopsies as well\nas the detection of non-csPCa. By reducing the number of unneeded\nbiopsies, patients can avoid the risk of biopsy-related complications\nincluding pain, bleeding, and infections, and in 1%-2% of biopsied\nmen, life-threatening urosepsis.¹² Moreover, overdetetion of non-\ncsPCa is known to cause overtreatment of indolent disease and\ndecreased QoL from patients living with an untreated cancer.¹³˒¹⁴ The\nadvantages of this novel nomogram in men pre-PCa diagnosis are\nclear, but it may also have clinical value in the increasingly large group\nof men with low-risk prostate cancer who are in active surveillance\n(AS) programs.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0744863748550415,
+            "t": 0.5469121932983398,
+            "r": 0.4895661473274231,
+            "b": 0.7595206499099731
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "80d8242a-3a35-4752-a11a-7805661df09d"
+    },
+    {
+      "text": "Studies have shown that the 4K score can improve the diagnostic discrimination of csPCa, reducing the number of required prostate biopsies. It has been suggested it could play an important clinical role in the decision-making process prior to proceeding with initial prostate biopsy in men with an elevated PSA level or abnormal digital rectal examination (DRE) or after a prior negative biopsy and persistently abnormal PSA levels.¹⁵ The recent prospective US validation study showed that 4K score test can predict csPCa with AUC 0.82 and with excellent calibration.¹¹ In the French arm of the ERSPC (European Randomized Study of Prostate Cancer Screening),",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07475967705249786,
+            "t": 0.7631702423095703,
+            "r": 0.4894701838493347,
+            "b": 0.926763653755188
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "4c174172-dd28-40ad-95a5-ea58cb0a911e"
+    },
+    {
+      "text": "AUC for detecting csPCa increased from 0.77 for a basic model (age, total PSA, and DRE) to 0.87 after adding four-kallikrein panel.^16 Our study confirms significant role of 4K score test in predicting csPCa. Additionally, multiple studies have shown that mpMRI helps in identifying a higher proportion of csPCa when compared to transrectal ultrasound-guided prostate biopsies alone. In the large multicenter, paired-cohort study, PROMIS, (comparing the diagnostic accuracy of mpMRI and TRUS-biopsy against template prostate mapping biopsy), results show that mpMRI and targeted biopsies detected up to 18% more cases of csPCa compared with TRUS-biopsy for all, while avoiding diagnosis of nonsignificant PCa by 5%.^8 However, other studies have shown a wide range of sensitivity for detecting csPCa (44%-87%) as well as negative predictive values ranging from 63%-98%.^7",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.514274001121521,
+            "t": 0.48023825883865356,
+            "r": 0.9279931783676147,
+            "b": 0.7094407677650452
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "947d3319-95e5-426d-a65f-ee8b688d1b22"
+    },
+    {
+      "text": "Probabilistic estimates and predictions are being used with\nincreasing frequency in prostate cancer research to guide the\ndecision-making process. Huge data sets and increasingly sophisti-\ncated statistical software allow for individualized probability pre-\ndictions. However, these predictions can be only helpful if they\naccurately reflect the correct underlying probabilities.¹⁷ Calibra-\ntion of the prediction model is a critical component of its accuracy\nand thereby its clinical utility and more effective individualized\ncare. The feature of this prediction tool is that it has been cali-\nbrated in an entirely different cohort and showed accuracy\nbetween predicted and actual rates of PCa, csPCa, and uPCa\nacross all ranges probability percentages. Approximately, 70% of\npatients that undergo prostate biopsy has negative results.¹⁸",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5152431726455688,
+            "t": 0.7133095860481262,
+            "r": 0.9272464513778687,
+            "b": 0.9262567162513733
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "f36d7886-fe76-4057-96cd-41d6d82423af"
+    },
+    {
+      "text": "25-Sep-2021 4 Downloaded from https://onlinelibrary.wiley.com/doi/epdf/10.1002/ajh.26321 by Wiley Online Library on [10/23/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1096-8652) for Use of Wiley Online Library, nor rules of use. OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9686076641082764,
+            "t": 0.02042984962463379,
+            "r": 0.9837332963943481,
+            "b": 0.9814815521240234
+          },
+          "page": 5
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "9abcb09b-41e9-4b22-bb02-d5be2e9cdd32"
+    },
+    {
+      "text": "WAGASKAR ET AL.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07182375341653824,
+            "t": 0.026988927274942398,
+            "r": 0.17142072319984436,
+            "b": 0.040666233748197556
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "4c9c82b6-bd44-4ea3-a3f5-f52c84c69d0e"
+    },
+    {
+      "text": "Cancer Reports\nOpen Access",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5569782853126526,
+            "t": 0.025173097848892212,
+            "r": 0.7515389323234558,
+            "b": 0.05148738622665405
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "f5e2d8c4-9984-4e62-8842-aa966cc3f038"
+    },
+    {
+      "text": "-WILEY",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.759587287902832,
+            "t": 0.026400934904813766,
+            "r": 0.8583307266235352,
+            "b": 0.050413232296705246
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "8543e9c4-d5db-4739-b845-8031ab6f2f6e"
+    },
+    {
+      "text": "7 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8872382640838623,
+            "t": 0.02630898542702198,
+            "r": 0.9250379800796509,
+            "b": 0.04180086404085159
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "927934f7-d740-44d1-90b3-3522f95d8fd7"
+    },
+    {
+      "text": "scatter plot: The plot displays the \"Actual rate of any PCa\" (y-axis) versus the \"Predictive rate of any PCa\" (x-axis), both axes ranging from 0.0 to 1.0. There are blue scatter points distributed along the plot, with a blue diagonal reference line (y = x) running from the bottom left (0,0) to the top right (1,1). Thin green vertical bars are shown along the x-axis, representing the distribution of predictive rates. The plot is labeled \"(A)\" in the upper left corner. The overall trend shows that the actual rate generally increases with the predictive rate, with points clustering near the diagonal. There is no legend.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.08382904529571533,
+            "t": 0.059591785073280334,
+            "r": 0.4951256513595581,
+            "b": 0.3591206669807434
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "0d1d80d4-9041-4f18-b628-cc19db9798b7"
+    },
+    {
+      "text": "scatter plot: The plot shows the relationship between the \"Predictive rate of csPCa\" (x-axis, ranging from 0.0 to 1.0) and the \"Actual rate of csPCa\" (y-axis, ranging from 0.0 to 1.0). Blue dots represent data points, and a blue diagonal line (y = x) is drawn from the bottom left to the top right, indicating perfect calibration. Green vertical bars are present along the x-axis, mostly clustered at lower predictive rates. The plot is labeled \"(B)\" in the upper left corner. The overall trend shows that as the predictive rate increases, the actual rate also increases, with some deviation from the diagonal. There is no legend or title beyond the axis labels.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4940321147441864,
+            "t": 0.06241503357887268,
+            "r": 0.9099617004394531,
+            "b": 0.36070549488067627
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "201c00de-9e07-487f-ad0f-2e47ffbb81e2"
+    },
+    {
+      "text": "scatter plot: The plot compares the \"Predictive rate of uPCa\" (x-axis) with the \"Actual rate of uPCa\" (y-axis). The axes both range from 0.0 to 1.0. There are several blue data points scattered, mostly clustered at lower predictive and actual rates, with a few points at higher values. A diagonal reference line (y = x) is drawn from the bottom-left to the top-right, indicating perfect prediction. Thin green vertical lines are present at the base of the plot, likely representing the distribution or frequency of predictive rates. The plot is labeled \"(C)\" in the upper left corner. No legend or further annotation is present. The chart visualizes the calibration of predictive versus actual rates for uPCa.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.29000306129455566,
+            "t": 0.3655662536621094,
+            "r": 0.7057778835296631,
+            "b": 0.6537876129150391
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "5ff2fc9a-b90e-4d31-bd98-16681a260e2d"
+    },
+    {
+      "text": "FIGURE 3  A, Predictive probabilities of cancer for each case in the testing cohort are sorted by probability of PCa calculated from the training model, respectively. Each point (average of 60 subsequent cases) illustrates the comparison between predictive probability (calculated from the training model) and actual cancer rate for this group of cases. Points on the diagonal line (0, 0 and 1, 1), show the agreement between the predicted and actual rate of PCa and the validated training model. The histogram of the calculated probabilities for the validation cohort is shown along the horizontal axis. B, Predictive probabilities of cancer for each case in the testing cohort are sorted by probability of csPCa calculated from the training model, respectively. Each point (average of 60 subsequent cases) illustrates the comparison between predictive probability (calculated from the training model) and actual cancer rate for this group of cases. Points on the diagonal line (0, 0 and 1, 1) show the agreement between the predicted and actual rate of csPCa and the validated training model. The histogram of the calculated probabilities for the validation cohort is shown along the horizontal axis. C, Predictive probabilities of cancer for each case in the testing cohort are sorted by probability of uPCa calculated from the training model, respectively. Each point (average of 60 subsequent cases) illustrates the comparison between predictive probability (calculated from the training model) and actual cancer rate for this group of cases. Points on the diagonal line (0, 0 and 1, 1) show the agreement between the predicted and actual rate of uPCa and the validated training model. The histogram of the calculated probabilities for the validation cohort is shown along the horizontal axis",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07025274634361267,
+            "t": 0.664492666721344,
+            "r": 0.920761227607727,
+            "b": 0.8496295809745789
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "e0583778-d50c-494e-b38b-79293340ce79"
+    },
+    {
+      "text": "History of negative prostate biopsy in the past lowers the chances\nof finding PCa in the forthcoming prostate biopsy.¹⁸ Finding the\ncancer at earlier stage is equally important for oncological efficacy\nas well as addressing quality-of-life issues after the surgery.¹⁹ We",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07249869406223297,
+            "t": 0.8781772255897522,
+            "r": 0.48648762702941895,
+            "b": 0.9435517191886902
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "8f5c9797-78bb-4e60-9256-dce918d68a3d"
+    },
+    {
+      "text": "found significance of prior negative biopsy for predicting PCa,\ncsPCa, and uPCa.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.511361837387085,
+            "t": 0.8796637058258057,
+            "r": 0.9228436946868896,
+            "b": 0.9088962078094482
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "5e909717-1c85-4145-add5-55f36e859bf3"
+    },
+    {
+      "text": "Our study has some limitations. First, all biopsies were performed\nby a single experienced, high-volume expert, which could affect",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5114073157310486,
+            "t": 0.9123543500900269,
+            "r": 0.923178493976593,
+            "b": 0.9430884122848511
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "da7f0e31-a7d6-4f6c-9b92-d0a49f993f75"
+    },
+    {
+      "text": "25734838, 2021, 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cam4.3753 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9678879976272583,
+            "t": 0.019468218088150024,
+            "r": 0.9847359657287598,
+            "b": 0.9812027215957642
+          },
+          "page": 6
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "27923196-b751-4177-a4ee-2433545932a3"
+    },
+    {
+      "text": "figure: Three line charts showing decision curve analysis for predicting prostate cancer (PCa) using different models and scores.\n\n(A) Decision curve analysis for predicting any PCa\n- Y-axis: Net Benefit (ranging from -0.1 to 0.5)\n- X-axis: Threshold Probability (ranging from 0 to 1)\n- Four lines:\n  - Blue: Net Benefit: Biopsy using prediction model\n  - Orange: Net Benefit: Biopsy using PI-RADS score\n  - Gray: Net Benefit: Biopsy using 4K score\n  - Brown: Net Benefit: Biopsy All\n  - Red: Net Benefit: Biopsy None\n- The blue line (prediction model) shows the highest net benefit across most threshold probabilities.\n\n(B) Decision curve analysis for predicting csPCa\n- Y-axis: Net Benefit (ranging from -0.1 to 0.3)\n- X-axis: Threshold Probability (ranging from 0 to 1)\n- Four lines:\n  - Blue: Net Benefit: Biopsy using prediction model\n  - Orange: Net Benefit: Biopsy using PI-RADS score\n  - Gray: Net Benefit: Biopsy using 4K score\n  - Brown: Net Benefit: Biopsy All\n  - Red: Net Benefit: Biopsy None\n- The blue line (prediction model) again shows the highest net benefit across most threshold probabilities.\n\n(C) Decision curve analysis for predicting uPCa\n- Y-axis: Net Benefit (ranging from -0.05 to 0.15)\n- X-axis: Threshold Probability (ranging from 0 to 1)\n- Four lines:\n  - Blue: Net Benefit: Biopsy using prediction model\n  - Orange: Net Benefit: Biopsy using PI-RADS score\n  - Gray: Net Benefit: Biopsy using 4K score\n  - Brown: Net Benefit: Biopsy All\n  - Red: Net Benefit: Biopsy None\n- The blue line (prediction model) shows the highest net benefit across most threshold probabilities.\n\nLegends are present below each chart, matching line colors to the net benefit calculation method.\n\nSummary: The figure presents decision curve analyses for predicting any prostate cancer (PCa), clinically significant PCa (csPCa), and unfavorable PCa (uPCa) using a prediction model, 4K score, or PI-RADS score alone. The prediction model consistently provides the highest net benefit across a range of threshold probabilities.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07076713442802429,
+            "t": 0.023832857608795166,
+            "r": 0.9315296411514282,
+            "b": 0.6072211861610413
+          },
+          "page": 7
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "11183f78-1135-4d49-9675-9b2c69312aec"
+    },
+    {
+      "text": "bar chart: The chart displays the percent of biopsies saved (y-axis) versus the percent of biopsies (x-axis) for different biopsy-saving thresholds (30%, 25%, 20%, 15%, 10%, 5%, and 0%). Each horizontal bar is divided into colored segments representing the following categories: Biopsies saved (blue), Benign biopsy (orange), Gleason 3+4 on biopsy (gray), Gleason 4+3 on biopsy (yellow), Gleason 6 on biopsy (purple), and ≥Gleason 8 on biopsy (green). The number of cases in each segment is labeled within the bar. The legend at the bottom matches each color to its category. The chart shows that as the percent of biopsies saved increases, the number of benign biopsies decreases, while the number of higher Gleason scores on biopsy remains relatively stable. This figure summarizes the trade-off between reducing unnecessary biopsies and detecting clinically significant prostate cancer.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07421739399433136,
+            "t": 0.646255373954773,
+            "r": 0.4847099781036377,
+            "b": 0.8720135688781738
+          },
+          "page": 7
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "3f79a43a-b0af-476b-89c1-c452de475412"
+    },
+    {
+      "text": "**FIGURE 5**  Graph showing the number of biopsies that can be saved in the validation cohort using the prediction tool predicting clinically significant prostate cancer (csPCa)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07216466963291168,
+            "t": 0.8817012310028076,
+            "r": 0.4670102596282959,
+            "b": 0.9290997982025146
+          },
+          "page": 7
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "417a2db6-ca0f-4ca1-a034-56c41d3f9f14"
+    },
+    {
+      "text": "reproducibility. Second, as mentioned in methodology, not all men who had 4K score test done were included in the analysis. Stringent biopsy criteria could also affect generalizability.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5136250853538513,
+            "t": 0.6439545154571533,
+            "r": 0.9300819039344788,
+            "b": 0.6964757442474365
+          },
+          "page": 7
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "cff57449-fd1d-46e6-bd7e-4334428a90e4"
+    },
+    {
+      "text": "5   |   CONCLUSIONS\n\nWe have developed a 4K score/MRI-based tool to assist clinicians in biopsy decision-making and counselling of men at risk for PCa. Using our novel prediction model could significantly reduce the large number of biopsies that detect benign or clinically insignificant PCa, while missing only a small proportion of csPCa and uPCa. Our results demonstrate the importance of combining 4K score test, prior negative biopsy, prostate volume, and mpMRI PI-RADS score ≥4 for predicting PCa, csPCa, and uPCa. This novel model could reduce unnecessary biopsies and decrease detection of clinically insignificant prostate cancer more effectively than mpMRI or 4K score alone. Thus, this model",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5129058957099915,
+            "t": 0.725155234336853,
+            "r": 0.9298412203788757,
+            "b": 0.9275975227355957
+          },
+          "page": 7
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "fa4a39c4-5541-4d6e-ab0f-e2aec74a0070"
+    },
+    {
+      "text": "25731848, 2021. 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cam4.3753 by Wiley Online Library on [09/05/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9671266078948975,
+            "t": 0.01828882098197937,
+            "r": 0.9854098558425903,
+            "b": 0.9829713106155396
+          },
+          "page": 7
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "abb69a8d-2e66-4627-987b-a0a8b13395fc"
+    },
+    {
+      "text": "WAGASKAR ET AL.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.070779949426651,
+            "t": 0.026950683444738388,
+            "r": 0.17292092740535736,
+            "b": 0.04084527865052223
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "d6ac50fb-54b2-49f8-88b3-9615e211b55b"
+    },
+    {
+      "text": "Cancer Reports  \nOpen Access",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5557963848114014,
+            "t": 0.024833282455801964,
+            "r": 0.7525124549865723,
+            "b": 0.05247310549020767
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "4b98f7f7-83f3-41e2-9caa-6bd9c23bab75"
+    },
+    {
+      "text": "WILEY",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7584999203681946,
+            "t": 0.02701118215918541,
+            "r": 0.8591437935829163,
+            "b": 0.05077097937464714
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "b4908788-d364-4c6a-9a7e-6f9963416072"
+    },
+    {
+      "text": "9 of 9",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8871713876724243,
+            "t": 0.02653747797012329,
+            "r": 0.9251381158828735,
+            "b": 0.04128887504339218
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "7cadf23a-8b0b-4ef8-88ad-ff14a5f6100e"
+    },
+    {
+      "text": "could have a significant impact on patient morbidity and social eco-\nnomic costs within prostate cancer diagnostics.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07122151553630829,
+            "t": 0.0642496794462204,
+            "r": 0.48578959703445435,
+            "b": 0.09669226408004761
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "6fdd3d60-0e28-440c-b45b-0e6fad83ed77"
+    },
+    {
+      "text": "ACKNOWLEDGMENT  \nWe thank Ms Sima Rabinowitz for editorial revision.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07049576938152313,
+            "t": 0.11239859461784363,
+            "r": 0.3822847008705139,
+            "b": 0.14630523324012756
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "0a714cde-24db-4343-9ff6-375bb5d02a71"
+    },
+    {
+      "text": "CONFLICT OF INTEREST  \nThe authors declare no conflicts of interest.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07111082971096039,
+            "t": 0.16180196404457092,
+            "r": 0.3320923447608948,
+            "b": 0.19560426473617554
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "de2c3f5c-23e8-475c-a95c-12fb8c4f27b1"
+    },
+    {
+      "text": "AUTHOR CONTRIBUTIONS  \nConceptualization, Data curation, Formal analysis, Methodology, Project administration, Visualization, Writing-original draft, Writing-review and editing, V.W.; Data curation, Software, Writing-review and editing, S.S.; Data curation, Formal analysis, Methodology, P.R.; Investigation, Resources, Writing-review and editing, J.Y.; Investigation, Writing-review and editing, A.L.; Data curation, Investigation, Writing-review and editing, S.P.; Investigation, Writing-review and editing, U.F. and S.L.; Data curation, Investigation, L.L.; Data curation, Writing-review and editing, K.H.; Validation, Writing-review and editing, S.P.; Conceptualization, Writing-original draft, Writing-review and editing, P.W.; Conceptualization, Project administration, Resources, Supervision, Writing-original draft, Writing-review & editing, A.T.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07027293741703033,
+            "t": 0.21218785643577576,
+            "r": 0.4892232418060303,
+            "b": 0.4298194944858551
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "63071690-9460-4219-940a-569e4163111f"
+    },
+    {
+      "text": "**DATA AVAILABILITY STATEMENT**  \nThe data that support the findings of this study are available from the corresponding author upon reasonable request.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06964492797851562,
+            "t": 0.4442082643508911,
+            "r": 0.48770958185195923,
+            "b": 0.49641138315200806
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "a598d55e-51ba-4d6e-b917-e3c986957788"
+    },
+    {
+      "text": "ETHICAL STATEMENT  \nThe study was conducted at the Icahn School of Medicine at Mount Sinai Health System (ISMMS) after approval from the Institutional Review Board (GCO 19-1711). Informed patient consent waived for this study.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07012665271759033,
+            "t": 0.5111336708068848,
+            "r": 0.48792022466659546,
+            "b": 0.596031904220581
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "930adfc1-0e0d-4793-b02b-d55178ef5976"
+    },
+    {
+      "text": "ORCID  \n_Vinayak G. Wagaskar_ ![figure: ORCID logo](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0000-0001-8027-6661  \n_Anna Lantz_ ![figure: ORCID logo](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0000-0002-5335-8028  \n_Ugo Giovanni Falagario_ ![figure: ORCID logo](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0000-0002-1152-3005",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07010655105113983,
+            "t": 0.626987099647522,
+            "r": 0.472317636013031,
+            "b": 0.6959629058837891
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "7699ff99-47b3-4f3b-94bc-d78246c01287"
+    },
+    {
+      "text": "1. Siegel RL, Miller KD, Jemal A. Cancer statistics, 2018. CA *Cancer J Clin.* 2018;68(1):7-30.\n2. Schroder FH, Hugosson J, Roobol MJ, et al; ERSPC Investigators. Screening and prostate cancer mortality: results of the European Randomised Study of Screening for Prostate Cancer (ERSPC) at 13 years of follow-up. *Lancet.* 2014;384(9959):2027-2035.\n3. Loeb S, Carter HB, Berndt SI, Ricker W, Schaeffer EM. Complications after prostate biopsy: data from SEER-Medicare. *J Urol.* 2011;186(5):1830-1834.\n4. Vickers AJ, Cronin AM, Roobol MJ, et al. A four-kallikrein panel predicts prostate cancer in men with recent screening: data from the European Randomized Study of Screening for Prostate Cancer, Rotterdam. *Clin Cancer Res.* 2010;16(12):3232-3239.\n5. Vickers AJ, Cronin AM, Aus G, et al. A panel of kallikrein markers can reduce unnecessary biopsy for prostate cancer: data from the",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07133358716964722,
+            "t": 0.7086160182952881,
+            "r": 0.48871850967407227,
+            "b": 0.9328964948654175
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "b1c00980-1e98-44fa-96f2-c91a10503351"
+    },
+    {
+      "text": "- 6. Nordstrom T, Vickers A, Assel M, Lilja H, Gronberg H, Eklund M. Comparison between the four-kallikrein panel and prostate health index for predicting prostate cancer. Eur Urol. 2015;68(1):139-146.\n- 7. Futterer JJ, Briganti A, De Visschere P, et al. Can clinically significant prostate cancer be detected with multiparametric magnetic resonance imaging? A systematic review of the literature. Eur Urol. 2015;68(6):1045-1053.\n- 8. Ahmed HU, El-Shater Bosaily A, Brown LC, et al; PROMIS Study group. Diagnostic accuracy of multi-parametric MRI and TRUS biopsy in prostate cancer (PROMIS): a paired validating confirmatory study. Lancet. 2017;389(10071):815-822.\n- 9. Rouvière O, Puech P, Renard-Penna R, et al. Use of prostate systematic and targeted biopsy on the basis of multiparametric MRI in biopsy-naive patients (MRI-FIRST): a prospective, multicentre, paired diagnostic study. Lancet Oncol. 2019;20(1):100-109.\n- 10. Gronberg H, Eklund M, Picker W, et al. Prostate cancer diagnostics using a combination of the Stockholm3 blood test and multiparametric magnetic resonance imaging. Eur Urol. 2018;74(6):722-728.\n- 11. Punnen S, Nahar B, Soodana-Prakash N, et al. Optimizing patient's selection for prostate biopsy: a single institution experience with multi-parametric MRI and the 4Kscore test for the detection of aggressive prostate cancer. PLoS One. 2018;13(8):e0201384.\n- 12. Aly M, Dyrdak R, Nordstrom T, et al. Rapid increase in multidrug-resistant enteric bacilli blood stream infection after prostate biopsy: A 10-year population-based cohort study. Prostate. 2015;75(9):947-956.\n- 13. Johansson E, Steineck G, Holmberg L, et al; SPCG-4 Investigators. Long-term quality-of-life outcomes after radical prostatectomy or watchful waiting: the Scandinavian Prostate Cancer Group-4 randomised trial. Lancet Oncol. 2011;12(9):891-899.\n- 14. Chen RC, Basak R, Meyer AM, et al. Association between choice of radical prostatectomy, external beam radiotherapy, brachytherapy, or active surveillance and patient-reported quality of life among men with localized prostate cancer. JAMA. 2017;317(11):1141-1150.\n- 15. Punnen S, Pavan N, Parekh DJ. Finding the wolf in sheep's clothing: the 4Kscore is a novel blood test that can accurately identify the risk of aggressive prostate cancer. Rev Urol. 2015;17(1):3-13.\n- 16. Benchikh A, Savage C, Cronin A, et al. A panel of kallikrein markers can predict outcome of prostate biopsy following clinical work-up: an independent validation study from the European Randomized Study of Prostate Cancer screening, France. BMC Cancer. 2010;10:635-635.\n- 17. Lindheim O, Petersen IT, Møntch LK, Youngstrom EA. The importance of calibration in clinical psychology. Assessment. 2020;27(4):840-854.\n- 18. Rivas J, Alvarez-Maestro M, Czarniecki M, Czarniecki S, Socarras M, Loeb S. Negative biopsies with rising prostate-specific antigen. What to do? EMJ Urol. 2017;5:76-82.\n- 19. Wagskarr VG, Mittal A, Sobotka S, et al. Hood technique for robotic radical prostatectomy—Preserving periurethral anatomical structures in the space of Retzius and sparing the pouch of douglas, enabling early return of continence without uncompromising surgical margin rates. Eur Urol. 2020(S0302-2838(20)):30771–30775. https://doi.org/10.1016/j.eururo.2020.09.044.",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.508758544921875,
+            "t": 0.06323462724685669,
+            "r": 0.9312293529510498,
+            "b": 0.7939822673797607
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "38561c8e-7183-475c-817f-8cd4f3d12467"
+    },
+    {
+      "text": "How to cite this article: Wagaskar VG, Sobotka S, Ratnani P, et al. A 4K score/MRI-based nomogram for predicting prostate cancer, clinically significant prostate cancer, and unfavorable prostate cancer. Cancer Reports. 2021;4:e1357. https://doi.org/10.1002/cnr2.1357",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5132180452346802,
+            "t": 0.8199913501739502,
+            "r": 0.9229600429534912,
+            "b": 0.9260469675064087
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "8fd65625-d291-4971-8a53-23d434fdb5b0"
+    },
+    {
+      "text": "2573848. 2021. 4. Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/cat.51378 Wiley Online Library on [illegible] 05/06/2023. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use. OA articles are governed by the applicable Creative Commons License",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9672095775604248,
+            "t": 0.01652887463569641,
+            "r": 0.9858905076980591,
+            "b": 0.9864753484725952
+          },
+          "page": 8
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "d3ce206e-7bc7-4d85-9472-3ab2519e9ed8"
+    }
+  ]
+}

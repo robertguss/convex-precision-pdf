@@ -1,0 +1,197 @@
+{
+  "markdown": "logo: RBC\n\nRoyal Bank of Canada  \nP.O. Box 4047 Terminal A  \nToronto, ON  M5W 1L5 <!-- figure, from page 0 (l=0.091,t=0.063,r=0.323,b=0.124), with ID fa77c19d-29fc-4ce7-b154-1662a47b2836 -->\n\nYour personal chequing  \naccount statement <!-- text, from page 0 (l=0.513,t=0.070,r=0.957,b=0.138), with ID f60c9211-d436-45a7-925e-b5d881301109 -->\n\nFrom March 12, 2004 to April 12, 2004 <!-- text, from page 0 (l=0.697,t=0.141,r=0.955,b=0.160), with ID 91e5aada-de06-43e5-85b8-9576da4a01a2 -->\n\nRBCPDA0001-123456789-01-000001-1-0001 <!-- text, from page 0 (l=0.096,t=0.180,r=0.283,b=0.194), with ID 211b629c-d22e-4857-9217-5e6e9a5d6213 -->\n\n19715 <!-- text, from page 0 (l=0.365,t=0.179,r=0.405,b=0.194), with ID c7d41435-a76d-4fa5-a3e0-5efc4a710950 -->\n\nYour account number: 02782-5094431 <!-- form, from page 0 (l=0.621,t=0.183,r=0.953,b=0.200), with ID 13b3cc19-31ca-435e-bd04-22ebc70a4473 -->\n\nSUSAN SAMPLE\n1234 ANY STREET, SUITE 5678\nADDRESS LINE #2\nCITY, PROVINCE  A1B 2C3 <!-- text, from page 0 (l=0.095,t=0.201,r=0.331,b=0.270), with ID 9dae123f-cfbc-4ee7-96b5-73e09f8daf3b -->\n\nHow to reach us:                1-800 ROYAL® 1-1\n                               (1-800-769-2511)\n                               www.rbcroyalbank.com/deposits <!-- form, from page 0 (l=0.621,t=0.205,r=0.952,b=0.253), with ID fb36af9d-ca01-48bf-812b-ea16ae317c98 -->\n\n<table><tbody><tr><td colspan=\"2\">Summary of your account for this period</td></tr><tr><td colspan=\"2\">Signature Plus 02782-5094431</td></tr><tr><td colspan=\"2\">Royal Bank of Canada</td></tr><tr><td colspan=\"2\">5879 ROULE JEAN-BAPTISTE, MONTREAL, PQ H3C 3B8</td></tr><tr><td>Your opening balance on March 12, 2004</td><td>$4,247.14</td></tr><tr><td>Total deposits into your account</td><td>+ 145.15</td></tr><tr><td>Total withdrawals from your account</td><td>- 727.50</td></tr><tr><td>Your closing balance on April 12, 2004</td><td>= $3,664.79</td></tr></tbody></table> <!-- table, from page 0 (l=0.050,t=0.338,r=0.589,b=0.502), with ID 413d2bf5-d79c-43da-948b-2149e6d7fed2 -->\n\n**RBC is now paperless!**\n\nDear Susan, we're pleased to introduce you to digital imaging. Now you can retrieve images of cheques in seconds and view them online. It's as easy as a click of a mouse.\n\nTry our new digital imaging service today. If you're not already an RBC Royal Bank Online Banking client, visit www.rbcroyalbank.com/online or simply call 1-800-ROYAL® 5-5 (1-800-769-2555). <!-- text, from page 0 (l=0.620,t=0.343,r=0.932,b=0.481), with ID 57b02ca8-e3c9-4a19-be61-5349b2b5c5ca -->\n\n<table><tbody><tr><td>Date</td><td>Description</td><td>Withdrawals ($)</td><td>Deposits ($)</td><td>Balance ($)</td></tr><tr><td></td><td>Opening balance</td><td></td><td></td><td>4,247.14</td></tr><tr><td>15 Mar</td><td>Transfer</td><td></td><td>85.00</td><td></td></tr><tr><td></td><td>Interest paid</td><td></td><td>.15</td><td></td></tr><tr><td></td><td>ATM withdrawal</td><td>100.00</td><td></td><td></td></tr><tr><td></td><td>Interac purchase -1361 - Nasr Foods Inc.</td><td>47.82</td><td></td><td>4,184.47</td></tr><tr><td>17 Mar</td><td>Overdraft interest</td><td>0.93</td><td></td><td>4,183.54</td></tr><tr><td>18 Mar</td><td>Cheque #30</td><td>40.00</td><td></td><td></td></tr><tr><td></td><td>Cheque #31</td><td>148.11</td><td></td><td>3,995.43</td></tr><tr><td>19 Mar</td><td>ATM withdrawal</td><td>60.00</td><td></td><td>3,935.43</td></tr><tr><td>22 Mar</td><td>ATM withdrawal</td><td>20.00</td><td></td><td></td></tr><tr><td></td><td>Interac purchase - 1361 - The Bay</td><td>125.13</td><td></td><td></td></tr><tr><td></td><td>Interac purchase - 1361 - Highland Farms</td><td>6.94</td><td></td><td>3,783.36</td></tr></tbody></table> <!-- table, from page 0 (l=0.048,t=0.544,r=0.955,b=0.809), with ID 0e515a6e-1436-4968-b322-c40029be3675 -->\n\n1 of 2 <!-- marginalia, from page 0 (l=0.914,t=0.886,r=0.954,b=0.901), with ID afd5f079-50db-41e0-b53c-7bf891b9b1f9 -->",
+  "chunks": [
+    {
+      "text": "logo: RBC\n\nRoyal Bank of Canada  \nP.O. Box 4047 Terminal A  \nToronto, ON  M5W 1L5",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09130329638719559,
+            "t": 0.06282724440097809,
+            "r": 0.32344067096710205,
+            "b": 0.12431994080543518
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "fa77c19d-29fc-4ce7-b154-1662a47b2836"
+    },
+    {
+      "text": "Your personal chequing  \naccount statement",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5132226943969727,
+            "t": 0.06958211213350296,
+            "r": 0.9565589427947998,
+            "b": 0.13764992356300354
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "f60c9211-d436-45a7-925e-b5d881301109"
+    },
+    {
+      "text": "From March 12, 2004 to April 12, 2004",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6969316601753235,
+            "t": 0.14141517877578735,
+            "r": 0.9552721381187439,
+            "b": 0.15999668836593628
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "91e5aada-de06-43e5-85b8-9576da4a01a2"
+    },
+    {
+      "text": "RBCPDA0001-123456789-01-000001-1-0001",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09635437279939651,
+            "t": 0.179772287607193,
+            "r": 0.2827197313308716,
+            "b": 0.19350358843803406
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "211b629c-d22e-4857-9217-5e6e9a5d6213"
+    },
+    {
+      "text": "19715",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.3653273582458496,
+            "t": 0.1787693351507187,
+            "r": 0.4054092764854431,
+            "b": 0.19367237389087677
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "c7d41435-a76d-4fa5-a3e0-5efc4a710950"
+    },
+    {
+      "text": "Your account number: 02782-5094431",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.620896577835083,
+            "t": 0.18291984498500824,
+            "r": 0.9525471925735474,
+            "b": 0.1998618096113205
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "13b3cc19-31ca-435e-bd04-22ebc70a4473"
+    },
+    {
+      "text": "SUSAN SAMPLE\n1234 ANY STREET, SUITE 5678\nADDRESS LINE #2\nCITY, PROVINCE  A1B 2C3",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09476680308580399,
+            "t": 0.201065793633461,
+            "r": 0.3306387662887573,
+            "b": 0.2703881561756134
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "9dae123f-cfbc-4ee7-96b5-73e09f8daf3b"
+    },
+    {
+      "text": "How to reach us:                1-800 ROYAL® 1-1\n                               (1-800-769-2511)\n                               www.rbcroyalbank.com/deposits",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6213064789772034,
+            "t": 0.2051873505115509,
+            "r": 0.9519796967506409,
+            "b": 0.25291743874549866
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "fb36af9d-ca01-48bf-812b-ea16ae317c98"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"2\">Summary of your account for this period</td></tr><tr><td colspan=\"2\">Signature Plus 02782-5094431</td></tr><tr><td colspan=\"2\">Royal Bank of Canada</td></tr><tr><td colspan=\"2\">5879 ROULE JEAN-BAPTISTE, MONTREAL, PQ H3C 3B8</td></tr><tr><td>Your opening balance on March 12, 2004</td><td>$4,247.14</td></tr><tr><td>Total deposits into your account</td><td>+ 145.15</td></tr><tr><td>Total withdrawals from your account</td><td>- 727.50</td></tr><tr><td>Your closing balance on April 12, 2004</td><td>= $3,664.79</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.049525439739227295,
+            "t": 0.3384629189968109,
+            "r": 0.5887740254402161,
+            "b": 0.5015103220939636
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "413d2bf5-d79c-43da-948b-2149e6d7fed2"
+    },
+    {
+      "text": "**RBC is now paperless!**\n\nDear Susan, we're pleased to introduce you to digital imaging. Now you can retrieve images of cheques in seconds and view them online. It's as easy as a click of a mouse.\n\nTry our new digital imaging service today. If you're not already an RBC Royal Bank Online Banking client, visit www.rbcroyalbank.com/online or simply call 1-800-ROYAL® 5-5 (1-800-769-2555).",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6203150749206543,
+            "t": 0.34274765849113464,
+            "r": 0.9324938058853149,
+            "b": 0.4814002811908722
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "57b02ca8-e3c9-4a19-be61-5349b2b5c5ca"
+    },
+    {
+      "text": "<table><tbody><tr><td>Date</td><td>Description</td><td>Withdrawals ($)</td><td>Deposits ($)</td><td>Balance ($)</td></tr><tr><td></td><td>Opening balance</td><td></td><td></td><td>4,247.14</td></tr><tr><td>15 Mar</td><td>Transfer</td><td></td><td>85.00</td><td></td></tr><tr><td></td><td>Interest paid</td><td></td><td>.15</td><td></td></tr><tr><td></td><td>ATM withdrawal</td><td>100.00</td><td></td><td></td></tr><tr><td></td><td>Interac purchase -1361 - Nasr Foods Inc.</td><td>47.82</td><td></td><td>4,184.47</td></tr><tr><td>17 Mar</td><td>Overdraft interest</td><td>0.93</td><td></td><td>4,183.54</td></tr><tr><td>18 Mar</td><td>Cheque #30</td><td>40.00</td><td></td><td></td></tr><tr><td></td><td>Cheque #31</td><td>148.11</td><td></td><td>3,995.43</td></tr><tr><td>19 Mar</td><td>ATM withdrawal</td><td>60.00</td><td></td><td>3,935.43</td></tr><tr><td>22 Mar</td><td>ATM withdrawal</td><td>20.00</td><td></td><td></td></tr><tr><td></td><td>Interac purchase - 1361 - The Bay</td><td>125.13</td><td></td><td></td></tr><tr><td></td><td>Interac purchase - 1361 - Highland Farms</td><td>6.94</td><td></td><td>3,783.36</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.04838123917579651,
+            "t": 0.5437052845954895,
+            "r": 0.954800009727478,
+            "b": 0.8092150092124939
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "0e515a6e-1436-4968-b322-c40029be3675"
+    },
+    {
+      "text": "1 of 2",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.9143326878547668,
+            "t": 0.8855454325675964,
+            "r": 0.9535720944404602,
+            "b": 0.9012629389762878
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "afd5f079-50db-41e0-b53c-7bf891b9b1f9"
+    }
+  ]
+}
