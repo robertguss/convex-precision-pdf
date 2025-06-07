@@ -26,7 +26,7 @@ export default async function DocumentPage({ params }: PageProps) {
     }
     
     return <DocumentViewerWrapper preloadedDocument={preloadedDocument} />;
-  } catch (error) {
+  } catch {
     // If document doesn't exist or user doesn't have access
     notFound();
   }

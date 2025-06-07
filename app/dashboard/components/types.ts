@@ -19,7 +19,7 @@ export interface ProcessedDocument {
   markdown: string;
   chunks: Array<{
     content: string;
-    metadata: any;
+    metadata: Record<string, unknown>;
   }>;
   pageCount: number;
   status: "uploading" | "processing" | "completed" | "failed";
@@ -37,7 +37,7 @@ export interface Chunk {
     width: number;
     height: number;
   };
-  metadata?: any;
+  metadata?: Record<string, unknown>;
 }
 
 export interface DocData {

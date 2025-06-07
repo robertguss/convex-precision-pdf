@@ -1,10 +1,10 @@
 // ABOUTME: Header component for the document viewer with export controls
 // ABOUTME: Includes back button, export format selector, and action buttons
-import React from 'react';
+import React from "react";
 
-import { Download, Trash2 } from 'lucide-react';
+import { Download, Trash2 } from "lucide-react";
 
-import { Button } from '@kit/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -13,9 +13,9 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@kit/ui/select';
+} from "@/components/ui/select";
 
-import { ExportFormat } from './types';
+import { ExportFormat } from "./types";
 
 interface DocumentHeaderProps {
   exportFormat: ExportFormat;
@@ -71,7 +71,7 @@ export const DocumentHeader: React.FC<DocumentHeaderProps> = ({
 
         <Button
           onClick={onDownloadSelection}
-          disabled={!hasSelection || exportFormat === ''}
+          disabled={!hasSelection || exportFormat === ""}
           className="mr-2 rounded bg-green-500 px-3 py-1 text-sm font-bold text-white hover:bg-green-700 focus:ring-2 focus:ring-green-300 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
         >
           <Download className="mr-2 h-4 w-4" />

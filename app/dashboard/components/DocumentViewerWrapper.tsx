@@ -14,7 +14,7 @@ import { DocumentHeader } from './DocumentHeader';
 import DocumentViewer from './DocumentViewer';
 import ParsedContent from './ParsedContent';
 import { useChunkSelection } from './hooks/useChunkSelection';
-import { Chunk, DocData, ExportFormat } from './types';
+import { DocData, ExportFormat } from './types';
 import { calculateNumberOfPages } from './utils/documentUtils';
 import { downloadFile, exportChunks } from './utils/exportUtils';
 
@@ -24,13 +24,11 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_FAST_API_URL || 'http://localhost:8
 interface DocumentViewerWrapperProps {
   preloadedDocument: Preloaded<typeof api.documents.getDocument>;
   isDemo?: boolean;
-  uploadComponent?: React.ReactNode;
 }
 
 export function DocumentViewerWrapper({
   preloadedDocument,
   isDemo = false,
-  uploadComponent,
 }: DocumentViewerWrapperProps) {
   const initialDocument = usePreloadedQuery(preloadedDocument);
   const documentId = initialDocument._id;
@@ -49,8 +47,10 @@ export function DocumentViewerWrapper({
   );
   const [elapsedTime, setElapsedTime] = useState(0);
 
-  // Not using examples in this implementation
-  const exampleBasePath = null;
+  // Get the static base path for example documents
+  const exampleBasePath = document?.landingAiResponse?.isExample 
+    ? document?.landingAiResponse?.staticBasePath 
+    : null;
 
   const {
     activeChunkId,

@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
 
 import { ProcessingView } from "./ProcessingView";
 import UploadScreen from "./UploadScreen";
@@ -13,6 +15,7 @@ import { Example } from "./types";
 export function UploadPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
+  const createExampleDocument = useMutation(api.documents.createExampleDocument);
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [useProgressiveUpload] = useState(true);
@@ -86,30 +89,17 @@ export function UploadPage() {
       }
       const exampleData = await dataResponse.json();
 
-      // Create a temporary document entry for the example
-      const response = await fetch("/api/examples/create-temp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: example.title,
-          dataUrl: example.dataUrl,
-          staticBasePath: example.staticImageBasePath,
-          markdown: exampleData.markdown,
-          chunks: exampleData.chunks,
-          num_pages: exampleData.num_pages || 0,
-        }),
+      // Create a document entry for the example using Convex mutation
+      const documentId = await createExampleDocument({
+        title: example.title,
+        markdown: exampleData.markdown,
+        chunks: exampleData.chunks,
+        pageCount: exampleData.num_pages || 0,
+        staticBasePath: example.staticImageBasePath,
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to create example document");
-      }
-
-      const result = await response.json();
-
       // Redirect to document view
-      router.push(`/dashboard/documents/${result.documentId}`);
+      router.push(`/dashboard/documents/${documentId}`);
     } catch (err) {
       console.error(err);
       setError(

@@ -5,10 +5,21 @@ import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-
-const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+import { auth } from "@clerk/nextjs/server";
 
 export async function POST(request: NextRequest) {
+  const { getToken } = await auth();
+  const token = await getToken({ template: "convex" });
+  
+  if (!token) {
+    return NextResponse.json(
+      { error: "Unauthorized" },
+      { status: 401 }
+    );
+  }
+  
+  const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+  convex.setAuth(token);
   try {
     const formData = await request.formData();
     const file = formData.get("file") as File;
@@ -36,7 +47,7 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    const uploadUrl = await convex.mutation(api.documents.generateUploadUrl);
+    const uploadUrl = await convex.mutation(api.documents.generateUploadUrl, {});
     
     const uploadResponse = await fetch(uploadUrl, {
       method: "POST",
@@ -59,6 +70,7 @@ export async function POST(request: NextRequest) {
       mimeType: file.type,
     });
     
+    // Fire and forget - process document in the background
     convex.action(api.documents.processDocumentWithLandingAI, {
       documentId: documentId as Id<"documents">,
     }).catch(error => {
@@ -73,7 +85,10 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Upload error:", error);
     return NextResponse.json(
-      { error: "Failed to upload document" },
+      { 
+        error: "Failed to upload document",
+        details: error instanceof Error ? error.message : "Unknown error"
+      },
       { status: 500 }
     );
   }

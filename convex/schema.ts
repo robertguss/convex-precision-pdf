@@ -19,7 +19,7 @@ export default defineSchema({
   documents: defineTable({
     userId: v.id("users"),
     title: v.string(),
-    fileId: v.id("_storage"),
+    fileId: v.optional(v.id("_storage")),
     status: v.union(
       v.literal("uploading"),
       v.literal("processing"),
