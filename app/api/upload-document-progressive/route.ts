@@ -6,21 +6,34 @@ import { ConvexHttpClient } from "convex/browser";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { auth } from "@clerk/nextjs/server";
+import { convertPdfToImages } from "@/utils/pdfToImages";
 
 export async function POST(request: NextRequest) {
-  const { getToken } = await auth();
-  const token = await getToken({ template: "convex" });
+  console.log("Upload endpoint called");
   
-  if (!token) {
-    return NextResponse.json(
-      { error: "Unauthorized" },
-      { status: 401 }
-    );
-  }
-  
-  const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
-  convex.setAuth(token);
   try {
+    const { getToken } = await auth();
+    const token = await getToken({ template: "convex" });
+    
+    console.log("Auth token obtained:", !!token);
+    
+    if (!token) {
+      return NextResponse.json(
+        { error: "Unauthorized - No auth token" },
+        { status: 401 }
+      );
+    }
+    
+    const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
+    console.log("Convex URL:", convexUrl);
+    
+    if (!convexUrl) {
+      throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
+    }
+    
+    const convex = new ConvexHttpClient(convexUrl);
+    convex.setAuth(token);
+    
     const formData = await request.formData();
     const file = formData.get("file") as File;
     
@@ -76,6 +89,62 @@ export async function POST(request: NextRequest) {
       mimeType: file.type,
     });
     
+    // Convert PDF to images if it's a PDF file
+    const pageImages: Id<"_storage">[] = [];
+    let pageCount = 1; // Default for non-PDF files
+    
+    if (file.type === "application/pdf") {
+      try {
+        console.log("Converting PDF to images...");
+        
+        // Get the file buffer
+        const fileBuffer = Buffer.from(await file.arrayBuffer());
+        
+        // Convert PDF pages to images
+        const imageBuffers = await convertPdfToImages(fileBuffer, 'png', 2);
+        pageCount = imageBuffers.length;
+        
+        console.log(`Converted ${pageCount} pages to images`);
+        
+        // Upload each page image to Convex storage
+        for (let i = 0; i < imageBuffers.length; i++) {
+          console.log(`Uploading page ${i + 1} image...`);
+          
+          // Get a new upload URL for each image
+          const imageUploadUrl = await convex.mutation(api.documents.generateUploadUrl, {});
+          
+          // Upload the image
+          const imageUploadResponse = await fetch(imageUploadUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "image/png",
+            },
+            body: imageBuffers[i],
+          });
+          
+          if (!imageUploadResponse.ok) {
+            throw new Error(`Failed to upload page ${i + 1} image`);
+          }
+          
+          const imageResult = await imageUploadResponse.json();
+          pageImages.push(imageResult.storageId as Id<"_storage">);
+        }
+        
+        console.log("All page images uploaded successfully");
+        
+        // Update the document with page images
+        await convex.mutation(api.documents.updateDocumentStatus, {
+          documentId: documentId as Id<"documents">,
+          status: "processing",
+          pageImages: pageImages,
+          pageCount: pageCount,
+        });
+      } catch (error) {
+        console.error("Error converting PDF to images:", error);
+        // Continue with processing even if image conversion fails
+      }
+    }
+    
     // Fire and forget - process document in the background
     convex.action(api.documents.processDocumentWithLandingAI, {
       documentId: documentId as Id<"documents">,
@@ -86,14 +155,39 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       documentId,
       status: "processing",
+      pageCount,
     });
     
   } catch (error) {
     console.error("Upload error:", error);
+    // Log the full error details
+    if (error instanceof Error) {
+      console.error("Error stack:", error.stack);
+    }
+    
+    // Provide more specific error messages
+    let errorMessage = "Failed to upload document";
+    let errorDetails = "Unknown error";
+    
+    if (error instanceof Error) {
+      errorDetails = error.message;
+      
+      // Check for specific error types
+      if (error.message.includes("generateUploadUrl")) {
+        errorMessage = "Failed to generate upload URL";
+      } else if (error.message.includes("storage")) {
+        errorMessage = "Failed to upload file to storage";
+      } else if (error.message.includes("createDocument")) {
+        errorMessage = "Failed to create document record";
+      } else if (error.message.includes("Unauthorized") || error.message.includes("auth")) {
+        errorMessage = "Authentication error";
+      }
+    }
+    
     return NextResponse.json(
       { 
-        error: "Failed to upload document",
-        details: error instanceof Error ? error.message : "Unknown error"
+        error: errorMessage,
+        details: errorDetails
       },
       { status: 500 }
     );

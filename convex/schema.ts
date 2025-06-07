@@ -47,6 +47,9 @@ export default defineSchema({
     }))),
     marginalia: v.optional(v.array(v.any())),
     
+    // Page images stored in Convex storage
+    pageImages: v.optional(v.array(v.id("_storage"))),
+    
     // Metadata
     pageCount: v.optional(v.number()),
     fileSize: v.number(),

@@ -3,6 +3,10 @@
     "convex": {
       "command": "npx",
       "args": ["-y", "convex@latest", "mcp", "start"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
     }
   }
 }

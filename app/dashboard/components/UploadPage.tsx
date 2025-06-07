@@ -37,7 +37,15 @@ export function UploadPage() {
         body: formData,
       });
 
-      const result = await response.json();
+      let result;
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        const text = await response.text();
+        console.error("Non-JSON response:", text);
+        result = { error: "Server returned non-JSON response", details: text };
+      }
 
       if (!response.ok) {
         if (response.status === 402) {
@@ -68,6 +76,14 @@ export function UploadPage() {
       router.push(`/dashboard/documents/${result.documentId}`);
     } catch (err) {
       console.error("Error during file upload:", err);
+      // Log more details about the error
+      if (err instanceof Error) {
+        console.error("Error details:", {
+          message: err.message,
+          stack: err.stack,
+          name: err.name
+        });
+      }
       setError(
         `Failed to upload ${file.name}: ${err instanceof Error ? err.message : "Unknown error"}`,
       );

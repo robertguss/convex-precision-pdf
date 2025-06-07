@@ -69,8 +69,8 @@ export function DocumentViewerWrapper({
         metadata: chunk.metadata,
         // Add properties expected by DocumentViewer
         text: chunk.content,
-        chunk_type: (chunk.metadata as any)?.chunk_type || 'text',
-        grounding: (chunk.metadata as any)?.grounding || []
+        chunk_type: (chunk.metadata as Record<string, unknown>)?.chunk_type as string || 'text',
+        grounding: (chunk.metadata as Record<string, unknown>)?.grounding as Array<unknown> || []
       }));
 
       const initialData: DocData = {
