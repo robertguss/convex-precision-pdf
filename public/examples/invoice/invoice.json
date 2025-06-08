@@ -1,0 +1,469 @@
+{
+  "markdown": "logo: cpb <!-- figure, from page 0 (l=0.607,t=0.029,r=0.776,b=0.093), with ID e1ffa446-078e-4110-ad37-f8e99330f033 -->\n\nCPB SOFTWARE (GERMANY) GMBH <!-- text, from page 0 (l=0.607,t=0.097,r=0.911,b=0.116), with ID 1c830e5c-bd51-49d8-9622-8e7706179f9e -->\n\nIm Bruch 3, 63897 Miltenberg  \nTelefon: +49 9371 9786 0  \ngermany@cpb-software.com  \nwww.cpb-software.com <!-- text, from page 0 (l=0.607,t=0.121,r=0.784,b=0.164), with ID ca21897e-3934-44a2-8a41-97c14e117743 -->\n\nCPB Software (Germany) GmbH - Im Bruch 3 - 63897 Miltenberg/Main <!-- text, from page 0 (l=0.093,t=0.187,r=0.467,b=0.204), with ID bc5aec52-28a1-4a46-aa2d-2fea466d23e7 -->\n\nMusterkunde AG\nMr. John Doe\nMusterstr. 23\n12345 Musterstadt <!-- text, from page 0 (l=0.095,t=0.214,r=0.245,b=0.277), with ID 7c47fc18-c7f5-471f-9633-6f11e0fe97b9 -->\n\nName: Stefanie Müller  \nPhone: +49 9371 9786-0 <!-- form, from page 0 (l=0.607,t=0.259,r=0.767,b=0.292), with ID 073387cd-1233-4428-9ea7-cac9785db194 -->\n\nInvoice WMACCESS Internet <!-- text, from page 0 (l=0.094,t=0.346,r=0.333,b=0.365), with ID 9923e5f9-84b9-4e9c-a048-9fae03ba2274 -->\n\n<table><tbody><tr><th>Invoice No</th><th>Customer No</th><th>Invoice Period</th><th>Date</th></tr><tr><td>123100401</td><td>12345</td><td>01.02.2024 - 29.02.2024</td><td>1. März 2024</td></tr></tbody></table> <!-- table, from page 0 (l=0.091,t=0.377,r=0.949,b=0.428), with ID d4e2584f-1a01-4943-a7f8-91b1d21f056b -->\n\n<table><tbody><tr><td>Service Description</td><td>Amount -without VAT-</td><td>quantity</td><td>Total Amount</td></tr><tr><td>Basic Fee wmView</td><td>130,00 €</td><td>1</td><td>130,00 €</td></tr><tr><td>Basis fee for additional user accounts</td><td>10,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Basic Fee wmPos</td><td>50,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Basic Fee wmGuide</td><td>1.000,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Change of user accounts</td><td>10,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T1</td><td>0,58 €</td><td>14</td><td>8,12 €</td></tr><tr><td>Transaction Fee T2</td><td>0,70 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T3</td><td>1,50 €</td><td>162</td><td>243,00 €</td></tr><tr><td>Transaction Fee T4</td><td>0,50 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T5</td><td>0,80 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T6</td><td>1,80 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G1</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G2</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G3</td><td>0,40 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G4</td><td>0,40 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G5</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G6</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Total</td><td colspan=\"2\"></td><td>381,12 €</td></tr><tr><td>VAT 19 %</td><td colspan=\"2\"></td><td>72,41 €</td></tr><tr><td>Gross Amount incl. VAT</td><td colspan=\"2\"></td><td>453,53 €</td></tr></tbody></table> <!-- table, from page 0 (l=0.092,t=0.436,r=0.947,b=0.764), with ID 6ee619dc-afc7-42b6-8777-e54bb5c236c6 -->\n\nTerms of Payment: Immediate payment without discount. Any bank charges must be paid by the invoice recipient.\nBank fees at our expense will be charged to the invoice recipient! <!-- text, from page 0 (l=0.095,t=0.787,r=0.783,b=0.818), with ID 33598901-e7bc-4689-b63d-7cb90a8f88ca -->\n\nPlease credit the amount invoiced to IBAN DE29 1234 5678 9012 3456 78 | BIC GENODE51MIC (SEPA Credit Transfer) <!-- text, from page 0 (l=0.096,t=0.831,r=0.824,b=0.847), with ID dc49ac59-16b8-49bb-8478-11e708e18439 -->\n\nThis invoice is generated automatically and will not be signed <!-- text, from page 0 (l=0.097,t=0.875,r=0.467,b=0.891), with ID 53fc44d6-fff4-48d2-8bf4-9142294f356d -->\n\nlogo: cpb software <!-- figure, from page 0 (l=0.722,t=0.002,r=0.949,b=0.068), with ID a9934094-f142-4acd-bc5e-f00e14585780 -->\n\n**Invoice Details** <!-- text, from page 0 (l=0.397,t=0.081,r=0.622,b=0.109), with ID eba027de-124f-4028-84b1-4b6092b61c1c -->\n\nPeriod:      01.02.2024      to      29.02.2024 <!-- form, from page 0 (l=0.280,t=0.113,r=0.735,b=0.137), with ID bc19296e-1e35-411d-b3af-fdeb18e241e1 -->\n\nUnit: Musterkunde AG    12345 <!-- form, from page 0 (l=0.064,t=0.140,r=0.950,b=0.181), with ID 541e863b-dd62-4493-a856-e641c4bfa9ef -->\n\n<table>\n  <tr>\n    <td>Request sections:</td>\n    <td>T1:</td>\n    <td>T2:</td>\n    <td>T3:</td>\n    <td>T4:</td>\n    <td>T5:</td>\n    <td>T6:</td>\n    <td>G1:</td>\n    <td>G2:</td>\n    <td>G3:</td>\n    <td>G4:</td>\n    <td>G5:</td>\n    <td>G6:</td>\n  </tr>\n  <tr>\n    <td>Amount in Euro:</td>\n    <td>0,58</td>\n    <td>0,70</td>\n    <td>1,50</td>\n    <td>0,50</td>\n    <td>0,80</td>\n    <td>1,80</td>\n    <td>0,30</td>\n    <td>0,30</td>\n    <td>0,40</td>\n    <td>0,40</td>\n    <td>0,30</td>\n    <td>0,30</td>\n  </tr>\n</table>\n <!-- form, from page 0 (l=0.065,t=0.200,r=0.867,b=0.233), with ID f490cf5e-2cd5-4a6f-b39d-60426161f75b -->\n\n<table>\n  <tr>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n  </tr>\n  <tr>\n    <td><b>user-account-1</b></td>\n    <td>10</td>\n    <td>0</td>\n    <td>99</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>154,30 €</td>\n  </tr>\n  <tr>\n    <td><b>user-account-2</b></td>\n    <td>4</td>\n    <td>0</td>\n    <td>63</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>96,82 €</td>\n  </tr>\n</table> <!-- form, from page 0 (l=0.067,t=0.248,r=0.947,b=0.284), with ID 62fecdfb-8458-4acb-a7e0-37d80badb26f -->\n\n<table><tbody><tr><td>Transaction Fee Seg</td><td>T1:</td><td>T2:</td><td>T3:</td><td>T4:</td><td>T5:</td><td>T6:</td><td>G1:</td><td>G2:</td><td>G3:</td><td>G4:</td><td>G5:</td><td>G6:</td></tr><tr><td>Queries in Total:</td><td>14</td><td>0</td><td>162</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Total in Euro:</td><td>8,12 €</td><td>0,00 €</td><td>243,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>251,12 €</td></tr></tbody></table> <!-- table, from page 0 (l=0.067,t=0.306,r=0.948,b=0.357), with ID 1ab939ed-3d42-46e3-bcb0-16247d00ed30 -->\n\nThe explanation of the query fee categories (T1 to T6 and G1 to G6) can be found on our website:\nhttps://www.wmaccess.com/abfragekategorien <!-- text, from page 0 (l=0.071,t=0.361,r=0.665,b=0.390), with ID 588e744c-37a4-4d1c-8cfc-d6e7cb71a4ea -->\n\nlogo: cpb software <!-- figure, from page 0 (l=0.723,t=0.001,r=0.947,b=0.067), with ID 8a7d7244-3dca-4983-b0a0-8e46b5405539 -->\n\n**Invoice Details for wmView Query Reference** <!-- text, from page 0 (l=0.197,t=0.080,r=0.818,b=0.111), with ID c38a39fc-9ec4-4aa0-8036-eb9e6f1332bf -->\n\nPeriod: 01.02.2024 <!-- form, from page 0 (l=0.283,t=0.112,r=0.515,b=0.137), with ID b18bc7ea-8205-414b-b028-0b9f626feeb0 -->\n\nto     29.02.2024 <!-- text, from page 0 (l=0.545,t=0.113,r=0.733,b=0.136), with ID b7ee338d-261a-44a1-ba7d-3b63a47257b5 -->\n\nUnit: Musterkunde AG  12345 <!-- form, from page 0 (l=0.068,t=0.141,r=0.945,b=0.179), with ID f4638e8c-f195-4bee-afbb-aff8517961ec -->\n\n<table><tbody><tr><td colspan=\"2\">Query Reference:</td></tr><tr><td colspan=\"2\">*Not specified*</td></tr><tr><td colspan=\"2\">AZR/31/27439</td></tr><tr><td colspan=\"2\">CCL/3715</td></tr><tr><td colspan=\"2\">CRS/28432</td></tr><tr><td colspan=\"2\">Cs/52113</td></tr><tr><td colspan=\"2\">GS 32090</td></tr><tr><td colspan=\"2\">Kpi/22695</td></tr><tr><td colspan=\"2\">PG 7772</td></tr><tr><td colspan=\"2\">Rjn/11138</td></tr><tr><td colspan=\"2\">SF-M 596/99-08</td></tr><tr><td colspan=\"2\">Ttrb/17885</td></tr><tr><td colspan=\"2\">WPN:24791</td></tr><tr><td colspan=\"2\">Wwt/15658</td></tr></tbody></table> <!-- table, from page 0 (l=0.067,t=0.210,r=0.324,b=0.444), with ID 22c40015-2259-49a3-9ad6-a32efd2af711 -->\n\n<table>\n  <tr>\n    <th colspan=\"6\">wmview, wmProfile and User Profiles Query Segments:</th>\n  </tr>\n  <tr>\n    <td>T1:</td>\n    <td>T2:</td>\n    <td>T3:</td>\n    <td>T4:</td>\n    <td>T5:</td>\n    <td>T6:</td>\n  </tr>\n</table> <!-- form, from page 0 (l=0.476,t=0.202,r=0.809,b=0.231), with ID b7771dca-f4b1-4b8c-b29a-a07e75989728 -->\n\n<table><tbody><tr><td>4</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>15,82 €</td></tr><tr><td>0</td><td>0</td><td>12</td><td>0</td><td>0</td><td>0</td><td>18,00 €</td></tr><tr><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>6,00 €</td></tr><tr><td>5</td><td>0</td><td>36</td><td>0</td><td>0</td><td>0</td><td>56,90 €</td></tr><tr><td>0</td><td>0</td><td>19</td><td>0</td><td>0</td><td>0</td><td>28,50 €</td></tr><tr><td>1</td><td>0</td><td>7</td><td>0</td><td>0</td><td>0</td><td>11,08 €</td></tr><tr><td>2</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>10,16 €</td></tr><tr><td>0</td><td>0</td><td>11</td><td>0</td><td>0</td><td>0</td><td>16,50 €</td></tr><tr><td>0</td><td>0</td><td>15</td><td>0</td><td>0</td><td>0</td><td>22,50 €</td></tr><tr><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>7,50 €</td></tr><tr><td>1</td><td>0</td><td>23</td><td>0</td><td>0</td><td>0</td><td>35,08 €</td></tr><tr><td>1</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>6,58 €</td></tr><tr><td>0</td><td>0</td><td>11</td><td>0</td><td>0</td><td>0</td><td>16,50 €</td></tr></tbody></table> <!-- table, from page 0 (l=0.476,t=0.244,r=0.945,b=0.443), with ID fc3e43f3-6319-4dc1-8a63-4df97db6fb63 -->\n\n<table><tbody><tr><td colspan=\"6\">Price for each Query in Euro:</td></tr><tr><td>0,58</td><td>0,70</td><td>1,50</td><td>0,50</td><td>0,80</td><td>1,80</td></tr></tbody></table> <!-- table, from page 0 (l=0.477,t=0.468,r=0.807,b=0.497), with ID eb5f0458-976f-4970-a602-20b307ecaf98 -->",
+  "chunks": [
+    {
+      "text": "logo: cpb",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6071054339408875,
+            "t": 0.029414869844913483,
+            "r": 0.7756920456886292,
+            "b": 0.09342026710510254
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "e1ffa446-078e-4110-ad37-f8e99330f033"
+    },
+    {
+      "text": "CPB SOFTWARE (GERMANY) GMBH",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6069873571395874,
+            "t": 0.09684424102306366,
+            "r": 0.9113800525665283,
+            "b": 0.11633779108524323
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "1c830e5c-bd51-49d8-9622-8e7706179f9e"
+    },
+    {
+      "text": "Im Bruch 3, 63897 Miltenberg  \nTelefon: +49 9371 9786 0  \ngermany@cpb-software.com  \nwww.cpb-software.com",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6066200733184814,
+            "t": 0.12053575366735458,
+            "r": 0.7836977243423462,
+            "b": 0.1641215980052948
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "ca21897e-3934-44a2-8a41-97c14e117743"
+    },
+    {
+      "text": "CPB Software (Germany) GmbH - Im Bruch 3 - 63897 Miltenberg/Main",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09341619908809662,
+            "t": 0.18705147504806519,
+            "r": 0.4669737219810486,
+            "b": 0.2043883204460144
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "bc5aec52-28a1-4a46-aa2d-2fea466d23e7"
+    },
+    {
+      "text": "Musterkunde AG\nMr. John Doe\nMusterstr. 23\n12345 Musterstadt",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09518604725599289,
+            "t": 0.21407119929790497,
+            "r": 0.24493423104286194,
+            "b": 0.27669262886047363
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "7c47fc18-c7f5-471f-9633-6f11e0fe97b9"
+    },
+    {
+      "text": "Name: Stefanie Müller  \nPhone: +49 9371 9786-0",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6065378189086914,
+            "t": 0.2592076063156128,
+            "r": 0.7671279907226562,
+            "b": 0.29154109954833984
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "073387cd-1233-4428-9ea7-cac9785db194"
+    },
+    {
+      "text": "Invoice WMACCESS Internet",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0941300094127655,
+            "t": 0.34600773453712463,
+            "r": 0.332771897315979,
+            "b": 0.36536797881126404
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "9923e5f9-84b9-4e9c-a048-9fae03ba2274"
+    },
+    {
+      "text": "<table><tbody><tr><th>Invoice No</th><th>Customer No</th><th>Invoice Period</th><th>Date</th></tr><tr><td>123100401</td><td>12345</td><td>01.02.2024 - 29.02.2024</td><td>1. März 2024</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09128677845001221,
+            "t": 0.3774127960205078,
+            "r": 0.9486101865768433,
+            "b": 0.427650511264801
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "d4e2584f-1a01-4943-a7f8-91b1d21f056b"
+    },
+    {
+      "text": "<table><tbody><tr><td>Service Description</td><td>Amount -without VAT-</td><td>quantity</td><td>Total Amount</td></tr><tr><td>Basic Fee wmView</td><td>130,00 €</td><td>1</td><td>130,00 €</td></tr><tr><td>Basis fee for additional user accounts</td><td>10,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Basic Fee wmPos</td><td>50,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Basic Fee wmGuide</td><td>1.000,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Change of user accounts</td><td>10,00 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T1</td><td>0,58 €</td><td>14</td><td>8,12 €</td></tr><tr><td>Transaction Fee T2</td><td>0,70 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T3</td><td>1,50 €</td><td>162</td><td>243,00 €</td></tr><tr><td>Transaction Fee T4</td><td>0,50 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T5</td><td>0,80 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee T6</td><td>1,80 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G1</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G2</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G3</td><td>0,40 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G4</td><td>0,40 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G5</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Transaction Fee G6</td><td>0,30 €</td><td>0</td><td>0,00 €</td></tr><tr><td>Total</td><td colspan=\"2\"></td><td>381,12 €</td></tr><tr><td>VAT 19 %</td><td colspan=\"2\"></td><td>72,41 €</td></tr><tr><td>Gross Amount incl. VAT</td><td colspan=\"2\"></td><td>453,53 €</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09171819686889648,
+            "t": 0.43624722957611084,
+            "r": 0.9473965167999268,
+            "b": 0.7637085914611816
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "6ee619dc-afc7-42b6-8777-e54bb5c236c6"
+    },
+    {
+      "text": "Terms of Payment: Immediate payment without discount. Any bank charges must be paid by the invoice recipient.\nBank fees at our expense will be charged to the invoice recipient!",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09487861394882202,
+            "t": 0.7868167161941528,
+            "r": 0.7830962538719177,
+            "b": 0.8179794549942017
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "33598901-e7bc-4689-b63d-7cb90a8f88ca"
+    },
+    {
+      "text": "Please credit the amount invoiced to IBAN DE29 1234 5678 9012 3456 78 | BIC GENODE51MIC (SEPA Credit Transfer)",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0962536633014679,
+            "t": 0.8310823440551758,
+            "r": 0.8235756158828735,
+            "b": 0.8473671674728394
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "dc49ac59-16b8-49bb-8478-11e708e18439"
+    },
+    {
+      "text": "This invoice is generated automatically and will not be signed",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.09730283915996552,
+            "t": 0.8748509287834167,
+            "r": 0.4668196439743042,
+            "b": 0.8910557627677917
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "53fc44d6-fff4-48d2-8bf4-9142294f356d"
+    },
+    {
+      "text": "logo: cpb software",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7220869064331055,
+            "t": 0.0017840936779975891,
+            "r": 0.9487181901931763,
+            "b": 0.06793536245822906
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "a9934094-f142-4acd-bc5e-f00e14585780"
+    },
+    {
+      "text": "**Invoice Details**",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.39677926898002625,
+            "t": 0.08100087940692902,
+            "r": 0.6215300559997559,
+            "b": 0.10864737629890442
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "eba027de-124f-4028-84b1-4b6092b61c1c"
+    },
+    {
+      "text": "Period:      01.02.2024      to      29.02.2024",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.2800474762916565,
+            "t": 0.11263323575258255,
+            "r": 0.734901487827301,
+            "b": 0.13671299815177917
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "bc19296e-1e35-411d-b3af-fdeb18e241e1"
+    },
+    {
+      "text": "Unit: Musterkunde AG    12345",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0639563500881195,
+            "t": 0.13984999060630798,
+            "r": 0.9504101276397705,
+            "b": 0.18057936429977417
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "541e863b-dd62-4493-a856-e641c4bfa9ef"
+    },
+    {
+      "text": "<table>\n  <tr>\n    <td>Request sections:</td>\n    <td>T1:</td>\n    <td>T2:</td>\n    <td>T3:</td>\n    <td>T4:</td>\n    <td>T5:</td>\n    <td>T6:</td>\n    <td>G1:</td>\n    <td>G2:</td>\n    <td>G3:</td>\n    <td>G4:</td>\n    <td>G5:</td>\n    <td>G6:</td>\n  </tr>\n  <tr>\n    <td>Amount in Euro:</td>\n    <td>0,58</td>\n    <td>0,70</td>\n    <td>1,50</td>\n    <td>0,50</td>\n    <td>0,80</td>\n    <td>1,80</td>\n    <td>0,30</td>\n    <td>0,30</td>\n    <td>0,40</td>\n    <td>0,40</td>\n    <td>0,30</td>\n    <td>0,30</td>\n  </tr>\n</table>\n",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06531506776809692,
+            "t": 0.19950202107429504,
+            "r": 0.8671132326126099,
+            "b": 0.23348423838615417
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "f490cf5e-2cd5-4a6f-b39d-60426161f75b"
+    },
+    {
+      "text": "<table>\n  <tr>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n  </tr>\n  <tr>\n    <td><b>user-account-1</b></td>\n    <td>10</td>\n    <td>0</td>\n    <td>99</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>154,30 €</td>\n  </tr>\n  <tr>\n    <td><b>user-account-2</b></td>\n    <td>4</td>\n    <td>0</td>\n    <td>63</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>0</td>\n    <td>96,82 €</td>\n  </tr>\n</table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.0665026307106018,
+            "t": 0.24755802750587463,
+            "r": 0.9470036625862122,
+            "b": 0.28414908051490784
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "62fecdfb-8458-4acb-a7e0-37d80badb26f"
+    },
+    {
+      "text": "<table><tbody><tr><td>Transaction Fee Seg</td><td>T1:</td><td>T2:</td><td>T3:</td><td>T4:</td><td>T5:</td><td>T6:</td><td>G1:</td><td>G2:</td><td>G3:</td><td>G4:</td><td>G5:</td><td>G6:</td></tr><tr><td>Queries in Total:</td><td>14</td><td>0</td><td>162</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Total in Euro:</td><td>8,12 €</td><td>0,00 €</td><td>243,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>0,00 €</td><td>251,12 €</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06733572483062744,
+            "t": 0.3063071668148041,
+            "r": 0.9484080076217651,
+            "b": 0.356702595949173
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "1ab939ed-3d42-46e3-bcb0-16247d00ed30"
+    },
+    {
+      "text": "The explanation of the query fee categories (T1 to T6 and G1 to G6) can be found on our website:\nhttps://www.wmaccess.com/abfragekategorien",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07067012786865234,
+            "t": 0.36112627387046814,
+            "r": 0.6645499467849731,
+            "b": 0.3896772563457489
+          },
+          "page": 1
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "588e744c-37a4-4d1c-8cfc-d6e7cb71a4ea"
+    },
+    {
+      "text": "logo: cpb software",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.7228593230247498,
+            "t": 0.0014724209904670715,
+            "r": 0.9472768902778625,
+            "b": 0.06655433028936386
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "8a7d7244-3dca-4983-b0a0-8e46b5405539"
+    },
+    {
+      "text": "**Invoice Details for wmView Query Reference**",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.1974981129169464,
+            "t": 0.08007776737213135,
+            "r": 0.8176755905151367,
+            "b": 0.11072017252445221
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "c38a39fc-9ec4-4aa0-8036-eb9e6f1332bf"
+    },
+    {
+      "text": "Period: 01.02.2024",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.28251856565475464,
+            "t": 0.11236796528100967,
+            "r": 0.5145232081413269,
+            "b": 0.13734222948551178
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "b18bc7ea-8205-414b-b028-0b9f626feeb0"
+    },
+    {
+      "text": "to     29.02.2024",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.5447648167610168,
+            "t": 0.1132761761546135,
+            "r": 0.7327690720558167,
+            "b": 0.1364866942167282
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "b7ee338d-261a-44a1-ba7d-3b63a47257b5"
+    },
+    {
+      "text": "Unit: Musterkunde AG  12345",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06801649928092957,
+            "t": 0.14076662063598633,
+            "r": 0.945292592048645,
+            "b": 0.17873841524124146
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "f4638e8c-f195-4bee-afbb-aff8517961ec"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"2\">Query Reference:</td></tr><tr><td colspan=\"2\">*Not specified*</td></tr><tr><td colspan=\"2\">AZR/31/27439</td></tr><tr><td colspan=\"2\">CCL/3715</td></tr><tr><td colspan=\"2\">CRS/28432</td></tr><tr><td colspan=\"2\">Cs/52113</td></tr><tr><td colspan=\"2\">GS 32090</td></tr><tr><td colspan=\"2\">Kpi/22695</td></tr><tr><td colspan=\"2\">PG 7772</td></tr><tr><td colspan=\"2\">Rjn/11138</td></tr><tr><td colspan=\"2\">SF-M 596/99-08</td></tr><tr><td colspan=\"2\">Ttrb/17885</td></tr><tr><td colspan=\"2\">WPN:24791</td></tr><tr><td colspan=\"2\">Wwt/15658</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.06679010391235352,
+            "t": 0.20993544161319733,
+            "r": 0.3235945701599121,
+            "b": 0.4437231421470642
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "22c40015-2259-49a3-9ad6-a32efd2af711"
+    },
+    {
+      "text": "<table>\n  <tr>\n    <th colspan=\"6\">wmview, wmProfile and User Profiles Query Segments:</th>\n  </tr>\n  <tr>\n    <td>T1:</td>\n    <td>T2:</td>\n    <td>T3:</td>\n    <td>T4:</td>\n    <td>T5:</td>\n    <td>T6:</td>\n  </tr>\n</table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4764452874660492,
+            "t": 0.20233674347400665,
+            "r": 0.8089587688446045,
+            "b": 0.23142953217029572
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "b7771dca-f4b1-4b8c-b29a-a07e75989728"
+    },
+    {
+      "text": "<table><tbody><tr><td>4</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>15,82 €</td></tr><tr><td>0</td><td>0</td><td>12</td><td>0</td><td>0</td><td>0</td><td>18,00 €</td></tr><tr><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>6,00 €</td></tr><tr><td>5</td><td>0</td><td>36</td><td>0</td><td>0</td><td>0</td><td>56,90 €</td></tr><tr><td>0</td><td>0</td><td>19</td><td>0</td><td>0</td><td>0</td><td>28,50 €</td></tr><tr><td>1</td><td>0</td><td>7</td><td>0</td><td>0</td><td>0</td><td>11,08 €</td></tr><tr><td>2</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>10,16 €</td></tr><tr><td>0</td><td>0</td><td>11</td><td>0</td><td>0</td><td>0</td><td>16,50 €</td></tr><tr><td>0</td><td>0</td><td>15</td><td>0</td><td>0</td><td>0</td><td>22,50 €</td></tr><tr><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>7,50 €</td></tr><tr><td>1</td><td>0</td><td>23</td><td>0</td><td>0</td><td>0</td><td>35,08 €</td></tr><tr><td>1</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>6,58 €</td></tr><tr><td>0</td><td>0</td><td>11</td><td>0</td><td>0</td><td>0</td><td>16,50 €</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.47554513812065125,
+            "t": 0.24380037188529968,
+            "r": 0.9454988241195679,
+            "b": 0.4430844485759735
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "fc3e43f3-6319-4dc1-8a63-4df97db6fb63"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"6\">Price for each Query in Euro:</td></tr><tr><td>0,58</td><td>0,70</td><td>1,50</td><td>0,50</td><td>0,80</td><td>1,80</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.4774506986141205,
+            "t": 0.4681558310985565,
+            "r": 0.8073285818099976,
+            "b": 0.49665072560310364
+          },
+          "page": 2
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "eb5f0458-976f-4970-a602-20b307ecaf98"
+    }
+  ]
+}

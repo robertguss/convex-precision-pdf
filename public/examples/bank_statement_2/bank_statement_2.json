@@ -1,0 +1,165 @@
+{
+  "markdown": "logo: Commerce Bank\n\nMember FDIC <!-- figure, from page 0 (l=0.074,t=0.021,r=0.366,b=0.059), with ID a5b5addd-575e-4c9a-af85-281f666e2068 -->\n\n1000 Walnut\nKansas City MO 64106-3686 <!-- text, from page 0 (l=0.126,t=0.061,r=0.342,b=0.093), with ID 7cea375a-805f-45ec-8a29-099c8c9256d1 -->\n\nJane Customer  \n1234 Anywhere Dr.  \nSmall Town, MO 12345-6789 <!-- text, from page 0 (l=0.125,t=0.104,r=0.370,b=0.155), with ID 08089442-4f3b-4342-b6ba-b9270819dea3 -->\n\nPrimary Account Number:  000009752 <!-- form, from page 0 (l=0.605,t=0.178,r=0.898,b=0.197), with ID 3931ed21-b6a9-49d0-b272-45c0dc58269e -->\n\nBank Statement\n\n*If you have any questions about your statement,  \nplease call us at 816-234-2265*\n\nStatement Date:  June 5, 2003  \nPage Number:  1 <!-- form, from page 0 (l=0.124,t=0.194,r=0.898,b=0.249), with ID 9112fd40-fd0f-469c-8f0f-758223a33f91 -->\n\n<table><tbody><tr><td colspan=\"2\">CONNECTIONS CHECKING Account # 000009752</td></tr><tr><td colspan=\"2\">Account Summary Account # 000009752</td></tr><tr><td>Beginning Balance on May 3, 2003</td><td>$7,126.11</td></tr><tr><td>Deposits & Other Credits</td><td>+3,615.08</td></tr><tr><td>ATM Withdrawals & Debits</td><td>-20.00</td></tr><tr><td>VISA Check Card Purchases & Debits</td><td>-0.00</td></tr><tr><td>Withdrawals & Other Debits</td><td>-0.00</td></tr><tr><td>Checks Paid</td><td>-200.00</td></tr><tr><td>Ending Balance on June 5, 2003</td><td>$10,521.19</td></tr></tbody></table> <!-- table, from page 0 (l=0.125,t=0.259,r=0.899,b=0.439), with ID 747c123b-3141-45a6-b687-2ce496e56b08 -->\n\n<table><tbody><tr><td colspan=\"3\">Deposits & Other Credits Account # 000009752</td></tr><tr><td>Description</td><td>Date Credited</td><td>Amount</td></tr><tr><td>Deposit</td><td>Ref Nbr: 130012345</td><td>05-15</td><td>$3,615.08</td></tr><tr><td colspan=\"2\">Total Deposits & Other Credits</td><td>$3,615.08</td></tr></tbody></table> <!-- table, from page 0 (l=0.125,t=0.447,r=0.897,b=0.548), with ID d4b537a0-d0ff-4543-b725-2e69c52ecc5a -->\n\n<table><tbody><tr><td colspan=\"4\">ATM Withdrawals & Debits Account # 000009752</td></tr><tr><td>Description</td><td>Tran Date</td><td>Date Paid</td><td>Amount</td></tr><tr><td>ATM Withdrawal<br>1000 Walnut St M119<br>Kansas City MO 00005678</td><td>05-18</td><td>05-19</td><td>$20.00</td></tr><tr><td colspan=\"3\">Total ATM Withdrawals & Debits</td><td>$20.00</td></tr><tr><td colspan=\"4\">Checks Paid Account # 000009752</td></tr></tbody></table> <!-- table, from page 0 (l=0.125,t=0.558,r=0.896,b=0.719), with ID 13f858eb-89d7-46b7-b928-1dcf926bd124 -->\n\n<table><tbody><tr><td>Date Paid</td><td>Check Number</td><td>Amount</td><td>Reference Number</td></tr><tr><td>05-12</td><td>1001</td><td>75.00</td><td>00012576589</td></tr><tr><td>05-18</td><td>1002</td><td>30.00</td><td>00036547854</td></tr><tr><td>05-24</td><td>1003</td><td>200.00</td><td>00094613547</td></tr><tr><td>Total Checks Paid</td><td></td><td></td><td></td></tr></tbody></table> <!-- table, from page 0 (l=0.121,t=0.729,r=0.607,b=0.832), with ID 3bc03a12-6faa-40fc-8d22-ca2bae2a8523 -->\n\n$305.00 <!-- marginalia, from page 0 (l=0.834,t=0.814,r=0.894,b=0.830), with ID 16c51d8a-0921-47d1-93b8-422ce289c782 -->",
+  "chunks": [
+    {
+      "text": "logo: Commerce Bank\n\nMember FDIC",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.07445859909057617,
+            "t": 0.021295182406902313,
+            "r": 0.36604389548301697,
+            "b": 0.058852456510066986
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "figure",
+      "chunk_id": "a5b5addd-575e-4c9a-af85-281f666e2068"
+    },
+    {
+      "text": "1000 Walnut\nKansas City MO 64106-3686",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12612202763557434,
+            "t": 0.06055138260126114,
+            "r": 0.34247204661369324,
+            "b": 0.09278174489736557
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "7cea375a-805f-45ec-8a29-099c8c9256d1"
+    },
+    {
+      "text": "Jane Customer  \n1234 Anywhere Dr.  \nSmall Town, MO 12345-6789",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12512288987636566,
+            "t": 0.10404936224222183,
+            "r": 0.3701862096786499,
+            "b": 0.15469136834144592
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "text",
+      "chunk_id": "08089442-4f3b-4342-b6ba-b9270819dea3"
+    },
+    {
+      "text": "Primary Account Number:  000009752",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.6051806807518005,
+            "t": 0.17838267982006073,
+            "r": 0.8981510996818542,
+            "b": 0.19671396911144257
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "3931ed21-b6a9-49d0-b272-45c0dc58269e"
+    },
+    {
+      "text": "Bank Statement\n\n*If you have any questions about your statement,  \nplease call us at 816-234-2265*\n\nStatement Date:  June 5, 2003  \nPage Number:  1",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12428018450737,
+            "t": 0.19410131871700287,
+            "r": 0.8980327844619751,
+            "b": 0.24893297255039215
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "form",
+      "chunk_id": "9112fd40-fd0f-469c-8f0f-758223a33f91"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"2\">CONNECTIONS CHECKING Account # 000009752</td></tr><tr><td colspan=\"2\">Account Summary Account # 000009752</td></tr><tr><td>Beginning Balance on May 3, 2003</td><td>$7,126.11</td></tr><tr><td>Deposits & Other Credits</td><td>+3,615.08</td></tr><tr><td>ATM Withdrawals & Debits</td><td>-20.00</td></tr><tr><td>VISA Check Card Purchases & Debits</td><td>-0.00</td></tr><tr><td>Withdrawals & Other Debits</td><td>-0.00</td></tr><tr><td>Checks Paid</td><td>-200.00</td></tr><tr><td>Ending Balance on June 5, 2003</td><td>$10,521.19</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12454941868782043,
+            "t": 0.25942280888557434,
+            "r": 0.8986526727676392,
+            "b": 0.4385637938976288
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "747c123b-3141-45a6-b687-2ce496e56b08"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"3\">Deposits & Other Credits Account # 000009752</td></tr><tr><td>Description</td><td>Date Credited</td><td>Amount</td></tr><tr><td>Deposit</td><td>Ref Nbr: 130012345</td><td>05-15</td><td>$3,615.08</td></tr><tr><td colspan=\"2\">Total Deposits & Other Credits</td><td>$3,615.08</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12470477819442749,
+            "t": 0.4467964768409729,
+            "r": 0.8968231081962585,
+            "b": 0.5480585694313049
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "d4b537a0-d0ff-4543-b725-2e69c52ecc5a"
+    },
+    {
+      "text": "<table><tbody><tr><td colspan=\"4\">ATM Withdrawals & Debits Account # 000009752</td></tr><tr><td>Description</td><td>Tran Date</td><td>Date Paid</td><td>Amount</td></tr><tr><td>ATM Withdrawal<br>1000 Walnut St M119<br>Kansas City MO 00005678</td><td>05-18</td><td>05-19</td><td>$20.00</td></tr><tr><td colspan=\"3\">Total ATM Withdrawals & Debits</td><td>$20.00</td></tr><tr><td colspan=\"4\">Checks Paid Account # 000009752</td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12468498945236206,
+            "t": 0.5583454370498657,
+            "r": 0.8961605429649353,
+            "b": 0.7194669246673584
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "13f858eb-89d7-46b7-b928-1dcf926bd124"
+    },
+    {
+      "text": "<table><tbody><tr><td>Date Paid</td><td>Check Number</td><td>Amount</td><td>Reference Number</td></tr><tr><td>05-12</td><td>1001</td><td>75.00</td><td>00012576589</td></tr><tr><td>05-18</td><td>1002</td><td>30.00</td><td>00036547854</td></tr><tr><td>05-24</td><td>1003</td><td>200.00</td><td>00094613547</td></tr><tr><td>Total Checks Paid</td><td></td><td></td><td></td></tr></tbody></table>",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.12080346047878265,
+            "t": 0.7293817400932312,
+            "r": 0.6065787076950073,
+            "b": 0.8319442868232727
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "table",
+      "chunk_id": "3bc03a12-6faa-40fc-8d22-ca2bae2a8523"
+    },
+    {
+      "text": "$305.00",
+      "grounding": [
+        {
+          "box": {
+            "l": 0.8344197273254395,
+            "t": 0.8141806125640869,
+            "r": 0.8935915231704712,
+            "b": 0.8297494649887085
+          },
+          "page": 0
+        }
+      ],
+      "chunk_type": "page_header",
+      "chunk_id": "16c51d8a-0921-47d1-93b8-422ce289c782"
+    }
+  ]
+}
