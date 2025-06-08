@@ -31,11 +31,14 @@ export function DocumentViewerWrapper({
 }: DocumentViewerWrapperProps) {
   const documentId = initialDocument._id;
   
-  // Poll for updates while processing
-  const document = useQuery(
+  // Poll for updates while processing (only for non-demo documents)
+  const liveDocument = useQuery(
     api.documents.getDocument,
-    { documentId: documentId as Id<"documents"> }
-  ) ?? initialDocument;
+    isDemo ? "skip" : { documentId: documentId as Id<"documents"> }
+  );
+  
+  // Use live document if available, otherwise use initial document
+  const document = liveDocument ?? initialDocument;
   const router = useRouter();
   const [exportFormat, setExportFormat] = useState<ExportFormat>('');
   const [isExtractingContent, setIsExtractingContent] = useState(false);

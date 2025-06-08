@@ -36,6 +36,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-dropzone": "^14.3.8",
+    "react-joyride": "github:NavidJalilian/flytask-joyride",
     "sharp": "^0.34.2",
     "svix": "^1.67.0",
     "tailwind-merge": "^3.3.0"
