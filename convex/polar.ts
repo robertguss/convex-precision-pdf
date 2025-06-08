@@ -2,7 +2,8 @@
  * Polar integration for subscription and credit management
  */
 
-import { components } from "./_generated/api";
+import { components, internal } from "./_generated/api";
+import { api } from "./_generated/api";
 import { Polar } from "@convex-dev/polar";
 import { v } from "convex/values";
 import { internalMutation, mutation, query, QueryCtx } from "./_generated/server";
@@ -17,8 +18,8 @@ const TIER_CREDITS = {
 
 // Initialize Polar with user info and product mappings
 export const polar = new Polar(components.polar, {
-  getUserInfo: async (ctx) => {
-    const user = await getCurrentUser(ctx);
+  getUserInfo: async (ctx: any) => {
+    const user = await getCurrentUser(ctx as QueryCtx);
     if (!user) {
       throw new Error("User not found");
     }
@@ -70,14 +71,20 @@ export const getUserSubscription = query({
 export const checkCredits = query({
   args: { pagesRequired: v.number() },
   handler: async (ctx, { pagesRequired }) => {
-    const subscription = await getUserSubscription(ctx, {});
-    if (!subscription) {
+    const user = await getCurrentUser(ctx);
+    if (!user) {
       return { hasCredits: false, creditsRemaining: 0 };
     }
 
+    // Default values for users without subscription data
+    const tier = user.subscriptionTier || "free";
+    const creditsUsed = user.creditsUsed || 0;
+    const creditsLimit = user.creditsLimit || TIER_CREDITS.free;
+    const creditsRemaining = Math.max(0, creditsLimit - creditsUsed);
+
     return {
-      hasCredits: subscription.creditsRemaining >= pagesRequired,
-      creditsRemaining: subscription.creditsRemaining,
+      hasCredits: creditsRemaining >= pagesRequired,
+      creditsRemaining: creditsRemaining,
     };
   },
 });
@@ -175,12 +182,15 @@ export const createCheckoutLink = mutation({
       throw new Error("User not authenticated");
     }
 
-    const checkoutUrl = await polar.createCheckoutLink(ctx, {
-      productKey,
-      metadata: { userId: user._id },
+    const checkout = await polar.createCheckoutSession(ctx, {
+      productIds: [productKey === 'starter' ? process.env.POLAR_PRODUCT_STARTER_ID! : process.env.POLAR_PRODUCT_PRO_ID!],
+      userId: user._id,
+      email: user.email,
+      origin: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+      successUrl: '/dashboard/subscription',
     });
 
-    return { url: checkoutUrl };
+    return { url: checkout.url };
   },
 });
 
@@ -199,9 +209,9 @@ export const createCustomerPortalLink = mutation({
       throw new Error("No active subscription found");
     }
 
-    const portalUrl = await polar.createCustomerPortalLink(ctx, {
-      customerId: user.polarCustomerId,
-    });
+    // The Polar component doesn't have createCustomerPortalSession
+    // Return Polar's customer portal URL directly
+    const portalUrl = `https://polar.sh/${process.env.POLAR_ORGANIZATION_NAME || 'your-org'}/portal`;
 
     return { url: portalUrl };
   },
@@ -243,7 +253,7 @@ export const updateUserSubscription = internalMutation({
 
     // If this is a new subscription or upgrade, reset credits
     if (status === "active" && (!user.subscriptionId || user.subscriptionTier !== tier)) {
-      await resetMonthlyCredits(ctx, { userId });
+      await ctx.runMutation(internal.polar.resetMonthlyCredits, { userId });
     }
   },
 });

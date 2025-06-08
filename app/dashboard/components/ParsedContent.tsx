@@ -2,21 +2,21 @@ import React, { useEffect, useRef } from 'react';
 
 import { marked } from 'marked';
 
-/**
- * @typedef {{ chunk_id: string; chunk_type: string; text: string }} Chunk
- * @typedef {(chunkId: string, event: React.MouseEvent<HTMLDivElement>) => void} OnChunkClick
- */
+interface Chunk {
+  chunk_id: string;
+  chunk_type: string;
+  text: string;
+}
 
-/**
- * @param {{
- *   chunks: Chunk[];
- *   activeChunkId: string | null;
- *   multiSelectedChunkIds: string[];
- *   onChunkClick: OnChunkClick;
- *   isLoading?: boolean;
- *   elapsedTime?: number;
- * }} props
- */
+interface ParsedContentProps {
+  chunks: Chunk[];
+  activeChunkId: string | null;
+  multiSelectedChunkIds: string[];
+  onChunkClick: (chunkId: string, event: React.MouseEvent<HTMLDivElement>) => void;
+  isLoading?: boolean;
+  elapsedTime?: number;
+}
+
 const ParsedContent = ({
   chunks,
   activeChunkId,
@@ -24,13 +24,12 @@ const ParsedContent = ({
   onChunkClick,
   isLoading = false,
   elapsedTime = 0,
-}) => {
-  /** @type {React.MutableRefObject<Record<string, HTMLDivElement | null>>} */
-  const chunkRefs = useRef({});
+}: ParsedContentProps) => {
+  const chunkRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     if (activeChunkId && chunkRefs.current[activeChunkId]) {
-      chunkRefs.current[activeChunkId].scrollIntoView({
+      chunkRefs.current[activeChunkId]!.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
       });

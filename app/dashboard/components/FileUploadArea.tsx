@@ -19,11 +19,15 @@ const UploadIcon = () => (
   </svg>
 );
 
-function FileUploadArea({ onFileSelect }) {
+interface FileUploadAreaProps {
+  onFileSelect: (file: File) => void;
+}
+
+function FileUploadArea({ onFileSelect }: FileUploadAreaProps) {
   const [dragMessage, setDragMessage] = useState('');
 
   const onDrop = useCallback(
-    (acceptedFiles) => {
+    (acceptedFiles: File[]) => {
       setDragMessage('');
       if (acceptedFiles.length > 0) {
         onFileSelect(acceptedFiles[0]);

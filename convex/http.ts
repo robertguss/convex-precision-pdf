@@ -54,27 +54,31 @@ async function validateRequest(req: Request): Promise<WebhookEvent | null> {
 
 // Register Polar webhook routes
 polar.registerRoutes(http, {
-  onSubscriptionCreated: async (ctx, event) => {
+  onSubscriptionCreated: async (ctx, event: any) => {
     // Handle new subscription
-    const { userId } = event.metadata;
-    await ctx.runMutation(internal.polar.updateUserSubscription, {
-      userId: userId as any,
-      subscriptionId: event.subscriptionId,
-      status: event.status,
-      productKey: event.productKey,
-      polarCustomerId: event.customerId,
-    });
+    if (event.data?.metadata?.userId) {
+      const subscription = event.data;
+      await ctx.runMutation(internal.polar.updateUserSubscription, {
+        userId: subscription.metadata.userId as any,
+        subscriptionId: subscription.id,
+        status: subscription.status,
+        productKey: subscription.product.key || 'starter',
+        polarCustomerId: subscription.customer_id,
+      });
+    }
   },
-  onSubscriptionUpdated: async (ctx, event) => {
-    // Handle subscription updates (upgrades, downgrades, cancellations)
-    const { userId } = event.metadata;
-    await ctx.runMutation(internal.polar.updateUserSubscription, {
-      userId: userId as any,
-      subscriptionId: event.subscriptionId,
-      status: event.status,
-      productKey: event.productKey,
-      polarCustomerId: event.customerId,
-    });
+  onSubscriptionUpdated: async (ctx, event: any) => {
+    // Handle subscription updates
+    if (event.data?.metadata?.userId) {
+      const subscription = event.data;
+      await ctx.runMutation(internal.polar.updateUserSubscription, {
+        userId: subscription.metadata.userId as any,
+        subscriptionId: subscription.id,
+        status: subscription.status,
+        productKey: subscription.product.key || 'starter',
+        polarCustomerId: subscription.customer_id,
+      });
+    }
   },
 });
 

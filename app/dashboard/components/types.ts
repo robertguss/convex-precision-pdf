@@ -39,9 +39,9 @@ export interface Chunk {
   };
   metadata?: Record<string, unknown>;
   // Additional fields for DocumentViewer compatibility
-  text?: string;
-  chunk_type?: string;
-  grounding?: Array<{
+  text: string;
+  chunk_type: string;
+  grounding: Array<{
     page: number;
     box: {
       l: number;

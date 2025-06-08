@@ -64,7 +64,7 @@ export function DocumentViewerWrapper({
   useEffect(() => {
     if (document) {
       // Transform chunks to match the expected format for DocumentViewer
-      const transformedChunks = (document.chunks || []).map(chunk => ({
+      const transformedChunks = (document.chunks || []).map((chunk: any) => ({
         chunk_id: chunk.chunk_id,
         content: chunk.content,
         page: chunk.page,
@@ -73,7 +73,15 @@ export function DocumentViewerWrapper({
         // Add properties expected by DocumentViewer
         text: chunk.content,
         chunk_type: (chunk.metadata as Record<string, unknown>)?.chunk_type as string || 'text',
-        grounding: (chunk.metadata as Record<string, unknown>)?.grounding as Array<unknown> || []
+        grounding: ((chunk.metadata as Record<string, unknown>)?.grounding as Array<{
+          page: number;
+          box: {
+            l: number;
+            t: number;
+            r: number;
+            b: number;
+          };
+        }>) || []
       }));
 
       const initialData: DocData = {

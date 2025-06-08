@@ -81,15 +81,23 @@ const exampleFilesData = [
  * @property {string} staticImageBasePath
  */
 
-/**
- * Component to display the main upload screen.
- * @param {object} props - The component props.
- * @param {(file: File) => void} props.onFileUpload - Callback function when a file is selected for upload.
- * @param {(example: ExampleFile) => void} props.onExampleSelect - Callback function when an example file is selected.
- * @param {string | object | null} props.error - Error message or object to display.
- * @param {() => void} props.clearError - Callback function to clear the current error.
- */
-function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }) {
+interface ExampleFile {
+  id: string;
+  title: string;
+  tags: string[];
+  imageUrl: string;
+  dataUrl: string;
+  staticImageBasePath: string;
+}
+
+interface UploadScreenProps {
+  onFileUpload: (file: File) => void;
+  onExampleSelect: (example: ExampleFile) => void;
+  error: string | { message?: string } | null;
+  clearError: () => void;
+}
+
+function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }: UploadScreenProps) {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 text-white antialiased sm:p-6">
       <div className="w-full max-w-4xl rounded-xl bg-white p-6 text-gray-800 shadow-2xl sm:p-8 md:p-10">
