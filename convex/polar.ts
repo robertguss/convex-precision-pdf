@@ -3,10 +3,9 @@
  */
 
 import { components, internal } from "./_generated/api";
-import { api } from "./_generated/api";
 import { Polar } from "@convex-dev/polar";
 import { v } from "convex/values";
-import { internalMutation, mutation, query, QueryCtx } from "./_generated/server";
+import { action, internalMutation, internalQuery, mutation, query, QueryCtx } from "./_generated/server";
 import { getCurrentUser } from "./users";
 
 // Define credit limits for each tier
@@ -174,23 +173,52 @@ export const resetMonthlyCredits = internalMutation({
 /**
  * Create a checkout link for upgrading to a paid plan
  */
-export const createCheckoutLink = mutation({
+export const createCheckoutLink = action({
   args: { productKey: v.string() },
   handler: async (ctx, { productKey }) => {
-    const user = await getCurrentUser(ctx);
-    if (!user) {
+    console.log("=== Creating checkout link ===");
+    console.log("Product key:", productKey);
+    
+    // Get user info from the database
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
       throw new Error("User not authenticated");
     }
-
-    const checkout = await polar.createCheckoutSession(ctx, {
-      productIds: [productKey === 'starter' ? process.env.POLAR_PRODUCT_STARTER_ID! : process.env.POLAR_PRODUCT_PRO_ID!],
-      userId: user._id,
-      email: user.email,
-      origin: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-      successUrl: '/dashboard/subscription',
+    
+    const user = await ctx.runQuery(internal.polar.getUserByClerkId, {
+      clerkId: identity.subject
     });
+    if (!user) {
+      throw new Error("User not found");
+    }
+    
+    console.log("User ID:", user._id);
+    console.log("User email:", user.email);
 
-    return { url: checkout.url };
+    const productId = productKey === 'starter' 
+      ? process.env.POLAR_PRODUCT_STARTER_ID! 
+      : process.env.POLAR_PRODUCT_PRO_ID!;
+    
+    console.log("Product ID:", productId);
+    
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+    console.log("Base URL:", baseUrl);
+    
+    try {
+      const checkout = await polar.createCheckoutSession(ctx, {
+        productIds: [productId],
+        userId: user._id,
+        email: user.email,
+        origin: baseUrl,
+        successUrl: `${baseUrl}/dashboard/subscription?success=true`,
+      });
+      
+      console.log("Checkout URL created:", checkout.url);
+      return { url: checkout.url };
+    } catch (error) {
+      console.error("Error creating checkout session:", error);
+      throw error;
+    }
   },
 });
 
@@ -214,6 +242,20 @@ export const createCustomerPortalLink = mutation({
     const portalUrl = `https://polar.sh/${process.env.POLAR_ORGANIZATION_NAME || 'your-org'}/portal`;
 
     return { url: portalUrl };
+  },
+});
+
+/**
+ * Internal query to get user by Clerk ID
+ */
+export const getUserByClerkId = internalQuery({
+  args: { clerkId: v.string() },
+  handler: async (ctx, { clerkId }) => {
+    const user = await ctx.db
+      .query("users")
+      .withIndex("byExternalId", (q) => q.eq("externalId", clerkId))
+      .unique();
+    return user;
   },
 });
 

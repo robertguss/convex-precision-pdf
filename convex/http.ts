@@ -54,31 +54,38 @@ async function validateRequest(req: Request): Promise<WebhookEvent | null> {
 
 // Register Polar webhook routes
 polar.registerRoutes(http, {
-  onSubscriptionCreated: async (ctx, event: any) => {
-    // Handle new subscription
-    if (event.data?.metadata?.userId) {
-      const subscription = event.data;
-      await ctx.runMutation(internal.polar.updateUserSubscription, {
-        userId: subscription.metadata.userId as any,
-        subscriptionId: subscription.id,
-        status: subscription.status,
-        productKey: subscription.product.key || 'starter',
-        polarCustomerId: subscription.customer_id,
-      });
-    }
+  // The default path is /polar/events - make sure this matches your Polar webhook configuration
+  onSubscriptionCreated: async (_ctx, event: any) => {
+    console.log("=== Polar webhook: subscription created ===");
+    console.log("Event type:", event.type);
+    console.log("Event data:", JSON.stringify(event.data, null, 2));
+    
+    // The Polar component should handle user association internally
+    // Let's log what we receive to debug
+    const subscription = event.data;
+    console.log("Subscription ID:", subscription?.id);
+    console.log("Customer ID:", subscription?.customer_id);
+    console.log("Product ID:", subscription?.product_id);
+    console.log("Status:", subscription?.status);
+    console.log("Metadata:", subscription?.metadata);
+    
+    // The Polar component should update the subscription automatically
+    // based on the getUserInfo function we provided
+    // If manual handling is needed, we can add it here
   },
-  onSubscriptionUpdated: async (ctx, event: any) => {
-    // Handle subscription updates
-    if (event.data?.metadata?.userId) {
-      const subscription = event.data;
-      await ctx.runMutation(internal.polar.updateUserSubscription, {
-        userId: subscription.metadata.userId as any,
-        subscriptionId: subscription.id,
-        status: subscription.status,
-        productKey: subscription.product.key || 'starter',
-        polarCustomerId: subscription.customer_id,
-      });
-    }
+  onSubscriptionUpdated: async (_ctx, event: any) => {
+    console.log("=== Polar webhook: subscription updated ===");
+    console.log("Event type:", event.type);
+    console.log("Event data:", JSON.stringify(event.data, null, 2));
+    
+    const subscription = event.data;
+    console.log("Subscription ID:", subscription?.id);
+    console.log("Customer ID:", subscription?.customer_id);
+    console.log("Product ID:", subscription?.product_id);
+    console.log("Status:", subscription?.status);
+    console.log("Metadata:", subscription?.metadata);
+    
+    // The Polar component should handle updates automatically
   },
 });
 
