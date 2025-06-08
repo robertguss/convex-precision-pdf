@@ -2,7 +2,7 @@ import React from "react";
 
 import ExampleCard from "./ExampleCard";
 import FileUploadArea from "./FileUploadArea";
-// import { CreditBalance } from './credit-balance';
+import { CreditBalance } from './credit-balance';
 
 const exampleFilesData = [
   {
@@ -95,7 +95,7 @@ function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }) {
       <div className="w-full max-w-4xl rounded-xl bg-white p-6 text-gray-800 shadow-2xl sm:p-8 md:p-10">
         <header className="mb-6 text-center sm:mb-8">
           <div className="mb-4 flex justify-center">
-            {/* <CreditBalance /> */}
+            <CreditBalance />
           </div>
           <p className="sm:text-md mx-auto max-w-2xl text-sm text-black md:text-lg">
             Extract structured information from visually complex documents with

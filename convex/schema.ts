@@ -14,6 +14,27 @@ export default defineSchema({
     email: v.string(),
     // this the Clerk ID, stored in the subject JWT field
     externalId: v.string(),
+    
+    // Polar subscription fields
+    polarCustomerId: v.optional(v.string()),
+    subscriptionId: v.optional(v.string()),
+    subscriptionStatus: v.optional(v.union(
+      v.literal("active"),
+      v.literal("canceled"),
+      v.literal("expired"),
+      v.literal("trialing"),
+      v.literal("free")
+    )),
+    subscriptionTier: v.optional(v.union(
+      v.literal("free"),
+      v.literal("starter"),
+      v.literal("pro")
+    )),
+    
+    // Credit tracking
+    creditsUsed: v.optional(v.number()),
+    creditsLimit: v.optional(v.number()),
+    creditsResetDate: v.optional(v.number()),
   }).index("byExternalId", ["externalId"]),
   
   documents: defineTable({

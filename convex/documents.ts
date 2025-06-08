@@ -255,6 +255,7 @@ export const processDocumentWithLandingAI = action({
           ...(existingPageImages && { pageImages: existingPageImages }),
         });
         
+        // Note: Don't consume credits for placeholder content
         return;
       }
       
@@ -311,6 +312,7 @@ export const processDocumentWithLandingAI = action({
       const existingPageImages = document.pageImages;
       const existingPageCount = document.pageCount;
       
+      // First update the document status
       await ctx.runMutation(api.documents.updateDocumentStatus, {
         documentId: args.documentId,
         status: "completed",
@@ -321,6 +323,17 @@ export const processDocumentWithLandingAI = action({
         ...(existingPageCount && { pageCount: existingPageCount }),
         ...(existingPageImages && { pageImages: existingPageImages }),
       });
+      
+      // Only consume credits after successful processing is confirmed
+      const pageCount = existingPageCount || 1;
+      try {
+        await ctx.runMutation(api.polar.consumeCredits, { pages: pageCount });
+        console.log(`Successfully consumed ${pageCount} credits for document processing`);
+      } catch (creditError) {
+        console.error("Failed to consume credits:", creditError);
+        // Don't fail the document processing if credit consumption fails
+        // The document was successfully processed
+      }
       
       console.log("Document processing completed with Landing AI");
     } catch (error) {

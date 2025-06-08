@@ -82,6 +82,21 @@ export async function POST(request: NextRequest) {
     console.log("Upload result:", uploadResult);
     const storageId = uploadResult.storageId;
     
+    // Check if user has credits before creating document
+    // For PDFs, we'll check credits after we know the page count
+    if (file.type !== "application/pdf") {
+      const creditCheck = await convex.query(api.polar.checkCredits, { pagesRequired: 1 });
+      if (!creditCheck.hasCredits) {
+        return NextResponse.json(
+          { 
+            error: "Insufficient credits", 
+            details: `You need 1 credit to process this document. You have ${creditCheck.creditsRemaining} credits remaining.` 
+          },
+          { status: 403 }
+        );
+      }
+    }
+    
     const documentId = await convex.mutation(api.documents.createDocument, {
       title: file.name,
       storageId: storageId as Id<"_storage">,
@@ -184,6 +199,25 @@ export async function POST(request: NextRequest) {
         
         console.log("All page images uploaded successfully");
         console.log("Page images array:", pageImages);
+        
+        // Check if user has enough credits for the PDF pages
+        const creditCheck = await convex.query(api.polar.checkCredits, { pagesRequired: pageCount });
+        if (!creditCheck.hasCredits) {
+          // Delete the document and storage files since user doesn't have enough credits
+          await convex.mutation(api.documents.updateDocumentStatus, {
+            documentId: documentId as Id<"documents">,
+            status: "failed",
+            errorMessage: `Insufficient credits. This document has ${pageCount} pages but you only have ${creditCheck.creditsRemaining} credits remaining.`,
+          });
+          
+          return NextResponse.json(
+            { 
+              error: "Insufficient credits", 
+              details: `This document has ${pageCount} pages but you only have ${creditCheck.creditsRemaining} credits remaining.` 
+            },
+            { status: 403 }
+          );
+        }
         
         // Update the document with page images
         console.log("Updating document with page images...");

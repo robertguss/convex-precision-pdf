@@ -3,6 +3,7 @@ import { httpAction } from "./_generated/server";
 import { internal } from "./_generated/api";
 import type { WebhookEvent } from "@clerk/backend";
 import { Webhook } from "svix";
+import { polar } from "./polar";
 
 const http = httpRouter();
 
@@ -50,5 +51,31 @@ async function validateRequest(req: Request): Promise<WebhookEvent | null> {
     return null;
   }
 }
+
+// Register Polar webhook routes
+polar.registerRoutes(http, {
+  onSubscriptionCreated: async (ctx, event) => {
+    // Handle new subscription
+    const { userId } = event.metadata;
+    await ctx.runMutation(internal.polar.updateUserSubscription, {
+      userId: userId as any,
+      subscriptionId: event.subscriptionId,
+      status: event.status,
+      productKey: event.productKey,
+      polarCustomerId: event.customerId,
+    });
+  },
+  onSubscriptionUpdated: async (ctx, event) => {
+    // Handle subscription updates (upgrades, downgrades, cancellations)
+    const { userId } = event.metadata;
+    await ctx.runMutation(internal.polar.updateUserSubscription, {
+      userId: userId as any,
+      subscriptionId: event.subscriptionId,
+      status: event.status,
+      productKey: event.productKey,
+      polarCustomerId: event.customerId,
+    });
+  },
+});
 
 export default http;

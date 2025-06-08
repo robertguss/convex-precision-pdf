@@ -11,6 +11,7 @@
 import type * as documents from "../documents.js";
 import type * as http from "../http.js";
 import type * as myFunctions from "../myFunctions.js";
+import type * as polar from "../polar.js";
 import type * as users from "../users.js";
 
 import type {
@@ -31,6 +32,7 @@ declare const fullApi: ApiFromModules<{
   documents: typeof documents;
   http: typeof http;
   myFunctions: typeof myFunctions;
+  polar: typeof polar;
   users: typeof users;
 }>;
 declare const fullApiWithMounts: typeof fullApi;

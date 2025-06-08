@@ -1,15 +1,13 @@
-// ABOUTME: Component to display user's current credit balance
-// ABOUTME: Shows remaining credits and provides visual feedback for low balance
+/**
+ * Component to display user's current credit balance
+ * Shows remaining credits and provides visual feedback for low balance
+ */
 
 'use client';
 
-import { Badge } from '@kit/ui/badge';
-import { cn } from '@kit/ui/utils';
-
-import { useCredits } from '~/lib/hooks/use-credits';
-
-// ABOUTME: Component to display user's current credit balance
-// ABOUTME: Shows remaining credits and provides visual feedback for low balance
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+import { useCredits } from './hooks/useCredits';
 
 interface CreditBalanceProps {
   isDemo?: boolean;
