@@ -1,3 +1,5 @@
+"use client";
+
 import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
@@ -14,8 +16,19 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { UploadPage } from "./components/UploadPage";
+import { useUser } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 
 export default function Page() {
+  const { isLoaded, isSignedIn } = useUser();
+
+  if (!isLoaded) {
+    return null; // or a loading spinner
+  }
+
+  if (!isSignedIn) {
+    redirect("/");
+  }
   return (
     <SidebarProvider>
       <AppSidebar />
