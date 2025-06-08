@@ -5,21 +5,12 @@
 
 import sharp from 'sharp';
 
-// Dynamic import to handle Node.js environment
-let pdfjsLib: any;
-let createCanvas: any;
+// Use require for pdfjs-dist to avoid ESM issues in Next.js
+const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
+const { createCanvas } = require('canvas');
 
-async function initializePdfJs() {
-  if (!pdfjsLib) {
-    pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
-    const { createCanvas: canvasCreator } = await import('canvas');
-    createCanvas = canvasCreator;
-    
-    // Configure PDF.js worker
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@4.8.69/legacy/build/pdf.worker.min.mjs`;
-  }
-  return pdfjsLib;
-}
+// Configure PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@4.8.69/legacy/build/pdf.worker.min.js`;
 
 /**
  * Converts a PDF buffer to an array of image buffers
@@ -34,10 +25,8 @@ export async function convertPdfToImages(
   scale: number = 2
 ): Promise<Buffer[]> {
   try {
-    const pdfjs = await initializePdfJs();
-    
     // Load the PDF document
-    const loadingTask = pdfjs.getDocument({
+    const loadingTask = pdfjsLib.getDocument({
       data: new Uint8Array(pdfBuffer),
       standardFontDataUrl: 'https://unpkg.com/pdfjs-dist@4.8.69/standard_fonts/',
     });
@@ -100,7 +89,7 @@ export async function getPdfMetadata(pdfBuffer: Buffer): Promise<{
   info: any;
 }> {
   try {
-    const loadingTask = pdfjs.getDocument({
+    const loadingTask = pdfjsLib.getDocument({
       data: new Uint8Array(pdfBuffer),
     });
     

@@ -214,8 +214,97 @@ export const processDocumentWithLandingAI = action({
         throw new Error("Failed to get file URL from storage");
       }
       
-      // TODO: Implement Landing AI integration
-      // For now, we'll just mark the document as completed with placeholder data
+      // Fetch the file from storage
+      console.log("Fetching file from storage...");
+      const fileResponse = await fetch(fileUrl);
+      
+      if (!fileResponse.ok) {
+        throw new Error(`Failed to fetch file from storage: ${fileResponse.status}`);
+      }
+      
+      const fileBlob = await fileResponse.blob();
+      
+      // Create FormData for the FastAPI endpoint
+      const formData = new FormData();
+      formData.append('file', fileBlob, document.title);
+      
+      // Get the API key from environment variables
+      // Note: In Convex, use process.env for environment variables
+      const apiKey = process.env.FAST_API_SECRET_KEY;
+      const fastApiUrl = process.env.FAST_API_URL || process.env.NEXT_PUBLIC_FAST_API_URL || 'http://localhost:8000';
+      
+      if (!apiKey) {
+        console.warn("FAST_API_SECRET_KEY not configured - using placeholder data");
+        
+        // Use placeholder data when API key is not configured
+        const existingPageImages = document.pageImages;
+        const existingPageCount = document.pageCount;
+        
+        await ctx.runMutation(api.documents.updateDocumentStatus, {
+          documentId: args.documentId,
+          status: "completed",
+          markdown: "# Document Processing\n\nLanding AI integration requires FAST_API_SECRET_KEY to be configured.\n\nTo set up:\n1. Run: `npx convex env set FAST_API_SECRET_KEY your-api-key`\n2. Run: `npx convex env set FAST_API_URL http://localhost:8000` (optional)\n3. Restart your Convex dev server",
+          chunks: [{
+            chunk_id: "placeholder-1",
+            content: "This is placeholder content. Configure FAST_API_SECRET_KEY to enable Landing AI processing.",
+            page: 0,
+            metadata: { chunk_type: "text" },
+          }],
+          // Preserve existing page count and images if they exist
+          ...(existingPageCount && { pageCount: existingPageCount }),
+          ...(existingPageImages && { pageImages: existingPageImages }),
+        });
+        
+        return;
+      }
+      
+      // Call FastAPI service to process document with Landing AI
+      console.log("Calling FastAPI process_document endpoint...");
+      const processResponse = await fetch(`${fastApiUrl}/api/process_document`, {
+        method: 'POST',
+        headers: {
+          'X-API-Key': apiKey,
+        },
+        body: formData,
+      });
+      
+      if (!processResponse.ok) {
+        const errorText = await processResponse.text();
+        throw new Error(`FastAPI document processing failed: ${processResponse.status} ${errorText}`);
+      }
+      
+      // Parse the Landing AI response
+      const landingAiData = await processResponse.json();
+      console.log("Landing AI processing completed");
+      
+      // Extract chunks and markdown from the response
+      const chunks = landingAiData.chunks || [];
+      const markdown = landingAiData.markdown || "";
+      
+      // Transform chunks to match our schema
+      const transformedChunks = chunks.map((chunk: any) => {
+        // Get the first grounding box if available
+        const firstGrounding = chunk.grounding?.[0];
+        const page = firstGrounding?.page || 0;
+        const box = firstGrounding?.box;
+        
+        return {
+          chunk_id: chunk.chunk_id || chunk.id || `chunk-${Date.now()}`,
+          content: chunk.text || chunk.content || "",
+          page: page,
+          bbox: box ? {
+            x: box.l,
+            y: box.t,
+            width: box.r - box.l,
+            height: box.b - box.t,
+          } : undefined,
+          metadata: {
+            chunk_type: chunk.chunk_type || 'text',
+            grounding: chunk.grounding || [],
+            ...(chunk.metadata || {})
+          },
+        };
+      });
       
       // Don't generate placeholder images if the document already has pageImages
       // (they were generated during the upload process)
@@ -225,19 +314,15 @@ export const processDocumentWithLandingAI = action({
       await ctx.runMutation(api.documents.updateDocumentStatus, {
         documentId: args.documentId,
         status: "completed",
-        markdown: "# Document Processing\n\nThis is a placeholder. Landing AI integration is not yet implemented.",
-        chunks: [{
-          chunk_id: "chunk-1",
-          content: "This is placeholder content for the document chunks.",
-          page: 0,
-          metadata: {},
-        }],
+        markdown: markdown,
+        chunks: transformedChunks,
+        landingAiResponse: landingAiData,
         // Preserve existing page count and images if they exist
         ...(existingPageCount && { pageCount: existingPageCount }),
         ...(existingPageImages && { pageImages: existingPageImages }),
       });
       
-      console.log("Document processing completed (placeholder)");
+      console.log("Document processing completed with Landing AI");
     } catch (error) {
       console.error("Error processing document:", error);
       

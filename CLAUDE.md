@@ -84,6 +84,10 @@ Currently no test framework is configured. When adding tests:
 - Use Convex's testing utilities for backend functions
 - Test files should follow `*.test.ts(x)` or `*.spec.ts(x)` naming
 
+### Fast API PDF Processing Service
+
+For PDF processing, use the Fast API service. The OpenAPI spec is in `docs/fast-api/openapi.json`.
+
 ### Notes
 
 Do not create comments in files like this:
