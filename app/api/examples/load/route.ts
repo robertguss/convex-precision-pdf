@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
       errorMessage: null,
       landingAiResponse: {
         isExample: true,
-        staticBasePath: `/examples/${id}`
+        staticBasePath: `/examples/${id}/images`
       }
     };
 
