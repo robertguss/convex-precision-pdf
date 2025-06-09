@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { useQueryClient } from "@tanstack/react-query";
-import { useMutation } from "convex/react";
+import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 
 import { ProcessingView } from "./ProcessingView";
@@ -16,9 +16,42 @@ export function UploadPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const createExampleDocument = useMutation(api.documents.createExampleDocument);
+  const currentUser = useQuery(api.users.current);
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [useProgressiveUpload] = useState(true);
+  
+  // Wait for user authentication to be ready
+  if (currentUser === undefined) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <div className="text-center">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+  
+  // If user is null, the webhook might not have synced yet
+  if (currentUser === null) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <div className="text-center">
+          <p className="text-muted-foreground">Setting up your account...</p>
+          <p className="text-sm text-muted-foreground mt-2">
+            If this takes more than a few seconds, please refresh the page or contact support.
+          </p>
+          <p className="text-xs text-muted-foreground mt-4">
+            Make sure the Clerk webhook is configured in your Clerk dashboard pointing to:
+            <br />
+            <code className="text-xs bg-muted px-1 py-0.5 rounded">
+              {process.env.NEXT_PUBLIC_CONVEX_URL?.replace('/.convex/cloud', '')}/clerk-users-webhook
+            </code>
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   const handleFileUpload = async (file: File) => {
     setError(null);

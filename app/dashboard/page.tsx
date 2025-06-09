@@ -18,6 +18,7 @@ import {
 import { UploadPage } from "./components/UploadPage";
 import { useUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import { Authenticated } from "convex/react";
 
 export default function Page() {
   const { isLoaded, isSignedIn } = useUser();
@@ -55,7 +56,9 @@ export default function Page() {
             </Breadcrumb>
           </div>
         </header>
-        <UploadPage />
+        <Authenticated>
+          <UploadPage />
+        </Authenticated>
       </SidebarInset>
     </SidebarProvider>
   );
