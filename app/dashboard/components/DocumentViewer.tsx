@@ -171,7 +171,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
             <img
               src={(() => {
                 const src = currentExampleStaticBasePath
-                  ? `${currentExampleStaticBasePath}/images/page_${pageIdx}.png`
+                  ? `${currentExampleStaticBasePath}/page_${pageIdx}.png`
                   : documentId
                     ? `/api/documents/${documentId}/page-image/${pageIdx}`
                     : `${backendUrl}/api/document/${documentBasename}/page_image/${pageIdx}`;
