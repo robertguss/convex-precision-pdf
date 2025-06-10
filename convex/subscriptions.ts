@@ -1,7 +1,6 @@
-import { query, mutation, internalMutation, internalQuery } from "./_generated/server";
+import { query, internalMutation, internalQuery } from "./_generated/server";
 import { v } from "convex/values";
 import { getAuthUserId } from "./auth.config";
-import { api } from "./_generated/api";
 
 export const getUserSubscription = query({
   args: {},
@@ -42,7 +41,6 @@ export const getUserSubscription = query({
   },
 });
 
-
 export const getByStripeCustomer = internalQuery({
   args: {
     stripeCustomerId: v.string(),
@@ -50,7 +48,9 @@ export const getByStripeCustomer = internalQuery({
   handler: async (ctx, args) => {
     return await ctx.db
       .query("subscriptions")
-      .withIndex("by_stripe_customer", (q) => q.eq("stripeCustomerId", args.stripeCustomerId))
+      .withIndex("by_stripe_customer", (q) =>
+        q.eq("stripeCustomerId", args.stripeCustomerId),
+      )
       .first();
   },
 });
@@ -103,7 +103,9 @@ export const updateSubscription = internalMutation({
   handler: async (ctx, args) => {
     const subscription = await ctx.db
       .query("subscriptions")
-      .withIndex("by_stripe_subscription", (q) => q.eq("stripeSubscriptionId", args.stripeSubscriptionId))
+      .withIndex("by_stripe_subscription", (q) =>
+        q.eq("stripeSubscriptionId", args.stripeSubscriptionId),
+      )
       .first();
 
     if (subscription) {
@@ -126,7 +128,9 @@ export const updateSubscriptionStatus = internalMutation({
   handler: async (ctx, args) => {
     const subscription = await ctx.db
       .query("subscriptions")
-      .withIndex("by_stripe_subscription", (q) => q.eq("stripeSubscriptionId", args.stripeSubscriptionId))
+      .withIndex("by_stripe_subscription", (q) =>
+        q.eq("stripeSubscriptionId", args.stripeSubscriptionId),
+      )
       .first();
 
     if (subscription) {
@@ -152,7 +156,6 @@ export const createSubscription = internalMutation({
     await ctx.db.insert("subscriptions", args);
   },
 });
-
 
 export const getUserPageUsage = query({
   args: {},
@@ -186,16 +189,16 @@ export const getUserPageUsage = query({
       // User has a subscription (paid plan)
       billingCycleStart = subscription.currentPeriodStart;
       billingCycleEnd = subscription.currentPeriodEnd;
-      
+
       // Get plan details for page limit
       const plan = await ctx.db
         .query("plans")
         .filter((q) => q.eq(q.field("id"), subscription.planId))
         .first();
-      
+
       if (plan) {
         // Extract page limit from features (e.g., "75 pages every month")
-        const pageFeature = plan.features.find(f => f.includes("pages"));
+        const pageFeature = plan.features.find((f) => f.includes("pages"));
         if (pageFeature) {
           const match = pageFeature.match(/(\d+)\s+pages/);
           if (match) {
@@ -206,22 +209,24 @@ export const getUserPageUsage = query({
     } else {
       // Free plan - use account creation date for billing cycle
       // We already have the user from above
-      
+
       // For free plan, we'll use 30-day cycles from account creation
       const now = Date.now();
       const accountAge = now - (user._creationTime || now);
       const cycleNumber = Math.floor(accountAge / (30 * 24 * 60 * 60 * 1000));
-      billingCycleStart = (user._creationTime || now) + (cycleNumber * 30 * 24 * 60 * 60 * 1000);
-      billingCycleEnd = billingCycleStart + (30 * 24 * 60 * 60 * 1000);
+      billingCycleStart =
+        (user._creationTime || now) + cycleNumber * 30 * 24 * 60 * 60 * 1000;
+      billingCycleEnd = billingCycleStart + 30 * 24 * 60 * 60 * 1000;
     }
 
     // Get usage for current billing cycle
     const usage = await ctx.db
       .query("pageUsage")
-      .withIndex("by_user_and_cycle", (q) => 
-        q.eq("userId", user._id)
-         .eq("billingCycleStart", billingCycleStart)
-         .eq("billingCycleEnd", billingCycleEnd)
+      .withIndex("by_user_and_cycle", (q) =>
+        q
+          .eq("userId", user._id)
+          .eq("billingCycleStart", billingCycleStart)
+          .eq("billingCycleEnd", billingCycleEnd),
       )
       .collect();
 
@@ -263,12 +268,13 @@ export const recordPageUsage = internalMutation({
       if (!user) {
         throw new Error("User not found");
       }
-      
+
       const now = Date.now();
       const accountAge = now - (user._creationTime || now);
       const cycleNumber = Math.floor(accountAge / (30 * 24 * 60 * 60 * 1000));
-      billingCycleStart = (user._creationTime || now) + (cycleNumber * 30 * 24 * 60 * 60 * 1000);
-      billingCycleEnd = billingCycleStart + (30 * 24 * 60 * 60 * 1000);
+      billingCycleStart =
+        (user._creationTime || now) + cycleNumber * 30 * 24 * 60 * 60 * 1000;
+      billingCycleEnd = billingCycleStart + 30 * 24 * 60 * 60 * 1000;
     }
 
     // Record the usage
@@ -317,16 +323,16 @@ export const checkPageLimit = query({
       // User has a subscription (paid plan)
       billingCycleStart = subscription.currentPeriodStart;
       billingCycleEnd = subscription.currentPeriodEnd;
-      
+
       // Get plan details for page limit
       const plan = await ctx.db
         .query("plans")
         .filter((q) => q.eq(q.field("id"), subscription.planId))
         .first();
-      
+
       if (plan) {
         // Extract page limit from features (e.g., "75 pages every month")
-        const pageFeature = plan.features.find(f => f.includes("pages"));
+        const pageFeature = plan.features.find((f) => f.includes("pages"));
         if (pageFeature) {
           const match = pageFeature.match(/(\d+)\s+pages/);
           if (match) {
@@ -337,22 +343,24 @@ export const checkPageLimit = query({
     } else {
       // Free plan - use account creation date for billing cycle
       // We already have the user from above
-      
+
       // For free plan, we'll use 30-day cycles from account creation
       const now = Date.now();
       const accountAge = now - (user._creationTime || now);
       const cycleNumber = Math.floor(accountAge / (30 * 24 * 60 * 60 * 1000));
-      billingCycleStart = (user._creationTime || now) + (cycleNumber * 30 * 24 * 60 * 60 * 1000);
-      billingCycleEnd = billingCycleStart + (30 * 24 * 60 * 60 * 1000);
+      billingCycleStart =
+        (user._creationTime || now) + cycleNumber * 30 * 24 * 60 * 60 * 1000;
+      billingCycleEnd = billingCycleStart + 30 * 24 * 60 * 60 * 1000;
     }
 
     // Get usage for current billing cycle
     const usage = await ctx.db
       .query("pageUsage")
-      .withIndex("by_user_and_cycle", (q) => 
-        q.eq("userId", user._id)
-         .eq("billingCycleStart", billingCycleStart)
-         .eq("billingCycleEnd", billingCycleEnd)
+      .withIndex("by_user_and_cycle", (q) =>
+        q
+          .eq("userId", user._id)
+          .eq("billingCycleStart", billingCycleStart)
+          .eq("billingCycleEnd", billingCycleEnd),
       )
       .collect();
 
@@ -360,10 +368,10 @@ export const checkPageLimit = query({
     const remaining = Math.max(0, pageLimit - used);
 
     if (remaining < args.requiredPages) {
-      return { 
-        allowed: false, 
+      return {
+        allowed: false,
         reason: `Insufficient pages. You have ${remaining} pages remaining, but ${args.requiredPages} are required.`,
-        usage: { used, limit: pageLimit, remaining }
+        usage: { used, limit: pageLimit, remaining },
       };
     }
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useQuery, useMutation } from "convex/react";
+import { useQuery, useAction } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +13,7 @@ export default function UpgradePage() {
   const router = useRouter();
   const plans = useQuery(api.plans.list);
   const subscription = useQuery(api.subscriptions.getUserSubscription);
-  const createCheckoutSession = useMutation(api.stripe.createCheckoutSession);
+  const createCheckoutSession = useAction(api.stripe.createCheckoutSession);
   const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
 
   const handleUpgrade = async (planId: string) => {
