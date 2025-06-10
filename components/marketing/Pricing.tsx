@@ -138,7 +138,7 @@ export function Pricing() {
             name="Free"
             price="$0"
             description="Perfect for trying out Precision PDF"
-            href="/register"
+            href="/dashboard?plan=free"
             features={[
               "10 pages per month",
               "All extraction features",
@@ -152,7 +152,7 @@ export function Pricing() {
             name="Starter"
             price="$9.99"
             description="For professionals and small teams"
-            href="/register"
+            href="/dashboard?plan=starter"
             features={[
               "75 pages per month",
               "Priority processing",
@@ -166,7 +166,7 @@ export function Pricing() {
             name="Pro"
             price="$24.99"
             description="For businesses with regular document processing needs"
-            href="/register"
+            href="/dashboard?plan=pro"
             features={[
               "250 pages per month",
               "Document history (90 days)",
