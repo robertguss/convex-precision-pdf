@@ -6,9 +6,6 @@ import { v } from "convex/values";
 // app will continue to work.
 // The schema provides more precise TypeScript types.
 export default defineSchema({
-  numbers: defineTable({
-    value: v.number(),
-  }),
   subscriptions: defineTable({
     userId: v.id("users"),
     stripeCustomerId: v.string(),
@@ -43,7 +40,11 @@ export default defineSchema({
     billingCycleEnd: v.number(),
   })
     .index("by_user", ["userId"])
-    .index("by_user_and_cycle", ["userId", "billingCycleStart", "billingCycleEnd"])
+    .index("by_user_and_cycle", [
+      "userId",
+      "billingCycleStart",
+      "billingCycleEnd",
+    ])
     .index("by_document", ["documentId"]),
 
   users: defineTable({
