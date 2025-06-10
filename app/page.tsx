@@ -1,10 +1,7 @@
 "use client";
 
-import { Authenticated, Unauthenticated } from "convex/react";
 import Link from "next/link";
 import { SignUpButton, SignInButton, UserButton } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Home() {
   return (
@@ -18,28 +15,9 @@ export default function Home() {
         </div>
       </header>
       <main className="p-8 flex flex-col gap-8">
-        <Authenticated>
-          <AuthenticatedRedirect />
-        </Authenticated>
-        <Unauthenticated>
-          <LandingPage />
-        </Unauthenticated>
+        <LandingPage />
       </main>
     </>
-  );
-}
-
-function AuthenticatedRedirect() {
-  const router = useRouter();
-  
-  useEffect(() => {
-    router.push("/dashboard");
-  }, [router]);
-  
-  return (
-    <div className="flex items-center justify-center min-h-[50vh]">
-      <p>Redirecting to dashboard...</p>
-    </div>
   );
 }
 

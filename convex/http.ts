@@ -59,8 +59,8 @@ http.route({
         apiVersion: "2025-05-28.basil",
       });
 
-      // Verify the webhook signature
-      const event = stripe.webhooks.constructEvent(
+      // Verify the webhook signature (use async version for edge runtime)
+      const event = await stripe.webhooks.constructEventAsync(
         text,
         signature,
         stripeWebhookSecret
