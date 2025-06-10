@@ -98,6 +98,50 @@ export const listDocuments = query({
 });
 
 /**
+ * Get all documents for the current user with thumbnail URLs
+ */
+export const listDocumentsWithThumbnails = query({
+  args: {},
+  handler: async (ctx) => {
+    const user = await getCurrentUser(ctx);
+    
+    // Return empty array if user is not authenticated
+    if (!user) {
+      return [];
+    }
+    
+    const documents = await ctx.db
+      .query("documents")
+      .withIndex("byUserId", (q) => q.eq("userId", user._id))
+      .order("desc")
+      .collect();
+    
+    // Add thumbnail URLs to each document
+    const documentsWithThumbnails = await Promise.all(
+      documents.map(async (doc) => {
+        let thumbnailUrl: string | null = null;
+        
+        // For example documents, use the static path
+        if (doc.landingAiResponse?.isExample && doc.landingAiResponse?.staticBasePath) {
+          thumbnailUrl = `${doc.landingAiResponse.staticBasePath}/page_0.png`;
+        } 
+        // For uploaded documents, get the first page image from storage
+        else if (doc.pageImages && doc.pageImages.length > 0) {
+          thumbnailUrl = await ctx.storage.getUrl(doc.pageImages[0]);
+        }
+        
+        return {
+          ...doc,
+          thumbnailUrl,
+        };
+      })
+    );
+    
+    return documentsWithThumbnails;
+  },
+});
+
+/**
  * Get a single document by ID
  */
 export const getDocument = query({

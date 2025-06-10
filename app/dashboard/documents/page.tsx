@@ -5,10 +5,11 @@ import { api } from "@/convex/_generated/api";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Calendar, Eye, Trash2, Download, HardDrive } from "lucide-react";
+import { FileText, Calendar, Eye, Trash2, Download, HardDrive, ImageIcon } from "lucide-react";
 import Link from "next/link";
 import { formatDistanceToNow } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton";
+import Image from "next/image";
 import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
@@ -50,7 +51,7 @@ function getStatusColor(status: string): string {
 }
 
 function DocumentsList() {
-  const documents = useQuery(api.documents.listDocuments);
+  const documents = useQuery(api.documents.listDocumentsWithThumbnails);
 
   if (documents === undefined) {
     return (
@@ -58,7 +59,8 @@ function DocumentsList() {
         <h1 className="text-3xl font-bold mb-8">All Documents</h1>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(6)].map((_, i) => (
-            <Card key={i}>
+            <Card key={i} className="overflow-hidden">
+              <Skeleton className="h-48 w-full" />
               <CardHeader>
                 <Skeleton className="h-4 w-3/4 mb-2" />
                 <Skeleton className="h-3 w-1/2" />
@@ -104,7 +106,25 @@ function DocumentsList() {
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {documents.map((doc) => (
-          <Card key={doc._id} className="hover:shadow-lg transition-shadow">
+          <Card key={doc._id} className="hover:shadow-lg transition-shadow overflow-hidden">
+            {/* Thumbnail Image */}
+            {doc.thumbnailUrl && (
+              <div className="relative h-48 bg-gray-100">
+                <Image
+                  src={doc.thumbnailUrl}
+                  alt={`First page of ${doc.title}`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+            )}
+            {!doc.thumbnailUrl && doc.status === "completed" && (
+              <div className="h-48 bg-gray-100 flex items-center justify-center">
+                <ImageIcon className="h-16 w-16 text-gray-400" />
+              </div>
+            )}
+            
             <CardHeader>
               <div className="flex justify-between items-start">
                 <div className="flex-1">
