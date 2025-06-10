@@ -6,7 +6,7 @@ import { Hero } from "@/components/marketing/Hero";
 import { MultipleOutputs } from "@/components/marketing/MultipleOutputs";
 import { Pricing } from "@/components/marketing/Pricing";
 import { SecondaryFeatures } from "@/components/marketing/SecondaryFeatures";
-import { Testimonials } from "@/components/marketing/Testimonials";
+// import { Testimonials } from "@/components/marketing/Testimonials";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <MultipleOutputs />
         <SecondaryFeatures />
         <CallToAction />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Pricing />
         <Faqs />
       </main>

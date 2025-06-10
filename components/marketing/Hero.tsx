@@ -1,13 +1,5 @@
-import Image from "next/image";
-
 import { Button } from "@/components/marketing/Button";
 import { Container } from "@/components/marketing/Container";
-import logoLaravel from "@/images/logos/laravel.svg";
-import logoMirage from "@/images/logos/mirage.svg";
-import logoStatamic from "@/images/logos/statamic.svg";
-import logoStaticKit from "@/images/logos/statickit.svg";
-import logoTransistor from "@/images/logos/transistor.svg";
-import logoTuple from "@/images/logos/tuple.svg";
 
 export function Hero() {
   return (
