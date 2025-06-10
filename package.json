@@ -38,13 +38,14 @@
     "react-dropzone": "^14.3.8",
     "react-joyride": "github:NavidJalilian/flytask-joyride",
     "sharp": "^0.34.2",
+    "stripe": "^18.2.1",
     "svix": "^1.67.0",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.8",
-    "@types/node": "^20",
+    "@types/node": "^20.19.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

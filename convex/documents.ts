@@ -1,7 +1,7 @@
 import { v } from "convex/values";
 import { mutation, query, action } from "./_generated/server";
 import { getCurrentUserOrThrow, getCurrentUser } from "./users";
-import { api } from "./_generated/api";
+import { api, internal } from "./_generated/api";
 import { Id } from "./_generated/dataModel";
 
 /**
@@ -149,9 +149,21 @@ export const createDocument = mutation({
     storageId: v.id("_storage"),
     fileSize: v.number(),
     mimeType: v.string(),
+    estimatedPageCount: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
     const user = await getCurrentUserOrThrow(ctx);
+    
+    // Check if user has enough pages remaining
+    // We'll use an estimated page count of 1 if not provided
+    const estimatedPages = args.estimatedPageCount || 1;
+    const limitCheck = await ctx.runQuery(api.subscriptions.checkPageLimit, {
+      requiredPages: estimatedPages,
+    });
+    
+    if (!limitCheck.allowed) {
+      throw new Error(limitCheck.reason);
+    }
     
     const documentId = await ctx.db.insert("documents", {
       userId: user._id,
@@ -387,6 +399,23 @@ export const updateDocumentStatus = mutation({
       ...(args.landingAiResponse !== undefined && { landingAiResponse: args.landingAiResponse }),
       updatedAt: Date.now(),
     });
+    
+    // If document processing completed successfully, record page usage
+    if (args.status === "completed" && args.pageCount) {
+      // Check if we've already recorded usage for this document
+      const existingUsage = await ctx.db
+        .query("pageUsage")
+        .withIndex("by_document", (q) => q.eq("documentId", args.documentId))
+        .first();
+      
+      if (!existingUsage) {
+        await ctx.runMutation(internal.subscriptions.recordPageUsage, {
+          userId: user._id,
+          documentId: args.documentId,
+          pageCount: args.pageCount,
+        });
+      }
+    }
   },
 });
 

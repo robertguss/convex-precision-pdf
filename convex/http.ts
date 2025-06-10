@@ -1,6 +1,6 @@
 import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
-import { internal } from "./_generated/api";
+import { internal, api } from "./_generated/api";
 import type { WebhookEvent } from "@clerk/backend";
 import { Webhook } from "svix";
 
@@ -32,6 +32,54 @@ http.route({
     }
 
     return new Response(null, { status: 200 });
+  }),
+});
+
+http.route({
+  path: "/stripe-webhook",
+  method: "POST",
+  handler: httpAction(async (ctx, request) => {
+    const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+    if (!stripeWebhookSecret) {
+      console.error("STRIPE_WEBHOOK_SECRET not configured");
+      return new Response("Webhook secret not configured", { status: 500 });
+    }
+
+    try {
+      const signature = request.headers.get("stripe-signature");
+      if (!signature) {
+        return new Response("No signature", { status: 400 });
+      }
+
+      const text = await request.text();
+      
+      // Import Stripe dynamically to avoid issues with edge runtime
+      const Stripe = (await import("stripe")).default;
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+        apiVersion: "2025-05-28.basil",
+      });
+
+      // Verify the webhook signature
+      const event = stripe.webhooks.constructEvent(
+        text,
+        signature,
+        stripeWebhookSecret
+      );
+
+      // Handle the webhook event using our existing handler
+      await ctx.runAction(api.stripe.handleWebhook, { event });
+
+      return new Response(JSON.stringify({ received: true }), { 
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (error) {
+      console.error("Stripe webhook error:", error);
+      return new Response(
+        `Webhook Error: ${error instanceof Error ? error.message : "Unknown error"}`,
+        { status: 400 }
+      );
+    }
   }),
 });
 

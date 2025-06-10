@@ -1,22 +1,16 @@
-// ABOUTME: Component to display user's current credit balance
-// ABOUTME: Shows remaining credits and provides visual feedback for low balance
-
 'use client';
 
-import { Badge } from '@kit/ui/badge';
-import { cn } from '@kit/ui/utils';
-
-import { useCredits } from '~/lib/hooks/use-credits';
-
-// ABOUTME: Component to display user's current credit balance
-// ABOUTME: Shows remaining credits and provides visual feedback for low balance
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { useQuery } from 'convex/react';
+import { api } from '@/convex/_generated/api';
 
 interface CreditBalanceProps {
   isDemo?: boolean;
 }
 
 export function CreditBalance({ isDemo = false }: CreditBalanceProps) {
-  const { data, isLoading, error } = useCredits();
+  const pageUsage = useQuery(api.subscriptions.getUserPageUsage);
 
   // Show demo mode badge if in demo
   if (isDemo) {
@@ -30,34 +24,34 @@ export function CreditBalance({ isDemo = false }: CreditBalanceProps) {
     );
   }
 
-  if (isLoading) {
+  if (!pageUsage) {
     return (
       <Badge variant="secondary" className="animate-pulse">
-        Loading credits...
+        Loading...
       </Badge>
     );
   }
 
-  if (error || !data) {
-    return null;
-  }
-
-  const { credits } = data;
-  const isLow = credits < 10;
-  const isEmpty = credits === 0;
+  const { remaining, used, limit } = pageUsage;
+  const percentageUsed = limit > 0 ? (used / limit) * 100 : 0;
+  const isLow = remaining < 5;
+  const isEmpty = remaining === 0;
 
   return (
-    <Badge
-      variant={isEmpty ? 'destructive' : isLow ? 'warning' : 'default'}
-      className={cn('font-semibold', isEmpty && 'animate-pulse')}
-    >
-      {isEmpty ? (
-        'No credits remaining'
-      ) : (
-        <>
-          {credits} credit{credits !== 1 ? 's' : ''} remaining
-        </>
-      )}
-    </Badge>
+    <div className="space-y-2">
+      <div className="flex items-center justify-between text-sm">
+        <span className="text-muted-foreground">Pages remaining</span>
+        <Badge
+          variant={isEmpty ? 'destructive' : isLow ? 'warning' : 'default'}
+          className={isEmpty ? 'animate-pulse' : ''}
+        >
+          {remaining} pages
+        </Badge>
+      </div>
+      <Progress value={percentageUsed} className="h-2" />
+      <p className="text-xs text-muted-foreground">
+        {used} of {limit} pages used
+      </p>
+    </div>
   );
 }

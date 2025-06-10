@@ -2,171 +2,151 @@
 
 import * as React from "react";
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
+  FileText,
+  Home,
+  CreditCard,
+  Settings,
+  Upload,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
 import { NavUser } from "@/components/nav-user";
-import { TeamSwitcher } from "@/components/team-switcher";
+import { CreditBalance } from "@/app/dashboard/components/credit-balance";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  SidebarSeparator,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarGroupContent,
 } from "@/components/ui/sidebar";
+import { useUser } from "@clerk/nextjs";
+import { useQuery, useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-// This is sample data.
-const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-  },
-  teams: [
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { user } = useUser();
+  const subscription = useQuery(api.subscriptions.getUserSubscription);
+  const createPortalSession = useMutation(api.stripe.createPortalSession);
+
+  const handleManageSubscription = async () => {
+    try {
+      const { url } = await createPortalSession();
+      window.location.href = url;
+    } catch (error) {
+      console.error("Error creating portal session:", error);
+    }
+  };
+
+  const navItems = [
     {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
-  navMain: [
-    {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: Home,
       isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
+      title: "Documents",
+      url: "/dashboard/documents",
+      icon: FileText,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "All Documents",
+          url: "/dashboard/documents",
         },
         {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
+          title: "Upload New",
+          url: "/dashboard/upload",
         },
       ],
     },
     {
       title: "Settings",
-      url: "#",
-      icon: Settings2,
+      url: "/dashboard/settings",
+      icon: Settings,
       items: [
         {
           title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
+          url: "/dashboard/settings",
         },
         {
           title: "Billing",
           url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          onClick: handleManageSubscription,
         },
       ],
     },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
-};
+  ];
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const userData = user ? {
+    name: user.firstName && user.lastName 
+      ? `${user.firstName} ${user.lastName}` 
+      : user.emailAddresses[0]?.emailAddress || "User",
+    email: user.emailAddresses[0]?.emailAddress || "",
+    avatar: user.imageUrl,
+  } : {
+    name: "Guest",
+    email: "",
+  };
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <SidebarGroup>
+          <SidebarGroupLabel>Precision PDF</SidebarGroupLabel>
+          <SidebarGroupContent className="mt-4">
+            <CreditBalance />
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavMain items={navItems} />
+        <SidebarSeparator />
+        <SidebarGroup>
+          <SidebarGroupLabel>Subscription</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <div className="px-3 py-2">
+              <p className="text-sm font-medium">
+                {subscription?.plan?.name || "Free Plan"}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {subscription?.plan?.features?.[0] || "10 pages per month"}
+              </p>
+              {!subscription && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="mt-2 w-full"
+                  asChild
+                >
+                  <Link href="/dashboard/upgrade">
+                    <CreditCard className="mr-2 h-3 w-3" />
+                    Upgrade
+                  </Link>
+                </Button>
+              )}
+              {subscription && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="mt-2 w-full"
+                  onClick={handleManageSubscription}
+                >
+                  <CreditCard className="mr-2 h-3 w-3" />
+                  Manage
+                </Button>
+              )}
+            </div>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={userData} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

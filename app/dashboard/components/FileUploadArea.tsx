@@ -19,17 +19,18 @@ const UploadIcon = () => (
   </svg>
 );
 
-function FileUploadArea({ onFileSelect }) {
+function FileUploadArea({ onFileSelect, pageUsage = null }) {
   const [dragMessage, setDragMessage] = useState('');
+  const hasPages = !pageUsage || pageUsage.remaining > 0;
 
   const onDrop = useCallback(
     (acceptedFiles) => {
       setDragMessage('');
-      if (acceptedFiles.length > 0) {
+      if (acceptedFiles.length > 0 && hasPages) {
         onFileSelect(acceptedFiles[0]);
       }
     },
-    [onFileSelect],
+    [onFileSelect, hasPages],
   );
 
   const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
@@ -42,7 +43,40 @@ function FileUploadArea({ onFileSelect }) {
       'image/jpeg': ['.jpeg', '.jpg'],
       'image/png': ['.png'],
     },
+    disabled: !hasPages,
   });
+
+  if (!hasPages && pageUsage) {
+    return (
+      <div className="rounded-lg border-2 border-dashed border-red-300 bg-red-50 p-6 text-center sm:p-8">
+        <svg
+          className="mx-auto mb-3 h-10 w-10 text-red-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+          />
+        </svg>
+        <p className="text-lg font-semibold text-red-600 mb-2">
+          No pages remaining
+        </p>
+        <p className="text-sm text-gray-600 mb-4">
+          You've used all {pageUsage.limit} pages in your current plan.
+        </p>
+        <a
+          href="/dashboard/upgrade"
+          className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+          Upgrade Plan
+        </a>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -50,7 +84,9 @@ function FileUploadArea({ onFileSelect }) {
       className={`group cursor-pointer rounded-lg border-2 border-dashed p-6 text-center transition-all duration-200 ease-in-out sm:p-8 ${
         isDragActive
           ? 'scale-105 border-blue-500 bg-blue-50'
-          : 'border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100'
+          : hasPages
+          ? 'border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100'
+          : 'border-gray-200 bg-gray-50 cursor-not-allowed opacity-50'
       }`}
     >
       <input {...getInputProps()} />
