@@ -4,7 +4,6 @@ import { api } from "@/convex/_generated/api";
 
 import ExampleCard from "./ExampleCard";
 import FileUploadArea from "./FileUploadArea";
-import { CreditBalance } from './credit-balance';
 
 const exampleFilesData = [
   {
@@ -93,14 +92,11 @@ const exampleFilesData = [
  */
 function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }) {
   const pageUsage = useQuery(api.subscriptions.getUserPageUsage);
-  
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 text-white antialiased sm:p-6">
       <div className="w-full max-w-4xl rounded-xl bg-white p-6 text-gray-800 shadow-2xl sm:p-8 md:p-10">
         <header className="mb-6 text-center sm:mb-8">
-          <div className="mb-4 flex justify-center">
-            <CreditBalance />
-          </div>
           <p className="sm:text-md mx-auto max-w-2xl text-sm text-black md:text-lg">
             Extract structured information from visually complex documents with
             text, tables, pictures, charts, and other information. The app
