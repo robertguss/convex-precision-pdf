@@ -20,10 +20,10 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: "Reporting",
-    summary: "Stay on top of things with always up-to-date reporting features.",
+    name: "Accuracy You Can Verify",
+    summary: "Every extraction comes with visual proof",
     description:
-      "We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.",
+      "Our unique highlighting system lets you verify accuracy instantly. Click extracted data to see its exact location in the original PDF, building trust in every extraction.",
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
       let id = useId();
@@ -54,11 +54,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: "Inventory",
+    name: "API-First Design",
     summary:
-      "Never lose track of what’s in stock with accurate inventory tracking.",
+      "Integrate PDF processing into your workflow",
     description:
-      "We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.",
+      "RESTful API with comprehensive documentation. Process documents programmatically and receive structured JSON responses. Perfect for automation.",
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -82,11 +82,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: "Contacts",
+    name: "Smart Table Recognition",
     summary:
-      "Organize all of your contacts, service providers, and invoices in one place.",
+      "Complex tables become simple spreadsheets",
     description:
-      "This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.",
+      "Automatically detects table structures, preserves relationships between cells, and exports to CSV with proper formatting. Even handles nested and multi-page tables.",
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -228,17 +228,16 @@ export function SecondaryFeatures() {
   return (
     <section
       id="secondary-features"
-      aria-label="Features for simplifying everyday business tasks"
+      aria-label="Features for real-world document processing"
       className="pt-20 pb-14 sm:pt-32 sm:pb-20 lg:pb-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Built for Real-World Documents
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            From simple invoices to complex medical journals, Precision PDF adapts to your document complexity.
           </p>
         </div>
         <FeaturesMobile />

@@ -6,53 +6,51 @@ import backgroundImage from "@/images/background-faqs.jpg";
 const faqs = [
   [
     {
-      question: "Does TaxPal handle VAT?",
+      question: "What types of PDFs can Precision PDF handle?",
       answer:
-        "Well no, but if you move your company offshore you can probably ignore it.",
+        "We process virtually any PDF: invoices, receipts, bank statements, medical records, legal documents, forms with checkboxes, multi-column layouts, and documents with tables, charts, or mixed content.",
     },
     {
-      question: "Can I pay for my subscription via purchase order?",
-      answer: "Absolutely, we are happy to take your money in all forms.",
+      question: "How accurate is the data extraction?",
+      answer: "Our AI achieves 95%+ accuracy on most documents. The interactive viewer lets you verify every extraction by clicking to see the source location in the original PDF.",
     },
     {
-      question: "How do I apply for a job at TaxPal?",
+      question: "Can I try it before signing up?",
       answer:
-        "We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.",
+        "Absolutely! Our interactive demo lets you explore 8 real-world examples without creating an account. Once you sign up for free, you get 10 pages to test with your own documents.",
     },
   ],
   [
     {
-      question: "What was that testimonial about tax fraud all about?",
+      question: "Is my data secure?",
       answer:
-        "TaxPal is just a software application, ultimately your books are your responsibility.",
+        "Yes. We're SOC 2 Type I and HIPAA compliant. Your documents are encrypted in transit (TLS) and at rest (256-bit AES). We process documents in isolated environments and automatically delete them after 30 days. We never train our models on your data.",
     },
     {
-      question:
-        "TaxPal sounds horrible but why do I still feel compelled to purchase?",
+      question: "Is there an API for developers?",
       answer:
-        "This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.",
+        "Yes! All paid plans include API access. Our RESTful API returns structured JSON and includes comprehensive documentation and code examples.",
     },
     {
-      question:
-        "I found other companies called TaxPal, are you sure you can use this name?",
+      question: "How fast is processing?",
       answer:
-        "Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.",
+        "Most documents process in 15-30 seconds. Larger documents may take up to 60 seconds. Batch processing runs multiple documents in parallel.",
     },
   ],
   [
     {
-      question: "How do you generate reports?",
+      question: "What export formats are supported?",
       answer:
-        "You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.",
+        "Export to CSV (perfect for spreadsheets), JSON (for developers), or Markdown (for documentation). You can also copy individual sections directly.",
     },
     {
-      question: "Can we expect more inventory features?",
-      answer: "In life it’s really better to never expect anything at all.",
+      question: "What happens if I exceed my monthly page limit?",
+      answer: "You'll be notified before reaching your limit. You can upgrade anytime or purchase additional pages. We never stop processing mid-document.",
     },
     {
-      question: "I lost my password, how do I get into my account?",
+      question: "Can I cancel my subscription anytime?",
       answer:
-        "Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.",
+        "Yes, you can cancel anytime from your dashboard. You'll retain access until the end of your billing period, and your data remains accessible for 30 days.",
     },
   ],
 ];
@@ -78,11 +76,10 @@ export function Faqs() {
             id="faq-title"
             className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
-            Frequently asked questions
+            Frequently Asked Questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            Everything you need to know about Precision PDF
           </p>
         </div>
         <ul

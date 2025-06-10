@@ -14,27 +14,27 @@ import screenshotVatReturns from "@/images/screenshots/vat-returns.png";
 
 const features = [
   {
-    title: "Payroll",
+    title: "Interactive Document Viewer",
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Split-screen interface shows your PDF and extracted data side-by-side. Click any text to highlight its source instantly.",
     image: screenshotPayroll,
   },
   {
-    title: "Claim expenses",
+    title: "Tables, Forms & Charts",
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "Extract structured data from the most challenging layouts. Multi-column text, nested tables, checkboxes - we handle it all.",
     image: screenshotExpenses,
   },
   {
-    title: "VAT handling",
+    title: "Instant Export",
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "Download as CSV for spreadsheets, JSON for developers, or Markdown for documentation. Copy individual sections with one click.",
     image: screenshotVatReturns,
   },
   {
-    title: "Reporting",
+    title: "Batch Processing",
     description:
-      "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
+      "Upload multiple PDFs and process them simultaneously. Perfect for digitizing document archives or regular invoice processing.",
     image: screenshotReporting,
   },
 ];
@@ -62,7 +62,7 @@ export function PrimaryFeatures() {
   return (
     <section
       id="features"
-      aria-label="Features for running your books"
+      aria-label="Features for document processing"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
       <Image
@@ -76,11 +76,10 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            See Your Data Come to Life
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            Click any extracted text to see its exact location in your original PDF. No more guessing where data came from.
           </p>
         </div>
         <TabGroup

@@ -11,19 +11,19 @@ const testimonials = [
   [
     {
       content:
-        "TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.",
+        "Precision PDF transformed our invoice processing. What took our team 3 hours now takes 3 minutes. The visual verification gives us confidence in every extraction.",
       author: {
-        name: "Sheryl Berge",
-        role: "CEO at Lynch LLC",
+        name: "Sarah Chen",
+        role: "CFO at TechStart Inc",
         image: avatarImage1,
       },
     },
     {
       content:
-        "I’m trying to get a hold of someone in support, I’m in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.",
+        "The ability to handle complex medical forms with tables and checkboxes is game-changing. We've digitized years of patient records in weeks.",
       author: {
-        name: "Amy Hahn",
-        role: "Director at Velocity Industries",
+        name: "Dr. Michael Roberts",
+        role: "Practice Manager at HealthFirst Clinic",
         image: avatarImage4,
       },
     },
@@ -31,19 +31,19 @@ const testimonials = [
   [
     {
       content:
-        "The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
+        "The API integration was seamless. We now automatically process loan applications and extract data directly into our underwriting system.",
       author: {
-        name: "Leland Kiehn",
-        role: "Founder of Kiehn and Sons",
+        name: "Jennifer Martinez",
+        role: "CTO at QuickLend Financial",
         image: avatarImage5,
       },
     },
     {
       content:
-        "There are so many things I had to do with my old software that I just don’t do at all with TaxPal. Suspicious but I can’t say I don’t love it.",
+        "I was skeptical about AI accuracy, but the click-to-verify feature sold me. I can see exactly where each data point comes from.",
       author: {
-        name: "Erin Powlowski",
-        role: "COO at Armstrong Inc",
+        name: "David Park",
+        role: "Operations Director at Global Logistics",
         image: avatarImage2,
       },
     },
@@ -51,19 +51,19 @@ const testimonials = [
   [
     {
       content:
-        "I used to have to remit tax to the EU and with TaxPal I somehow don’t have to do that anymore. Nervous to travel there now though.",
+        "We process hundreds of settlement statements monthly. Precision PDF handles even the most complex HUD-1 forms perfectly.",
       author: {
-        name: "Peter Renolds",
-        role: "Founder of West Inc",
+        name: "Amanda Foster",
+        role: "Broker at Riverside Realty",
         image: avatarImage3,
       },
     },
     {
       content:
-        "This is the fourth email I’ve sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.",
+        "The batch processing feature alone saves us 15 hours per week. We upload our daily invoices and get structured data in minutes.",
       author: {
-        name: "Amy Hahn",
-        role: "Director at Velocity Industries",
+        name: "Tom Williams",
+        role: "Accounting Manager at Retail Plus",
         image: avatarImage4,
       },
     },
@@ -88,12 +88,10 @@ export function Testimonials() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Loved by businesses worldwide.
+            Trusted by Document-Heavy Industries
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Our software is so simple that people can’t help but fall in love
-            with it. Simplicity is easy when you just skip tons of
-            mission-critical features.
+            See how businesses save hours every week with intelligent PDF processing.
           </p>
         </div>
         <ul
