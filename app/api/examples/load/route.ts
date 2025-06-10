@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
       processedAt: Date.now(),
       uploadedAt: Date.now(),
       markdown: data.markdown || '',
-      chunks: (data.chunks || []).map((chunk: any) => ({
+      chunks: (data.chunks || []).map((chunk: Record<string, unknown>) => ({
         chunk_id: chunk.chunk_id,
         content: chunk.content || chunk.text,
         page: chunk.page,

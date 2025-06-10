@@ -1,8 +1,10 @@
 import React from "react";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
 
 import ExampleCard from "./ExampleCard";
 import FileUploadArea from "./FileUploadArea";
-// import { CreditBalance } from './credit-balance';
+import { CreditBalance } from './credit-balance';
 
 const exampleFilesData = [
   {
@@ -90,12 +92,14 @@ const exampleFilesData = [
  * @param {() => void} props.clearError - Callback function to clear the current error.
  */
 function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }) {
+  const pageUsage = useQuery(api.subscriptions.getUserPageUsage);
+  
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 text-white antialiased sm:p-6">
       <div className="w-full max-w-4xl rounded-xl bg-white p-6 text-gray-800 shadow-2xl sm:p-8 md:p-10">
         <header className="mb-6 text-center sm:mb-8">
           <div className="mb-4 flex justify-center">
-            {/* <CreditBalance /> */}
+            <CreditBalance />
           </div>
           <p className="sm:text-md mx-auto max-w-2xl text-sm text-black md:text-lg">
             Extract structured information from visually complex documents with
@@ -136,7 +140,7 @@ function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }) {
           </div>
         )}
 
-        <FileUploadArea onFileSelect={onFileUpload} />
+        <FileUploadArea onFileSelect={onFileUpload} pageUsage={pageUsage} />
 
         <div className="mt-8 border-t border-gray-200 pt-6 sm:mt-10 sm:pt-8">
           <h2 className="mb-6 text-center text-xl font-semibold text-gray-700 sm:text-2xl">

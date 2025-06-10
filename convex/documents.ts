@@ -1,7 +1,7 @@
 import { v } from "convex/values";
 import { mutation, query, action } from "./_generated/server";
 import { getCurrentUserOrThrow, getCurrentUser } from "./users";
-import { api } from "./_generated/api";
+import { api, internal } from "./_generated/api";
 import { Id } from "./_generated/dataModel";
 
 /**
@@ -98,6 +98,50 @@ export const listDocuments = query({
 });
 
 /**
+ * Get all documents for the current user with thumbnail URLs
+ */
+export const listDocumentsWithThumbnails = query({
+  args: {},
+  handler: async (ctx) => {
+    const user = await getCurrentUser(ctx);
+    
+    // Return empty array if user is not authenticated
+    if (!user) {
+      return [];
+    }
+    
+    const documents = await ctx.db
+      .query("documents")
+      .withIndex("byUserId", (q) => q.eq("userId", user._id))
+      .order("desc")
+      .collect();
+    
+    // Add thumbnail URLs to each document
+    const documentsWithThumbnails = await Promise.all(
+      documents.map(async (doc) => {
+        let thumbnailUrl: string | null = null;
+        
+        // For example documents, use the static path
+        if (doc.landingAiResponse?.isExample && doc.landingAiResponse?.staticBasePath) {
+          thumbnailUrl = `${doc.landingAiResponse.staticBasePath}/page_0.png`;
+        } 
+        // For uploaded documents, get the first page image from storage
+        else if (doc.pageImages && doc.pageImages.length > 0) {
+          thumbnailUrl = await ctx.storage.getUrl(doc.pageImages[0]);
+        }
+        
+        return {
+          ...doc,
+          thumbnailUrl,
+        };
+      })
+    );
+    
+    return documentsWithThumbnails;
+  },
+});
+
+/**
  * Get a single document by ID
  */
 export const getDocument = query({
@@ -149,9 +193,21 @@ export const createDocument = mutation({
     storageId: v.id("_storage"),
     fileSize: v.number(),
     mimeType: v.string(),
+    estimatedPageCount: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
     const user = await getCurrentUserOrThrow(ctx);
+    
+    // Check if user has enough pages remaining
+    // We'll use an estimated page count of 1 if not provided
+    const estimatedPages = args.estimatedPageCount || 1;
+    const limitCheck = await ctx.runQuery(api.subscriptions.checkPageLimit, {
+      requiredPages: estimatedPages,
+    });
+    
+    if (!limitCheck.allowed) {
+      throw new Error(limitCheck.reason);
+    }
     
     const documentId = await ctx.db.insert("documents", {
       userId: user._id,
@@ -387,6 +443,23 @@ export const updateDocumentStatus = mutation({
       ...(args.landingAiResponse !== undefined && { landingAiResponse: args.landingAiResponse }),
       updatedAt: Date.now(),
     });
+    
+    // If document processing completed successfully, record page usage
+    if (args.status === "completed" && args.pageCount) {
+      // Check if we've already recorded usage for this document
+      const existingUsage = await ctx.db
+        .query("pageUsage")
+        .withIndex("by_document", (q) => q.eq("documentId", args.documentId))
+        .first();
+      
+      if (!existingUsage) {
+        await ctx.runMutation(internal.subscriptions.recordPageUsage, {
+          userId: user._id,
+          documentId: args.documentId,
+          pageCount: args.pageCount,
+        });
+      }
+    }
   },
 });
 

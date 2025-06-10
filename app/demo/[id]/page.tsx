@@ -3,7 +3,6 @@
 import { use, useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import { DocumentViewerWrapper } from '../../dashboard/components/DocumentViewerWrapper';
-import { DemoUploadCTA } from '../_components/DemoUploadCTA';
 import { DemoTour } from '../_components/DemoTour';
 
 interface DemoDocumentPageProps {
@@ -14,7 +13,7 @@ interface DemoDocumentPageProps {
 
 export default function DemoDocumentPage({ params }: DemoDocumentPageProps) {
   const resolvedParams = use(params);
-  const [document, setDocument] = useState<any | null>(null);
+  const [document, setDocument] = useState<unknown | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

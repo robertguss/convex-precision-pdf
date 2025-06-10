@@ -2,22 +2,23 @@ import React, { useEffect, useRef } from 'react';
 
 import { marked } from 'marked';
 
-/**
- * @typedef {{ chunk_id: string; chunk_type: string; text: string }} Chunk
- * @typedef {(chunkId: string, event: React.MouseEvent<HTMLDivElement>) => void} OnChunkClick
- */
+interface Chunk {
+  chunk_id: string;
+  chunk_type: string;
+  text?: string;
+  content?: string;
+}
 
-/**
- * @param {{
- *   chunks: Chunk[];
- *   activeChunkId: string | null;
- *   multiSelectedChunkIds: string[];
- *   onChunkClick: OnChunkClick;
- *   isLoading?: boolean;
- *   elapsedTime?: number;
- * }} props
- */
-const ParsedContent = ({
+interface ParsedContentProps {
+  chunks: Chunk[];
+  activeChunkId: string | null;
+  multiSelectedChunkIds: string[];
+  onChunkClick: (chunkId: string, event: React.MouseEvent<HTMLDivElement>) => void;
+  isLoading?: boolean;
+  elapsedTime?: number;
+}
+
+const ParsedContent: React.FC<ParsedContentProps> = ({
   chunks,
   activeChunkId,
   multiSelectedChunkIds,
@@ -25,8 +26,7 @@ const ParsedContent = ({
   isLoading = false,
   elapsedTime = 0,
 }) => {
-  /** @type {React.MutableRefObject<Record<string, HTMLDivElement | null>>} */
-  const chunkRefs = useRef({});
+  const chunkRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     if (activeChunkId && chunkRefs.current[activeChunkId]) {
@@ -137,12 +137,12 @@ const ParsedContent = ({
             {chunk.chunk_type === 'table' || chunk.chunk_type === 'form' ? (
               <div
                 className="prose prose-sm max-w-none overflow-x-auto"
-                dangerouslySetInnerHTML={{ __html: marked(chunk.text) }}
+                dangerouslySetInnerHTML={{ __html: marked(chunk.text || chunk.content || '') }}
               />
             ) : (
               <div
                 className="whitespace-pre-line text-gray-800"
-                dangerouslySetInnerHTML={{ __html: marked(chunk.text) }}
+                dangerouslySetInnerHTML={{ __html: marked(chunk.text || chunk.content || '') }}
               />
             )}
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ExampleCardProps {
   title: string;
@@ -13,11 +14,13 @@ function ExampleCard({ title, tags, imageUrl, onClick }: ExampleCardProps) {
       onClick={onClick}
       className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-gray-50 shadow-md transition-shadow duration-200 ease-in-out hover:shadow-lg"
     >
-      <div className="h-40 w-full overflow-hidden border-b border-gray-200 bg-gray-200">
-        <img
+      <div className="relative h-40 w-full overflow-hidden border-b border-gray-200 bg-gray-200">
+        <Image
           src={imageUrl}
           alt={title}
-          className="h-full w-full object-contain p-2 transition-transform duration-200 group-hover:scale-105"
+          fill
+          className="object-contain p-2 transition-transform duration-200 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="flex flex-grow flex-col justify-between p-4">

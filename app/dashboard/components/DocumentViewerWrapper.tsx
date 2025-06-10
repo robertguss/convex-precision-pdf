@@ -64,17 +64,25 @@ export function DocumentViewerWrapper({
   useEffect(() => {
     if (document) {
       // Transform chunks to match the expected format for DocumentViewer
-      const transformedChunks = (document.chunks || []).map(chunk => ({
-        chunk_id: chunk.chunk_id,
-        content: chunk.content,
-        page: chunk.page,
-        bbox: chunk.bbox,
-        metadata: chunk.metadata,
-        // Add properties expected by DocumentViewer
-        text: chunk.content,
-        chunk_type: (chunk.metadata as Record<string, unknown>)?.chunk_type as string || 'text',
-        grounding: (chunk.metadata as Record<string, unknown>)?.grounding as Array<unknown> || []
-      }));
+      const transformedChunks = (document.chunks || []).map(chunk => {
+        const metadata = chunk.metadata as Record<string, unknown> || {};
+        const grounding = metadata.grounding as Array<{
+          page: number;
+          box: { l: number; t: number; r: number; b: number; };
+        }> || [];
+        
+        return {
+          chunk_id: chunk.chunk_id,
+          content: chunk.content,
+          page: chunk.page,
+          bbox: chunk.bbox,
+          metadata: chunk.metadata,
+          // Add properties expected by DocumentViewer
+          text: chunk.content,
+          chunk_type: (metadata.chunk_type as string) || 'text',
+          grounding: grounding
+        };
+      });
 
       const initialData: DocData = {
         markdown: document.markdown || '',
@@ -200,7 +208,11 @@ export function DocumentViewerWrapper({
           <div className="h-full overflow-y-auto border-r border-gray-200 bg-white document-viewer-container" data-tour="document-chunks">
             <DocumentViewer
               pages={numberOfPages}
-              chunks={docData.chunks || []}
+              chunks={(docData.chunks || []).map(chunk => ({
+                chunk_id: chunk.chunk_id,
+                chunk_type: chunk.chunk_type || 'text',
+                grounding: chunk.grounding
+              }))}
               activeChunkId={activeChunkId}
               multiSelectedChunkIds={multiSelectedChunkIds}
               onChunkClick={handleChunkClick}
