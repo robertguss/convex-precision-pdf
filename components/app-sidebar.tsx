@@ -6,7 +6,6 @@ import {
   Home,
   CreditCard,
   Settings,
-  Upload,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";

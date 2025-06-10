@@ -2,7 +2,7 @@
 
 import { action } from "./_generated/server";
 import { v } from "convex/values";
-import { getAuthUserId } from "@convex-dev/auth/server";
+import { getAuthUserId } from "./auth.config";
 import { api, internal } from "./_generated/api";
 import Stripe from "stripe";
 
@@ -27,7 +27,7 @@ export const createCheckoutSession = action({
       throw new Error("Not authenticated");
     }
 
-    const user = await ctx.runQuery(api.auth.loggedInUser);
+    const user = await ctx.runQuery(api.users.current);
     if (!user) {
       throw new Error("User not found");
     }
@@ -143,7 +143,6 @@ export const handleWebhook = action({
               break;
             }
             const subscription = await stripe.subscriptions.retrieve(session.subscription as string);
-            const customer = await stripe.customers.retrieve(session.customer);
             
             const convexUserId = session.metadata?.convexUserId;
             if (!convexUserId) {
@@ -151,9 +150,18 @@ export const handleWebhook = action({
               break;
             }
 
+            // Get the user by external ID
+            const userRecord = await ctx.runQuery(internal.users.getByExternalId, {
+              externalId: convexUserId,
+            });
+            if (!userRecord) {
+              console.error("User not found for external ID:", convexUserId);
+              break;
+            }
+
             // Create or update subscription in our database
             await ctx.runMutation(internal.subscriptions.createOrUpdateSubscription, {
-              userId: convexUserId as any,
+              userId: userRecord._id,
               stripeCustomerId: session.customer as string,
               stripeSubscriptionId: subscription.id,
               status: subscription.status,

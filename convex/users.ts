@@ -1,4 +1,4 @@
-import { internalMutation, query, QueryCtx } from "./_generated/server";
+import { internalMutation, query, QueryCtx, internalQuery } from "./_generated/server";
 import { UserJSON } from "@clerk/backend";
 import { v, Validator } from "convex/values";
 
@@ -42,6 +42,13 @@ export const deleteFromClerk = internalMutation({
         `Can't delete user, there is none for Clerk user ID: ${clerkUserId}`,
       );
     }
+  },
+});
+
+export const getByExternalId = internalQuery({
+  args: { externalId: v.string() },
+  handler: async (ctx, args) => {
+    return await userByExternalId(ctx, args.externalId);
   },
 });
 

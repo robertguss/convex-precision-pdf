@@ -1,3 +1,5 @@
+import { Auth } from "convex/server";
+
 const authConfig = {
   providers: [
     {
@@ -8,3 +10,12 @@ const authConfig = {
 };
 
 export default authConfig;
+
+export const getAuthUserId = async (ctx: { auth: Auth }) => {
+  const identity = await ctx.auth.getUserIdentity();
+  if (!identity) {
+    return null;
+  }
+  // Clerk user IDs are passed in the subject field
+  return identity.subject;
+};

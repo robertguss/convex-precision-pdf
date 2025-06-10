@@ -3,10 +3,10 @@
 import { useState, useCallback } from 'react';
 
 import { DocData, Example } from '../types';
-import { useDocumentRealtime } from './useDocumentRealtime';
-import { Database } from '~/lib/database.types';
+// import { useDocumentRealtime } from './useDocumentRealtime';
+// import { Doc } from '@/convex/_generated/dataModel';
 
-type DocumentRow = Database['public']['Tables']['documents']['Row'];
+// type DocumentRow = Doc<"documents">;
 
 interface UseDocumentProcessorReturn {
   documentId: string | null;
@@ -55,40 +55,41 @@ export function useDocumentProcessor(): UseDocumentProcessorReturn {
   };
 
   // Handle realtime document updates
-  const handleRealtimeDocumentUpdate = useCallback((document: DocumentRow) => {
-    console.log('[Hook] Received realtime document update');
-    
-    if (document.parsed_markdown || document.parsed_chunks) {
-      // Content is ready - parse JSON chunks into Chunk array
-      const chunks = Array.isArray(document.parsed_chunks) 
-        ? (document.parsed_chunks as unknown as Chunk[]) 
-        : [];
-      const errors = Array.isArray(document.processing_errors) 
-        ? document.processing_errors 
-        : [];
-        
-      setDocData((prevData) => ({
-        ...prevData!,
-        markdown: document.parsed_markdown || '',
-        chunks,
-        errors,
-      }));
-      setIsExtractingContent(false);
-      
-      // Clear any pending polling since realtime update succeeded
-      if (pollingTimeoutId) {
-        clearTimeout(pollingTimeoutId);
-        setPollingTimeoutId(null);
-      }
-    }
-  }, [pollingTimeoutId]);
+  // TODO: Implement Convex realtime subscription
+  // const handleRealtimeDocumentUpdate = useCallback((document: DocumentRow) => {
+  //   console.log('[Hook] Received realtime document update');
+  //   
+  //   if (document.markdown || document.chunks) {
+  //     // Content is ready
+  //     const chunks = document.chunks || [];
+  //     const errors = document.errorMessage 
+  //       ? [{ message: document.errorMessage }] 
+  //       : [];
+  //       
+  //     setDocData((prevData) => ({
+  //       ...prevData!,
+  //       markdown: document.markdown || '',
+  //       chunks,
+  //       errors,
+  //       num_pages: document.pageCount || 0,
+  //     }));
+  //     setIsExtractingContent(false);
+  //     
+  //     // Clear any pending polling since realtime update succeeded
+  //     if (pollingTimeoutId) {
+  //       clearTimeout(pollingTimeoutId);
+  //       setPollingTimeoutId(null);
+  //     }
+  //   }
+  // }, [pollingTimeoutId]);
 
   // Use realtime subscription when extracting content
-  useDocumentRealtime({
-    documentId: isExtractingContent ? documentId : null,
-    onDocumentUpdate: handleRealtimeDocumentUpdate,
-    enabled: isExtractingContent,
-  });
+  // TODO: Implement Convex realtime subscription
+  // useDocumentRealtime({
+  //   documentId: isExtractingContent ? documentId : null,
+  //   onDocumentUpdate: handleRealtimeDocumentUpdate,
+  //   enabled: isExtractingContent,
+  // });
 
   // Polling function to check document status (fallback for realtime)
   const pollDocumentStatus = useCallback(async (docId: string) => {

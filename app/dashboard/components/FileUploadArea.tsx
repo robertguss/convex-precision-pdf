@@ -2,6 +2,17 @@ import React, { useCallback, useState } from 'react';
 
 import { useDropzone } from 'react-dropzone';
 
+interface PageUsage {
+  used: number;
+  limit: number;
+  remaining: number;
+}
+
+interface FileUploadAreaProps {
+  onFileSelect: (file: File) => void;
+  pageUsage?: PageUsage | null;
+}
+
 const UploadIcon = () => (
   <svg
     className="mx-auto mb-3 h-10 w-10 text-gray-400 transition-colors group-hover:text-blue-500"
@@ -19,12 +30,12 @@ const UploadIcon = () => (
   </svg>
 );
 
-function FileUploadArea({ onFileSelect, pageUsage = null }) {
+function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps) {
   const [dragMessage, setDragMessage] = useState('');
   const hasPages = !pageUsage || pageUsage.remaining > 0;
 
   const onDrop = useCallback(
-    (acceptedFiles) => {
+    (acceptedFiles: File[]) => {
       setDragMessage('');
       if (acceptedFiles.length > 0 && hasPages) {
         onFileSelect(acceptedFiles[0]);
@@ -66,7 +77,7 @@ function FileUploadArea({ onFileSelect, pageUsage = null }) {
           No pages remaining
         </p>
         <p className="text-sm text-gray-600 mb-4">
-          You've used all {pageUsage.limit} pages in your current plan.
+          You&apos;ve used all {pageUsage.limit} pages in your current plan.
         </p>
         <a
           href="/dashboard/upgrade"

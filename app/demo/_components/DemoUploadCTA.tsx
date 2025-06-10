@@ -24,7 +24,7 @@ export function DemoUploadCTA() {
         </h3>
         
         <p className="mb-6 text-muted-foreground">
-          You've seen what PrecisionPDF can do. Now try it with your own PDFs - invoices, bank statements, contracts, and more.
+          You&apos;ve seen what PrecisionPDF can do. Now try it with your own PDFs - invoices, bank statements, contracts, and more.
         </p>
 
         <div className="mb-6 space-y-3">

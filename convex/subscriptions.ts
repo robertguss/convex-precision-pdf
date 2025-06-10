@@ -1,19 +1,28 @@
 import { query, mutation, internalMutation, internalQuery } from "./_generated/server";
 import { v } from "convex/values";
-import { getAuthUserId } from "@convex-dev/auth/server";
+import { getAuthUserId } from "./auth.config";
 import { api } from "./_generated/api";
 
 export const getUserSubscription = query({
   args: {},
   handler: async (ctx) => {
-    const userId = await getAuthUserId(ctx);
-    if (!userId) {
+    const externalId = await getAuthUserId(ctx);
+    if (!externalId) {
+      return null;
+    }
+
+    // Get the internal user ID from external ID
+    const user = await ctx.db
+      .query("users")
+      .withIndex("byExternalId", (q) => q.eq("externalId", externalId))
+      .unique();
+    if (!user) {
       return null;
     }
 
     const subscription = await ctx.db
       .query("subscriptions")
-      .withIndex("by_user", (q) => q.eq("userId", userId))
+      .withIndex("by_user", (q) => q.eq("userId", user._id))
       .first();
 
     if (!subscription) {
@@ -33,24 +42,6 @@ export const getUserSubscription = query({
   },
 });
 
-export const getUserUsage = query({
-  args: {},
-  handler: async (ctx) => {
-    const userId = await getAuthUserId(ctx);
-    if (!userId) {
-      return null;
-    }
-
-    const currentMonth = new Date().toISOString().slice(0, 7); // YYYY-MM
-    
-    const usage = await ctx.db
-      .query("usage")
-      .withIndex("by_user_month", (q) => q.eq("userId", userId).eq("month", currentMonth))
-      .first();
-
-    return usage || { apiCalls: 0, storageUsed: 0 };
-  },
-});
 
 export const getByStripeCustomer = internalQuery({
   args: {
@@ -162,56 +153,28 @@ export const createSubscription = internalMutation({
   },
 });
 
-export const incrementUsage = mutation({
-  args: {
-    type: v.union(v.literal("apiCalls"), v.literal("storage")),
-    amount: v.number(),
-  },
-  handler: async (ctx, args) => {
-    const userId = await getAuthUserId(ctx);
-    if (!userId) {
-      throw new Error("Not authenticated");
-    }
-
-    const currentMonth = new Date().toISOString().slice(0, 7); // YYYY-MM
-    
-    const usage = await ctx.db
-      .query("usage")
-      .withIndex("by_user_month", (q) => q.eq("userId", userId).eq("month", currentMonth))
-      .first();
-
-    if (usage) {
-      const updates: any = {};
-      if (args.type === "apiCalls") {
-        updates.apiCalls = usage.apiCalls + args.amount;
-      } else {
-        updates.storageUsed = usage.storageUsed + args.amount;
-      }
-      await ctx.db.patch(usage._id, updates);
-    } else {
-      const newUsage: any = {
-        userId,
-        month: currentMonth,
-        apiCalls: args.type === "apiCalls" ? args.amount : 0,
-        storageUsed: args.type === "storage" ? args.amount : 0,
-      };
-      await ctx.db.insert("usage", newUsage);
-    }
-  },
-});
 
 export const getUserPageUsage = query({
   args: {},
   handler: async (ctx) => {
-    const userId = await getAuthUserId(ctx);
-    if (!userId) {
+    const externalId = await getAuthUserId(ctx);
+    if (!externalId) {
+      return { used: 0, limit: 0, remaining: 0 };
+    }
+
+    // Get the internal user ID from external ID
+    const user = await ctx.db
+      .query("users")
+      .withIndex("byExternalId", (q) => q.eq("externalId", externalId))
+      .unique();
+    if (!user) {
       return { used: 0, limit: 0, remaining: 0 };
     }
 
     // Get user's subscription
     const subscription = await ctx.db
       .query("subscriptions")
-      .withIndex("by_user", (q) => q.eq("userId", userId))
+      .withIndex("by_user", (q) => q.eq("userId", user._id))
       .first();
 
     // Determine the current billing cycle and page limit
@@ -242,14 +205,7 @@ export const getUserPageUsage = query({
       }
     } else {
       // Free plan - use account creation date for billing cycle
-      const user = await ctx.db
-        .query("users")
-        .filter((q) => q.eq(q.field("externalId"), userId))
-        .first();
-      
-      if (!user) {
-        return { used: 0, limit: pageLimit, remaining: pageLimit };
-      }
+      // We already have the user from above
       
       // For free plan, we'll use 30-day cycles from account creation
       const now = Date.now();
@@ -263,7 +219,7 @@ export const getUserPageUsage = query({
     const usage = await ctx.db
       .query("pageUsage")
       .withIndex("by_user_and_cycle", (q) => 
-        q.eq("userId", userId)
+        q.eq("userId", user._id)
          .eq("billingCycleStart", billingCycleStart)
          .eq("billingCycleEnd", billingCycleEnd)
       )
@@ -332,25 +288,85 @@ export const checkPageLimit = query({
     requiredPages: v.number(),
   },
   handler: async (ctx, args) => {
-    const userId = await getAuthUserId(ctx);
-    if (!userId) {
+    const externalId = await getAuthUserId(ctx);
+    if (!externalId) {
       return { allowed: false, reason: "Not authenticated" };
     }
 
-    const usage = await ctx.runQuery(api.subscriptions.getUserPageUsage);
-    
-    if (!usage) {
-      return { allowed: false, reason: "Unable to check usage" };
+    // Get the internal user ID from external ID
+    const user = await ctx.db
+      .query("users")
+      .withIndex("byExternalId", (q) => q.eq("externalId", externalId))
+      .unique();
+    if (!user) {
+      return { allowed: false, reason: "User not found" };
     }
 
-    if (usage.remaining < args.requiredPages) {
+    // Get user's subscription
+    const subscription = await ctx.db
+      .query("subscriptions")
+      .withIndex("by_user", (q) => q.eq("userId", user._id))
+      .first();
+
+    // Determine the current billing cycle and page limit
+    let billingCycleStart: number;
+    let billingCycleEnd: number;
+    let pageLimit = 10; // Default free plan limit
+
+    if (subscription) {
+      // User has a subscription (paid plan)
+      billingCycleStart = subscription.currentPeriodStart;
+      billingCycleEnd = subscription.currentPeriodEnd;
+      
+      // Get plan details for page limit
+      const plan = await ctx.db
+        .query("plans")
+        .filter((q) => q.eq(q.field("id"), subscription.planId))
+        .first();
+      
+      if (plan) {
+        // Extract page limit from features (e.g., "75 pages every month")
+        const pageFeature = plan.features.find(f => f.includes("pages"));
+        if (pageFeature) {
+          const match = pageFeature.match(/(\d+)\s+pages/);
+          if (match) {
+            pageLimit = parseInt(match[1]);
+          }
+        }
+      }
+    } else {
+      // Free plan - use account creation date for billing cycle
+      // We already have the user from above
+      
+      // For free plan, we'll use 30-day cycles from account creation
+      const now = Date.now();
+      const accountAge = now - (user._creationTime || now);
+      const cycleNumber = Math.floor(accountAge / (30 * 24 * 60 * 60 * 1000));
+      billingCycleStart = (user._creationTime || now) + (cycleNumber * 30 * 24 * 60 * 60 * 1000);
+      billingCycleEnd = billingCycleStart + (30 * 24 * 60 * 60 * 1000);
+    }
+
+    // Get usage for current billing cycle
+    const usage = await ctx.db
+      .query("pageUsage")
+      .withIndex("by_user_and_cycle", (q) => 
+        q.eq("userId", user._id)
+         .eq("billingCycleStart", billingCycleStart)
+         .eq("billingCycleEnd", billingCycleEnd)
+      )
+      .collect();
+
+    const used = usage.reduce((total, record) => total + record.pageCount, 0);
+    const remaining = Math.max(0, pageLimit - used);
+
+    if (remaining < args.requiredPages) {
       return { 
         allowed: false, 
-        reason: `Insufficient pages. You have ${usage.remaining} pages remaining, but ${args.requiredPages} are required.`,
-        usage
+        reason: `Insufficient pages. You have ${remaining} pages remaining, but ${args.requiredPages} are required.`,
+        usage: { used, limit: pageLimit, remaining }
       };
     }
 
-    return { allowed: true, usage };
+    return { allowed: true, usage: { used, limit: pageLimit, remaining } };
   },
 });
