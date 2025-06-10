@@ -2,7 +2,8 @@
 // ABOUTME: Supports JSON, Markdown, CSV, and XLSX export formats
 import { Chunk, ExportFormat } from '../types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_FAST_API_URL || 'http://localhost:8000';
+// Use local API routes to avoid CORS issues
+const API_BASE_URL = '';
 
 export async function exportChunks(
   chunks: Chunk[],

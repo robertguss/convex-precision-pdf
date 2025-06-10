@@ -18,6 +18,7 @@ import { calculateNumberOfPages } from './utils/documentUtils';
 import { downloadFile, exportChunks } from './utils/exportUtils';
 
 // Configuration for the backend API
+// API_BASE_URL is still needed for DocumentViewer component to load images
 const API_BASE_URL = process.env.NEXT_PUBLIC_FAST_API_URL || 'http://localhost:8000';
 
 interface DocumentViewerWrapperProps {
@@ -73,12 +74,12 @@ export function DocumentViewerWrapper({
         
         return {
           chunk_id: chunk.chunk_id,
-          content: chunk.content,
+          content: chunk.content || '',
           page: chunk.page,
           bbox: chunk.bbox,
           metadata: chunk.metadata,
           // Add properties expected by DocumentViewer
-          text: chunk.content,
+          text: chunk.content || '',
           chunk_type: (metadata.chunk_type as string) || 'text',
           grounding: grounding
         };
@@ -144,7 +145,7 @@ export function DocumentViewerWrapper({
       filename.substring(0, filename.lastIndexOf('.')) || filename;
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/export/all-markdown`, {
+      const response = await fetch(`/api/export/all-markdown`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
