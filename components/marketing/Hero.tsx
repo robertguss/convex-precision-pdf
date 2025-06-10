@@ -27,15 +27,13 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        AI-powered document processing that shows you exactly where every piece of data comes from. 
-        Handle invoices, medical records, bank statements, and complex forms with confidence.
+        AI-powered document processing that shows you exactly where every piece
+        of data comes from. Handle invoices, medical records, bank statements,
+        and complex forms with confidence.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="/demo">Try Interactive Demo</Button>
-        <Button
-          href="#video"
-          variant="outline"
-        >
+        {/* <Button href="#video" variant="outline">
           <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
@@ -43,9 +41,9 @@ export function Hero() {
             <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
           </svg>
           <span className="ml-3">Watch it Work</span>
-        </Button>
+        </Button> */}
       </div>
-      <div className="mt-36 lg:mt-44">
+      {/* <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
           Processing 50,000+ pages monthly for businesses worldwide
         </p>
@@ -79,7 +77,7 @@ export function Hero() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </Container>
   );
 }

@@ -27,9 +27,9 @@ const faqs = [
         "Yes. We're SOC 2 Type I and HIPAA compliant. Your documents are encrypted in transit (TLS) and at rest (256-bit AES). We process documents in isolated environments and automatically delete them after 30 days. We never train our models on your data.",
     },
     {
-      question: "Is there an API for developers?",
+      question: "Can I collaborate with my team?",
       answer:
-        "Yes! All paid plans include API access. Our RESTful API returns structured JSON and includes comprehensive documentation and code examples.",
+        "Yes! Pro plan includes team collaboration features. Share documents with team members, add comments, and manage permissions. Perfect for teams processing documents together.",
     },
     {
       question: "How fast is processing?",

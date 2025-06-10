@@ -26,7 +26,7 @@ const features: Array<Feature> = [
       "Our unique highlighting system lets you verify accuracy instantly. Click extracted data to see its exact location in the original PDF, building trust in every extraction.",
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
-      let id = useId();
+      const id = useId();
       return (
         <>
           <defs>
@@ -54,11 +54,10 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: "API-First Design",
-    summary:
-      "Integrate PDF processing into your workflow",
+    name: "Real-Time Processing",
+    summary: "Watch your documents transform before your eyes",
     description:
-      "RESTful API with comprehensive documentation. Process documents programmatically and receive structured JSON responses. Perfect for automation.",
+      "Live progress updates show each page being analyzed. Preview extracted data instantly as processing completes. No more waiting and wondering.",
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -83,8 +82,7 @@ const features: Array<Feature> = [
   },
   {
     name: "Smart Table Recognition",
-    summary:
-      "Complex tables become simple spreadsheets",
+    summary: "Complex tables become simple spreadsheets",
     description:
       "Automatically detects table structures, preserves relationships between cells, and exports to CSV with proper formatting. Even handles nested and multi-page tables.",
     image: screenshotContacts,
@@ -237,7 +235,8 @@ export function SecondaryFeatures() {
             Built for Real-World Documents
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            From simple invoices to complex medical journals, Precision PDF adapts to your document complexity.
+            From simple invoices to complex medical journals, Precision PDF
+            adapts to your document complexity.
           </p>
         </div>
         <FeaturesMobile />

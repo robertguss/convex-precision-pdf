@@ -156,7 +156,7 @@ export function Pricing() {
             features={[
               "75 pages per month",
               "Priority processing",
-              "API access",
+              "Document history (30 days)",
               "Batch uploads",
               "Priority support",
             ]}
@@ -169,8 +169,8 @@ export function Pricing() {
             href="/register"
             features={[
               "250 pages per month",
-              "Advanced API rate limits",
-              "Webhook notifications",
+              "Document history (90 days)",
+              "Team collaboration features",
               "Custom export templates",
               "Dedicated support",
               "99.9% uptime SLA",
