@@ -68,7 +68,7 @@ export const createCheckoutSession = action({
         ],
         mode: "subscription",
         success_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard?success=true`,
-        cancel_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard/upgrade?canceled=true`,
+        cancel_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard`,
         metadata: {
           convexUserId: userId,
           planId: args.planId,
