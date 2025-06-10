@@ -1,11 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  FileText,
-  Home,
-  CreditCard,
-} from "lucide-react";
+import { FileText, Home, CreditCard } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
@@ -49,32 +45,25 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       isActive: true,
     },
     {
-      title: "Documents",
+      title: "My Documents",
       url: "/dashboard/documents",
       icon: FileText,
-      items: [
-        {
-          title: "All Documents",
-          url: "/dashboard/documents",
-        },
-        {
-          title: "Upload New",
-          url: "/dashboard/upload",
-        },
-      ],
     },
   ];
 
-  const userData = user ? {
-    name: user.firstName && user.lastName 
-      ? `${user.firstName} ${user.lastName}` 
-      : user.emailAddresses[0]?.emailAddress || "User",
-    email: user.emailAddresses[0]?.emailAddress || "",
-    avatar: user.imageUrl,
-  } : {
-    name: "Guest",
-    email: "",
-  };
+  const userData = user
+    ? {
+        name:
+          user.firstName && user.lastName
+            ? `${user.firstName} ${user.lastName}`
+            : user.emailAddresses[0]?.emailAddress || "User",
+        email: user.emailAddresses[0]?.emailAddress || "",
+        avatar: user.imageUrl,
+      }
+    : {
+        name: "Guest",
+        email: "",
+      };
 
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -100,9 +89,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 {subscription?.plan?.features?.[0] || "10 pages per month"}
               </p>
               {!subscription && (
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button
+                  variant="outline"
+                  size="sm"
                   className="mt-2 w-full"
                   asChild
                 >
@@ -113,9 +102,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </Button>
               )}
               {subscription && (
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button
+                  variant="outline"
+                  size="sm"
                   className="mt-2 w-full"
                   onClick={handleManageSubscription}
                 >
