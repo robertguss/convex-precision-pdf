@@ -5,7 +5,6 @@ import { Header } from "@/components/marketing/Header";
 import { Hero } from "@/components/marketing/Hero";
 import { MultipleOutputs } from "@/components/marketing/MultipleOutputs";
 import { Pricing } from "@/components/marketing/Pricing";
-import { PrimaryFeatures } from "@/components/marketing/PrimaryFeatures";
 import { SecondaryFeatures } from "@/components/marketing/SecondaryFeatures";
 import { Testimonials } from "@/components/marketing/Testimonials";
 
@@ -16,7 +15,6 @@ export default function Home() {
       <main>
         <Hero />
         <MultipleOutputs />
-        <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
         <Testimonials />
