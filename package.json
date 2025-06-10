@@ -29,6 +29,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "convex": "^1.23.0",
+    "date-fns": "^4.1.0",
     "lucide-react": "^0.513.0",
     "marked": "^15.0.12",
     "next": "15.2.3",

@@ -23,7 +23,7 @@ import {
   SidebarGroupContent,
 } from "@/components/ui/sidebar";
 import { useUser } from "@clerk/nextjs";
-import { useQuery, useMutation } from "convex/react";
+import { useQuery, useAction } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -31,7 +31,7 @@ import Link from "next/link";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { user } = useUser();
   const subscription = useQuery(api.subscriptions.getUserSubscription);
-  const createPortalSession = useMutation(api.stripe.createPortalSession);
+  const createPortalSession = useAction(api.stripe.createPortalSession);
 
   const handleManageSubscription = async () => {
     try {
