@@ -159,13 +159,27 @@ export const handleWebhook = action({
               break;
             }
 
+            // Get the plan ID from the subscription's price
+            const priceId = subscription.items.data[0]?.price.id;
+            let planId = "free"; // Default to free
+            
+            // Map Stripe price ID to our plan ID
+            const plans = await ctx.runQuery(api.plans.list);
+            const matchingPlan = plans.find((p: any) => p.stripePriceId === priceId);
+            if (matchingPlan) {
+              planId = matchingPlan.id;
+            } else if (session.metadata?.planId) {
+              // Fallback to metadata if provided
+              planId = session.metadata.planId;
+            }
+
             // Create or update subscription in our database
             await ctx.runMutation(internal.subscriptions.createOrUpdateSubscription, {
               userId: userRecord._id,
               stripeCustomerId: session.customer as string,
               stripeSubscriptionId: subscription.id,
               status: subscription.status,
-              planId: session.metadata?.planId || "basic",
+              planId: planId,
               currentPeriodStart: (subscription as any).current_period_start * 1000,
               currentPeriodEnd: (subscription as any).current_period_end * 1000,
               cancelAtPeriodEnd: (subscription as any).cancel_at_period_end,
@@ -183,10 +197,21 @@ export const handleWebhook = action({
           });
 
           if (userSub) {
+            // Get the plan ID from the subscription's price
+            const priceId = subscriptionData.items.data[0]?.price.id;
+            let planId = "free"; // Default to free
+            
+            // Map Stripe price ID to our plan ID
+            const plans = await ctx.runQuery(api.plans.list);
+            const matchingPlan = plans.find((p: any) => p.stripePriceId === priceId);
+            if (matchingPlan) {
+              planId = matchingPlan.id;
+            }
+
             await ctx.runMutation(internal.subscriptions.updateSubscription, {
               stripeSubscriptionId: subscriptionData.id,
               status: subscriptionData.status,
-              planId: subscriptionData.items.data[0].price.lookup_key || "basic",
+              planId: planId,
               currentPeriodStart: subscriptionData.current_period_start * 1000,
               currentPeriodEnd: subscriptionData.current_period_end * 1000,
               cancelAtPeriodEnd: subscriptionData.cancel_at_period_end,
@@ -199,7 +224,7 @@ export const handleWebhook = action({
           await ctx.runMutation(internal.subscriptions.updateSubscription, {
             stripeSubscriptionId: deletedSubscription.id,
             status: "canceled",
-            planId: "basic",
+            planId: "free",
             currentPeriodStart: deletedSubscription.current_period_start * 1000,
             currentPeriodEnd: deletedSubscription.current_period_end * 1000,
             cancelAtPeriodEnd: true,

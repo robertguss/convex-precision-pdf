@@ -5,7 +5,6 @@ import {
   FileText,
   Home,
   CreditCard,
-  Settings,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -61,22 +60,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {
           title: "Upload New",
           url: "/dashboard/upload",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "/dashboard/settings",
-      icon: Settings,
-      items: [
-        {
-          title: "General",
-          url: "/dashboard/settings",
-        },
-        {
-          title: "Billing",
-          url: "#",
-          onClick: handleManageSubscription,
         },
       ],
     },

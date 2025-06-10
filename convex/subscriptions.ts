@@ -2,6 +2,38 @@ import { query, internalMutation, internalQuery } from "./_generated/server";
 import { v } from "convex/values";
 import { getAuthUserId } from "./auth.config";
 
+export const debugUserSubscription = query({
+  args: {},
+  handler: async (ctx) => {
+    const externalId = await getAuthUserId(ctx);
+    if (!externalId) {
+      return { error: "Not authenticated" };
+    }
+
+    const user = await ctx.db
+      .query("users")
+      .withIndex("byExternalId", (q) => q.eq("externalId", externalId))
+      .unique();
+    if (!user) {
+      return { error: "User not found" };
+    }
+
+    const subscription = await ctx.db
+      .query("subscriptions")
+      .withIndex("by_user", (q) => q.eq("userId", user._id))
+      .first();
+
+    const plans = await ctx.db.query("plans").collect();
+
+    return {
+      userId: user._id,
+      userEmail: user.email,
+      subscription,
+      availablePlans: plans,
+    };
+  },
+});
+
 export const getUserSubscription = query({
   args: {},
   handler: async (ctx) => {
@@ -286,6 +318,27 @@ export const recordPageUsage = internalMutation({
       billingCycleStart,
       billingCycleEnd,
     });
+  },
+});
+
+export const fixSubscriptionPlan = internalMutation({
+  args: {
+    userId: v.id("users"),
+    planId: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const subscription = await ctx.db
+      .query("subscriptions")
+      .withIndex("by_user", (q) => q.eq("userId", args.userId))
+      .first();
+
+    if (subscription) {
+      await ctx.db.patch(subscription._id, {
+        planId: args.planId,
+      });
+      return { success: true, message: "Subscription plan updated" };
+    }
+    return { success: false, message: "No subscription found" };
   },
 });
 
