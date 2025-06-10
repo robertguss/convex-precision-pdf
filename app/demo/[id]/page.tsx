@@ -4,6 +4,7 @@ import { use, useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import { DocumentViewerWrapper } from '../../dashboard/components/DocumentViewerWrapper';
 import { DemoTour } from '../_components/DemoTour';
+import { api } from '@/convex/_generated/api';
 
 interface DemoDocumentPageProps {
   params: Promise<{
@@ -11,9 +12,11 @@ interface DemoDocumentPageProps {
   }>;
 }
 
+type DocumentType = NonNullable<typeof api.documents.getDocument._returnType>;
+
 export default function DemoDocumentPage({ params }: DemoDocumentPageProps) {
   const resolvedParams = use(params);
-  const [document, setDocument] = useState<unknown | null>(null);
+  const [document, setDocument] = useState<DocumentType | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

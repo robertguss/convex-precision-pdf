@@ -5,6 +5,15 @@ import { api } from "@/convex/_generated/api";
 import ExampleCard from "./ExampleCard";
 import FileUploadArea from "./FileUploadArea";
 
+export interface ExampleFile {
+  id: string;
+  title: string;
+  tags: string[];
+  imageUrl: string;
+  dataUrl: string;
+  staticImageBasePath: string;
+}
+
 const exampleFilesData = [
   {
     id: "invoice",
@@ -82,6 +91,13 @@ const exampleFilesData = [
  * @property {string} staticImageBasePath
  */
 
+interface UploadScreenProps {
+  onFileUpload: (file: File) => void;
+  onExampleSelect: (example: ExampleFile) => void;
+  error: string | object | null;
+  clearError: () => void;
+}
+
 /**
  * Component to display the main upload screen.
  * @param {object} props - The component props.
@@ -90,7 +106,7 @@ const exampleFilesData = [
  * @param {string | object | null} props.error - Error message or object to display.
  * @param {() => void} props.clearError - Callback function to clear the current error.
  */
-function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }) {
+function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }: UploadScreenProps) {
   const pageUsage = useQuery(api.subscriptions.getUserPageUsage);
 
   return (

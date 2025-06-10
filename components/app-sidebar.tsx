@@ -63,6 +63,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     : {
         name: "Guest",
         email: "",
+        avatar: "",
       };
 
   return (

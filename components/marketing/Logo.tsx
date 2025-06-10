@@ -1,8 +1,12 @@
 import { Slice } from "lucide-react";
 
-export function Logo() {
+interface LogoProps {
+  className?: string;
+}
+
+export function Logo({ className }: LogoProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className={className || "flex items-center gap-2"}>
       <Slice className="h-10 w-10" />
       <span className="text-2xl">PrecisionPDF</span>
     </div>

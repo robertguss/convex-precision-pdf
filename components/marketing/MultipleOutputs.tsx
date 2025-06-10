@@ -4,7 +4,7 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import { Container } from "@/components/marketing/Container";
-import { FileText, Slice, FileSpreadsheet, FileCode, FileDown, Table } from "lucide-react";
+import { FileText, Slice, FileSpreadsheet, FileCode, Table } from "lucide-react";
 
 const Circle = forwardRef<
   HTMLDivElement,

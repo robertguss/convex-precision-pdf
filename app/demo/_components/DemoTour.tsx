@@ -3,7 +3,15 @@
 import { useEffect, useState } from 'react';
 import { HelpCircle } from 'lucide-react';
 import Joyride from 'react-joyride';
-import type { CallBackProps, Step } from 'react-joyride';
+import type { CallBackProps } from 'react-joyride';
+
+interface Step {
+  target: string;
+  content: string;
+  placement?: 'top' | 'bottom' | 'left' | 'right' | 'center' | 'auto';
+  disableBeacon?: boolean;
+  disableScrolling?: boolean;
+}
 import { Button } from '@/components/ui/button';
 
 const steps: Step[] = [

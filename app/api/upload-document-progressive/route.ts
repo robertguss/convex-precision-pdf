@@ -90,7 +90,6 @@ export async function POST(request: NextRequest) {
     });
     
     // Convert PDF to images if it's a PDF file
-    const pageImages: Id<"_storage">[] = [];
     let pageCount = 1; // Default for non-PDF files
     
     if (file.type === "application/pdf") {
@@ -132,7 +131,7 @@ export async function POST(request: NextRequest) {
         console.log("FastAPI response structure:", Object.keys(responseData));
         console.log("FastAPI response sample:", JSON.stringify(responseData).substring(0, 200) + "...");
         
-        let pageImages: Id<"_storage">[] = [];
+        const pageImages: Id<"_storage">[] = [];
         
         // Check if response has "images" key (new format)
         if (responseData.images && Array.isArray(responseData.images)) {

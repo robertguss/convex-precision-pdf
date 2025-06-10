@@ -10,7 +10,7 @@ import { api } from "@/convex/_generated/api";
 
 import { ProcessingView } from "./ProcessingView";
 import UploadScreen from "./UploadScreen";
-import { Example } from "./types";
+import type { ExampleFile } from "./UploadScreen";
 
 export function UploadPage() {
   const router = useRouter();
@@ -124,7 +124,7 @@ export function UploadPage() {
     }
   };
 
-  const handleExampleSelect = async (example: Example) => {
+  const handleExampleSelect = async (example: ExampleFile) => {
     setError(null);
     setIsProcessing(true);
 

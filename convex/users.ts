@@ -13,7 +13,7 @@ export const upsertFromClerk = internalMutation({
   args: { data: v.any() as Validator<UserJSON> }, // no runtime validation, trust Clerk
   async handler(ctx, { data }) {
     const primaryEmail = data.primary_email_address_id 
-      ? data.email_addresses?.find((email) => email.id === data.primary_email_address_id)
+      ? data.email_addresses?.find((email: any) => email.id === data.primary_email_address_id)
       : data.email_addresses?.[0];
     const userAttributes = {
       name: `${data.first_name} ${data.last_name}`,
