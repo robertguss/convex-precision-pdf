@@ -1,13 +1,13 @@
 "use client"
 
 import {
-  BadgeCheck,
-  Bell,
   ChevronsUpDown,
   CreditCard,
   LogOut,
-  Sparkles,
 } from "lucide-react"
+import { useClerk } from "@clerk/nextjs"
+import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 import {
   Avatar,
@@ -32,14 +32,32 @@ import {
 
 export function NavUser({
   user,
+  onManageSubscription,
 }: {
   user: {
     name: string
     email: string
     avatar: string
   }
+  onManageSubscription?: () => void
 }) {
   const { isMobile } = useSidebar()
+  const { signOut } = useClerk()
+  const router = useRouter()
+
+  const handleSignOut = async () => {
+    await signOut()
+    router.push('/')
+  }
+
+  // Get initials for avatar fallback
+  const getInitials = (name: string) => {
+    const names = name.split(' ')
+    if (names.length >= 2) {
+      return `${names[0][0]}${names[names.length - 1][0]}`.toUpperCase()
+    }
+    return name.slice(0, 2).toUpperCase()
+  }
 
   return (
     <SidebarMenu>
@@ -52,7 +70,7 @@ export function NavUser({
             >
               <Avatar className="h-8 w-8 rounded-lg">
                 <AvatarImage src={user.avatar} alt={user.name} />
-                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                <AvatarFallback className="rounded-lg">{getInitials(user.name)}</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
@@ -71,7 +89,7 @@ export function NavUser({
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
                   <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  <AvatarFallback className="rounded-lg">{getInitials(user.name)}</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
@@ -81,30 +99,24 @@ export function NavUser({
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <Sparkles />
-                Upgrade to Pro
-              </DropdownMenuItem>
+              {onManageSubscription ? (
+                <DropdownMenuItem onClick={onManageSubscription} className="cursor-pointer">
+                  <CreditCard className="mr-2 h-4 w-4" />
+                  Manage Subscription
+                </DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem asChild>
+                  <Link href="/dashboard/upgrade" className="flex items-center">
+                    <CreditCard className="mr-2 h-4 w-4" />
+                    Manage Subscription
+                  </Link>
+                </DropdownMenuItem>
+              )}
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <BadgeCheck />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCard />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Bell />
-                Notifications
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <LogOut />
-              Log out
+            <DropdownMenuItem onClick={handleSignOut} className="cursor-pointer">
+              <LogOut className="mr-2 h-4 w-4" />
+              Sign out
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

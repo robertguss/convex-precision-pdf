@@ -110,7 +110,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   onClick={handleManageSubscription}
                 >
                   <CreditCard className="mr-2 h-3 w-3" />
-                  Manage
+                  Manage Subscription
                 </Button>
               )}
             </div>
@@ -118,7 +118,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={userData} />
+        <NavUser
+          user={userData}
+          onManageSubscription={
+            subscription ? handleManageSubscription : undefined
+          }
+        />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
