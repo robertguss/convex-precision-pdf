@@ -8,6 +8,7 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import clsx from "clsx";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
 import { Button } from "@/components/marketing/Button";
 import { Container } from "@/components/marketing/Container";
@@ -56,6 +57,8 @@ function MobileNavIcon({ open }: { open: boolean }) {
 }
 
 function MobileNavigation() {
+  const { isSignedIn } = useUser();
+  
   return (
     <Popover>
       <PopoverButton
@@ -74,20 +77,30 @@ function MobileNavigation() {
       >
         <MobileNavLink href="#pricing">Pricing</MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="/login">Sign in</MobileNavLink>
+        {isSignedIn ? (
+          <MobileNavLink href="/dashboard">Dashboard</MobileNavLink>
+        ) : (
+          <SignInButton mode="modal">
+            <PopoverButton className="block w-full p-2 text-left">
+              Sign in
+            </PopoverButton>
+          </SignInButton>
+        )}
       </PopoverPanel>
     </Popover>
   );
 }
 
 export function Header() {
+  const { isSignedIn } = useUser();
+  
   return (
     <header className="py-10">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Logo />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#pricing">Pricing</NavLink>
@@ -95,7 +108,18 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+              {isSignedIn ? (
+                <div className="flex items-center gap-x-4">
+                  <NavLink href="/dashboard">Dashboard</NavLink>
+                  <UserButton />
+                </div>
+              ) : (
+                <SignInButton mode="modal">
+                  <button className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                    Sign in
+                  </button>
+                </SignInButton>
+              )}
             </div>
             <Button href="/demo" color="blue">
               <span>Try Demo</span>
