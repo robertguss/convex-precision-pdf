@@ -125,61 +125,108 @@ export async function POST(request: NextRequest) {
           throw new Error(`FastAPI PDF conversion failed: ${convertResponse.status} ${errorText}`);
         }
         
-        // The response is a JSON object with page numbers as keys and base64 images as values
-        const imageData: Record<string, string[]> = await convertResponse.json();
-        console.log("FastAPI response structure:", Object.keys(imageData));
-        console.log("FastAPI response sample:", JSON.stringify(imageData).substring(0, 200) + "...");
+        // The response can be in two formats:
+        // 1. {"0": ["base64"], "1": ["base64"], ...} - page numbers as keys
+        // 2. {"images": ["base64", "base64", ...]} - all images in one array
+        const responseData = await convertResponse.json();
+        console.log("FastAPI response structure:", Object.keys(responseData));
+        console.log("FastAPI response sample:", JSON.stringify(responseData).substring(0, 200) + "...");
         
-        const pageNumbers = Object.keys(imageData).map(Number).sort((a, b) => a - b);
-        pageCount = pageNumbers.length;
+        let pageImages: Id<"_storage">[] = [];
         
-        console.log(`Received ${pageCount} pages from FastAPI`);
-        console.log("Page numbers:", pageNumbers);
-        
-        // Sort the keys to ensure pages are in order
-        const sortedPageKeys = Object.keys(imageData).sort((a, b) => parseInt(a) - parseInt(b));
-        
-        // Upload each page image to Convex storage
-        for (const pageKey of sortedPageKeys) {
-          const base64Images = imageData[pageKey];
-          console.log(`Processing page key: ${pageKey}, base64Images:`, base64Images ? base64Images.length : 'undefined');
-          if (!base64Images || base64Images.length === 0) {
-            console.log(`Skipping page ${pageKey} - no images found`);
-            continue;
+        // Check if response has "images" key (new format)
+        if (responseData.images && Array.isArray(responseData.images)) {
+          const base64Images = responseData.images;
+          pageCount = base64Images.length;
+          console.log(`Received ${pageCount} pages from FastAPI (images array format)`);
+          
+          // Upload each page image to Convex storage
+          for (let pageNum = 0; pageNum < base64Images.length; pageNum++) {
+            const base64Image = base64Images[pageNum];
+            console.log(`Uploading page ${pageNum + 1} image...`);
+            console.log(`Base64 image length: ${base64Image.length} characters`);
+            
+            // Convert base64 to buffer
+            const imageBuffer = Buffer.from(base64Image, 'base64');
+            console.log(`Page ${pageNum + 1} image size: ${imageBuffer.length} bytes`);
+            
+            // Get a new upload URL for each image
+            const imageUploadUrl = await convex.mutation(api.documents.generateUploadUrl, {});
+            console.log(`Got upload URL for page ${pageNum + 1}`);
+            
+            // Upload the image
+            const imageUploadResponse = await fetch(imageUploadUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "image/png",
+              },
+              body: imageBuffer,
+            });
+            
+            if (!imageUploadResponse.ok) {
+              const errorText = await imageUploadResponse.text();
+              throw new Error(`Failed to upload page ${pageNum + 1} image: ${imageUploadResponse.status} ${errorText}`);
+            }
+            
+            const imageResult = await imageUploadResponse.json();
+            console.log(`Page ${pageNum + 1} uploaded, storage ID:`, imageResult.storageId);
+            pageImages.push(imageResult.storageId as Id<"_storage">);
+            console.log(`Page images array after push:`, pageImages);
           }
+        } else {
+          // Old format with page numbers as keys
+          const imageData = responseData as Record<string, string[]>;
+          const pageNumbers = Object.keys(imageData).map(Number).sort((a, b) => a - b);
+          pageCount = pageNumbers.length;
           
-          // Use the first image (there should only be one per page)
-          const base64Image = base64Images[0];
-          const pageNum = parseInt(pageKey);
-          console.log(`Uploading page ${pageNum + 1} image...`);
-          console.log(`Base64 image length: ${base64Image.length} characters`);
+          console.log(`Received ${pageCount} pages from FastAPI (page number keys format)`);
+          console.log("Page numbers:", pageNumbers);
           
-          // Convert base64 to buffer
-          const imageBuffer = Buffer.from(base64Image, 'base64');
-          console.log(`Page ${pageNum + 1} image size: ${imageBuffer.length} bytes`);
+          // Sort the keys to ensure pages are in order
+          const sortedPageKeys = Object.keys(imageData).sort((a, b) => parseInt(a) - parseInt(b));
           
-          // Get a new upload URL for each image
-          const imageUploadUrl = await convex.mutation(api.documents.generateUploadUrl, {});
-          console.log(`Got upload URL for page ${pageNum + 1}`);
-          
-          // Upload the image
-          const imageUploadResponse = await fetch(imageUploadUrl, {
-            method: "POST",
-            headers: {
-              "Content-Type": "image/png",
-            },
-            body: imageBuffer,
-          });
-          
-          if (!imageUploadResponse.ok) {
-            const errorText = await imageUploadResponse.text();
-            throw new Error(`Failed to upload page ${pageNum + 1} image: ${imageUploadResponse.status} ${errorText}`);
+          // Upload each page image to Convex storage
+          for (const pageKey of sortedPageKeys) {
+            const base64ImagesArray = imageData[pageKey];
+            console.log(`Processing page key: ${pageKey}, base64Images:`, base64ImagesArray ? base64ImagesArray.length : 'undefined');
+            if (!base64ImagesArray || base64ImagesArray.length === 0) {
+              console.log(`Skipping page ${pageKey} - no images found`);
+              continue;
+            }
+            
+            // Use the first image (there should only be one per page)
+            const base64Image = base64ImagesArray[0];
+            const pageNum = parseInt(pageKey);
+            console.log(`Uploading page ${pageNum + 1} image...`);
+            console.log(`Base64 image length: ${base64Image.length} characters`);
+            
+            // Convert base64 to buffer
+            const imageBuffer = Buffer.from(base64Image, 'base64');
+            console.log(`Page ${pageNum + 1} image size: ${imageBuffer.length} bytes`);
+            
+            // Get a new upload URL for each image
+            const imageUploadUrl = await convex.mutation(api.documents.generateUploadUrl, {});
+            console.log(`Got upload URL for page ${pageNum + 1}`);
+            
+            // Upload the image
+            const imageUploadResponse = await fetch(imageUploadUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "image/png",
+              },
+              body: imageBuffer,
+            });
+            
+            if (!imageUploadResponse.ok) {
+              const errorText = await imageUploadResponse.text();
+              throw new Error(`Failed to upload page ${pageNum + 1} image: ${imageUploadResponse.status} ${errorText}`);
+            }
+            
+            const imageResult = await imageUploadResponse.json();
+            console.log(`Page ${pageNum + 1} uploaded, storage ID:`, imageResult.storageId);
+            pageImages.push(imageResult.storageId as Id<"_storage">);
+            console.log(`Page images array after push:`, pageImages);
           }
-          
-          const imageResult = await imageUploadResponse.json();
-          console.log(`Page ${pageNum + 1} uploaded, storage ID:`, imageResult.storageId);
-          pageImages.push(imageResult.storageId as Id<"_storage">);
-          console.log(`Page images array after push:`, pageImages);
         }
         
         console.log("All page images uploaded successfully");

@@ -248,7 +248,7 @@ export function useDocumentProcessor(): UseDocumentProcessorReturn {
             markdown: result.markdown || '',
             chunks: result.chunks || [],
             errors: result.errors || [],
-            num_pages: result.num_pages || 0,
+            num_pages: result.pageCount || 0,
           },
           basename,
         );
