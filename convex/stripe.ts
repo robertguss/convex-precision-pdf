@@ -67,8 +67,8 @@ export const createCheckoutSession = action({
           },
         ],
         mode: "subscription",
-        success_url: `${process.env.SITE_URL || "http://localhost:5173"}?success=true`,
-        cancel_url: `${process.env.SITE_URL || "http://localhost:5173"}?canceled=true`,
+        success_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard?success=true`,
+        cancel_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard/upgrade?canceled=true`,
         metadata: {
           convexUserId: userId,
           planId: args.planId,
@@ -110,7 +110,7 @@ export const createPortalSession = action({
     try {
       const session = await stripe.billingPortal.sessions.create({
         customer: subscription.stripeCustomerId,
-        return_url: process.env.SITE_URL || "http://localhost:5173",
+        return_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard`,
       });
 
       return {

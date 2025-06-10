@@ -36,7 +36,7 @@ http.route({
 });
 
 http.route({
-  path: "/stripe-webhook",
+  path: "/stripe/webhook",
   method: "POST",
   handler: httpAction(async (ctx, request) => {
     const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
