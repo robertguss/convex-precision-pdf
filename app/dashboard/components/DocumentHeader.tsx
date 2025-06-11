@@ -56,43 +56,54 @@ export const DocumentHeader: React.FC<DocumentHeaderProps> = ({
         <div className="flex items-center">
           <Button
             onClick={onBack}
-            variant="ghost"
-            size="sm"
-            className="mr-4"
+            variant="outline"
+            size="default"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back
           </Button>
           {documentTitle && (
             <>
-              <Separator orientation="vertical" className="mr-4 h-6" />
+              <Separator orientation="vertical" className="mx-4 h-6" />
               <h1 className="text-lg font-medium text-gray-900">{documentTitle}</h1>
             </>
           )}
         </div>
 
         {/* Right side - Export controls */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           {/* Export format selector */}
-          <Select
-            value={exportFormat}
-            onValueChange={(value) => onExportFormatChange(value as ExportFormat)}
-          >
-            <SelectTrigger className="h-9 w-[180px]" data-tour="export-button">
-              <SelectValue placeholder="Export format" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Export Formats</SelectLabel>
-                <SelectItem value="markdown">Markdown</SelectItem>
-                <SelectItem value="json">JSON</SelectItem>
-                <SelectItem value="text">Plain Text</SelectItem>
-                <SelectItem value="docx">Word (.docx)</SelectItem>
-                <SelectItem value="csv">CSV</SelectItem>
-                <SelectItem value="xlsx">Excel (.xlsx)</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+          <div className="flex items-center gap-2">
+            {!exportFormat && (
+              <span className="text-sm font-medium text-gray-500">Step 1:</span>
+            )}
+            <Select
+              value={exportFormat}
+              onValueChange={(value) => onExportFormatChange(value as ExportFormat)}
+            >
+              <SelectTrigger 
+                className={`h-10 w-[200px] font-medium transition-all ${
+                  exportFormat 
+                    ? "border-blue-500 bg-blue-50 text-blue-900 hover:bg-blue-100 shadow-sm" 
+                    : "border-gray-400 bg-gradient-to-r from-gray-50 to-white text-gray-800 hover:from-gray-100 hover:to-gray-50 hover:border-gray-500 shadow"
+                }`} 
+                data-tour="export-button"
+              >
+                <SelectValue placeholder="Choose export format" className="text-sm" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel className="font-semibold text-gray-700">Export Formats</SelectLabel>
+                  <SelectItem value="markdown">Markdown (.md)</SelectItem>
+                  <SelectItem value="json">JSON (.json)</SelectItem>
+                  <SelectItem value="text">Plain Text (.txt)</SelectItem>
+                  <SelectItem value="docx">Word Document (.docx)</SelectItem>
+                  <SelectItem value="csv">CSV (.csv)</SelectItem>
+                  <SelectItem value="xlsx">Excel Spreadsheet (.xlsx)</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
 
           {/* Download All button */}
           <TooltipProvider>
@@ -102,8 +113,13 @@ export const DocumentHeader: React.FC<DocumentHeaderProps> = ({
                   onClick={onDownloadAll}
                   disabled={!hasMarkdown || !exportFormat}
                   variant="outline"
-                  size="sm"
+                  size="default"
                   data-tour="download-all"
+                  className={
+                    hasMarkdown && exportFormat 
+                      ? "border-gray-300 bg-white hover:bg-gray-100 hover:border-gray-400" 
+                      : ""
+                  }
                 >
                   <FileDown className="mr-2 h-4 w-4" />
                   Download All
@@ -127,13 +143,14 @@ export const DocumentHeader: React.FC<DocumentHeaderProps> = ({
                   <Button
                     onClick={onDownloadSelection}
                     disabled={!hasSelection || !exportFormat}
-                    variant={hasSelection ? "default" : "outline"}
-                    size="sm"
+                    variant={hasSelection && exportFormat ? "default" : "outline"}
+                    size="default"
+                    className={hasSelection && exportFormat ? "" : "border-gray-300"}
                   >
                     <Download className="mr-2 h-4 w-4" />
                     Download Selection
                     {hasSelection && (
-                      <span className="ml-2 rounded-full bg-primary-foreground/20 px-2 py-0.5 text-xs">
+                      <span className="ml-2 rounded-full bg-white/20 px-2 py-0.5 text-xs font-medium">
                         {selectionCount}
                       </span>
                     )}
@@ -155,8 +172,13 @@ export const DocumentHeader: React.FC<DocumentHeaderProps> = ({
             <Button
               onClick={onClearSelection}
               disabled={!hasSelection}
-              variant="ghost"
-              size="sm"
+              variant="outline"
+              size="default"
+              className={
+                hasSelection 
+                  ? "border-gray-300 bg-white hover:bg-gray-100 hover:border-gray-400" 
+                  : ""
+              }
             >
               <Trash2 className="mr-2 h-4 w-4" />
               Clear
