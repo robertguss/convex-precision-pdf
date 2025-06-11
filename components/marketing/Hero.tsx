@@ -19,9 +19,8 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        AI-powered document processing that shows you exactly where every piece
-        of data comes from. Handle invoices, medical records, bank statements,
-        and complex forms with confidence.
+        What used to take hours by hand now takes seconds with our AI. Turn
+        complex PDFs into clean, structured data you can actually use.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="/demo">Try Interactive Demo</Button>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Precision PDF - AI-Powered PDF Data Extraction",
     default: "Precision PDF - Extract Data from PDFs with AI & Visual Verification",
   },
-  description: "AI-powered PDF data extraction tool that shows you exactly where every piece of data comes from. Handle invoices, medical records, bank statements, and complex forms with confidence. Real-time processing with visual proof.",
+  description: "What used to take hours by hand now takes seconds with our AI. Turn complex PDFs into clean, structured data you can actually use. Extract data from PDFs with visual proof - every extraction shows exactly where it came from.",
   keywords: [
     "PDF data extraction",
     "AI document processing",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Precision PDF - Extract Data from PDFs with AI & Visual Verification",
-    description: "AI-powered document processing that shows you exactly where every piece of data comes from. Handle invoices, medical records, bank statements, and complex forms with confidence.",
+    description: "What used to take hours by hand now takes seconds with our AI. Turn complex PDFs into clean, structured data you can actually use.",
     url: "https://precisionpdf.com",
     siteName: "Precision PDF",
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Precision PDF - AI-Powered PDF Data Extraction",
-    description: "Extract data from PDFs with surgical precision. AI-powered processing with visual proof for every extraction.",
+    description: "What used to take hours by hand now takes seconds with our AI. Turn complex PDFs into clean, structured data you can actually use.",
     images: ["https://precisionpdf.com/twitter-image.png"],
     creator: "@precisionpdf",
   },
