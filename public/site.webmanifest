@@ -1,0 +1,27 @@
+{
+  "name": "Precision PDF - AI-Powered PDF Data Extraction",
+  "short_name": "Precision PDF",
+  "description": "Extract data from PDFs with surgical precision. AI-powered document processing with visual proof.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

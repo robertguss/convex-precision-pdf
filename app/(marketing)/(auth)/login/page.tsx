@@ -8,6 +8,14 @@ import { SlimLayout } from "@/components/marketing/SlimLayout";
 
 export const metadata: Metadata = {
   title: "Sign In",
+  description: "Sign in to your Precision PDF account to access your documents and continue extracting data from PDFs with AI-powered precision.",
+  alternates: {
+    canonical: "https://precisionpdf.com/login",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Login() {

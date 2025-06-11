@@ -1,6 +1,27 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { AppLogo } from "@/components/app-logo";
+
+export const metadata: Metadata = {
+  title: "Interactive Demo",
+  description: "Try Precision PDF with real examples. Experience AI-powered PDF data extraction with invoices, medical records, bank statements, and more. No signup required.",
+  alternates: {
+    canonical: "https://precisionpdf.com/demo",
+  },
+  openGraph: {
+    title: "Try Precision PDF Demo - Extract Data from Real PDFs",
+    description: "Experience AI-powered PDF data extraction with real examples. See how Precision PDF handles invoices, medical records, and complex documents.",
+    images: [
+      {
+        url: "https://precisionpdf.com/demo-og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Precision PDF Interactive Demo",
+      },
+    ],
+  },
+};
 
 function DemoModeBadge() {
   return (

@@ -8,6 +8,14 @@ import { SlimLayout } from "@/components/marketing/SlimLayout";
 
 export const metadata: Metadata = {
   title: "Sign Up",
+  description: "Create your free Precision PDF account. Start extracting data from PDFs with AI-powered precision. No credit card required for trial.",
+  alternates: {
+    canonical: "https://precisionpdf.com/register",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Register() {

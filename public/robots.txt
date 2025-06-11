@@ -1,0 +1,26 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://precisionpdf.com/sitemap.xml
+
+# Crawl-delay for bots that support it
+Crawl-delay: 1
+
+# Disallow access to internal paths
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow search engines to access public assets
+Allow: /images/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
