@@ -59,4 +59,4 @@ export interface DocData {
   num_pages: number;
 }
 
-export type ExportFormat = '' | 'markdown' | 'json' | 'csv' | 'xlsx';
+export type ExportFormat = '' | 'markdown' | 'json' | 'csv' | 'xlsx' | 'text' | 'docx';

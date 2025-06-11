@@ -15,7 +15,8 @@ import ParsedContent from './ParsedContent';
 import { useChunkSelection } from './hooks/useChunkSelection';
 import { DocData, ExportFormat } from './types';
 import { calculateNumberOfPages } from './utils/documentUtils';
-import { downloadFile, exportChunks } from './utils/exportUtils';
+import { exportChunks } from './utils/exportUtils';
+import { useDownload } from './hooks/useDownload';
 
 // Configuration for the backend API
 // API_BASE_URL is still needed for DocumentViewer component to load images
@@ -60,6 +61,8 @@ export function DocumentViewerWrapper({
     handleChunkClick,
     clearSelection,
   } = useChunkSelection();
+  
+  const { download } = useDownload();
 
   // Initialize docData from document
   useEffect(() => {
@@ -139,37 +142,109 @@ export function DocumentViewerWrapper({
 
   const handleDownloadAll = async () => {
     if (!docData || !docData.markdown) return;
+    
+    // Use markdown as default if no format is selected
+    const format = exportFormat || 'markdown';
 
     const filename = document?.title || 'document';
     const basename =
       filename.substring(0, filename.lastIndexOf('.')) || filename;
 
     try {
-      const response = await fetch(`/api/export/all-markdown`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ markdown: docData.markdown }),
-      });
+      let response: Response;
+      let content: string | Blob;
+      let mimeType: string;
+      let fileExtension: string;
+
+      switch (format) {
+        case 'json':
+          response = await fetch(`/api/export/all-json`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ markdown: docData.markdown }),
+          });
+          const jsonData = await response.json();
+          content = JSON.stringify(jsonData, null, 2);
+          mimeType = 'application/json';
+          fileExtension = 'json';
+          break;
+
+        case 'text':
+          response = await fetch(`/api/export/all-text`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ markdown: docData.markdown }),
+          });
+          content = await response.text();
+          mimeType = 'text/plain';
+          fileExtension = 'txt';
+          break;
+
+        case 'docx':
+          response = await fetch(`/api/export/all-docx`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ markdown: docData.markdown }),
+          });
+          content = await response.blob();
+          mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+          fileExtension = 'docx';
+          break;
+
+        case 'csv':
+          // For CSV, we need to send chunks instead of markdown
+          response = await fetch(`/api/export/csv`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chunks: docData.chunks }),
+          });
+          content = await response.text();
+          mimeType = 'text/csv';
+          fileExtension = 'csv';
+          break;
+
+        case 'xlsx':
+          // For XLSX, we need to send the appropriate data structure
+          response = await fetch(`/api/export/all-xlsx`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ data: docData }),
+          });
+          content = await response.blob();
+          mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+          fileExtension = 'xlsx';
+          break;
+
+        case 'markdown':
+        default:
+          response = await fetch(`/api/export/all-markdown`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ markdown: docData.markdown }),
+          });
+          content = await response.text();
+          mimeType = 'text/markdown';
+          fileExtension = 'md';
+          break;
+      }
 
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(
-          `Markdown export failed: ${response.status} ${response.statusText} - ${errorText}`,
+          `Export failed: ${response.status} ${response.statusText} - ${errorText}`,
         );
       }
 
-      const processedMarkdown = await response.text();
-      downloadFile(
-        processedMarkdown,
-        'text/markdown',
-        `${basename}_complete.md`,
-      );
+      // Download the file using the hook
+      download({
+        filename: `${basename}_complete.${fileExtension}`,
+        content: content,
+        mimeType: mimeType,
+      });
     } catch (err) {
-      console.error('Failed to export all markdown:', err);
+      console.error('Failed to export:', err);
       alert(
-        `Error exporting markdown: ${err instanceof Error ? err.message : 'Unknown error'}`,
+        `Error exporting to ${format}: ${err instanceof Error ? err.message : 'Unknown error'}`,
       );
     }
   };
@@ -202,6 +277,8 @@ export function DocumentViewerWrapper({
         hasSelection={multiSelectedChunkIds.length > 0}
         onDownloadAll={handleDownloadAll}
         hasMarkdown={!!docData.markdown}
+        documentTitle={document?.title}
+        selectionCount={multiSelectedChunkIds.length}
       />
 
       <Allotment defaultSizes={[700, 300]} className="flex-grow" data-tour="resizable-divider">

@@ -17,10 +17,16 @@ export async function exportChunks(
 
   switch (format) {
     case 'json':
-      exportAsJson(chunks, documentBasename);
+      await exportAsJson(chunks, documentBasename);
       break;
     case 'markdown':
       await exportAsMarkdown(chunks, documentBasename);
+      break;
+    case 'text':
+      await exportAsText(chunks, documentBasename);
+      break;
+    case 'docx':
+      await exportAsDocx(chunks, documentBasename);
       break;
     case 'csv':
       await exportAsCsv(chunks, documentBasename);
@@ -34,13 +40,36 @@ export async function exportChunks(
   }
 }
 
-function exportAsJson(chunks: Chunk[], documentBasename: string) {
-  const jsonString = JSON.stringify(chunks, null, 2);
-  downloadFile(
-    jsonString,
-    'application/json',
-    `${documentBasename}_selection.json`,
-  );
+async function exportAsJson(chunks: Chunk[], documentBasename: string) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/export/json`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ chunks }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(
+        `JSON export failed: ${response.status} ${response.statusText} - ${errorText}`,
+      );
+    }
+
+    const jsonData = await response.json();
+    const jsonString = JSON.stringify(jsonData, null, 2);
+    downloadFile(
+      jsonString,
+      'application/json',
+      `${documentBasename}_selection.json`,
+    );
+  } catch (err) {
+    console.error('Failed to export JSON:', err);
+    alert(
+      `Error exporting to JSON: ${err instanceof Error ? err.message : 'Unknown error'}`,
+    );
+  }
 }
 
 async function exportAsMarkdown(chunks: Chunk[], documentBasename: string) {
@@ -128,6 +157,64 @@ async function exportAsXlsx(chunks: Chunk[], documentBasename: string) {
   }
 }
 
+async function exportAsText(chunks: Chunk[], documentBasename: string) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/export/text`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ chunks }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(
+        `Text export failed: ${response.status} ${response.statusText} - ${errorText}`,
+      );
+    }
+
+    const textString = await response.text();
+    downloadFile(
+      textString,
+      'text/plain',
+      `${documentBasename}_selection.txt`,
+    );
+  } catch (err) {
+    console.error('Failed to export Text:', err);
+    alert(
+      `Error exporting to Text: ${err instanceof Error ? err.message : 'Unknown error'}`,
+    );
+  }
+}
+
+async function exportAsDocx(chunks: Chunk[], documentBasename: string) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/export/docx`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ chunks }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(
+        `DOCX export failed: ${response.status} ${response.statusText} - ${errorText}`,
+      );
+    }
+
+    const blob = await response.blob();
+    downloadBlob(blob, `${documentBasename}_selection.docx`);
+  } catch (err) {
+    console.error('Failed to export DOCX:', err);
+    alert(
+      `Error exporting to DOCX: ${err instanceof Error ? err.message : 'Unknown error'}`,
+    );
+  }
+}
+
 export function downloadFile(
   content: string,
   mimeType: string,
@@ -137,13 +224,22 @@ export function downloadFile(
   downloadBlob(blob, filename);
 }
 
-function downloadBlob(blob: Blob, filename: string) {
+export function downloadBlob(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  
+  // Create a temporary anchor element and trigger download
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.style.display = 'none';
+  
+  // Use a timeout to ensure the link is processed
+  document.body.appendChild(link);
+  link.click();
+  
+  // Clean up
+  setTimeout(() => {
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }, 100);
 }
