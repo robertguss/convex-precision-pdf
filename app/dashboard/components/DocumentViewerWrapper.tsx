@@ -15,7 +15,8 @@ import ParsedContent from './ParsedContent';
 import { useChunkSelection } from './hooks/useChunkSelection';
 import { DocData, ExportFormat } from './types';
 import { calculateNumberOfPages } from './utils/documentUtils';
-import { downloadFile, exportChunks } from './utils/exportUtils';
+import { exportChunks } from './utils/exportUtils';
+import { useDownload } from './hooks/useDownload';
 
 // Configuration for the backend API
 // API_BASE_URL is still needed for DocumentViewer component to load images
@@ -60,6 +61,8 @@ export function DocumentViewerWrapper({
     handleChunkClick,
     clearSelection,
   } = useChunkSelection();
+  
+  const { download } = useDownload();
 
   // Initialize docData from document
   useEffect(() => {
@@ -232,23 +235,12 @@ export function DocumentViewerWrapper({
         );
       }
 
-      // Download the file
-      if (content instanceof Blob) {
-        const url = URL.createObjectURL(content);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `${basename}_complete.${fileExtension}`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      } else {
-        downloadFile(
-          content,
-          mimeType,
-          `${basename}_complete.${fileExtension}`,
-        );
-      }
+      // Download the file using the hook
+      download({
+        filename: `${basename}_complete.${fileExtension}`,
+        content: content,
+        mimeType: mimeType,
+      });
     } catch (err) {
       console.error('Failed to export:', err);
       alert(
