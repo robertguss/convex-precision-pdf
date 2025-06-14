@@ -1,12 +1,22 @@
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
-import { afterEach, vi } from 'vitest'
+import { afterEach, afterAll, beforeAll, vi } from 'vitest'
+import { server } from './mocks/server'
 
 /**
- * Cleanup after each test
+ * MSW server setup for mocking external APIs
  */
+beforeAll(() => {
+  server.listen({ onUnhandledRequest: 'warn' })
+})
+
 afterEach(() => {
   cleanup()
+  server.resetHandlers()
+})
+
+afterAll(() => {
+  server.close()
 })
 
 /**
