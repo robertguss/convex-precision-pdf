@@ -4,20 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
+### Installing Dependencies
+
+- You must always use `pnpm` to install dependencies.
+- You must install all dependencies with their @latest version.
+
 ### Running the Application
 
 ```bash
-npm run dev        # Runs both Next.js frontend and Convex backend in parallel
-npm run dev:frontend  # Next.js development server only (port 3000)
-npm run dev:backend   # Convex development server only
+pnpm run dev        # Runs both Next.js frontend and Convex backend in parallel
+pnpm run dev:frontend  # Next.js development server only (port 3000)
+pnpm run dev:backend   # Convex development server only
 ```
 
 ### Building and Production
 
 ```bash
-npm run build      # Production build
-npm run start      # Start production server
-npm run lint       # Run ESLint
+pnpm run build      # Production build
+pnpm run start      # Start production server
+pnpm run lint       # Run ESLint
 ```
 
 ### Convex-Specific Commands
