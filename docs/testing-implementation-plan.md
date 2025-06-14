@@ -66,7 +66,7 @@ Status: Complete
 
 #### 5. ROB-110: Create Mock Data Generators
 
-Status: In Progress
+Status: Complete
 
 - **Priority**: P0
 - **Dependencies**: ROB-83
@@ -83,7 +83,7 @@ Focus on critical payment and subscription logic to address existing bugs:
 
 #### 6. ROB-111: Unit Tests: Subscription & Payment Logic 🔴 HIGHEST PRIORITY
 
-Status: Not Started
+Status: In Progress
 
 - **Priority**: P0 - Critical for bug fixes
 - **Dependencies**: ROB-83, 107, 108, 110
