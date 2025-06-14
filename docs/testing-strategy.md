@@ -55,6 +55,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 ### A. Subscription & Payment System (HIGHEST PRIORITY)
 
 #### Unit Tests
+
 - Subscription state calculations
 - Page limit enforcement logic
 - Billing cycle calculations
@@ -63,6 +64,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Usage tracking logic
 
 #### Integration Tests
+
 - Stripe webhook handlers
 - Subscription creation/update flows
 - Payment method management
@@ -71,6 +73,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Clerk user to Stripe customer mapping
 
 #### E2E Tests
+
 - Complete upgrade flow from free to paid plans
 - Payment failure scenarios and recovery
 - Plan switching with prorated billing
@@ -81,6 +84,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 ### B. Document Export System
 
 #### Unit Tests
+
 - Format conversion utilities (JSON, Markdown, Text, DOCX, XLSX, CSV)
 - Data transformation logic
 - File generation functions
@@ -88,6 +92,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Metadata preservation
 
 #### Integration Tests
+
 - Export API endpoints
 - Batch export functionality
 - File download handling
@@ -95,6 +100,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Large document export handling
 
 #### E2E Tests
+
 - Export all formats with verification
 - Bulk document export
 - Export with authentication
@@ -104,6 +110,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 ### C. Document Processing Pipeline
 
 #### Unit Tests
+
 - File validation logic (size, type)
 - Processing state management
 - Error handling utilities
@@ -111,6 +118,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Progress calculation
 
 #### Integration Tests
+
 - Upload to processing flow
 - Convex real-time updates
 - Status tracking
@@ -118,6 +126,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Error recovery mechanisms
 
 #### E2E Tests
+
 - Complete upload workflow
 - Large file handling (up to 250MB)
 - Error recovery flows
@@ -171,6 +180,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 **Overall Target: 80% Coverage**
 
 #### Priority Coverage Areas
+
 - Subscription logic: 95%+ (critical business logic)
 - Payment processing: 95%+
 - Export functions: 90%+
@@ -180,6 +190,7 @@ This document outlines the comprehensive testing strategy for the convex-precisi
 - Convex functions: 85%+
 
 #### Coverage Exclusions
+
 - `/convex/_generated/*` (auto-generated code)
 - `*.config.ts` files
 - Type definition files (`.d.ts`)
@@ -204,7 +215,7 @@ describe('DocumentViewer', () => {
   beforeEach(() => {
     // Mock Clerk authentication
     mockClerkAuth({ userId: 'test-user' });
-    
+
     // Mock Convex hooks
     vi.mock('@convex/react', () => ({
       useQuery: vi.fn(),
@@ -228,7 +239,7 @@ describe('DocumentViewer', () => {
 describe('documents.create', () => {
   it('should create document with proper authentication', async () => {
     const t = convexTest(schema);
-    
+
     // Mock authentication context
     await t.withIdentity({ subject: 'user123' }).run(async (ctx) => {
       // Test function execution
@@ -248,7 +259,7 @@ describe('Subscription Upgrade Flow', () => {
   beforeEach(() => {
     // Use test user accounts
     cy.login('free-tier-user@test.com');
-    
+
     // Reset test data
     cy.task('resetDatabase');
   });
