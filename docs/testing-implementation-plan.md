@@ -97,7 +97,7 @@ Status: Complete
 
 #### 7. ROB-92: Unit Tests: Export Format Utilities
 
-Status: In Progress
+Status: Complete
 
 - **Priority**: P1
 - **Dependencies**: ROB-83, 108, 110
@@ -110,7 +110,7 @@ Status: In Progress
 
 #### 8. ROB-93: Unit Tests: Document Processing Logic
 
-Status: Not Started
+Status: In Progress
 
 - **Priority**: P1
 - **Dependencies**: ROB-83, 107, 108, 110
