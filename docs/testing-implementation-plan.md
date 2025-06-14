@@ -62,13 +62,11 @@ Status: Not Started
 Status: Not Started
 
 - **Priority**: P0
-- **Dependencies**: ROB-83
 - **Description**: Must complete before any E2E tests
 - **Key Tasks**:
   - Install Cypress with TypeScript support
   - Configure custom commands
   - Setup test data management
-  - CI/CD integration
 
 ### Phase 6: E2E Tests - Payment Priority (Week 4)
 
@@ -77,7 +75,6 @@ Status: Not Started
 Status: Not Started
 
 - **Priority**: P0
-- **Dependencies**: ROB-104, ROB-111, ROB-88, ROB-89, ROB-90
 - **Description**: Full payment flows with real Stripe test mode
 - **Key Scenarios**:
   - Free → Pro → Business upgrades
@@ -90,7 +87,6 @@ Status: Not Started
 Status: Not Started
 
 - **Priority**: P1
-- **Dependencies**: ROB-104
 - **Description**: Basic authentication flows
 - **Key Tests**:
   - Sign up with email verification
@@ -102,7 +98,6 @@ Status: Not Started
 Status: Not Started
 
 - **Priority**: P1
-- **Dependencies**: ROB-104, ROB-105
 - **Description**: Advanced auth including permissions
 - **Key Tests**:
   - Role-based access
@@ -114,7 +109,6 @@ Status: Not Started
 Status: Not Started
 
 - **Priority**: P2
-- **Dependencies**: ROB-104
 - **Description**: Complete document processing flow
 - **Key Tests**:
   - Upload → Processing → Completion
@@ -126,7 +120,6 @@ Status: Not Started
 Status: Not Started
 
 - **Priority**: P2
-- **Dependencies**: ROB-104
 - **Description**: All export formats with download verification
 - **Key Tests**:
   - All format exports
