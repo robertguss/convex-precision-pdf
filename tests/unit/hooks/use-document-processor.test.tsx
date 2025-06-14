@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { renderHook, act, waitFor } from '@testing-library/react';
 import { useDocumentProcessor } from '@/app/dashboard/components/hooks/useDocumentProcessor';
-import { renderWithProviders } from '@/tests/utils';
 
 /**
  * Unit tests for useDocumentProcessor hook
@@ -17,9 +16,13 @@ describe('useDocumentProcessor Hook', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     mockFetch.mockReset();
+    // Use fake timers to handle polling
+    vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
+    vi.clearAllTimers();
+    vi.useRealTimers();
     vi.restoreAllMocks();
   });
 
@@ -52,9 +55,13 @@ describe('useDocumentProcessor Hook', () => {
 
       const { result } = renderHook(() => useDocumentProcessor());
 
-      await act(async () => {
+      // Start the upload
+      const uploadPromise = act(async () => {
         await result.current.handleFileUpload(mockFile);
       });
+
+      // Wait for the upload to complete
+      await uploadPromise;
 
       expect(mockFetch).toHaveBeenCalledWith('/api/upload-document-progressive', {
         method: 'POST',
@@ -71,6 +78,11 @@ describe('useDocumentProcessor Hook', () => {
       });
       expect(result.current.isExtractingContent).toBe(true);
       expect(result.current.error).toBeNull();
+
+      // Clean up polling to prevent test timeout
+      act(() => {
+        result.current.resetDocument();
+      });
     });
 
     it('should handle file upload errors', async () => {
@@ -135,9 +147,7 @@ describe('useDocumentProcessor Hook', () => {
           })
         });
 
-        const { result } = renderHook(() => useDocumentProcessor(), {
-          wrapper: TestWrapper
-        });
+        const { result } = renderHook(() => useDocumentProcessor());
 
         await act(async () => {
           await result.current.handleFileUpload(mockFile);
@@ -234,10 +244,11 @@ describe('useDocumentProcessor Hook', () => {
 
   describe('Content Extraction Polling', () => {
     beforeEach(() => {
-      vi.useFakeTimers();
+      vi.useFakeTimers({ shouldAdvanceTime: true });
     });
 
     afterEach(() => {
+      vi.clearAllTimers();
       vi.useRealTimers();
     });
 
