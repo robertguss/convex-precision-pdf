@@ -83,7 +83,7 @@ Focus on critical payment and subscription logic to address existing bugs:
 
 #### 6. ROB-111: Unit Tests: Subscription & Payment Logic 🔴 HIGHEST PRIORITY
 
-Status: In Progress
+Status: Complete
 
 - **Priority**: P0 - Critical for bug fixes
 - **Dependencies**: ROB-83, 107, 108, 110
@@ -97,7 +97,7 @@ Status: In Progress
 
 #### 7. ROB-92: Unit Tests: Export Format Utilities
 
-Status: Not Started
+Status: In Progress
 
 - **Priority**: P1
 - **Dependencies**: ROB-83, 108, 110
