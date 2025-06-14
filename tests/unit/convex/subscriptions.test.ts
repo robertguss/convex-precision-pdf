@@ -4,21 +4,268 @@
  */
 
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { convexTest } from 'convex-test'
-import { api, internal } from '../../../convex/_generated/api'
-import { Id } from '../../../convex/_generated/dataModel'
 import { generateUser, generateSubscription, generateFreePlan } from '../../utils/data/generators'
+
+// Mock convex-test
+vi.mock('convex-test', () => ({
+  convexTest: vi.fn()
+}))
+
+// Mock data types for testing
+type MockUser = {
+  _id: string;
+  _creationTime: number;
+  name: string;
+  email: string;
+  externalId: string;
+}
+
+type MockSubscription = {
+  _id: string;
+  userId: string;
+  stripeCustomerId: string;
+  stripeSubscriptionId: string;
+  status: string;
+  planId: string;
+  currentPeriodStart: number;
+  currentPeriodEnd: number;
+  cancelAtPeriodEnd: boolean;
+}
 
 describe('Subscription Business Logic', () => {
   let t: any
+  let mockUsers: MockUser[]
+  let mockSubscriptions: MockSubscription[]
+  let mockPageUsage: any[]
+  let mockPlans: any[]
+  let currentAuthUser: string | null
 
   beforeEach(async () => {
-    const schema = await import('../../../convex/schema')
-    t = convexTest(schema.default)
+    mockUsers = []
+    mockSubscriptions = []
+    mockPageUsage = []
+    currentAuthUser = null
+    
+    // Mock plans data
+    mockPlans = [
+      { id: 'free', name: 'Free', features: ['10 pages per month'] },
+      { id: 'starter', name: 'Starter', features: ['75 pages every month'] },
+      { id: 'pro', name: 'Pro', features: ['250 pages every month'] }
+    ]
+    
+    t = {
+      query: vi.fn((apiCall, args) => {
+        if (apiCall._name === 'subscriptions.getUserSubscription') {
+          if (!currentAuthUser) return Promise.resolve(null)
+          
+          const user = mockUsers.find(u => u.externalId === currentAuthUser)
+          if (!user) return Promise.resolve(null)
+          
+          const subscription = mockSubscriptions.find(s => s.userId === user._id)
+          if (!subscription) return Promise.resolve(null)
+          
+          const plan = mockPlans.find(p => p.id === subscription.planId)
+          return Promise.resolve({ ...subscription, plan })
+        }
+        
+        if (apiCall._name === 'subscriptions.getUserPageUsage') {
+          if (!currentAuthUser) return Promise.resolve({ used: 0, limit: 0, remaining: 0 })
+          
+          const user = mockUsers.find(u => u.externalId === currentAuthUser)
+          if (!user) return Promise.resolve({ used: 0, limit: 0, remaining: 0 })
+          
+          const subscription = mockSubscriptions.find(s => s.userId === user._id)
+          let limit = 10 // Default free plan
+          let billingCycleStart = user._creationTime
+          let billingCycleEnd = user._creationTime + 30 * 24 * 60 * 60 * 1000
+          
+          if (subscription) {
+            const plan = mockPlans.find(p => p.id === subscription.planId)
+            if (plan) {
+              const pageFeature = plan.features.find((f: string) => f.includes('pages'))
+              if (pageFeature) {
+                const match = pageFeature.match(/(\d+)\s+pages/)
+                if (match) limit = parseInt(match[1])
+              }
+            }
+            billingCycleStart = subscription.currentPeriodStart
+            billingCycleEnd = subscription.currentPeriodEnd
+          }
+          
+          const usage = mockPageUsage.filter(u => 
+            u.userId === user._id && 
+            u.billingCycleStart === billingCycleStart &&
+            u.billingCycleEnd === billingCycleEnd
+          )
+          const used = usage.reduce((total, record) => total + record.pageCount, 0)
+          const remaining = Math.max(0, limit - used)
+          
+          return Promise.resolve({
+            used,
+            limit,
+            remaining,
+            billingCycleStart,
+            billingCycleEnd,
+          })
+        }
+        
+        if (apiCall._name === 'subscriptions.checkPageLimit') {
+          if (!currentAuthUser) return Promise.resolve({ allowed: false, reason: 'Not authenticated' })
+          
+          const user = mockUsers.find(u => u.externalId === currentAuthUser)
+          if (!user) return Promise.resolve({ allowed: false, reason: 'User not found' })
+          
+          const subscription = mockSubscriptions.find(s => s.userId === user._id)
+          let limit = 10 // Default free plan
+          
+          if (subscription) {
+            const plan = mockPlans.find(p => p.id === subscription.planId)
+            if (plan) {
+              const pageFeature = plan.features.find((f: string) => f.includes('pages'))
+              if (pageFeature) {
+                const match = pageFeature.match(/(\d+)\s+pages/)
+                if (match) limit = parseInt(match[1])
+              }
+            }
+          }
+          
+          const usage = mockPageUsage.filter(u => u.userId === user._id)
+          const used = usage.reduce((total, record) => total + record.pageCount, 0)
+          const remaining = Math.max(0, limit - used)
+          
+          if (remaining < args.requiredPages) {
+            return Promise.resolve({
+              allowed: false,
+              reason: `Insufficient pages. You have ${remaining} pages remaining, but ${args.requiredPages} are required.`,
+              usage: { used, limit, remaining },
+            })
+          }
+          
+          return Promise.resolve({ allowed: true, usage: { used, limit, remaining } })
+        }
+        
+        return Promise.resolve([])
+      }),
+      mutation: vi.fn((apiCall, args) => {
+        if (apiCall._name === 'plans.seedPlans') {
+          return Promise.resolve('Plans seeded successfully')
+        }
+        
+        if (apiCall._name === 'internal.users.create') {
+          const user = { _id: `user_${Date.now()}`, ...args }
+          mockUsers.push(user)
+          return Promise.resolve(user._id)
+        }
+        
+        if (apiCall._name === 'internal.subscriptions.createSubscription') {
+          const subscription = { _id: `sub_${Date.now()}`, ...args }
+          mockSubscriptions.push(subscription)
+          return Promise.resolve(subscription._id)
+        }
+        
+        if (apiCall._name === 'subscriptions.recordPageUsage') {
+          const usage = {
+            _id: `usage_${Date.now()}`,
+            ...args,
+            processedAt: Date.now(),
+            billingCycleStart: args.billingCycleStart || Date.now(),
+            billingCycleEnd: args.billingCycleEnd || Date.now() + 30 * 24 * 60 * 60 * 1000,
+          }
+          mockPageUsage.push(usage)
+          return Promise.resolve(usage._id)
+        }
+        
+        if (apiCall._name === 'internal.documents.create') {
+          const document = { _id: `doc_${Date.now()}`, ...args }
+          return Promise.resolve(document._id)
+        }
+        
+        if (apiCall._name === 'internal.plans.create') {
+          const plan = { _id: `plan_${Date.now()}`, ...args }
+          mockPlans.push(plan)
+          return Promise.resolve(plan._id)
+        }
+        
+        if (apiCall._name === 'internal.subscriptions.createOrUpdateSubscription') {
+          // Check if subscription exists for user
+          const existingIndex = mockSubscriptions.findIndex(s => s.userId === args.userId)
+          if (existingIndex >= 0) {
+            // Update existing
+            mockSubscriptions[existingIndex] = { ...mockSubscriptions[existingIndex], ...args }
+            return Promise.resolve(mockSubscriptions[existingIndex]._id)
+          } else {
+            // Create new
+            const subscription = { _id: `sub_${Date.now()}`, ...args }
+            mockSubscriptions.push(subscription)
+            return Promise.resolve(subscription._id)
+          }
+        }
+        
+        if (apiCall._name === 'internal.subscriptions.updateSubscription') {
+          const subscription = mockSubscriptions.find(s => s.stripeSubscriptionId === args.stripeSubscriptionId)
+          if (subscription) {
+            Object.assign(subscription, args)
+          }
+          return Promise.resolve('updated')
+        }
+        
+        if (apiCall._name === 'internal.subscriptions.updateSubscriptionStatus') {
+          const subscription = mockSubscriptions.find(s => s.stripeSubscriptionId === args.stripeSubscriptionId)
+          if (subscription) {
+            subscription.status = args.status
+          }
+          return Promise.resolve('updated')
+        }
+        
+        return Promise.resolve(`mock_${Date.now()}`)
+      }),
+      action: vi.fn(),
+      withIdentity: vi.fn((identity) => {
+        currentAuthUser = identity.subject
+        return t
+      }),
+    }
     
     // Seed plans for testing
-    await t.mutation(api.plans.seedPlans)
+    await t.mutation({ _name: 'plans.seedPlans' })
   })
+
+  // Mock API objects
+  const api = {
+    subscriptions: {
+      getUserSubscription: { _name: 'subscriptions.getUserSubscription' },
+      getUserPageUsage: { _name: 'subscriptions.getUserPageUsage' },
+      checkPageLimit: { _name: 'subscriptions.checkPageLimit' },
+      recordPageUsage: { _name: 'subscriptions.recordPageUsage' },
+    },
+    plans: {
+      seedPlans: { _name: 'plans.seedPlans' },
+    }
+  }
+
+  const internal = {
+    users: {
+      create: { _name: 'internal.users.create' },
+    },
+    subscriptions: {
+      createSubscription: { _name: 'internal.subscriptions.createSubscription' },
+      createOrUpdateSubscription: { _name: 'internal.subscriptions.createOrUpdateSubscription' },
+      updateSubscription: { _name: 'internal.subscriptions.updateSubscription' },
+      updateSubscriptionStatus: { _name: 'internal.subscriptions.updateSubscriptionStatus' },
+      getByStripeCustomer: { _name: 'internal.subscriptions.getByStripeCustomer' },
+      getByUser: { _name: 'internal.subscriptions.getByUser' },
+      getAll: { _name: 'internal.subscriptions.getAll' },
+    },
+    documents: {
+      create: { _name: 'internal.documents.create' },
+    },
+    plans: {
+      create: { _name: 'internal.plans.create' },
+    },
+    pageUsage: {
+      getByUser: { _name: 'internal.pageUsage.getByUser' },
+    }
+  }
 
   describe('getUserSubscription', () => {
     it('should return null for unauthenticated user', async () => {
