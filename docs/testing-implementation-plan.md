@@ -53,7 +53,7 @@ Status: Complete
 
 #### 4. ROB-109: Setup Convex Test Utilities
 
-Status: In Progress
+Status: Complete
 
 - **Priority**: P0
 - **Dependencies**: ROB-83
@@ -66,7 +66,7 @@ Status: In Progress
 
 #### 5. ROB-110: Create Mock Data Generators
 
-Status: Not Started
+Status: In Progress
 
 - **Priority**: P0
 - **Dependencies**: ROB-83
