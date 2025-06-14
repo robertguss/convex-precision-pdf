@@ -18,6 +18,9 @@ export * from './form-helpers'
 // MSW utilities (re-export from existing file)
 export * from './msw-helpers'
 
+// Convex testing utilities
+export * from './convex'
+
 /**
  * Convenience exports for the most commonly used utilities
  */
@@ -61,6 +64,18 @@ export {
   mockAPIResponse,
   resetMockHandlers
 } from './msw-helpers'
+
+export {
+  // Convex utilities
+  MockConvexClient,
+  createMockConvexClient,
+  createConvexTest,
+  createConvexTestWithAuth,
+  createMockUserIdentity,
+  withAuthenticatedUser,
+  withUnauthenticatedUser,
+  RealtimeTestHelper
+} from './convex'
 
 /**
  * Quick setup functions for common test scenarios
@@ -113,5 +128,16 @@ export const quickSetup = {
     delay: promiseUtils.delay,
     waitForCondition: pollingUtils.waitForCondition,
     scenario: createAsyncScenario()
+  }),
+
+  /**
+   * Setup for Convex function testing
+   */
+  convexTesting: () => ({
+    createTest: createConvexTest,
+    createTestWithAuth: createConvexTestWithAuth,
+    mockClient: createMockConvexClient,
+    createUser: createMockUserIdentity,
+    realtimeHelper: new RealtimeTestHelper()
   })
 }
