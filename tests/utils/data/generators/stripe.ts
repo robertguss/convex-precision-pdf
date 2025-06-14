@@ -75,7 +75,7 @@ export interface MockStripeInvoice {
   object: 'invoice';
   created: number;
   customer: string;
-  subscription: string;
+  subscription: string | null;
   status: 'draft' | 'open' | 'paid' | 'uncollectible' | 'void';
   amount_due: number;
   amount_paid: number;
@@ -84,6 +84,24 @@ export interface MockStripeInvoice {
   invoice_pdf?: string;
   period_start: number;
   period_end: number;
+  payment_intent?: {
+    status: string;
+  };
+}
+
+// Stripe Checkout Session interfaces
+export interface MockStripeCheckoutSession {
+  id: string;
+  object: 'checkout.session';
+  created: number;
+  customer: string;
+  mode: 'payment' | 'subscription' | 'setup';
+  status: 'open' | 'complete' | 'expired';
+  success_url: string;
+  cancel_url: string;
+  url?: string;
+  subscription?: string;
+  metadata: Record<string, string>;
 }
 
 // Stripe Webhook Event interfaces
@@ -241,6 +259,29 @@ export function generateStripeInvoice(overrides: Partial<MockStripeInvoice> = {}
     invoice_pdf: `https://pay.stripe.com/invoice/${faker.string.alphanumeric(20)}/pdf`,
     period_start: faker.date.past().getTime() / 1000,
     period_end: faker.date.recent().getTime() / 1000,
+    payment_intent: {
+      status: faker.helpers.arrayElement(['succeeded', 'requires_payment_method', 'processing']),
+    },
+    ...overrides,
+  };
+}
+
+export function generateStripeCheckoutSession(overrides: Partial<MockStripeCheckoutSession> = {}): MockStripeCheckoutSession {
+  return {
+    id: `cs_${faker.string.alphanumeric(14)}`,
+    object: 'checkout.session',
+    created: faker.date.recent().getTime() / 1000,
+    customer: `cus_${faker.string.alphanumeric(14)}`,
+    mode: 'subscription',
+    status: 'complete',
+    success_url: 'http://localhost:3000/dashboard?success=true',
+    cancel_url: 'http://localhost:3000/dashboard',
+    url: `https://checkout.stripe.com/c/pay/cs_${faker.string.alphanumeric(14)}`,
+    subscription: `sub_${faker.string.alphanumeric(14)}`,
+    metadata: {
+      convexUserId: `user_${faker.string.alphanumeric(24)}`,
+      planId: faker.helpers.arrayElement(['starter', 'pro', 'business']),
+    },
     ...overrides,
   };
 }
