@@ -125,6 +125,7 @@ function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }: Uplo
           <div
             className="relative mb-6 rounded border-l-4 border-red-500 bg-red-100 px-4 py-3 text-red-700 shadow"
             role="alert"
+            data-cy="error-message"
           >
             <div className="flex">
               <div className="py-1">
@@ -138,7 +139,7 @@ function UploadScreen({ onFileUpload, onExampleSelect, error, clearError }: Uplo
               </div>
               <div>
                 <p className="font-bold">Error</p>
-                <p className="text-sm">
+                <p className="text-sm" data-cy="error-text">
                   {typeof error === "string" ? error : JSON.stringify(error)}
                 </p>
               </div>

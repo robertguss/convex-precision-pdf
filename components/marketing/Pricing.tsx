@@ -58,6 +58,7 @@ function Plan({
   features,
   featured = false,
   cta = "Get started",
+  planId,
 }: {
   name: string;
   price: string;
@@ -66,6 +67,7 @@ function Plan({
   features: Array<string>;
   featured?: boolean;
   cta?: string;
+  planId?: string;
 }) {
   return (
     <section
@@ -73,6 +75,7 @@ function Plan({
         "flex flex-col rounded-3xl px-6 sm:px-8",
         featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8",
       )}
+      data-cy={planId ? `${planId}-plan-card` : undefined}
     >
       <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
       <p
@@ -106,6 +109,7 @@ function Plan({
         color="white"
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
+        data-cy={planId ? `select-${planId}-plan` : undefined}
       >
         {cta}
       </Button>
@@ -135,6 +139,7 @@ export function Pricing() {
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
+            planId="free"
             name="Free"
             price="$0"
             description="Perfect for trying out Precision PDF"
@@ -149,6 +154,7 @@ export function Pricing() {
           />
           <Plan
             featured
+            planId="starter"
             name="Starter"
             price="$9.99"
             description="For professionals and small teams"
@@ -163,6 +169,7 @@ export function Pricing() {
             cta="Start Free Trial"
           />
           <Plan
+            planId="pro"
             name="Pro"
             price="$24.99"
             description="For businesses with regular document processing needs"
