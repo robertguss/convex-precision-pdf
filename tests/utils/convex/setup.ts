@@ -1,6 +1,8 @@
 import { convexTest } from 'convex-test'
 import { vi } from 'vitest'
 
+export { ConvexTestingHelper } from './testing-helper'
+
 /**
  * Create a test instance of Convex with isolated state
  * Note: This will require proper Convex schema setup to work fully
