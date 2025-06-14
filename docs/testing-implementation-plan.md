@@ -55,19 +55,6 @@ Status: Not Started
   - Feature comparisons
   - Call-to-action elements
 
-### Phase 5: E2E Test Infrastructure (Week 4)
-
-#### 20. ROB-104: Setup Cypress Infrastructure
-
-Status: Not Started
-
-- **Priority**: P0
-- **Description**: Must complete before any E2E tests
-- **Key Tasks**:
-  - Install Cypress with TypeScript support
-  - Configure custom commands
-  - Setup test data management
-
 ### Phase 6: E2E Tests - Payment Priority (Week 4)
 
 #### 21. ROB-91: E2E Tests: Complete Payment Flows 🔴 CRITICAL
