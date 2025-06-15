@@ -7,8 +7,9 @@ export default defineConfig({
     viewportHeight: 720,
     video: false,
     screenshotOnRunFailure: true,
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    async setupNodeEvents(on, config) {
+      const { default: setupNodeEvents } = await import('./cypress/plugins/index');
+      return setupNodeEvents(on, config);
     },
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.ts',

@@ -83,10 +83,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarGroupLabel>Subscription</SidebarGroupLabel>
           <SidebarGroupContent>
             <div className="px-3 py-2">
-              <p className="text-sm font-medium">
+              <p className="text-sm font-medium" data-cy="current-plan">
                 {subscription?.plan?.name || "Free Plan"}
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground" data-cy="plan-features">
                 {subscription?.plan?.features?.[0] || "10 pages per month"}
               </p>
               {!subscription && (
@@ -95,6 +95,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   size="sm"
                   className="mt-2 w-full"
                   asChild
+                  data-cy="upgrade-button"
                 >
                   <Link href="/dashboard/upgrade">
                     <CreditCard className="mr-2 h-3 w-3" />
@@ -108,6 +109,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   size="sm"
                   className="mt-2 w-full"
                   onClick={handleManageSubscription}
+                  data-cy="manage-subscription"
                 >
                   <CreditCard className="mr-2 h-3 w-3" />
                   Manage Subscription

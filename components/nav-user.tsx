@@ -100,12 +100,12 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               {onManageSubscription ? (
-                <DropdownMenuItem onClick={onManageSubscription} className="cursor-pointer">
+                <DropdownMenuItem onClick={onManageSubscription} className="cursor-pointer" data-cy="manage-subscription-menu">
                   <CreditCard className="mr-2 h-4 w-4" />
                   Manage Subscription
                 </DropdownMenuItem>
               ) : (
-                <DropdownMenuItem asChild>
+                <DropdownMenuItem asChild data-cy="manage-subscription-menu">
                   <Link href="/dashboard/upgrade" className="flex items-center">
                     <CreditCard className="mr-2 h-4 w-4" />
                     Manage Subscription

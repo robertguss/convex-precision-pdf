@@ -64,6 +64,7 @@ function Plan({
   isLoading = false,
   cta = "Get started",
   onSelect,
+  planId,
 }: {
   name: string;
   price: string;
@@ -74,6 +75,7 @@ function Plan({
   isLoading?: boolean;
   cta?: string;
   onSelect?: () => void;
+  planId: string;
 }) {
   return (
     <section
@@ -81,8 +83,9 @@ function Plan({
         "flex flex-col rounded-3xl px-6 sm:px-8",
         featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8",
       )}
+      data-cy={`${planId}-plan-card`}
     >
-      <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
+      <h3 className="mt-5 font-display text-lg text-white" data-cy="plan-name">{name}</h3>
       <p
         className={clsx(
           "mt-2 text-base",
@@ -91,7 +94,7 @@ function Plan({
       >
         {description}
       </p>
-      <p className="order-first font-display text-5xl font-light tracking-tight text-white">
+      <p className="order-first font-display text-5xl font-light tracking-tight text-white" data-cy="plan-price">
         {price}
       </p>
       <ul
@@ -102,9 +105,9 @@ function Plan({
         )}
       >
         {features.map((feature) => (
-          <li key={feature} className="flex">
+          <li key={feature} className="flex" data-cy="plan-feature">
             <CheckIcon className={featured ? "text-white" : "text-slate-400"} />
-            <span className="ml-4">{feature}</span>
+            <span className="ml-4" data-cy="plan-credits">{feature}</span>
           </li>
         ))}
       </ul>
@@ -118,6 +121,7 @@ function Plan({
             "w-full opacity-50 cursor-not-allowed"
           )}
           disabled
+          data-cy="current-plan-badge"
         >
           Current Plan
         </button>
@@ -133,6 +137,7 @@ function Plan({
             "w-full disabled:opacity-50 disabled:cursor-not-allowed"
           )}
           aria-label={`Get started with the ${name} plan for ${price}`}
+          data-cy={isCurrentPlan ? undefined : `select-${planId}-plan`}
         >
           {isLoading ? (
             <span className="flex items-center justify-center">
@@ -168,7 +173,7 @@ export default function UpgradePage() {
 
   if (!plans) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-slate-900">
+      <div className="flex items-center justify-center min-h-screen bg-slate-900" data-cy="loading-state">
         <Loader2 className="h-8 w-8 animate-spin text-white" />
       </div>
     );
@@ -246,6 +251,7 @@ export default function UpgradePage() {
             return (
               <Plan
                 key={plan.id}
+                planId={plan.id}
                 name={plan.name}
                 price={plan.price}
                 description={plan.description}
