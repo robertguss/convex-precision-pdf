@@ -14,6 +14,10 @@ import * as databaseHelpers from '../helpers/database.helper';
 type TestFixtures = {
   authenticatedPage: any;
   testUser: authHelpers.TestUser;
+  auth: typeof authHelpers;
+  payment: typeof paymentHelpers;
+  document: typeof documentHelpers;
+  database: typeof databaseHelpers;
 };
 
 // Extend base test with our fixtures
@@ -31,6 +35,23 @@ export const test = base.extend<TestFixtures>({
   testUser: async ({}, use) => {
     // Default to free tier user
     await use(authHelpers.testUsers.free);
+  },
+  
+  // Helper fixtures
+  auth: async ({}, use) => {
+    await use(authHelpers);
+  },
+  
+  payment: async ({}, use) => {
+    await use(paymentHelpers);
+  },
+  
+  document: async ({}, use) => {
+    await use(documentHelpers);
+  },
+  
+  database: async ({}, use) => {
+    await use(databaseHelpers);
   },
 });
 
