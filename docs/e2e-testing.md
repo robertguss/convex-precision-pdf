@@ -26,7 +26,7 @@ pnpm run pw:test:debug
 
 ## Test Structure
 
-```
+```text
 tests/
 ├── e2e/                    # End-to-end tests
 │   ├── subscriptions/      # Payment and subscription tests
