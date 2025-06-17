@@ -46,7 +46,8 @@ tests/
 │   ├── visual.helper.ts    # Visual testing helpers
 │   ├── performance.helper.ts # Performance testing helpers
 │   └── trace.helper.ts     # Debugging and trace helpers
-└── reporters/              # Custom test reporters
+├── reporters/              # Custom test reporters
+└── global.setup.ts         # Global test setup with Clerk
 ```
 
 ## Key Features
@@ -195,10 +196,10 @@ test('my new test', async ({ page, auth, payment, document, database }) => {
   // Reset test data
   await database.resetDatabase();
   await database.seedTestUsers();
-  
+
   // Login
   await auth.loginAsUser(page, 'pro');
-  
+
   // Your test logic here
   await expect(page.locator('[data-cy="element"]')).toBeVisible();
 });
@@ -207,11 +208,13 @@ test('my new test', async ({ page, auth, payment, document, database }) => {
 ## Best Practices
 
 1. **Use data-cy attributes** for test selectors:
+
    ```html
    <button data-cy="upgrade-button">Upgrade</button>
    ```
 
 2. **Reset state before each test**:
+
    ```typescript
    test.beforeEach(async ({ database }) => {
      await database.resetDatabase();
@@ -220,16 +223,18 @@ test('my new test', async ({ page, auth, payment, document, database }) => {
    ```
 
 3. **Use helpers instead of raw Playwright commands**:
+
    ```typescript
    // Good
    await payment.verifySubscription(page, 'Pro', 50);
-   
+
    // Avoid
    await expect(page.locator('[data-cy="current-plan"]')).toContainText('Pro');
    await expect(page.locator('[data-cy="page-credits"]')).toContainText('50');
    ```
 
 4. **Add meaningful test descriptions**:
+
    ```typescript
    test.describe('Subscription Upgrade Flow', () => {
      test('should successfully upgrade from free to pro plan', async () => {
@@ -279,21 +284,25 @@ expect(flakiness.flaky).toBe(false);
 ## Troubleshooting
 
 ### Tests timing out
+
 - Increase timeout in test: `test.setTimeout(60000);`
 - Check if app is running: `pnpm run dev`
 - Verify environment variables are set
 
 ### Authentication issues
+
 - Ensure `CLERK_TESTING_TOKEN` is set
 - Check Clerk dashboard for test mode
 - Verify test users exist
 
 ### Visual test failures
+
 - Update snapshots if changes are intentional
 - Check for dynamic content that needs masking
 - Ensure consistent viewport sizes
 
 ### Network mocking not working
+
 - Verify route patterns match actual URLs
 - Check network tab in trace viewer
 - Ensure mocks are set before navigation

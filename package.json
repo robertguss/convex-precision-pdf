@@ -20,7 +20,8 @@
     "pw:test:debug": "playwright test --debug",
     "pw:test:headed": "playwright test --headed",
     "pw:report": "playwright show-report",
-    "pw:codegen": "playwright codegen http://localhost:3000"
+    "pw:codegen": "playwright codegen http://localhost:3000",
+    "pw:setup": "tsx scripts/setup-e2e-tests.ts"
   },
   "dependencies": {
     "@clerk/backend": "^2.0.0",
