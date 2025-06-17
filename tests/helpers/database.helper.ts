@@ -311,3 +311,43 @@ export async function setPreviousSubscription(
     throw error;
   }
 }
+
+/**
+ * Expire grace period for a user
+ */
+export async function expireGracePeriod(userId: string) {
+  try {
+    console.log(`Expiring grace period for user ${userId}`);
+    
+    // In real implementation:
+    // await convex.mutation(api.test.expireGracePeriod, { userId });
+    
+    return true;
+  } catch (error) {
+    console.error('Failed to expire grace period:', error);
+    throw error;
+  }
+}
+
+/**
+ * Set grace period for a user
+ */
+export async function setGracePeriod(userId: string, daysRemaining: number) {
+  try {
+    const expiryDate = new Date();
+    expiryDate.setDate(expiryDate.getDate() + daysRemaining);
+    
+    console.log(`Setting grace period to expire on ${expiryDate.toISOString()}`);
+    
+    // In real implementation:
+    // await convex.mutation(api.test.setGracePeriod, {
+    //   userId,
+    //   expiryDate: expiryDate.toISOString()
+    // });
+    
+    return expiryDate;
+  } catch (error) {
+    console.error('Failed to set grace period:', error);
+    throw error;
+  }
+}

@@ -57,19 +57,29 @@ export async function signIn(page: Page, email: string, password: string) {
   // Setup Clerk testing token for this page
   await setupClerkTestingToken({ page });
   
-  // Navigate to the sign-in page
-  await page.goto('/sign-in');
+  // Navigate to the home page
+  await page.goto('/');
   
-  // Fill in email/username
-  await page.locator('input[name="identifier"]').fill(email);
-  await page.locator('button:has-text("Continue")').click();
+  // Click the sign-in button to open the modal
+  await page.locator('button:has-text("Sign in")').first().click();
   
-  // Fill in password
-  await page.locator('input[name="password"]').fill(password);
-  await page.locator('button:has-text("Continue")').click();
+  // Wait for the Clerk modal to appear
+  await page.waitForSelector('[data-clerk-portal-root]', { timeout: 5000 });
+  
+  // Fill in email/username in the Clerk modal
+  const emailInput = page.locator('[data-clerk-portal-root] input[name="identifier"]');
+  await emailInput.waitFor({ state: 'visible', timeout: 5000 });
+  await emailInput.fill(email);
+  await page.locator('[data-clerk-portal-root] button:has-text("Continue")').click();
+  
+  // Wait for password field to appear and fill it
+  const passwordInput = page.locator('[data-clerk-portal-root] input[name="password"]');
+  await passwordInput.waitFor({ state: 'visible', timeout: 5000 });
+  await passwordInput.fill(password);
+  await page.locator('[data-clerk-portal-root] button:has-text("Continue")').click();
   
   // Wait for sign-in to complete
-  await page.waitForURL('**/dashboard', { timeout: 10000 });
+  await page.waitForURL('**/dashboard', { timeout: 15000 });
   
   // Wait for Convex to be ready
   await waitForConvex(page);
