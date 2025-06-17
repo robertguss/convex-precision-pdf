@@ -83,11 +83,22 @@ This is a Next.js 15 application with Convex backend and Clerk authentication.
 
 ### Testing Approach
 
-Currently no test framework is configured. When adding tests:
+The project uses multiple testing frameworks:
 
-- Use Jest + React Testing Library for frontend
-- Use Convex's testing utilities for backend functions
-- Test files should follow `*.test.ts(x)` or `*.spec.ts(x)` naming
+- **Unit Tests**: Vitest for component and utility testing
+- **E2E Tests**: Playwright for end-to-end testing
+- **Test files**: Follow `*.test.ts(x)` or `*.spec.ts(x)` naming
+
+#### E2E Testing Commands
+
+```bash
+pnpm run pw:test         # Run all E2E tests
+pnpm run pw:test:ui      # Run tests in UI mode (recommended)
+pnpm run pw:test:debug   # Debug tests
+pnpm run pw:report       # View test report
+```
+
+See `docs/e2e-testing.md` for comprehensive E2E testing documentation.
 
 ### Fast API PDF Processing Service
 
