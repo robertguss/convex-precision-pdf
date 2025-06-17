@@ -12,13 +12,10 @@
 
 # testing
 /coverage
-cypress/downloads
-cypress/screenshots
-cypress/videos
-cypress/results
 test-results/
 playwright-report/
 playwright/.cache/
+.auth/
 
 # next.js
 /.next/
