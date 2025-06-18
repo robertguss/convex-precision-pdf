@@ -3,6 +3,7 @@
  */
 
 import { test, expect } from '../../fixtures/test-fixtures';
+import { testCards } from '../../helpers/payment.helper';
 
 test.describe('Subscription Lifecycle', () => {
   test.beforeEach(async ({ database }) => {

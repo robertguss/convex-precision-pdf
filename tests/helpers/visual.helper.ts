@@ -43,8 +43,9 @@ export async function takeVisualSnapshot(
   // Wait for images to load
   await page.waitForLoadState('networkidle');
   
-  // Take screenshot
-  await expect(page).toHaveScreenshot(name, {
+  // Take screenshot - ensure .png extension
+  const screenshotName = name.endsWith('.png') ? name : `${name}.png`;
+  await expect(page).toHaveScreenshot(screenshotName, {
     fullPage: options.fullPage ?? false,
     mask: options.mask,
     maxDiffPixels: options.maxDiffPixels ?? 100,

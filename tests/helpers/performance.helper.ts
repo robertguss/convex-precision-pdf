@@ -379,6 +379,41 @@ export async function generatePerformanceReport(
 }
 
 /**
+ * Measure API call performance
+ */
+export async function measureAPIPerformance(page: Page): Promise<Array<{
+  url: string;
+  method: string;
+  duration: number;
+  size: number;
+  status: number;
+}>> {
+  const apiMetrics: Array<any> = [];
+  
+  // Set up request interception
+  page.on('response', async (response) => {
+    const request = response.request();
+    const url = request.url();
+    
+    // Only track API calls
+    if (url.includes('/api/') || url.includes('convex/')) {
+      const timing = response.timing();
+      const size = (await response.body()).length;
+      
+      apiMetrics.push({
+        url,
+        method: request.method(),
+        duration: timing ? timing.responseEnd - timing.requestStart : 0,
+        size,
+        status: response.status(),
+      });
+    }
+  });
+  
+  return apiMetrics;
+}
+
+/**
  * Run lighthouse audit
  */
 export async function runLighthouseAudit(browser: Browser, url: string) {

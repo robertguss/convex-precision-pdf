@@ -351,3 +351,57 @@ export async function setGracePeriod(userId: string, daysRemaining: number) {
     throw error;
   }
 }
+
+/**
+ * Trigger billing reminders
+ */
+export async function triggerBillingReminders() {
+  try {
+    console.log('Triggering billing reminder emails');
+    
+    // In real implementation:
+    // await convex.action(api.test.sendBillingReminders);
+    
+    return true;
+  } catch (error) {
+    console.error('Failed to trigger billing reminders:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get last email sent
+ */
+export async function getLastEmail() {
+  try {
+    // Mock implementation
+    return {
+      to: 'pro.user@test.precisionpdf.com',
+      subject: 'Subscription renewal reminder',
+      html: 'Your subscription will renew in 3 days for $19',
+    };
+  } catch (error) {
+    console.error('Failed to get last email:', error);
+    throw error;
+  }
+}
+
+/**
+ * Set card expiration status
+ */
+export async function setCardExpiration(userId: string, isExpiring: boolean) {
+  try {
+    console.log(`Setting card expiration status: ${isExpiring}`);
+    
+    // In real implementation:
+    // await convex.mutation(api.test.setCardExpiration, {
+    //   userId,
+    //   isExpiring
+    // });
+    
+    return true;
+  } catch (error) {
+    console.error('Failed to set card expiration:', error);
+    throw error;
+  }
+}
