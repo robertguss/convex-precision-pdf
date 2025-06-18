@@ -3,7 +3,7 @@
  * Handles testing token generation and environment setup
  */
 
-import { clerkClient } from '@clerk/clerk-sdk-node';
+import { createClerkClient } from '@clerk/backend';
 
 /**
  * Generate a Clerk testing token
@@ -26,7 +26,7 @@ export async function generateClerkTestingToken(): Promise<string> {
   
   try {
     // Initialize Clerk client
-    const clerk = clerkClient({ secretKey });
+    const clerk = createClerkClient({ secretKey });
     
     // Create testing token
     const testingToken = await clerk.testingTokens.createTestingToken();
@@ -57,6 +57,8 @@ export async function setupClerkForTesting() {
   process.env.CLERK_TESTING_TOKEN = token;
   
   console.log('✓ Clerk testing token generated and set');
+  console.log('\nIMPORTANT: Add this to your .env.local file:');
+  console.log(`CLERK_TESTING_TOKEN=${token}`);
 }
 
 /**

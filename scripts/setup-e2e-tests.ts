@@ -29,7 +29,11 @@ async function main() {
   // Check Clerk environment
   const hasAllKeys = getClerkEnvInfo();
   
-  if (!hasAllKeys) {
+  // Check if we have the minimum required keys
+  const hasPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  const hasSecretKey = process.env.CLERK_SECRET_KEY;
+  
+  if (!hasPublishableKey || !hasSecretKey) {
     console.log('\n📋 Setup Instructions:');
     console.log('====================');
     console.log('1. Go to https://dashboard.clerk.com');
