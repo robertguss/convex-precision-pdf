@@ -58,7 +58,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
 
 function MobileNavigation() {
   const { isSignedIn } = useUser();
-  
+
   return (
     <Popover>
       <PopoverButton
@@ -93,7 +93,7 @@ function MobileNavigation() {
 
 export function Header() {
   const { isSignedIn } = useUser();
-  
+
   return (
     <header className="py-10">
       <Container>
