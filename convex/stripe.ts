@@ -7,7 +7,7 @@ import { api, internal } from "./_generated/api";
 import Stripe from "stripe";
 
 // Initialize Stripe with your secret key
-const stripe = process.env.STRIPE_SECRET_KEY 
+const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY, {
       apiVersion: "2025-05-28.basil",
     })
@@ -19,7 +19,9 @@ export const createCheckoutSession = action({
   },
   handler: async (ctx, args): Promise<{ url: string; sessionId: string }> => {
     if (!stripe) {
-      throw new Error("Stripe not configured. Please set STRIPE_SECRET_KEY environment variable.");
+      throw new Error(
+        "Stripe not configured. Please set STRIPE_SECRET_KEY environment variable.",
+      );
     }
 
     const userId = await getAuthUserId(ctx);
@@ -41,8 +43,10 @@ export const createCheckoutSession = action({
     try {
       // Check if user already has a Stripe customer ID
       let customerId: string;
-      const existingSubscription = await ctx.runQuery(api.subscriptions.getUserSubscription);
-      
+      const existingSubscription = await ctx.runQuery(
+        api.subscriptions.getUserSubscription,
+      );
+
       if (existingSubscription?.stripeCustomerId) {
         customerId = existingSubscription.stripeCustomerId;
       } else {
@@ -67,8 +71,8 @@ export const createCheckoutSession = action({
           },
         ],
         mode: "subscription",
-        success_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard?success=true`,
-        cancel_url: `${process.env.SITE_URL || "http://localhost:3000"}/dashboard`,
+        success_url: `${process.env.SITE_URL || "https://www.precisionpdf.com/"}/dashboard?success=true`,
+        cancel_url: `${process.env.SITE_URL || "https://www.precisionpdf.com/"}/dashboard`,
         metadata: {
           convexUserId: userId,
           planId: args.planId,
@@ -85,7 +89,9 @@ export const createCheckoutSession = action({
       };
     } catch (error) {
       console.error("Stripe checkout error:", error);
-      throw new Error(`Failed to create checkout session: ${error instanceof Error ? error.message : "Unknown error"}`);
+      throw new Error(
+        `Failed to create checkout session: ${error instanceof Error ? error.message : "Unknown error"}`,
+      );
     }
   },
 });
@@ -94,7 +100,9 @@ export const createPortalSession = action({
   args: {},
   handler: async (ctx): Promise<{ url: string }> => {
     if (!stripe) {
-      throw new Error("Stripe not configured. Please set STRIPE_SECRET_KEY environment variable.");
+      throw new Error(
+        "Stripe not configured. Please set STRIPE_SECRET_KEY environment variable.",
+      );
     }
 
     const userId = await getAuthUserId(ctx);
@@ -102,7 +110,9 @@ export const createPortalSession = action({
       throw new Error("Not authenticated");
     }
 
-    const subscription = await ctx.runQuery(api.subscriptions.getUserSubscription);
+    const subscription = await ctx.runQuery(
+      api.subscriptions.getUserSubscription,
+    );
     if (!subscription?.stripeCustomerId) {
       throw new Error("No subscription found");
     }
@@ -118,7 +128,9 @@ export const createPortalSession = action({
       };
     } catch (error) {
       console.error("Stripe portal error:", error);
-      throw new Error(`Failed to create portal session: ${error instanceof Error ? error.message : "Unknown error"}`);
+      throw new Error(
+        `Failed to create portal session: ${error instanceof Error ? error.message : "Unknown error"}`,
+      );
     }
   },
 });
@@ -129,7 +141,7 @@ export const handleWebhook = action({
   },
   handler: async (ctx, args): Promise<{ received: boolean }> => {
     const event = args.event;
-    
+
     console.log(`Processing webhook event: ${event.type}`);
 
     try {
@@ -142,8 +154,10 @@ export const handleWebhook = action({
               console.error("Stripe not configured");
               break;
             }
-            const subscription = await stripe.subscriptions.retrieve(session.subscription as string);
-            
+            const subscription = await stripe.subscriptions.retrieve(
+              session.subscription as string,
+            );
+
             const convexUserId = session.metadata?.convexUserId;
             if (!convexUserId) {
               console.error("No convex user ID in session metadata");
@@ -151,9 +165,12 @@ export const handleWebhook = action({
             }
 
             // Get the user by external ID
-            const userRecord = await ctx.runQuery(internal.users.getByExternalId, {
-              externalId: convexUserId,
-            });
+            const userRecord = await ctx.runQuery(
+              internal.users.getByExternalId,
+              {
+                externalId: convexUserId,
+              },
+            );
             if (!userRecord) {
               console.error("User not found for external ID:", convexUserId);
               break;
@@ -162,10 +179,12 @@ export const handleWebhook = action({
             // Get the plan ID from the subscription's price
             const priceId = subscription.items.data[0]?.price.id;
             let planId = "free"; // Default to free
-            
+
             // Map Stripe price ID to our plan ID
             const plans = await ctx.runQuery(api.plans.list);
-            const matchingPlan = plans.find((p: any) => p.stripePriceId === priceId);
+            const matchingPlan = plans.find(
+              (p: any) => p.stripePriceId === priceId,
+            );
             if (matchingPlan) {
               planId = matchingPlan.id;
             } else if (session.metadata?.planId) {
@@ -174,36 +193,46 @@ export const handleWebhook = action({
             }
 
             // Create or update subscription in our database
-            await ctx.runMutation(internal.subscriptions.createOrUpdateSubscription, {
-              userId: userRecord._id,
-              stripeCustomerId: session.customer as string,
-              stripeSubscriptionId: subscription.id,
-              status: subscription.status,
-              planId: planId,
-              currentPeriodStart: (subscription as any).current_period_start * 1000,
-              currentPeriodEnd: (subscription as any).current_period_end * 1000,
-              cancelAtPeriodEnd: (subscription as any).cancel_at_period_end,
-            });
+            await ctx.runMutation(
+              internal.subscriptions.createOrUpdateSubscription,
+              {
+                userId: userRecord._id,
+                stripeCustomerId: session.customer as string,
+                stripeSubscriptionId: subscription.id,
+                status: subscription.status,
+                planId: planId,
+                currentPeriodStart:
+                  (subscription as any).current_period_start * 1000,
+                currentPeriodEnd:
+                  (subscription as any).current_period_end * 1000,
+                cancelAtPeriodEnd: (subscription as any).cancel_at_period_end,
+              },
+            );
           }
           break;
 
         case "customer.subscription.created":
         case "customer.subscription.updated":
           const subscriptionData = event.data.object;
-          
+
           // Find the user by Stripe customer ID
-          const userSub = await ctx.runQuery(internal.subscriptions.getByStripeCustomer, {
-            stripeCustomerId: subscriptionData.customer,
-          });
+          const userSub = await ctx.runQuery(
+            internal.subscriptions.getByStripeCustomer,
+            {
+              stripeCustomerId: subscriptionData.customer,
+            },
+          );
 
           if (userSub) {
             // Get the plan ID from the subscription's price
             const priceId = subscriptionData.items.data[0]?.price.id;
             let planId = "free"; // Default to free
-            
+
             // Map Stripe price ID to our plan ID
             const plans = await ctx.runQuery(api.plans.list);
-            const matchingPlan = plans.find((p: any) => p.stripePriceId === priceId);
+            const matchingPlan = plans.find(
+              (p: any) => p.stripePriceId === priceId,
+            );
             if (matchingPlan) {
               planId = matchingPlan.id;
             }
@@ -218,7 +247,7 @@ export const handleWebhook = action({
             });
           }
           break;
-        
+
         case "customer.subscription.deleted":
           const deletedSubscription = event.data.object;
           await ctx.runMutation(internal.subscriptions.updateSubscription, {
@@ -235,10 +264,13 @@ export const handleWebhook = action({
           const invoice = event.data.object;
           if (invoice.subscription) {
             // Update subscription status to active
-            await ctx.runMutation(internal.subscriptions.updateSubscriptionStatus, {
-              stripeSubscriptionId: invoice.subscription,
-              status: "active",
-            });
+            await ctx.runMutation(
+              internal.subscriptions.updateSubscriptionStatus,
+              {
+                stripeSubscriptionId: invoice.subscription,
+                status: "active",
+              },
+            );
           }
           break;
 
@@ -246,10 +278,13 @@ export const handleWebhook = action({
           const failedInvoice = event.data.object;
           if (failedInvoice.subscription) {
             // Update subscription status to past_due
-            await ctx.runMutation(internal.subscriptions.updateSubscriptionStatus, {
-              stripeSubscriptionId: failedInvoice.subscription,
-              status: "past_due",
-            });
+            await ctx.runMutation(
+              internal.subscriptions.updateSubscriptionStatus,
+              {
+                stripeSubscriptionId: failedInvoice.subscription,
+                status: "past_due",
+              },
+            );
           }
           break;
 
@@ -260,7 +295,9 @@ export const handleWebhook = action({
       return { received: true };
     } catch (error) {
       console.error("Webhook processing error:", error);
-      throw new Error(`Webhook processing failed: ${error instanceof Error ? error.message : "Unknown error"}`);
+      throw new Error(
+        `Webhook processing failed: ${error instanceof Error ? error.message : "Unknown error"}`,
+      );
     }
   },
 });

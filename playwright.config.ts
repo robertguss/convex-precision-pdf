@@ -20,7 +20,7 @@ export default defineConfig({
     ['html'],
     ['list'],
     ['./tests/reporters/custom-reporter.ts'],
-    ...(process.env.CI ? [['github'], ['blob']] : [])
+    ...(process.env.CI ? [['github'] as const, ['blob'] as const] : [])
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
