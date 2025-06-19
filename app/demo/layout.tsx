@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { AppLogo } from "@/components/app-logo";
+import { Logo } from "@/components/marketing/Logo";
 
 export const metadata: Metadata = {
   title: "Interactive Demo",
@@ -43,7 +43,7 @@ export default function DemoLayout({
       <header className="top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-6">
-            <AppLogo />
+            <Logo />
             <DemoModeBadge />
           </div>
 
