@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { Container } from "@/components/marketing/Container";
 import { Logo } from "@/components/marketing/Logo";
 import { NavLink } from "@/components/marketing/NavLink";
@@ -9,13 +7,8 @@ export function Footer() {
     <footer className="bg-slate-50">
       <Container>
         <div className="py-16">
-          <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              {/* <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink> */}
-              {/* <NavLink href="/help">Help Center</NavLink> */}
               <NavLink href="/security">Security & Privacy</NavLink>
             </div>
           </nav>
