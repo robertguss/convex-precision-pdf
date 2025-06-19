@@ -6,9 +6,9 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "@/components/marketing/Container";
-import screenshotContacts from "@/images/screenshots/contacts.png";
-import screenshotInventory from "@/images/screenshots/inventory.png";
-import screenshotProfitLoss from "@/images/screenshots/profit-loss.png";
+import visualProof from "@/images/precision-pdf-screenshots/visual_proof.webp";
+import processing from "@/images/precision-pdf-screenshots/processing.webp";
+import sideBySide from "@/images/precision-pdf-screenshots/side_by_side.webp";
 
 interface Feature {
   name: React.ReactNode;
@@ -24,7 +24,7 @@ const features: Array<Feature> = [
     summary: "Every extraction comes with visual proof",
     description:
       "Our unique highlighting system lets you verify accuracy instantly. Click extracted data to see its exact location in the original PDF, building trust in every extraction.",
-    image: screenshotProfitLoss,
+    image: visualProof,
     icon: function ReportingIcon() {
       const id = useId();
       return (
@@ -58,7 +58,7 @@ const features: Array<Feature> = [
     summary: "Watch your documents transform before your eyes",
     description:
       "Live progress updates show each page being analyzed. Preview extracted data instantly as processing completes. No more waiting and wondering.",
-    image: screenshotInventory,
+    image: processing,
     icon: function InventoryIcon() {
       return (
         <>
@@ -84,8 +84,8 @@ const features: Array<Feature> = [
     name: "Smart Table Recognition",
     summary: "Complex tables become simple spreadsheets",
     description:
-      "Automatically detects table structures, preserves relationships between cells, and exports to CSV with proper formatting. Even handles nested and multi-page tables.",
-    image: screenshotContacts,
+      "Automatically detects table structures, preserves relationships between cells, and exports to CSV and Excel with proper formatting. Even handles nested and multi-page tables.",
+    image: sideBySide,
     icon: function ContactsIcon() {
       return (
         <>
