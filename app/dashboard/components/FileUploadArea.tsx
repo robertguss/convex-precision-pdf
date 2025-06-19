@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState } from "react";
 
-import { useDropzone } from 'react-dropzone';
+import { useDropzone } from "react-dropzone";
 
 interface PageUsage {
   used: number;
@@ -30,13 +30,16 @@ const UploadIcon = () => (
   </svg>
 );
 
-function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps) {
-  const [dragMessage, setDragMessage] = useState('');
+function FileUploadArea({
+  onFileSelect,
+  pageUsage = null,
+}: FileUploadAreaProps) {
+  const [dragMessage, setDragMessage] = useState("");
   const hasPages = !pageUsage || pageUsage.remaining > 0;
 
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
-      setDragMessage('');
+      setDragMessage("");
       if (acceptedFiles.length > 0 && hasPages) {
         onFileSelect(acceptedFiles[0]);
       }
@@ -47,12 +50,12 @@ function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps)
   const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
     onDrop,
     multiple: false,
-    onDragEnter: () => setDragMessage('Release to drop the file'),
-    onDragLeave: () => setDragMessage(''),
+    onDragEnter: () => setDragMessage("Release to drop the file"),
+    onDragLeave: () => setDragMessage(""),
     accept: {
-      'application/pdf': ['.pdf'],
-      'image/jpeg': ['.jpeg', '.jpg'],
-      'image/png': ['.png'],
+      "application/pdf": [".pdf"],
+      "image/jpeg": [".jpeg", ".jpg"],
+      "image/png": [".png"],
     },
     disabled: !hasPages,
   });
@@ -73,7 +76,10 @@ function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps)
             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
           />
         </svg>
-        <p className="text-lg font-semibold text-red-600 mb-2" data-cy="no-pages-remaining">
+        <p
+          className="text-lg font-semibold text-red-600 mb-2"
+          data-cy="no-pages-remaining"
+        >
           No pages remaining
         </p>
         <p className="text-sm text-gray-600 mb-4">
@@ -95,17 +101,17 @@ function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps)
       {...getRootProps()}
       className={`group cursor-pointer rounded-lg border-2 border-dashed p-6 text-center transition-all duration-200 ease-in-out sm:p-8 ${
         isDragActive
-          ? 'scale-105 border-blue-500 bg-blue-50'
+          ? "scale-105 border-blue-500 bg-blue-50"
           : hasPages
-          ? 'border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100'
-          : 'border-gray-200 bg-gray-50 cursor-not-allowed opacity-50'
+            ? "border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100"
+            : "border-gray-200 bg-gray-50 cursor-not-allowed opacity-50"
       }`}
     >
       <input {...getInputProps()} />
       <UploadIcon />
       {isDragActive ? (
         <p className="text-lg font-semibold text-blue-600">
-          {dragMessage || 'Drop the file here ...'}
+          {dragMessage || "Drop the file here ..."}
         </p>
       ) : (
         <>
@@ -117,7 +123,7 @@ function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps)
                 open();
               }}
               onKeyPress={(e) => {
-                if (e.key === 'Enter') {
+                if (e.key === "Enter") {
                   e.stopPropagation();
                   open();
                 }
@@ -126,12 +132,12 @@ function FileUploadArea({ onFileSelect, pageUsage = null }: FileUploadAreaProps)
               role="button"
             >
               Click to upload
-            </span>{' '}
+            </span>{" "}
             or drag and drop
           </p>
-          <p className="mt-1 text-xs text-gray-500 sm:text-sm">
+          {/* <p className="mt-1 text-xs text-gray-500 sm:text-sm">
             JPEG, PNG, PDF
-          </p>
+          </p> */}
           <p className="mt-1 text-xs text-gray-400">
             Max File size: 250MB, Max File pages: 50
           </p>

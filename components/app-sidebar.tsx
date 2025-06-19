@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { FileText, Home, CreditCard } from "lucide-react";
+import { Logo } from "@/components/marketing/Logo";
 
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
@@ -70,7 +71,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <SidebarGroup>
-          <SidebarGroupLabel>Precision PDF</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <div className="px-3 py-2">
+              <Logo className="flex items-center gap-2 [&>svg]:h-6 [&>svg]:w-6 [&>span]:text-lg [&>span]:font-semibold" />
+            </div>
+          </SidebarGroupContent>
           <SidebarGroupContent className="mt-4">
             <CreditBalance />
           </SidebarGroupContent>

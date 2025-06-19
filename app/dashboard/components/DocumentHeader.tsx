@@ -85,7 +85,7 @@ export const DocumentHeader: React.FC<DocumentHeaderProps> = ({
                 className={`h-10 w-[200px] font-medium transition-all ${
                   exportFormat 
                     ? "border-blue-500 bg-blue-50 text-blue-900 hover:bg-blue-100 shadow-sm" 
-                    : "border-gray-400 bg-gradient-to-r from-gray-50 to-white text-gray-800 hover:from-gray-100 hover:to-gray-50 hover:border-gray-500 shadow"
+                    : "border-2 border-blue-400 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:border-blue-500 shadow-md"
                 }`} 
                 data-tour="export-button"
               >
