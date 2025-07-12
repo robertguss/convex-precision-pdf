@@ -7,8 +7,8 @@ const ContentSecurityPolicy = `
   style-src 'self' 'unsafe-inline' *.clerk.com *.crisp.chat;
   style-src-elem 'self' 'unsafe-inline' *.clerk.com *.crisp.chat client.crisp.chat;
   img-src 'self' blob: data: *.clerk.com *.convex.cloud;
-  font-src 'self';
-  connect-src 'self' *.clerk.com *.convex.cloud *.posthog.com *.crisp.chat wss://*.crisp.chat *.sentry.io;
+  font-src 'self' *.crisp.chat client.crisp.chat;
+  connect-src 'self' *.clerk.com clerk.precisionpdf.com *.convex.cloud *.posthog.com *.crisp.chat wss://*.crisp.chat *.sentry.io datafa.st;
   frame-src 'self' *.clerk.com *.stripe.com;
   worker-src 'self' blob:;
 `;
@@ -40,7 +40,7 @@ const securityHeaders = [
   },
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), midi=(), payment=(), vr=(), xr-spatial-tracking=()",
+    value: "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), midi=(), payment=(), xr-spatial-tracking=()",
   },
   {
     key: "Content-Security-Policy",
