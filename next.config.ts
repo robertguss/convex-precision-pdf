@@ -8,7 +8,7 @@ const ContentSecurityPolicy = `
   style-src-elem 'self' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat client.crisp.chat;
   img-src 'self' blob: data: *.clerk.com clerk.precisionpdf.com img.clerk.com *.convex.cloud;
   font-src 'self' *.crisp.chat client.crisp.chat;
-  connect-src 'self' *.clerk.com clerk.precisionpdf.com *.convex.cloud *.posthog.com *.crisp.chat wss://*.crisp.chat *.sentry.io o4509412388175872.ingest.us.sentry.io datafa.st;
+  connect-src 'self' *.clerk.com clerk.precisionpdf.com *.convex.cloud wss://*.convex.cloud *.posthog.com *.crisp.chat wss://*.crisp.chat *.sentry.io o4509412388175872.ingest.us.sentry.io datafa.st;
   frame-src 'self' *.clerk.com clerk.precisionpdf.com challenges.cloudflare.com *.stripe.com;
   worker-src 'self' blob:;
 `;
