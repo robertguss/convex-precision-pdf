@@ -36,6 +36,18 @@ them.
 - [ ] Remove all test credentials from codebase
 - [ ] Review and update CORS policies
 
+### CORS Configuration
+
+The application uses a secure CORS policy that:
+- Allows all origins in development for easier testing
+- Restricts to your specific domain in production
+- Properly handles preflight requests
+- Sets appropriate security headers
+
+**Important**: Ensure `NEXT_PUBLIC_APP_URL` is set to your production domain (e.g., `https://precisionpdf.com`) in your production environment variables.
+
+The CORS configuration is implemented in `next.config.ts` and applies to all `/api/*` routes. Convex handles its own CORS internally and doesn't require additional configuration.
+
 ## Environment Variables
 
 ### Production Environment Variables Checklist
@@ -590,6 +602,32 @@ async headers() {
       source: '/:path*',
       headers: securityHeaders,
     },
+    {
+      // CORS configuration for API routes
+      source: '/api/:path*',
+      headers: [
+        {
+          key: 'Access-Control-Allow-Credentials',
+          value: 'true'
+        },
+        {
+          key: 'Access-Control-Allow-Origin',
+          value: process.env.NODE_ENV === 'development' ? '*' : process.env.NEXT_PUBLIC_APP_URL || ''
+        },
+        {
+          key: 'Access-Control-Allow-Methods',
+          value: 'GET,DELETE,PATCH,POST,PUT'
+        },
+        {
+          key: 'Access-Control-Allow-Headers',
+          value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
+        },
+        {
+          key: 'Access-Control-Max-Age',
+          value: '86400'
+        }
+      ]
+    }
   ];
 }
 ```
