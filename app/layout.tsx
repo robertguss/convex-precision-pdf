@@ -86,15 +86,16 @@ export const metadata: Metadata = {
 		apple: "/apple-touch-icon.png",
 	},
 	manifest: "/site.webmanifest",
-	viewport: {
-		width: "device-width",
-		initialScale: 1,
-		maximumScale: 5,
-	},
 	metadataBase: new URL("https://precisionpdf.com"),
 	alternates: {
 		canonical: "/",
 	},
+};
+
+export const viewport = {
+	width: "device-width",
+	initialScale: 1,
+	maximumScale: 5,
 };
 
 export default function RootLayout({

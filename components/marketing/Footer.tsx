@@ -8,8 +8,9 @@ export function Footer() {
         <div className="py-16">
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="/security">Security & Privacy</NavLink>
+              <NavLink href="/privacy">Privacy Policy</NavLink>
               <NavLink href="/terms">Terms of Service</NavLink>
+              <NavLink href="/security">Security</NavLink>
             </div>
           </nav>
 
