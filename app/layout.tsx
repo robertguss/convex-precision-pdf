@@ -81,9 +81,9 @@ export const metadata: Metadata = {
 		},
 	},
 	icons: {
-		icon: "/convex.svg",
-		shortcut: "/favicon.ico",
-		apple: "/apple-touch-icon.png",
+		icon: "/favicon.svg",
+		shortcut: "/favicon.svg",
+		apple: "/apple-touch-icon.svg",
 	},
 	manifest: "/site.webmanifest",
 	metadataBase: new URL("https://precisionpdf.com"),
