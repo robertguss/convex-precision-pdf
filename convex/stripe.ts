@@ -40,6 +40,10 @@ export const createCheckoutSession = action({
       throw new Error("Plan not found");
     }
 
+    if (!selectedPlan.stripePriceId) {
+      throw new Error("Cannot create checkout session for free plan");
+    }
+
     try {
       // Check if user already has a Stripe customer ID
       let customerId: string;
