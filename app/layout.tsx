@@ -131,6 +131,7 @@ export default function RootLayout({
 							__html: `
 								window.$crisp=[];
 								window.CRISP_WEBSITE_ID="${process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID}";
+								window.$crisp.push(["safe", true]);
 								(function(){
 									d=document;
 									s=d.createElement("script");
