@@ -52,3 +52,10 @@ package-lock.json
 
 # Sentry Config File
 .env.sentry-build-plugin
+
+# IDE specific files
+.cursor/
+
+# Sentry example files (for development only)
+app/api/sentry-example-api/
+app/sentry-example-page/
