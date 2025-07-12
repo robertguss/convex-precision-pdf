@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat *.posthog.com datafa.st blob:;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat *.posthog.com datafa.st vercel.live blob:;
   style-src 'self' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat;
   style-src-elem 'self' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat client.crisp.chat;
   img-src 'self' blob: data: *.clerk.com clerk.precisionpdf.com *.convex.cloud;
@@ -40,7 +40,7 @@ const securityHeaders = [
   },
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), midi=(), payment=(), xr-spatial-tracking=()",
+    value: "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), midi=(), payment=()",
   },
   {
     key: "Content-Security-Policy",
