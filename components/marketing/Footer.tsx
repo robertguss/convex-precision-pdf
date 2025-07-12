@@ -1,5 +1,4 @@
 import { Container } from "@/components/marketing/Container";
-import { Logo } from "@/components/marketing/Logo";
 import { NavLink } from "@/components/marketing/NavLink";
 
 export function Footer() {
@@ -10,6 +9,7 @@ export function Footer() {
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
               <NavLink href="/security">Security & Privacy</NavLink>
+              <NavLink href="/terms">Terms of Service</NavLink>
             </div>
           </nav>
 
