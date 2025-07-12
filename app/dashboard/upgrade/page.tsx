@@ -163,7 +163,23 @@ export default function UpgradePage() {
   const handleUpgrade = async (planId: string) => {
     try {
       setLoadingPlanId(planId);
-      const { url } = await createCheckoutSession({ planId });
+      
+      // Get Datafast cookies for attribution
+      const getCookie = (name: string) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop()?.split(';').shift();
+        return undefined;
+      };
+      
+      const datafastVisitorId = getCookie('datafast_visitor_id');
+      const datafastSessionId = getCookie('datafast_session_id');
+      
+      const { url } = await createCheckoutSession({ 
+        planId,
+        datafastVisitorId,
+        datafastSessionId,
+      });
       window.location.href = url;
     } catch (error) {
       console.error("Error creating checkout session:", error);

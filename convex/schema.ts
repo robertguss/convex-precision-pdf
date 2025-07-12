@@ -26,7 +26,7 @@ export default defineSchema({
     description: v.string(),
     price: v.number(),
     interval: v.string(),
-    stripePriceId: v.string(),
+    stripePriceId: v.optional(v.string()),
     features: v.array(v.string()),
     popular: v.optional(v.boolean()),
   }),
