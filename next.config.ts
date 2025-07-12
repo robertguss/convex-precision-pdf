@@ -3,13 +3,13 @@ import type { NextConfig } from "next";
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat *.posthog.com datafa.st vercel.live blob:;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com challenges.cloudflare.com *.crisp.chat *.posthog.com datafa.st vercel.live blob:;
   style-src 'self' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat;
   style-src-elem 'self' 'unsafe-inline' *.clerk.com clerk.precisionpdf.com *.crisp.chat client.crisp.chat;
-  img-src 'self' blob: data: *.clerk.com clerk.precisionpdf.com *.convex.cloud;
+  img-src 'self' blob: data: *.clerk.com clerk.precisionpdf.com img.clerk.com *.convex.cloud;
   font-src 'self' *.crisp.chat client.crisp.chat;
   connect-src 'self' *.clerk.com clerk.precisionpdf.com *.convex.cloud *.posthog.com *.crisp.chat wss://*.crisp.chat *.sentry.io o4509412388175872.ingest.us.sentry.io datafa.st;
-  frame-src 'self' *.clerk.com clerk.precisionpdf.com *.stripe.com;
+  frame-src 'self' *.clerk.com clerk.precisionpdf.com challenges.cloudflare.com *.stripe.com;
   worker-src 'self' blob:;
 `;
 
