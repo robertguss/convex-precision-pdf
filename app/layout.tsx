@@ -108,7 +108,7 @@ export default function RootLayout({
 			<head>
 				<Script
 					data-website-id="68727e9c527beef6ff8a8b07"
-					data-domain="www.precisionpdf.com.COM"
+					data-domain="www.precisionpdf.com"
 					src="https://datafa.st/js/script.js"
 					strategy="afterInteractive"
 				/>
