@@ -134,7 +134,7 @@ function Plan({
             featured
               ? "bg-white text-blue-600 hover:bg-slate-100 active:bg-slate-200"
               : "ring-1 ring-inset ring-white/10 text-white hover:bg-white/5 active:bg-white/10",
-            "w-full disabled:opacity-50 disabled:cursor-not-allowed"
+            "w-full cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
           )}
           aria-label={`Get started with the ${name} plan for ${price}`}
           data-cy={isCurrentPlan ? undefined : `select-${planId}-plan`}
