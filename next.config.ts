@@ -40,7 +40,8 @@ const securityHeaders = [
   },
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), midi=(), payment=()",
+    value:
+      "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), midi=(), payment=()",
   },
   {
     key: "Content-Security-Policy",
@@ -73,10 +74,10 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
+      // {
+      //   source: "/:path*",
+      //   headers: securityHeaders,
+      // },
       {
         // API routes that might be called from different origins in development
         source: "/api/:path*",
