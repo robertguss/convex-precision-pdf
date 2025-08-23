@@ -1,0 +1,50 @@
+# Codebase Architecture
+
+## Stack
+- Next.js 15 (App Router) + TypeScript
+- Convex (backend/database)
+- Clerk (authentication)
+- Stripe (payments)
+- TailwindCSS + Radix UI
+- Sentry (monitoring)
+
+## Structure
+- `/app` - Next.js pages (App Router)
+- `/components` - React components
+- `/convex` - Backend functions and schema
+- `/lib` - Utility functions
+- `/utils` - Additional utilities
+- `/hooks` - Custom React hooks
+
+## Development
+- `pnpm run dev` - Start frontend + backend
+- `pnpm run dev:frontend` - Next.js only
+- `pnpm run dev:backend` - Convex only
+
+# Testing
+
+## Unit Tests (Vitest)
+- `pnpm test` - Interactive mode
+- `pnpm test:run` - Single run
+- `pnpm test:watch` - Watch mode
+- `pnpm test:coverage` - With coverage
+- `pnpm test:ui` - UI mode
+
+## E2E Tests (Playwright)
+- `pnpm pw:test` - Run tests
+- `pnpm pw:test:ui` - UI mode
+- `pnpm pw:test:debug` - Debug mode
+- `pnpm pw:test:headed` - Headed mode
+- `pnpm pw:report` - View report
+- `pnpm pw:codegen` - Generate tests
+
+# Linting
+
+## ESLint
+- `pnpm lint` - Run linter
+- Config: Next.js + TypeScript rules
+- File: `eslint.config.mjs`
+
+## Build
+- `pnpm build` - Production build
+- `pnpm start` - Start production server
