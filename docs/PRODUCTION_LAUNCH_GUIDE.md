@@ -39,6 +39,7 @@ them.
 ### CORS Configuration
 
 The application uses a secure CORS policy that:
+
 - Allows all origins in development for easier testing
 - Restricts to your specific domain in production
 - Properly handles preflight requests
@@ -177,6 +178,7 @@ npx convex run --prod plans:seedPlans
 #### A. Configure Products and Prices
 
 1. Create products in Stripe Dashboard:
+
    - **Free Plan**: $0/month (if you want to track free users)
    - **Starter Plan**: $9.99/month - 75 pages
    - **Pro Plan**: $24.99/month - 250 pages
@@ -376,8 +378,8 @@ import posthog from "posthog-js";
 export function initAnalytics() {
   if (typeof window !== "undefined" && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ||
-        "https://app.posthog.com",
+      api_host:
+        process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://app.posthog.com",
       loaded: (posthog) => {
         if (process.env.NODE_ENV === "development") posthog.opt_out_capturing();
       },
@@ -714,11 +716,13 @@ Use a service like BetterUptime or create a simple status page:
 #### B. Set Up Alerts
 
 1. **Sentry Alerts**:
+
    - Error rate spike
    - New error types
    - Performance degradation
 
 2. **Vercel Alerts**:
+
    - Build failures
    - Function errors
    - Performance issues

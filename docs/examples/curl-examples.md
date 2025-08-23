@@ -46,7 +46,7 @@ curl "http://localhost:3000/api/examples/load?example=medical_report_1"
 # All available examples:
 # - invoice
 # - bank_statement_1
-# - bank_statement_2  
+# - bank_statement_2
 # - medical_report_1
 # - medical_report_2
 # - medical_journal_article
@@ -55,6 +55,7 @@ curl "http://localhost:3000/api/examples/load?example=medical_report_1"
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -84,6 +85,7 @@ curl -X POST \
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -117,6 +119,7 @@ curl -X POST \
 ```
 
 **Response:**
+
 ```json
 {
   "markdown": "# Document Title\n\nExtracted content...",
@@ -149,7 +152,7 @@ Export a document in various formats.
 curl "http://localhost:3000/api/export/json?documentId=abc123" \
   -o document.json
 
-# Export as CSV  
+# Export as CSV
 curl "http://localhost:3000/api/export/csv?documentId=abc123" \
   -o document.csv
 
@@ -275,28 +278,28 @@ mkdir -p "$OUTPUT_DIR"
 for pdf_file in "$PDF_DIR"/*.pdf; do
   filename=$(basename "$pdf_file" .pdf)
   echo "Processing: $filename"
-  
+
   # Upload document
   response=$(curl -X POST \
     -H "Content-Type: multipart/form-data" \
     -F "file=@$pdf_file" \
     "http://localhost:3000/api/upload-document" \
     --silent)
-  
+
   # Extract document ID
   doc_id=$(echo $response | grep -o '"documentId":"[^"]*' | cut -d'"' -f4)
-  
+
   if [ -n "$doc_id" ]; then
     echo "  Document ID: $doc_id"
-    
+
     # Wait for processing
     sleep 5
-    
+
     # Export as JSON
     curl "http://localhost:3000/api/export/json?documentId=$doc_id" \
       -o "$OUTPUT_DIR/$filename.json" \
       --silent
-    
+
     echo "  Exported: $filename.json"
   else
     echo "  Error uploading: $filename"
@@ -315,9 +318,9 @@ Handle various error scenarios.
 
 upload_with_error_handling() {
   local file="$1"
-  
+
   echo "Uploading: $file"
-  
+
   # Upload with status code capture
   response=$(curl -X POST \
     -H "Content-Type: multipart/form-data" \
@@ -325,11 +328,11 @@ upload_with_error_handling() {
     -w "HTTPSTATUS:%{http_code}" \
     "http://localhost:3000/api/upload-document" \
     --silent)
-  
+
   # Extract HTTP status
   http_status=$(echo $response | grep -o 'HTTPSTATUS:[0-9]*' | cut -d':' -f2)
   response_body=$(echo $response | sed 's/HTTPSTATUS:[0-9]*$//')
-  
+
   case $http_status in
     200|201)
       echo "✅ Upload successful"
@@ -374,17 +377,17 @@ Validate API responses and extract data.
 # Function to validate JSON response
 validate_json_response() {
   local response="$1"
-  
+
   # Check if response is valid JSON
   if echo "$response" | jq . >/dev/null 2>&1; then
     echo "✅ Valid JSON response"
-    
+
     # Extract success status
     success=$(echo "$response" | jq -r '.success // false')
-    
+
     if [ "$success" = "true" ]; then
       echo "✅ Operation successful"
-      
+
       # Extract document ID if present
       doc_id=$(echo "$response" | jq -r '.documentId // empty')
       if [ -n "$doc_id" ]; then
@@ -477,11 +480,11 @@ import json
 # Upload document
 def upload_document(file_path):
     url = "http://localhost:3000/api/upload-document"
-    
+
     with open(file_path, 'rb') as file:
         files = {'file': file}
         response = requests.post(url, files=files)
-    
+
     if response.status_code == 200:
         return response.json()
     else:
@@ -491,9 +494,9 @@ def upload_document(file_path):
 def export_document(document_id, format='json'):
     url = f"http://localhost:3000/api/export/{format}"
     params = {'documentId': document_id}
-    
+
     response = requests.get(url, params=params)
-    
+
     if response.status_code == 200:
         return response.content
     else:
@@ -503,12 +506,12 @@ def export_document(document_id, format='json'):
 try:
     result = upload_document("document.pdf")
     document_id = result['documentId']
-    
+
     # Export as JSON
     json_data = export_document(document_id, 'json')
     with open('exported.json', 'wb') as f:
         f.write(json_data)
-        
+
 except Exception as e:
     print(f"Error: {e}")
 ```
@@ -516,54 +519,53 @@ except Exception as e:
 ### JavaScript/Node.js Integration
 
 ```javascript
-const FormData = require('form-data');
-const fs = require('fs');
-const fetch = require('node-fetch');
+const FormData = require("form-data");
+const fs = require("fs");
+const fetch = require("node-fetch");
 
 // Upload document
 async function uploadDocument(filePath) {
   const form = new FormData();
-  form.append('file', fs.createReadStream(filePath));
-  
-  const response = await fetch('http://localhost:3000/api/upload-document', {
-    method: 'POST',
-    body: form
+  form.append("file", fs.createReadStream(filePath));
+
+  const response = await fetch("http://localhost:3000/api/upload-document", {
+    method: "POST",
+    body: form,
   });
-  
+
   if (!response.ok) {
     throw new Error(`Upload failed: ${response.statusText}`);
   }
-  
+
   return await response.json();
 }
 
 // Export document
-async function exportDocument(documentId, format = 'json') {
+async function exportDocument(documentId, format = "json") {
   const url = `http://localhost:3000/api/export/${format}?documentId=${documentId}`;
   const response = await fetch(url);
-  
+
   if (!response.ok) {
     throw new Error(`Export failed: ${response.statusText}`);
   }
-  
+
   return await response.buffer();
 }
 
 // Usage
 (async () => {
   try {
-    const result = await uploadDocument('document.pdf');
+    const result = await uploadDocument("document.pdf");
     const documentId = result.documentId;
-    
+
     // Wait for processing
     setTimeout(async () => {
-      const exportedData = await exportDocument(documentId, 'json');
-      fs.writeFileSync('exported.json', exportedData);
-      console.log('Document exported successfully');
+      const exportedData = await exportDocument(documentId, "json");
+      fs.writeFileSync("exported.json", exportedData);
+      console.log("Document exported successfully");
     }, 5000);
-    
   } catch (error) {
-    console.error('Error:', error.message);
+    console.error("Error:", error.message);
   }
 })();
 ```
@@ -571,6 +573,6 @@ async function exportDocument(documentId, format = 'json') {
 ## Next Steps
 
 - **[JavaScript SDK Examples](./javascript-sdk.md)** - Frontend integration
-- **[Python Examples](./python-examples.md)** - Backend integration  
+- **[Python Examples](./python-examples.md)** - Backend integration
 - **[API Reference](../developers/api-reference.md)** - Complete API documentation
 - **[Authentication Setup](../security/re-enabling-auth.md)** - Enable authentication for production

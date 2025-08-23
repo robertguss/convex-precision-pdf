@@ -46,14 +46,17 @@ Currently, the app is in development mode with authentication disabled, so you c
 ### Upload Process
 
 1. **Navigate to Dashboard**
+
    - Click "Upload Document" or go to `/dashboard`
 
 2. **Choose Your File**
+
    - Drag and drop a PDF file
    - Or click "Browse" to select from your computer
    - The file will upload immediately
 
 3. **Processing Begins**
+
    - You'll see a real-time progress indicator
    - Processing typically takes 30-60 seconds per page
    - Status updates happen automatically
@@ -86,16 +89,19 @@ graph LR
 When processing completes, you'll see:
 
 #### Left Panel: Original PDF
+
 - **Page navigation**: Click through pages
 - **Zoom controls**: Magnify details
 - **Highlighted regions**: See where data was extracted from
 
 #### Right Panel: Extracted Data
+
 - **Markdown view**: Clean, structured text representation
 - **Chunk view**: Individual data pieces with source locations
 - **Table data**: Structured tables ready for export
 
 #### Visual Verification
+
 - **Click any data chunk** to see its location in the original PDF
 - **Bounding boxes** show exactly where text was found
 - **Color coding** indicates different types of content
@@ -108,27 +114,30 @@ When processing completes, you'll see:
 
 ### Types of Extracted Content
 
-| Content Type | Description | Example |
-|--------------|-------------|---------|
-| **Text Blocks** | Paragraphs and sentences | Contract terms, descriptions |
-| **Tables** | Structured data in rows/columns | Financial data, inventories |
-| **Forms** | Field-value pairs | Name: John Doe, Date: 2024-01-01 |
-| **Headers** | Document titles and section headers | Invoice #12345, Patient Information |
-| **Lists** | Bullet points and numbered lists | Terms and conditions, requirements |
+| Content Type    | Description                         | Example                             |
+| --------------- | ----------------------------------- | ----------------------------------- |
+| **Text Blocks** | Paragraphs and sentences            | Contract terms, descriptions        |
+| **Tables**      | Structured data in rows/columns     | Financial data, inventories         |
+| **Forms**       | Field-value pairs                   | Name: John Doe, Date: 2024-01-01    |
+| **Headers**     | Document titles and section headers | Invoice #12345, Patient Information |
+| **Lists**       | Bullet points and numbered lists    | Terms and conditions, requirements  |
 
 ## Exporting Your Data
 
 ### Available Export Formats
 
 #### For Spreadsheet Use
+
 - **CSV**: Perfect for Excel, Google Sheets
 - **XLSX**: Native Excel format with formatting
 
 #### For Developers
+
 - **JSON**: Structured data with metadata
 - **API access**: Programmatic integration
 
 #### For Documentation
+
 - **Markdown**: Clean, readable format
 - **DOCX**: Microsoft Word document
 - **Plain Text**: Simple text extraction
@@ -136,6 +145,7 @@ When processing completes, you'll see:
 ### How to Export
 
 1. **Single Document Export**
+
    - Open any processed document
    - Click "Export" button
    - Choose your preferred format
@@ -150,6 +160,7 @@ When processing completes, you'll see:
 ### Export Examples
 
 #### CSV Export (Great for Spreadsheets)
+
 ```csv
 Field,Value,Page,Confidence
 Company Name,Acme Corp,1,0.98
@@ -158,6 +169,7 @@ Amount,$1234.56,1,0.99
 ```
 
 #### JSON Export (Perfect for Developers)
+
 ```json
 {
   "title": "Invoice INV-001",
@@ -176,12 +188,14 @@ Amount,$1234.56,1,0.99
 ### Document Quality Tips
 
 ✅ **Good Documents**:
+
 - High resolution scans (300 DPI+)
 - Clear, readable text
 - Standard fonts and layouts
 - Well-structured tables
 
 ❌ **Challenging Documents**:
+
 - Blurry or low-resolution scans
 - Handwritten text
 - Complex multi-column layouts
@@ -190,11 +204,13 @@ Amount,$1234.56,1,0.99
 ### Upload Recommendations
 
 1. **Optimize Your PDFs**
+
    - Use "Save as PDF" instead of scanning when possible
    - Ensure text is selectable (not just an image)
    - Remove unnecessary pages
 
 2. **For Scanned Documents**
+
    - Scan at 300 DPI or higher
    - Use black and white for text documents
    - Ensure pages are straight and well-lit
@@ -207,17 +223,20 @@ Amount,$1234.56,1,0.99
 ## Understanding Your Account
 
 ### Free Plan Limits
+
 - **10 pages per month**
 - **All export formats**
 - **Visual verification**
 - **Basic support**
 
 ### Usage Tracking
+
 - Monitor your page usage in the dashboard
 - Counts reset monthly
 - Multi-page documents count each page separately
 
 ### Upgrade Benefits
+
 - **More pages per month**
 - **Priority processing**
 - **Advanced features**
@@ -226,24 +245,28 @@ Amount,$1234.56,1,0.99
 ## Common Use Cases
 
 ### 📊 Business Documents
+
 - **Invoices**: Extract line items, totals, vendor info
 - **Financial Statements**: Pull key figures and ratios
 - **Contracts**: Identify key terms and dates
 - **Reports**: Convert tables to spreadsheet format
 
 ### 🏥 Healthcare Documents
+
 - **Medical Records**: Extract patient information and test results
 - **Lab Reports**: Convert test data to structured format
 - **Insurance Forms**: Pull policy and claim information
 - **Research Papers**: Extract data tables and findings
 
 ### 🏦 Financial Documents
+
 - **Bank Statements**: Extract transaction data
 - **Tax Documents**: Pull income and deduction information
 - **Investment Reports**: Convert performance data
 - **Loan Applications**: Extract applicant information
 
 ### 📚 Academic & Research
+
 - **Research Papers**: Extract data tables and citations
 - **Thesis Documents**: Convert appendices and data
 - **Grant Applications**: Pull budget and timeline information
@@ -254,23 +277,27 @@ Amount,$1234.56,1,0.99
 ### Upload Problems
 
 **Problem**: "File upload failed"
+
 - ✅ Check file size (max 50MB)
 - ✅ Ensure it's a PDF file
 - ✅ Try refreshing the page
 - ✅ Check your internet connection
 
 **Problem**: "File type not supported"
+
 - ✅ Convert to PDF first
 - ✅ Ensure file extension is .pdf
 
 ### Processing Issues
 
 **Problem**: "Processing failed"
+
 - ✅ Try re-uploading the document
 - ✅ Check if the PDF has selectable text
 - ✅ Contact support with the document
 
 **Problem**: "Poor extraction quality"
+
 - ✅ Check original document quality
 - ✅ Try a higher resolution scan
 - ✅ Ensure text is not in images
@@ -278,11 +305,13 @@ Amount,$1234.56,1,0.99
 ### Export Problems
 
 **Problem**: "Export failed" or "No data to export"
+
 - ✅ Ensure document processing completed successfully
 - ✅ Try refreshing the page
 - ✅ Try a different export format
 
 **Problem**: "Missing data in export"
+
 - ✅ Check if data was extracted (visible in viewer)
 - ✅ Some formats may not include all metadata
 - ✅ Try JSON export for complete data
@@ -290,16 +319,19 @@ Amount,$1234.56,1,0.99
 ## Getting Help
 
 ### Self-Service Resources
+
 - 📚 **Documentation**: Browse all guides in `/docs`
 - 🎯 **Interactive Demo**: Try examples without uploading
 - 🔍 **FAQ**: Common questions and answers
 
 ### Contact Support
+
 - 💬 **Live Chat**: Click the chat widget (bottom right)
 - 📧 **Email**: support@precisionpdf.com
 - 🐛 **Bug Reports**: GitHub Issues for technical problems
 
 ### Feature Requests
+
 - Have an idea for improvement?
 - Want support for new document types?
 - Contact us through any support channel
@@ -307,11 +339,13 @@ Amount,$1234.56,1,0.99
 ## What's Next?
 
 ### Explore Advanced Features
+
 - **API Integration**: Automate document processing
 - **Bulk Processing**: Handle multiple documents
 - **Custom Workflows**: Integrate with your systems
 
 ### Stay Updated
+
 - **Follow Updates**: Watch for new features
 - **Join Community**: Connect with other users
 - **Provide Feedback**: Help us improve

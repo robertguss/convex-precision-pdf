@@ -51,17 +51,19 @@ git checkout -b fix/bug-description
 ## 🧭 Project Overview
 
 ### Architecture
+
 - **Frontend**: Next.js 15 with React 19
-- **Backend**: Convex (real-time database + serverless functions)  
+- **Backend**: Convex (real-time database + serverless functions)
 - **Authentication**: Clerk (currently disabled for development)
 - **Processing**: External FastAPI service with Landing AI
 - **UI**: Tailwind CSS with shadcn/ui components
 
 ### Key Directories
+
 ```
 precision-pdf/
 ├── app/                    # Next.js App Router pages & API routes
-├── components/             # Reusable React components  
+├── components/             # Reusable React components
 ├── convex/                # Backend functions and database schema
 ├── docs/                  # Documentation (what you're reading!)
 ├── public/                # Static assets and example documents
@@ -72,28 +74,33 @@ precision-pdf/
 ## 🎯 Ways to Contribute
 
 ### 1. Bug Fixes
+
 - Check [GitHub Issues](https://github.com/robertguss/precision-pdf/issues) for bug reports
 - Look for issues labeled `bug` or `good first issue`
 - Reproduce the bug locally before fixing
 
 ### 2. Feature Development
+
 - Check [GitHub Issues](https://github.com/robertguss/precision-pdf/issues) for feature requests
 - Look for issues labeled `enhancement` or `feature request`
 - Discuss large features in issues before implementing
 
 ### 3. Documentation
+
 - Improve existing documentation
 - Add missing documentation
 - Fix typos and clarify instructions
 - Translate documentation to other languages
 
 ### 4. Testing
+
 - Add unit tests (Vitest)
 - Add E2E tests (Playwright)
 - Improve test coverage
 - Test on different browsers/devices
 
 ### 5. UI/UX Improvements
+
 - Improve existing components
 - Add new shadcn/ui components
 - Enhance accessibility
@@ -119,23 +126,27 @@ pnpm run format
 ### Coding Standards
 
 #### TypeScript
+
 - Use TypeScript for all new code
 - Prefer interfaces over types for object shapes
 - Use proper typing, avoid `any`
 - Add JSDoc comments for complex functions
 
 #### React Components
+
 - Use functional components with hooks
 - Prefer composition over inheritance
 - Follow the existing component structure
 - Use `use client` directive only when necessary
 
 #### File Naming
+
 - Use kebab-case for file names: `document-viewer.tsx`
 - Use PascalCase for component names: `DocumentViewer`
 - Use camelCase for functions and variables
 
 #### Example Component
+
 ```typescript
 /**
  * DocumentViewer displays PDF documents with extracted data
@@ -145,16 +156,16 @@ interface DocumentViewerProps {
   showMetadata?: boolean;
 }
 
-export function DocumentViewer({ 
-  documentId, 
-  showMetadata = true 
+export function DocumentViewer({
+  documentId,
+  showMetadata = true
 }: DocumentViewerProps) {
   const document = useQuery(api.documents.getDocument, { documentId });
-  
+
   if (!document) {
     return <div>Loading...</div>;
   }
-  
+
   return (
     <div className="document-viewer">
       {/* Component implementation */}
@@ -166,6 +177,7 @@ export function DocumentViewer({
 ### Convex Functions
 
 #### Queries (Read Operations)
+
 ```typescript
 // convex/documents.ts
 export const getDocument = query({
@@ -175,33 +187,34 @@ export const getDocument = query({
     if (!user) {
       throw new ConvexError("User not authenticated");
     }
-    
+
     const document = await ctx.db.get(documentId);
     if (!document || document.userId !== user._id) {
       return null;
     }
-    
+
     return document;
   },
 });
 ```
 
-#### Mutations (Write Operations)  
+#### Mutations (Write Operations)
+
 ```typescript
 export const updateDocument = mutation({
-  args: { 
+  args: {
     documentId: v.id("documents"),
     updates: v.object({
       title: v.optional(v.string()),
       status: v.optional(v.string()),
-    })
+    }),
   },
   handler: async (ctx, { documentId, updates }) => {
     const user = await getCurrentUser(ctx);
     if (!user) {
       throw new ConvexError("User not authenticated");
     }
-    
+
     await ctx.db.patch(documentId, {
       ...updates,
       updatedAt: Date.now(),
@@ -229,15 +242,15 @@ export async function GET(request: NextRequest) {
     //     { status: 401 }
     //   );
     // }
-    
+
     // Implementation here
-    
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("API error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -250,7 +263,7 @@ export async function GET(request: NextRequest) {
 ```bash
 # Unit tests with Vitest
 pnpm run test            # Run once
-pnpm run test:watch      # Watch mode  
+pnpm run test:watch      # Watch mode
 pnpm run test:ui         # UI interface
 
 # E2E tests with Playwright
@@ -262,43 +275,46 @@ pnpm run pw:test:debug   # Debug mode
 ### Writing Tests
 
 #### Unit Test Example
+
 ```typescript
 // utils/documentUtils.test.ts
-import { describe, it, expect } from 'vitest';
-import { extractDocumentTitle } from './documentUtils';
+import { describe, it, expect } from "vitest";
+import { extractDocumentTitle } from "./documentUtils";
 
-describe('documentUtils', () => {
-  it('should extract title from document data', () => {
+describe("documentUtils", () => {
+  it("should extract title from document data", () => {
     const mockDocument = {
-      markdown: '# Invoice INV-001\n\nCompany: Acme Corp',
-      chunks: []
+      markdown: "# Invoice INV-001\n\nCompany: Acme Corp",
+      chunks: [],
     };
-    
+
     const title = extractDocumentTitle(mockDocument);
-    expect(title).toBe('Invoice INV-001');
+    expect(title).toBe("Invoice INV-001");
   });
 });
 ```
 
 #### E2E Test Example
+
 ```typescript
 // tests/upload.spec.ts
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('should upload and process document', async ({ page }) => {
-  await page.goto('/dashboard');
-  
+test("should upload and process document", async ({ page }) => {
+  await page.goto("/dashboard");
+
   // Upload file
   const fileInput = page.locator('input[type="file"]');
-  await fileInput.setInputFiles('test-files/sample.pdf');
-  
+  await fileInput.setInputFiles("test-files/sample.pdf");
+
   // Wait for processing
-  await expect(page.locator('[data-testid="processing-status"]'))
-    .toContainText('completed', { timeout: 30000 });
-    
+  await expect(page.locator('[data-testid="processing-status"]')).toContainText(
+    "completed",
+    { timeout: 30000 },
+  );
+
   // Verify results
-  await expect(page.locator('[data-testid="extracted-content"]'))
-    .toBeVisible();
+  await expect(page.locator('[data-testid="extracted-content"]')).toBeVisible();
 });
 ```
 
@@ -307,6 +323,7 @@ test('should upload and process document', async ({ page }) => {
 ### Before Submitting
 
 1. **Sync with upstream**
+
    ```bash
    git fetch upstream
    git checkout main
@@ -314,6 +331,7 @@ test('should upload and process document', async ({ page }) => {
    ```
 
 2. **Run tests and linting**
+
    ```bash
    pnpm run lint
    pnpm run test
@@ -337,27 +355,33 @@ When creating a PR, use this template:
 
 ```markdown
 ## Description
+
 Brief description of changes made.
 
 ## Type of Change
+
 - [ ] Bug fix
-- [ ] New feature  
+- [ ] New feature
 - [ ] Documentation update
 - [ ] Refactoring
 - [ ] Performance improvement
 
 ## Related Issues
+
 Fixes #123
 
 ## How Has This Been Tested?
+
 - [ ] Unit tests
 - [ ] E2E tests
 - [ ] Manual testing
 
 ## Screenshots (if applicable)
+
 Add screenshots for UI changes.
 
 ## Checklist
+
 - [ ] Code follows project style guidelines
 - [ ] Self-review completed
 - [ ] Tests added/updated
@@ -435,6 +459,7 @@ export function DocumentCard({ document }: DocumentCardProps) {
 ## 🔒 Security Considerations
 
 ### Current Security Status
+
 The project has authentication **disabled** for easy development. When contributing:
 
 1. **Don't commit real API keys** or secrets
@@ -454,7 +479,6 @@ export async function sensitiveOperation() {
   // if (!userId) {
   //   throw new Error("Unauthorized");
   // }
-  
   // Implementation here
 }
 ```
@@ -471,6 +495,7 @@ A clear description of the bug.
 
 **To Reproduce**
 Steps to reproduce:
+
 1. Go to '...'
 2. Click on '...'
 3. See error
@@ -482,6 +507,7 @@ What should happen.
 Add screenshots if applicable.
 
 **Environment:**
+
 - OS: [e.g. macOS, Windows, Linux]
 - Browser: [e.g. Chrome, Safari, Firefox]
 - Node.js version: [e.g. 18.17.0]
@@ -514,23 +540,27 @@ Screenshots, mockups, or examples.
 Understanding our label system:
 
 ### Type Labels
+
 - `bug` - Something isn't working
 - `enhancement` - New feature or improvement
 - `documentation` - Documentation improvements
 - `question` - Further information is requested
 
 ### Priority Labels
+
 - `priority: high` - Critical issues
 - `priority: medium` - Important but not critical
 - `priority: low` - Nice to have
 
-### Status Labels  
+### Status Labels
+
 - `good first issue` - Good for newcomers
 - `help wanted` - Extra attention needed
 - `in progress` - Someone is working on this
 - `blocked` - Blocked by dependencies
 
 ### Area Labels
+
 - `area: frontend` - Frontend/UI related
 - `area: backend` - Convex functions/API
 - `area: docs` - Documentation related
@@ -541,9 +571,10 @@ Understanding our label system:
 ### Versioning
 
 We follow [Semantic Versioning](https://semver.org/):
+
 - `MAJOR.MINOR.PATCH`
 - `MAJOR`: Breaking changes
-- `MINOR`: New features (backward compatible)  
+- `MINOR`: New features (backward compatible)
 - `PATCH`: Bug fixes (backward compatible)
 
 ### Release Workflow
@@ -565,7 +596,7 @@ We follow [Semantic Versioning](https://semver.org/):
 ### Before Asking
 
 1. **Check existing issues** and discussions
-2. **Read the documentation** thoroughly  
+2. **Read the documentation** thoroughly
 3. **Try reproducing** the issue locally
 4. **Gather relevant information** (error messages, screenshots, etc.)
 
@@ -574,6 +605,7 @@ We follow [Semantic Versioning](https://semver.org/):
 ### Contributors
 
 All contributors will be:
+
 - **Listed** in the Contributors section
 - **Thanked** in release notes for significant contributions
 - **Invited** to our contributors channel
@@ -622,7 +654,7 @@ Report issues to: conduct@precisionpdf.com
 
 ### Development Tools
 
-- **VS Code Extensions**: 
+- **VS Code Extensions**:
   - ES7+ React/Redux/React-Native snippets
   - Tailwind CSS IntelliSense
   - TypeScript Importer

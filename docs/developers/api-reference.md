@@ -33,13 +33,15 @@ Upload a PDF document for processing.
 **Content-Type:** `multipart/form-data`
 
 **Request Body:**
+
 ```typescript
 {
-  file: File  // PDF file
+  file: File; // PDF file
 }
 ```
 
 **Response:**
+
 ```typescript
 {
   success: true,
@@ -49,6 +51,7 @@ Upload a PDF document for processing.
 ```
 
 **Error Responses:**
+
 ```typescript
 // 400 - Bad Request
 {
@@ -77,6 +80,7 @@ Upload a PDF document for processing.
 ```
 
 **Example:**
+
 ```bash
 curl -X POST \
   -H "Content-Type: multipart/form-data" \
@@ -99,13 +103,15 @@ Process a document with Landing AI (called internally after upload).
 **Endpoint:** `POST /api/process-document`
 
 **Request Body:**
+
 ```typescript
 {
-  file: File  // PDF file
+  file: File; // PDF file
 }
 ```
 
 **Response:**
+
 ```typescript
 {
   markdown: string,
@@ -126,6 +132,7 @@ Process a document with Landing AI (called internally after upload).
 ```
 
 **Example:**
+
 ```bash
 curl -X POST \
   -H "Content-Type: multipart/form-data" \
@@ -140,9 +147,11 @@ curl -X POST \
 Export individual documents in various formats.
 
 #### Export as JSON
+
 **Endpoint:** `GET /api/export/json?documentId=<id>`
 
 **Response:** JSON file download
+
 ```json
 {
   "title": "Document Title",
@@ -153,31 +162,37 @@ Export individual documents in various formats.
 ```
 
 #### Export as CSV
+
 **Endpoint:** `GET /api/export/csv?documentId=<id>`
 
 **Response:** CSV file download with extracted tabular data
 
 #### Export as DOCX
+
 **Endpoint:** `GET /api/export/docx?documentId=<id>`
 
 **Response:** Microsoft Word document download
 
 #### Export as Markdown
+
 **Endpoint:** `GET /api/export/markdown?documentId=<id>`
 
 **Response:** Markdown file download
 
 #### Export as Text
+
 **Endpoint:** `GET /api/export/text?documentId=<id>`
 
 **Response:** Plain text file download
 
 #### Export as XLSX
+
 **Endpoint:** `GET /api/export/xlsx?documentId=<id>`
 
 **Response:** Excel spreadsheet download
 
 **Example:**
+
 ```bash
 curl -O "http://localhost:3000/api/export/json?documentId=abc123"
 ```
@@ -187,6 +202,7 @@ curl -O "http://localhost:3000/api/export/json?documentId=abc123"
 Export all user documents in a single archive.
 
 **Endpoints:**
+
 - `GET /api/export/all-json` - All documents as JSON files
 - `GET /api/export/all-docx` - All documents as Word files
 - `GET /api/export/all-markdown` - All documents as Markdown files
@@ -196,6 +212,7 @@ Export all user documents in a single archive.
 **Response:** ZIP archive download
 
 **Example:**
+
 ```bash
 curl -O "http://localhost:3000/api/export/all-json"
 ```
@@ -209,12 +226,14 @@ Retrieve rendered page images from documents.
 **Endpoint:** `GET /api/documents/[id]/page-image/[page]`
 
 **Parameters:**
+
 - `id`: Document ID
 - `page`: Page number (0-indexed)
 
 **Response:** PNG image
 
 **Example:**
+
 ```bash
 curl "http://localhost:3000/api/documents/abc123/page-image/0" \
   -o page-0.png
@@ -229,9 +248,11 @@ Load pre-processed example documents for demo purposes.
 **Endpoint:** `GET /api/examples/load?example=<example-name>`
 
 **Parameters:**
+
 - `example`: One of: `invoice`, `bank_statement_1`, `bank_statement_2`, `medical_report_1`, `medical_report_2`, `medical_journal_article`, `mortgage_application`, `settlement_statement`
 
 **Response:**
+
 ```typescript
 {
   success: true,
@@ -247,6 +268,7 @@ Load pre-processed example documents for demo purposes.
 ```
 
 **Example:**
+
 ```bash
 curl "http://localhost:3000/api/examples/load?example=invoice"
 ```
@@ -260,6 +282,7 @@ Check if the FastAPI service is available.
 **Endpoint:** `GET /api/test`
 
 **Response:**
+
 ```typescript
 {
   message: "Hello from Next.js API!",
@@ -269,6 +292,7 @@ Check if the FastAPI service is available.
 ```
 
 **Example:**
+
 ```bash
 curl "http://localhost:3000/api/test"
 ```
@@ -282,6 +306,7 @@ Webhook endpoint for syncing user data from Clerk.
 **Endpoint:** `POST /api/sync-user`
 
 **Headers:**
+
 ```http
 svix-id: <webhook-id>
 svix-timestamp: <timestamp>
@@ -291,6 +316,7 @@ svix-signature: <signature>
 **Request Body:** Clerk webhook payload
 
 **Response:**
+
 ```typescript
 {
   success: true,
@@ -303,20 +329,23 @@ svix-signature: <signature>
 ### Queries (Read Operations)
 
 #### Get Current User
+
 ```typescript
-api.users.current
+api.users.current;
 ```
 
 **Returns:** `User | null`
 
 #### List Documents
+
 ```typescript
-api.documents.listDocuments
+api.documents.listDocuments;
 ```
 
 **Returns:** `Array<Document>`
 
 #### Get Document
+
 ```typescript
 api.documents.getDocument(documentId: Id<"documents">)
 ```
@@ -324,15 +353,17 @@ api.documents.getDocument(documentId: Id<"documents">)
 **Returns:** `Document | null`
 
 #### Get User Subscription
+
 ```typescript
-api.subscriptions.getUserSubscription
+api.subscriptions.getUserSubscription;
 ```
 
 **Returns:** `Subscription | null`
 
 #### Get Page Usage
+
 ```typescript
-api.subscriptions.getUserPageUsage
+api.subscriptions.getUserPageUsage;
 ```
 
 **Returns:** `{ used: number, limit: number, percentage: number }`
@@ -340,6 +371,7 @@ api.subscriptions.getUserPageUsage
 ### Mutations (Write Operations)
 
 #### Create Document
+
 ```typescript
 api.documents.createDocument({
   title: string,
@@ -353,6 +385,7 @@ api.documents.createDocument({
 **Returns:** `Id<"documents">`
 
 #### Update Document Status
+
 ```typescript
 api.documents.updateDocumentStatus({
   documentId: Id<"documents">,
@@ -369,6 +402,7 @@ api.documents.updateDocumentStatus({
 **Returns:** `void`
 
 #### Create Example Document
+
 ```typescript
 api.documents.createExampleDocument({
   exampleName: string,
@@ -387,17 +421,19 @@ api.documents.createExampleDocument({
 ### Actions (External API Calls)
 
 #### Generate Upload URL
+
 ```typescript
-api.documents.generateUploadUrl
+api.documents.generateUploadUrl;
 ```
 
 **Returns:** `string` (pre-signed upload URL)
 
 #### Process Document with Landing AI
+
 ```typescript
 api.documents.processDocumentWithLandingAI({
-  documentId: Id<"documents">
-})
+  documentId: Id<"documents">,
+});
 ```
 
 **Returns:** `{ success: boolean, error?: string }`
@@ -405,71 +441,76 @@ api.documents.processDocumentWithLandingAI({
 ## Data Types
 
 ### Document
+
 ```typescript
 interface Document {
-  _id: Id<"documents">,
-  userId: Id<"users">,
-  title: string,
-  fileId?: Id<"_storage">,
-  status: "uploading" | "processing" | "completed" | "failed",
-  errorMessage?: string,
-  landingAiResponse?: any,
-  markdown?: string,
-  chunks?: Array<Chunk>,
-  marginalia?: any[],
-  pageImages?: Array<Id<"_storage">>,
-  pageCount?: number,
-  fileSize: number,
-  mimeType: string,
-  createdAt: number,
-  updatedAt: number
+  _id: Id<"documents">;
+  userId: Id<"users">;
+  title: string;
+  fileId?: Id<"_storage">;
+  status: "uploading" | "processing" | "completed" | "failed";
+  errorMessage?: string;
+  landingAiResponse?: any;
+  markdown?: string;
+  chunks?: Array<Chunk>;
+  marginalia?: any[];
+  pageImages?: Array<Id<"_storage">>;
+  pageCount?: number;
+  fileSize: number;
+  mimeType: string;
+  createdAt: number;
+  updatedAt: number;
 }
 ```
 
 ### Chunk
+
 ```typescript
 interface Chunk {
-  chunk_id: string,
-  content: string,
-  page: number,
+  chunk_id: string;
+  content: string;
+  page: number;
   bbox?: {
-    x: number,
-    y: number,
-    width: number,
-    height: number
-  },
-  metadata: any
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+  metadata: any;
 }
 ```
 
 ### User
+
 ```typescript
 interface User {
-  _id: Id<"users">,
-  name: string,
-  email: string,
-  externalId: string  // Clerk user ID
+  _id: Id<"users">;
+  name: string;
+  email: string;
+  externalId: string; // Clerk user ID
 }
 ```
 
 ### Subscription
+
 ```typescript
 interface Subscription {
-  _id: Id<"subscriptions">,
-  userId: Id<"users">,
-  stripeCustomerId: string,
-  stripeSubscriptionId: string,
-  status: string,
-  planId: string,
-  currentPeriodStart: number,
-  currentPeriodEnd: number,
-  cancelAtPeriodEnd: boolean
+  _id: Id<"subscriptions">;
+  userId: Id<"users">;
+  stripeCustomerId: string;
+  stripeSubscriptionId: string;
+  status: string;
+  planId: string;
+  currentPeriodStart: number;
+  currentPeriodEnd: number;
+  cancelAtPeriodEnd: boolean;
 }
 ```
 
 ## Error Handling
 
 ### Standard Error Format
+
 ```typescript
 {
   error: string,      // Human-readable error message
@@ -480,27 +521,29 @@ interface Subscription {
 
 ### Common Error Codes
 
-| Code | Status | Description |
-|------|--------|-------------|
-| `UNAUTHORIZED` | 401 | Invalid or missing authentication |
-| `FORBIDDEN` | 403 | User lacks required permissions |
-| `NOT_FOUND` | 404 | Resource not found |
-| `VALIDATION_ERROR` | 400 | Invalid request data |
-| `RATE_LIMITED` | 429 | Too many requests |
-| `INSUFFICIENT_CREDITS` | 402 | User has insufficient page credits |
-| `PROCESSING_FAILED` | 500 | Document processing failed |
-| `UPLOAD_FAILED` | 500 | File upload failed |
+| Code                   | Status | Description                        |
+| ---------------------- | ------ | ---------------------------------- |
+| `UNAUTHORIZED`         | 401    | Invalid or missing authentication  |
+| `FORBIDDEN`            | 403    | User lacks required permissions    |
+| `NOT_FOUND`            | 404    | Resource not found                 |
+| `VALIDATION_ERROR`     | 400    | Invalid request data               |
+| `RATE_LIMITED`         | 429    | Too many requests                  |
+| `INSUFFICIENT_CREDITS` | 402    | User has insufficient page credits |
+| `PROCESSING_FAILED`    | 500    | Document processing failed         |
+| `UPLOAD_FAILED`        | 500    | File upload failed                 |
 
 ## Rate Limiting
 
 When rate limiting is enabled:
 
 **Limits:**
+
 - Upload API: 10 uploads per hour per user/IP
 - Export API: 100 exports per hour per user
 - General API: 1000 requests per hour per user/IP
 
 **Rate Limit Headers:**
+
 ```http
 X-RateLimit-Limit: 100
 X-RateLimit-Remaining: 95
@@ -516,6 +559,7 @@ The main application integrates with an external FastAPI service for document pr
 **Base URL:** `http://localhost:8000` (dev) / `https://your-service.onrender.com` (prod)
 
 #### Process Document
+
 ```http
 POST /api/process_document
 Headers:
@@ -524,9 +568,10 @@ Body: multipart/form-data with PDF file
 ```
 
 #### Convert Formats
+
 ```http
 POST /api/convert_to_json
-POST /api/convert_to_csv  
+POST /api/convert_to_csv
 POST /api/convert_to_docx
 POST /api/convert_to_markdown
 POST /api/convert_to_text
@@ -534,6 +579,7 @@ POST /api/convert_to_xlsx
 ```
 
 #### Health Check
+
 ```http
 GET /health
 ```
@@ -551,8 +597,8 @@ Convex provides real-time updates via WebSocket connections:
 const documents = useQuery(api.documents.listDocuments);
 
 // Subscribe to specific document updates
-const document = useQuery(api.documents.getDocument, { 
-  documentId: "abc123" 
+const document = useQuery(api.documents.getDocument, {
+  documentId: "abc123",
 });
 
 // Execute mutations
@@ -573,11 +619,11 @@ const createDocument = useMutation(api.documents.createDocument);
 ```typescript
 // Upload document
 const formData = new FormData();
-formData.append('file', file);
+formData.append("file", file);
 
-const response = await fetch('/api/upload-document', {
-  method: 'POST',
-  body: formData
+const response = await fetch("/api/upload-document", {
+  method: "POST",
+  body: formData,
 });
 
 const result = await response.json();
@@ -592,9 +638,9 @@ import { api } from "@/convex/_generated/api";
 function DocumentList() {
   const documents = useQuery(api.documents.listDocuments);
   const createDocument = useMutation(api.documents.createDocument);
-  
+
   if (documents === undefined) return <div>Loading...</div>;
-  
+
   return (
     <div>
       {documents.map(doc => (

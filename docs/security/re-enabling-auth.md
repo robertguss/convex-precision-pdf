@@ -32,6 +32,7 @@ The following files have been modified to disable security:
 **File:** `middleware.ts`
 
 **Current State:**
+
 ```typescript
 // Security disabled for local development
 export default function middleware() {
@@ -41,17 +42,18 @@ export default function middleware() {
 ```
 
 **Production State:**
+
 ```typescript
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
-import { NextResponse } from 'next/server';
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
 
 const isPublicRoute = createRouteMatcher([
-  '/',
-  '/demo(.*)',
-  '/privacy',
-  '/terms',
-  '/api/sync-user',
-  '/api/examples/load',
+  "/",
+  "/demo(.*)",
+  "/privacy",
+  "/terms",
+  "/api/sync-user",
+  "/api/examples/load",
 ]);
 
 export default clerkMiddleware((auth, request) => {
@@ -62,7 +64,7 @@ export default clerkMiddleware((auth, request) => {
 });
 
 export const config = {
-  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };
 ```
 
@@ -85,14 +87,12 @@ export const config = {
 // AFTER (enabled):
 const { userId } = await auth();
 if (!userId) {
-  return NextResponse.json(
-    { error: "Unauthorized" },
-    { status: 401 }
-  );
+  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 }
 ```
 
 **Files to update:**
+
 - `app/api/upload-document/route.ts`
 - `app/api/upload-document-progressive/route.ts`
 - `app/api/process-document/route.ts`
@@ -120,6 +120,7 @@ CLERK_WEBHOOK_SECRET="whsec_your-webhook-secret"
 **3.3 Configure Clerk-Convex Integration**
 
 In Clerk Dashboard:
+
 1. Go to JWT Templates
 2. Create new template named "convex"
 3. Set these claims:
@@ -138,6 +139,7 @@ In Clerk Dashboard:
 **3.4 Configure Convex Environment**
 
 In Convex Dashboard → Settings → Environment Variables:
+
 ```
 CLERK_JWT_ISSUER_DOMAIN=https://your-clerk-domain.clerk.accounts.dev
 ```
@@ -147,6 +149,7 @@ CLERK_JWT_ISSUER_DOMAIN=https://your-clerk-domain.clerk.accounts.dev
 **File:** `convex/auth.config.ts`
 
 **Uncomment the Clerk configuration:**
+
 ```typescript
 export default {
   providers: [
@@ -154,7 +157,7 @@ export default {
       domain: process.env.CLERK_JWT_ISSUER_DOMAIN,
       applicationID: "convex",
     },
-  ]
+  ],
 };
 ```
 
@@ -179,6 +182,7 @@ if (!user) {
 ```
 
 **Critical functions to update:**
+
 - `convex/documents.ts` - All document operations
 - `convex/users.ts` - User management functions
 - `convex/subscriptions.ts` - Billing operations
@@ -197,6 +201,7 @@ if (!user) {
 **File:** `app/api/sync-user/route.ts`
 
 Ensure webhook validation is enabled:
+
 ```typescript
 const wh = new Webhook(process.env.CLERK_WEBHOOK_SECRET!);
 const evt = wh.verify(body, {
@@ -211,19 +216,16 @@ const evt = wh.verify(body, {
 **File:** `middleware.ts` (add to the re-enabled middleware)
 
 ```typescript
-import { rateLimit } from '@/lib/rate-limit';
+import { rateLimit } from "@/lib/rate-limit";
 
 // Add rate limiting for uploads
-if (request.nextUrl.pathname.startsWith('/api/upload')) {
-  const ip = request.ip ?? '127.0.0.1';
+if (request.nextUrl.pathname.startsWith("/api/upload")) {
+  const ip = request.ip ?? "127.0.0.1";
   const identifier = userId || ip;
-  
+
   const { success } = await rateLimit.check(identifier, 10); // 10 per hour
   if (!success) {
-    return NextResponse.json(
-      { error: 'Rate limit exceeded' },
-      { status: 429 }
-    );
+    return NextResponse.json({ error: "Rate limit exceeded" }, { status: 429 });
   }
 }
 ```
@@ -233,11 +235,12 @@ if (request.nextUrl.pathname.startsWith('/api/upload')) {
 **File:** `next.config.ts`
 
 Update CORS headers:
+
 ```typescript
 {
   key: 'Access-Control-Allow-Origin',
-  value: process.env.NODE_ENV === 'development' 
-    ? '*' 
+  value: process.env.NODE_ENV === 'development'
+    ? '*'
     : process.env.NEXT_PUBLIC_APP_URL || 'https://your-domain.com'
 }
 ```
@@ -247,15 +250,18 @@ Update CORS headers:
 **File:** `convex/stripe.ts`
 
 Uncomment webhook signature validation:
+
 ```typescript
-const sig = request.headers.get('stripe-signature')!;
+const sig = request.headers.get("stripe-signature")!;
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
 
 try {
   const event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
   // Process event...
 } catch (err) {
-  throw new ConvexError(`Webhook signature verification failed: ${err.message}`);
+  throw new ConvexError(
+    `Webhook signature verification failed: ${err.message}`,
+  );
 }
 ```
 
@@ -291,6 +297,7 @@ After re-enabling security, verify everything works:
 **Symptoms:** API calls failing with 401 errors
 
 **Solutions:**
+
 1. Check environment variables are set correctly
 2. Verify JWT template configuration in Clerk
 3. Ensure Convex environment has correct `CLERK_JWT_ISSUER_DOMAIN`
@@ -301,6 +308,7 @@ After re-enabling security, verify everything works:
 **Symptoms:** Webhooks returning 400/401 errors
 
 **Solutions:**
+
 1. Verify webhook secrets are correct
 2. Check webhook URL configuration
 3. Ensure webhook handler is not cached
@@ -311,6 +319,7 @@ After re-enabling security, verify everything works:
 **Symptoms:** Browser CORS errors in production
 
 **Solutions:**
+
 1. Update CORS configuration in `next.config.ts`
 2. Ensure `NEXT_PUBLIC_APP_URL` is set correctly
 3. Check domain configuration in Clerk
@@ -320,6 +329,7 @@ After re-enabling security, verify everything works:
 **Symptoms:** Users stuck in authentication redirects
 
 **Solutions:**
+
 1. Check public route configuration in middleware
 2. Verify Clerk domain configuration
 3. Ensure redirect URLs are whitelisted
@@ -332,12 +342,12 @@ Create tests to verify security is working:
 
 ```typescript
 // Example test for API authentication
-test('requires authentication for document upload', async () => {
-  const response = await fetch('/api/upload-document', {
-    method: 'POST',
+test("requires authentication for document upload", async () => {
+  const response = await fetch("/api/upload-document", {
+    method: "POST",
     body: new FormData(),
   });
-  
+
   expect(response.status).toBe(401);
 });
 ```
@@ -366,6 +376,7 @@ ENCRYPTION_KEY=$(openssl rand -base64 32)
 ### 2. Content Security Policy
 
 Add to `next.config.ts`:
+
 ```typescript
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -380,9 +391,9 @@ const ContentSecurityPolicy = `
 
 ```typescript
 const securityHeaders = [
-  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-  { key: 'X-Content-Type-Options', value: 'nosniff' },
-  { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "origin-when-cross-origin" },
 ];
 ```
 

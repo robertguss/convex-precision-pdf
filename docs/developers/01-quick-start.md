@@ -7,6 +7,7 @@ Get Precision PDF running locally in 5 minutes! This guide will have you process
 **This repository is currently configured for easy local development with ALL AUTHENTICATION AND SECURITY FEATURES DISABLED.**
 
 This means:
+
 - No user authentication required
 - No API key validation
 - All endpoints are public
@@ -66,6 +67,7 @@ pnpm install
 ```
 
 This will install:
+
 - Next.js and React
 - Convex client libraries
 - UI components (shadcn/ui)
@@ -91,6 +93,7 @@ npx convex dev
 ```
 
 This will:
+
 1. Create a new Convex deployment
 2. Set `NEXT_PUBLIC_CONVEX_URL` in your `.env.local`
 3. Deploy the database schema
@@ -120,6 +123,7 @@ pnpm run dev
 Open your browser and navigate to: **http://localhost:3000**
 
 You should see:
+
 - The Precision PDF homepage
 - Example documents you can explore
 - Upload functionality (works with example processing)
@@ -127,6 +131,7 @@ You should see:
 ## What Works Out of the Box
 
 ### ✅ Fully Functional
+
 - **Homepage and navigation**
 - **Example document exploration** (8 pre-processed documents)
 - **Upload interface** (files are stored, but processing requires FastAPI)
@@ -135,10 +140,12 @@ You should see:
 - **Responsive UI** with Tailwind CSS
 
 ### ⚠️ Limited Functionality (Without FastAPI)
+
 - **PDF Processing** - Files upload but won't be processed without FastAPI service
 - **Export Features** - Require FastAPI service for format conversion
 
 ### 🚫 Disabled for Local Development
+
 - **Authentication** - No login required (security disabled)
 - **Payment processing** - Stripe integration disabled
 - **Rate limiting** - No limits enforced
@@ -147,15 +154,19 @@ You should see:
 ## Next Steps
 
 ### For Basic Exploration
+
 You're all set! Explore the example documents and UI.
 
 ### For Full PDF Processing
+
 Set up the FastAPI service by following the [FastAPI Integration Guide](./fastapi-integration.md).
 
 ### For Production Deployment
+
 **CRITICAL:** Follow the [Security Configuration Guide](./04-security-configuration.md) to re-enable authentication.
 
 ### For Development
+
 Continue with the [Local Development Guide](./03-local-development.md).
 
 ## Common Issues
