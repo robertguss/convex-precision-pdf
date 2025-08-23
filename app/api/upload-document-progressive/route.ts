@@ -12,17 +12,11 @@ export async function POST(request: NextRequest) {
   console.log("Upload endpoint called");
   
   try {
+    // Auth disabled for local development
     const { getToken } = await auth();
     const token = await getToken({ template: "convex" });
     
     console.log("Auth token obtained:", !!token);
-    
-    if (!token) {
-      return NextResponse.json(
-        { error: "Unauthorized - No auth token" },
-        { status: 401 }
-      );
-    }
     
     const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
     console.log("Convex URL:", convexUrl);
@@ -32,7 +26,9 @@ export async function POST(request: NextRequest) {
     }
     
     const convex = new ConvexHttpClient(convexUrl);
-    convex.setAuth(token);
+    if (token) {
+      convex.setAuth(token);
+    }
     
     const formData = await request.formData();
     const file = formData.get("file") as File;

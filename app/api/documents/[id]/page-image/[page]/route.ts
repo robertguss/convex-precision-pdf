@@ -14,15 +14,9 @@ export async function GET(
   { params }: { params: Promise<{ id: string; page: string }> }
 ) {
   try {
+    // Auth disabled for local development
     const { getToken } = await auth();
     const token = await getToken({ template: "convex" });
-    
-    if (!token) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
-    }
     
     const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!convexUrl) {
@@ -30,7 +24,9 @@ export async function GET(
     }
     
     const convex = new ConvexHttpClient(convexUrl);
-    convex.setAuth(token);
+    if (token) {
+      convex.setAuth(token);
+    }
     
     const { id, page } = await params;
     const pageIndex = parseInt(page, 10);

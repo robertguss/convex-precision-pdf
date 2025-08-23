@@ -1,10 +1,41 @@
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+// Rate limiting disabled for local development
+// Original rate limiting code commented out below:
+
+// import { Ratelimit } from "@upstash/ratelimit";
+// import { Redis } from "@upstash/redis";
 
 /**
- * Rate limiter configuration for API endpoints
- * Uses Upstash Redis for distributed rate limiting in serverless environments
+ * Rate limiter configuration for API endpoints - DISABLED FOR LOCAL DEVELOPMENT
+ * Original functionality commented out to remove all rate limiting
  */
+
+// Stub function that always allows requests
+export function rateLimit(config: {
+  interval: number;
+  uniqueTokenPerInterval?: number;
+}) {
+  return {
+    limit: async (identifier: string, options?: any) => {
+      // Always return success for local development
+      return {
+        success: true,
+        limit: 999999,
+        remaining: 999999,
+        reset: Date.now() + 3600000, // 1 hour from now
+      };
+    },
+  };
+}
+
+/**
+ * Upload limiter stub - always allows uploads for local development
+ */
+export const uploadLimiter = rateLimit({
+  interval: 60 * 60 * 1000, // 1 hour
+  uniqueTokenPerInterval: 500, // Max unique tokens
+});
+
+/* ORIGINAL RATE LIMITING CODE - COMMENTED OUT FOR LOCAL DEVELOPMENT
 
 // Create a Redis instance - in production, use environment variables
 const redis = new Redis({
@@ -12,11 +43,6 @@ const redis = new Redis({
   token: process.env.UPSTASH_REDIS_REST_TOKEN!,
 });
 
-/**
- * Create a rate limiter instance
- * @param config - Rate limit configuration
- * @returns Configured rate limiter
- */
 export function rateLimit(config: {
   interval: number;
   uniqueTokenPerInterval?: number;
@@ -32,12 +58,9 @@ export function rateLimit(config: {
   });
 }
 
-/**
- * Rate limiter for upload endpoints
- * Free users: 10 uploads per hour
- * Paid users: 50 uploads per hour
- */
 export const uploadLimiter = rateLimit({
   interval: 60 * 60 * 1000, // 1 hour
   uniqueTokenPerInterval: 500, // Max unique tokens
 });
+
+*/

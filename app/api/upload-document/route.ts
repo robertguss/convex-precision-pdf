@@ -8,18 +8,14 @@ import { Id } from "@/convex/_generated/dataModel";
 import { auth } from "@clerk/nextjs/server";
 
 export async function POST(request: NextRequest) {
+  // Auth disabled for local development
   const { getToken } = await auth();
   const token = await getToken({ template: "convex" });
   
-  if (!token) {
-    return NextResponse.json(
-      { error: "Unauthorized" },
-      { status: 401 }
-    );
-  }
-  
   const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
-  convex.setAuth(token);
+  if (token) {
+    convex.setAuth(token);
+  }
   try {
     const formData = await request.formData();
     const file = formData.get("file") as File;

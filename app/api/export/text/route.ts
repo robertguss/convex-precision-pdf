@@ -8,14 +8,8 @@ import { auth } from "@clerk/nextjs/server";
 
 export async function POST(request: NextRequest) {
   try {
-    // Verify authentication
+    // Auth disabled for local development
     const { userId } = await auth();
-    if (!userId) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
-    }
 
     // Get the request body
     const body = await request.json();
